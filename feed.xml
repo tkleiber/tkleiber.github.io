@@ -6,8 +6,8 @@
     <atom:link href="https://tkleiber.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Mon, 9 Mar 2020 22:11:02 +0100</pubDate>
-    <lastBuildDate>Mon, 9 Mar 2020 22:11:02 +0100</lastBuildDate>
+    <pubDate>Wed, 3 Jun 2020 13:10:00 +0200</pubDate>
+    <lastBuildDate>Wed, 3 Jun 2020 13:10:00 +0200</lastBuildDate>
 
     <item>
       <title>Fourth Post</title>
@@ -128,10 +128,10 @@ libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.&lt;/p&gt;
 	</description>
     </item>
     <item>
-      <title>Hello world!</title>
-      <link>https://tkleiber.github.io/blog/2013/Hello+world%21.html</link>
+      <title>Hello world</title>
+      <link>https://tkleiber.github.io/blog/2013/Hello+world.html</link>
       <pubDate>Tue, 13 Dec 2011 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2013/Hello+world%21.html</guid>
+      <guid isPermaLink="false">blog/2013/Hello+world.html</guid>
       	<description>
 	&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Welcome to my new blog. After long time I have decided to create now my own blog. Be excitedly for future content round about software development.&lt;/p&gt;
