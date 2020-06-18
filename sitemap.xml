@@ -2,26 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://tkleiber.github.io/about.html</loc>
-        <lastmod>2013-09-24</lastmod>
+        <lastmod>2011-12-13</lastmod>
     </url>
     <url>
-        <loc>https://tkleiber.github.io/blog/2013/fourth-post.html</loc>
-        <lastmod>2013-10-17</lastmod>
+        <loc>https://tkleiber.github.io/blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</loc>
+        <lastmod>2012-01-22</lastmod>
     </url>
     <url>
-        <loc>https://tkleiber.github.io/blog/2013/third-post.html</loc>
-        <lastmod>2013-09-26</lastmod>
+        <loc>https://tkleiber.github.io/blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</loc>
+        <lastmod>2011-12-27</lastmod>
     </url>
     <url>
-        <loc>https://tkleiber.github.io/blog/2013/second-post.html</loc>
-        <lastmod>2013-08-25</lastmod>
-    </url>
-    <url>
-        <loc>https://tkleiber.github.io/blog/2013/first-post.html</loc>
-        <lastmod>2013-07-24</lastmod>
-    </url>
-    <url>
-        <loc>https://tkleiber.github.io/blog/2013/Hello+world.html</loc>
+        <loc>https://tkleiber.github.io/blog/2011/Hello+world.html</loc>
         <lastmod>2011-12-13</lastmod>
     </url>
 </urlset>

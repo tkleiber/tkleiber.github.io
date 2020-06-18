@@ -6,135 +6,279 @@
     <atom:link href="https://tkleiber.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Mon, 8 Jun 2020 21:31:58 +0200</pubDate>
-    <lastBuildDate>Mon, 8 Jun 2020 21:31:58 +0200</lastBuildDate>
+    <pubDate>Fri, 19 Jun 2020 00:16:42 +0200</pubDate>
+    <lastBuildDate>Fri, 19 Jun 2020 00:16:42 +0200</lastBuildDate>
 
     <item>
-      <title>Fourth Post</title>
-      <link>https://tkleiber.github.io/blog/2013/fourth-post.html</link>
-      <pubDate>Thu, 17 Oct 2013 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2013/fourth-post.html</guid>
+      <title>Oracle Forms 11 running as application in Java Webstart</title>
+      <link>https://tkleiber.github.io/blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</link>
+      <pubDate>Sun, 22 Jan 2012 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</guid>
       	<description>
 	&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.&lt;/p&gt;
+&lt;p&gt;According to my last post today I will show you the basic configuration for forms 11g.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Unfortunatly webstart in forms 11g it is not as easy as in 10g, but it works too!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As first you need an additional unique identifier &quot;ifsessid&quot; in parameter &quot;serverURL&quot; for forms. This prevents the use of a static jnlp in this case. Maybe it is possible to branch out the build of this unique identifier from the jnlp. I have decided instead to create the the jnlp from a java server page. This helps me additional to use forms parameters, which I will describe in a later post. Sure there maybe exist other ways to build the jnlp.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Let&amp;#8217;s start:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Again I assume you have an running unix or linux application server with forms 11g.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As first you need the &lt;em&gt;webstart_11g.jsp&lt;/em&gt; in folder &lt;em&gt;public_html&lt;/em&gt; under a JDeveloper project. The marked lines provides the identifier:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-numlines hljs&quot; data-lang=&quot;numlines&quot;&gt;&amp;lt;%@ page contentType=&quot;application/x-java-jnlp-file&quot; language=&quot;java&quot; import=&quot;java.sql.*&quot;%&amp;gt;
+&amp;lt;%@ page session=&quot;true&quot;%&amp;gt;
+&amp;lt;%response.setDateHeader (&quot;Expires&quot;, 0); //prevents caching at the proxy server%&amp;gt;
+&amp;lt;%
+  long time = System.currentTimeMillis();
+  String sessid = String.valueOf(time);
+%&amp;gt;
+&amp;lt;jnlp codebase=&quot;http://localhost.localdomain:9001/forms/java/&quot;&amp;gt;
+  &amp;lt;information&amp;gt;
+    &amp;lt;title&amp;gt;Webstart Test Oracle Forms 11g&amp;lt;/title&amp;gt;
+    &amp;lt;vendor&amp;gt;develishdevelopment.wordpress.com&amp;lt;/vendor&amp;gt;
+    &amp;lt;description&amp;gt;Webstart Test Oracle Forms 11g&amp;lt;/description&amp;gt;
+  &amp;lt;/information&amp;gt;
+  &amp;lt;security&amp;gt;
+    &amp;lt;all-permissions/&amp;gt;
+  &amp;lt;/security&amp;gt;
+  &amp;lt;update check=&quot;timeout&quot; policy=&quot;always&quot;/&amp;gt;
+  &amp;lt;resources&amp;gt;
+    &amp;lt;j2se version=&quot;1.6.0&quot;/&amp;gt;
+    &amp;lt;jar href=&quot;frmall.jar&quot; download=&quot;eager&quot; main=&quot;true&quot;/&amp;gt;
+  &amp;lt;/resources&amp;gt;
+  &amp;lt;applet-desc name=&quot;Webstart Test Oracle Forms 11g&quot; main-class=&quot;oracle.forms.engine.Main&quot; width=&quot;990&quot; height=&quot;640&quot;&amp;gt;
+    &amp;lt;param name=&quot;background&quot; value=&quot;no&quot;/&amp;gt;
+    &amp;lt;param name=&quot;logo&quot; value=&quot;no&quot;/&amp;gt;
+    &amp;lt;param name=&quot;serverApp&quot; value=&quot;default&quot;/&amp;gt;
+    &amp;lt;param name=&quot;lookAndFeel&quot; value=&quot;oracle&quot;/&amp;gt;
+    &amp;lt;param name=&quot;allow_debug&quot; value=&quot;true&quot;/&amp;gt;
+    &amp;lt;param name=&quot;separateFrame&quot; value=&quot;false&quot;/&amp;gt;
+    &amp;lt;param name=&quot;em_mode&quot; value=&quot;1&quot;/&amp;gt;
+    &amp;lt;param name=&quot;latencyCheck&quot; value=&quot;true&quot;/&amp;gt;
+    &amp;lt;param name=&quot;networkRetries&quot; value=&quot;240&quot;/&amp;gt;
+    &amp;lt;param name=&quot;serverArgs&quot; value=&quot;module=test.fmx useSDI=yes&quot;/&amp;gt;
+    &amp;lt;param name=&quot;serverURL&quot; value=&quot;http://localhost.localdomain:9001/forms/lservlet?ifcfs=http://localhost.localdomain:9001/forms/frmservlet?config=jpi&amp;amp;ifsessid=formsapp.&amp;lt;%=sessid%&amp;gt;&quot;/&amp;gt;
+    &amp;lt;param name=&quot;colorScheme&quot; value=&quot;teal&quot;/&amp;gt;
+    &amp;lt;param name=&quot;splashScreen&quot; value=&quot;no&quot;/&amp;gt;
+    &amp;lt;param name=&quot;dontTruncateTabs&quot; value=&quot;true&quot;/&amp;gt;
+  &amp;lt;/applet-desc&amp;gt;
+&amp;lt;/jnlp&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now you need to deploy this jsp. First create a application server connection in JDeveloper version corresponding to your forms weblogic server. I have forms 11.1.1.2.0, which runs on weblogic 10.3.2. So I have to use JDeveloper 11.1.1.2.0. See oracle support information for supported JDeveloper version for your environment. Right click on you Jdeveloper project with the jsp an select deploy. Following are the steps in the deploy wizard:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;ulist&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.org&quot; class=&quot;bare&quot;&gt;http://example.org&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.org&quot;&gt;Example.org&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu,
-mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo
-ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet
-ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus,
-id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In
-consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere
-libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.&lt;/p&gt;
-&lt;/div&gt;
-	</description>
-    </item>
-    <item>
-      <title>Third Post</title>
-      <link>https://tkleiber.github.io/blog/2013/third-post.html</link>
-      <pubDate>Thu, 26 Sep 2013 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2013/third-post.html</guid>
-      	<description>
-	&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;Deployment Action&lt;/p&gt;
 &lt;div class=&quot;ulist&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.org&quot; class=&quot;bare&quot;&gt;http://example.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Deploy to application server&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.org&quot;&gt;Example.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Select Servers&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Application Servers: your application server&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Overwrite modules of the same name: select&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deploy to all server instances in the domain: unselect&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deploy as a standalone Application: select&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Server instances&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;List Standalone Servers and Cluster: select your forms cluster or your forms server (WLS_FORMS)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Summary: finish&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu,
-mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo
-ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet
-ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus,
-id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In
-consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere
-libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.&lt;/p&gt;
+&lt;p&gt;In the project properties change the deployment properties to set your context root, which will be later part of your url:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/webstart_11g_deployment_profile.png&quot; alt=&quot;set context root&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you redeploy this jsp, you may wonder that your change is not immediatly shown. You can solve this by dropping the former deployment before redeploying or you add following files to your JDeveloper Project under folder &lt;em&gt;public_html\WEB-INF&lt;/em&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;weblogic.xml:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-xml hljs&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;weblogic-web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.bea.com/ns/weblogic/weblogic-web-app http://www.bea.com/ns/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd&quot; xmlns=&quot;http://www.bea.com/ns/weblogic/weblogic-web-app&quot;&amp;gt;
+&amp;lt;jsp-descriptor&amp;gt;
+&amp;lt;page-check-seconds&amp;gt;0&amp;lt;/page-check-seconds&amp;gt;
+&amp;lt;/jsp-descriptor&amp;gt;
+&amp;lt;container-descriptor&amp;gt;
+&amp;lt;servlet-reload-check-secs&amp;gt;0&amp;lt;/servlet-reload-check-secs&amp;gt;
+&amp;lt;resource-reload-check-secs&amp;gt;0&amp;lt;/resource-reload-check-secs&amp;gt;
+&amp;lt;/container-descriptor&amp;gt;
+&amp;lt;context-root&amp;gt;webstart_11g&amp;lt;/context-root&amp;gt;
+&amp;lt;fast-swap&amp;gt;
+&amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt;
+&amp;lt;refresh-interval&amp;gt;1&amp;lt;/refresh-interval&amp;gt;
+&amp;lt;/fast-swap&amp;gt;
+&amp;lt;/weblogic-web-app&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;web.xml:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-xml hljs&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version = &apos;1.0&apos; encoding = &apos;windows-1252&apos;?&amp;gt;
+&amp;lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; version=&quot;2.5&quot; xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;&amp;gt;&amp;lt;/web-app&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Complete workspace you can found &lt;a href=&quot;https://docs.google.com/open?id=0B52l1kNwgjwCNjIzN2Y1ZjktMzU1Ny00OGRjLTkyNzItNGIwMTViZmJiZDMz&quot;&amp;gt;webstart_11g.zip&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now start java webstart with your jnlp url, here is an example in linux:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-bash hljs&quot; data-lang=&quot;bash&quot;&gt;./javaws http://localhost.localdomain:9001/webstart_11g/webstart_11g.jsp&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Java webstart comes up with the standard &lt;em&gt;test.fmx&lt;/em&gt; from the forms services installation:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/webstart_11g_succesful.png&quot; alt=&quot;Webstart 11g succesful&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s all!&lt;/p&gt;
 &lt;/div&gt;
 	</description>
     </item>
     <item>
-      <title>Second Post</title>
-      <link>https://tkleiber.github.io/blog/2013/second-post.html</link>
-      <pubDate>Sun, 25 Aug 2013 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2013/second-post.html</guid>
+      <title>Oracle Forms 10 running as application in Java Webstart</title>
+      <link>https://tkleiber.github.io/blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</link>
+      <pubDate>Tue, 27 Dec 2011 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</guid>
       	<description>
-	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://example.org&quot;&gt;http://example.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://example.org&quot;&gt;Example.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu,&lt;br /&gt;
-mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo&lt;br /&gt;
-ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet&lt;br /&gt;
-ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus,&lt;br /&gt;
-id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In&lt;br /&gt;
-consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere&lt;br /&gt;
-libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.&lt;/p&gt;
-
+	&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Many people miss in webforms the possibility to run forms as a separate application. They have a lot of problems to handle browser back button an so on.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The good news - there is way to do this with Java Webstart.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The bad news - it is not supported by Oracle. But we run this since four years now and is very stable.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Following I show you the basic configuration for forms 10g. In later posts I will show you examples for forms 11g, how to handle forms parameters and further more.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Let&amp;#8217;s start:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I assume you have an running unix or linux application server with forms 10.1.2.
+Put following code as &lt;em&gt;webstart_10g.jnlp&lt;/em&gt; to directory &lt;em&gt;&amp;lt;Oracle Home&amp;gt;/j2ee/home/default-web-app&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-xml hljs&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;jnlp spec=&quot;1.0+&quot; codebase=&quot;http://localhost.localdomain:7778/forms/java/&quot;&amp;gt;
+  &amp;lt;information&amp;gt;
+    &amp;lt;title&amp;gt;Webstart Test Oracle Forms 10g&amp;lt;/title&amp;gt;
+    &amp;lt;vendor&amp;gt;develishdevelopment.wordpress.com&amp;lt;/vendor&amp;gt;
+    &amp;lt;homepage href=&quot;null&quot;/&amp;gt;
+    &amp;lt;description&amp;gt;Webstart Test Oracle Forms 10g&amp;lt;/description&amp;gt;
+  &amp;lt;/information&amp;gt;
+  &amp;lt;security&amp;gt;
+    &amp;lt;all-permissions/&amp;gt;
+  &amp;lt;/security&amp;gt;
+  &amp;lt;update check=&quot;timeout&quot; policy=&quot;always&quot;/&amp;gt;
+  &amp;lt;resources&amp;gt;
+    &amp;lt;java version=&quot;1.6.0&quot;/&amp;gt;
+    &amp;lt;jar href=&quot;frmall.jar&quot; download=&quot;eager&quot; main=&quot;true&quot;/&amp;gt;
+  &amp;lt;/resources&amp;gt;
+  &amp;lt;applet-desc name=&quot;Webstart Test Oracle Forms 10g&quot; main-class=&quot;oracle.forms.engine.Main&quot; width=&quot;990&quot; height=&quot;660&quot;&amp;gt;
+    &amp;lt;param name=&quot;background&quot; value=&quot;no&quot;/&amp;gt;
+    &amp;lt;param name=&quot;logo&quot; value=&quot;no&quot;/&amp;gt;
+    &amp;lt;param name=&quot;serverApp&quot; value=&quot;default&quot;/&amp;gt;
+    &amp;lt;param name=&quot;lookAndFeel&quot; value=&quot;oracle&quot;/&amp;gt;
+    &amp;lt;param name=&quot;allow_debug&quot; value=&quot;true&quot;/&amp;gt;
+    &amp;lt;param name=&quot;separateFrame&quot; value=&quot;false&quot;/&amp;gt;
+    &amp;lt;param name=&quot;em_mode&quot; value=&quot;1&quot;/&amp;gt;
+    &amp;lt;param name=&quot;latencyCheck&quot; value=&quot;true&quot;/&amp;gt;
+    &amp;lt;param name=&quot;networkRetries&quot; value=&quot;240&quot;/&amp;gt;
+    &amp;lt;param name=&quot;serverArgs&quot; value=&quot;module=test.fmx useSDI=yes&quot;/&amp;gt;
+    &amp;lt;param name=&quot;serverURL&quot; value=&quot;http://localhost.localdomain:7778/forms/lservlet?ifcfs=http://localhost.localdomain:7778/forms/frmservlet?config=jpi&quot;/&amp;gt;
+    &amp;lt;param name=&quot;colorScheme&quot; value=&quot;teal&quot;/&amp;gt;
+    &amp;lt;param name=&quot;splashScreen&quot; value=&quot;no&quot;/&amp;gt;
+    &amp;lt;param name=&quot;dontTruncateTabs&quot; value=&quot;true&quot;/&amp;gt;
+  &amp;lt;/applet-desc&amp;gt;
+&amp;lt;/jnlp&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Start java webstart with your jnlp url, here is an example in linux:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-bash hljs&quot; data-lang=&quot;bash&quot;&gt;./javaws http://localhost.localdomain:7778/j2ee/webstart_10g.jnlp&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Java webstart comes up with the standard test.fmx from the forms services installation:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/webstart_10g_succesful.png&quot; alt=&quot;Webstart 10g succesful&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Isn&amp;#8217;t it easy?&lt;/p&gt;
+&lt;/div&gt;
 	</description>
     </item>
     <item>
-      <title>First Post</title>
-      <link>https://tkleiber.github.io/blog/2013/first-post.html</link>
-      <pubDate>Wed, 24 Jul 2013 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2013/first-post.html</guid>
-      	<description>
-	
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://example.org&quot;&gt;http://example.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://example.org&quot;&gt;Example.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, 
-mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo 
-ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet 
-ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus, 
-id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales.&lt;/p&gt; 
-
-&lt;pre class=&quot;prettyprint&quot;&gt;
-&lt;code&gt;
-package org.jbake;
-
-public class Oven {
-	public static void main(String[] args) {
-		System.out.print(&quot;Baking!&quot;);
-  }
-}
-&lt;/code&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;In consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere 
-libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.&lt;/p&gt;
-
-	</description>
-    </item>
-    <item>
-      <title>Hello world</title>
-      <link>https://tkleiber.github.io/blog/2013/Hello+world.html</link>
+      <title>Hello world!</title>
+      <link>https://tkleiber.github.io/blog/2011/Hello+world.html</link>
       <pubDate>Tue, 13 Dec 2011 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2013/Hello+world.html</guid>
+      <guid isPermaLink="false">blog/2011/Hello+world.html</guid>
       	<description>
 	&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Welcome to my new blog. After long time I have decided to create now my own blog. Be excitedly for future content round about software development.&lt;/p&gt;
+&lt;p&gt;Welcome to my new blog. After long time I have decided to create now my own blog at &lt;a href=&quot;http://wordpress.com/&quot;&gt;WordPress.com&lt;/a&gt;. Be excitedly for future content round about software development.&lt;/p&gt;
 &lt;/div&gt;
 	</description>
     </item>
