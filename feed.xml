@@ -1,21 +1,26 @@
 <?xml version="1.0"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>JBake</title>
-    <link>https://tkleiber.github.io</link>
-    <atom:link href="https://tkleiber.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <description>JBake Bootstrap Template</description>
-    <language>en-gb</language>
-    <pubDate>Fri, 19 Jun 2020 00:16:42 +0200</pubDate>
-    <lastBuildDate>Fri, 19 Jun 2020 00:16:42 +0200</lastBuildDate>
-
-    <item>
-      <title>Oracle Forms 11 running as application in Java Webstart</title>
-      <link>https://tkleiber.github.io/blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</link>
-      <pubDate>Sun, 22 Jan 2012 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</guid>
-      	<description>
-	&lt;div class=&quot;paragraph&quot;&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Develish Development</title>
+    <link href="https://tkleiber.github.io/"/>
+    <link rel="self" type="application/atom+xml" href="https://tkleiber.github.io/feed.xml"/>
+    <subtitle>The development devil is in the implementation details!</subtitle>
+    <updated>2020-06-25T18:10:30Z</updated>
+    <id>tag:localhost,2020:06</id>
+    <entry>
+        <title>Oracle Forms 11 running as application in Java Webstart</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html"/>
+        <updated>2012-01-22T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</id>
+        <category term="Oracle"/>
+        <category term="Forms"/>
+        <category term="11g"/>
+        <category term="Java"/>
+        <category term="Webstart"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;According to my last post today I will show you the basic configuration for forms 11g.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -35,7 +40,7 @@
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-numlines hljs&quot; data-lang=&quot;numlines&quot;&gt;&amp;lt;%@ page contentType=&quot;application/x-java-jnlp-file&quot; language=&quot;java&quot; import=&quot;java.sql.*&quot;%&amp;gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;%@ page contentType=&quot;application/x-java-jnlp-file&quot; language=&quot;java&quot; import=&quot;java.sql.*&quot;%&amp;gt;
 &amp;lt;%@ page session=&quot;true&quot;%&amp;gt;
 &amp;lt;%response.setDateHeader (&quot;Expires&quot;, 0); //prevents caching at the proxy server%&amp;gt;
 &amp;lt;%
@@ -140,7 +145,7 @@
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-xml hljs&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;weblogic-web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.bea.com/ns/weblogic/weblogic-web-app http://www.bea.com/ns/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd&quot; xmlns=&quot;http://www.bea.com/ns/weblogic/weblogic-web-app&quot;&amp;gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;weblogic-web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.bea.com/ns/weblogic/weblogic-web-app http://www.bea.com/ns/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd&quot; xmlns=&quot;http://www.bea.com/ns/weblogic/weblogic-web-app&quot;&amp;gt;
 &amp;lt;jsp-descriptor&amp;gt;
 &amp;lt;page-check-seconds&amp;gt;0&amp;lt;/page-check-seconds&amp;gt;
 &amp;lt;/jsp-descriptor&amp;gt;
@@ -161,7 +166,7 @@
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-xml hljs&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version = &apos;1.0&apos; encoding = &apos;windows-1252&apos;?&amp;gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version = &apos;1.0&apos; encoding = &apos;windows-1252&apos;?&amp;gt;
 &amp;lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; version=&quot;2.5&quot; xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;&amp;gt;&amp;lt;/web-app&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -173,7 +178,7 @@
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-bash hljs&quot; data-lang=&quot;bash&quot;&gt;./javaws http://localhost.localdomain:9001/webstart_11g/webstart_11g.jsp&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./javaws http://localhost.localdomain:9001/webstart_11g/webstart_11g.jsp&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -187,15 +192,23 @@
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;That&amp;#8217;s all!&lt;/p&gt;
 &lt;/div&gt;
-	</description>
-    </item>
-    <item>
-      <title>Oracle Forms 10 running as application in Java Webstart</title>
-      <link>https://tkleiber.github.io/blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</link>
-      <pubDate>Tue, 27 Dec 2011 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</guid>
-      	<description>
-	&lt;div class=&quot;paragraph&quot;&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Oracle Forms 10 running as application in Java Webstart</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html"/>
+        <updated>2011-12-27T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</id>
+        <category term="Oracle"/>
+        <category term="Forms"/>
+        <category term="10g"/>
+        <category term="Java"/>
+        <category term="Webstart"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Many people miss in webforms the possibility to run forms as a separate application. They have a lot of problems to handle browser back button an so on.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -216,7 +229,7 @@ Put following code as &lt;em&gt;webstart_10g.jnlp&lt;/em&gt; to directory &lt;em
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-xml hljs&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;jnlp spec=&quot;1.0+&quot; codebase=&quot;http://localhost.localdomain:7778/forms/java/&quot;&amp;gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;jnlp spec=&quot;1.0+&quot; codebase=&quot;http://localhost.localdomain:7778/forms/java/&quot;&amp;gt;
   &amp;lt;information&amp;gt;
     &amp;lt;title&amp;gt;Webstart Test Oracle Forms 10g&amp;lt;/title&amp;gt;
     &amp;lt;vendor&amp;gt;develishdevelopment.wordpress.com&amp;lt;/vendor&amp;gt;
@@ -255,7 +268,7 @@ Put following code as &lt;em&gt;webstart_10g.jnlp&lt;/em&gt; to directory &lt;em
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-bash hljs&quot; data-lang=&quot;bash&quot;&gt;./javaws http://localhost.localdomain:7778/j2ee/webstart_10g.jnlp&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./javaws http://localhost.localdomain:7778/j2ee/webstart_10g.jnlp&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -269,19 +282,23 @@ Put following code as &lt;em&gt;webstart_10g.jnlp&lt;/em&gt; to directory &lt;em
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Isn&amp;#8217;t it easy?&lt;/p&gt;
 &lt;/div&gt;
-	</description>
-    </item>
-    <item>
-      <title>Hello world!</title>
-      <link>https://tkleiber.github.io/blog/2011/Hello+world.html</link>
-      <pubDate>Tue, 13 Dec 2011 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2011/Hello+world.html</guid>
-      	<description>
-	&lt;div class=&quot;paragraph&quot;&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Hello world!</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2011/Hello+world.html"/>
+        <updated>2011-12-13T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2011/Hello+world.html</id>
+        <category term="blog"/>
+        <category term="asciidoc"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Welcome to my new blog. After long time I have decided to create now my own blog at &lt;a href=&quot;http://wordpress.com/&quot;&gt;WordPress.com&lt;/a&gt;. Be excitedly for future content round about software development.&lt;/p&gt;
 &lt;/div&gt;
-	</description>
-    </item>
-
-  </channel> 
-</rss>
+        </content>
+    </entry>
+    
+</feed>
