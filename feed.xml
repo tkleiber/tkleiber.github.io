@@ -4,7 +4,7 @@
     <link href="https://tkleiber.github.io/"/>
     <link rel="self" type="application/atom+xml" href="https://tkleiber.github.io/feed.xml"/>
     <subtitle>The development devil is in the implementation details!</subtitle>
-    <updated>2020-06-25T18:39:35Z</updated>
+    <updated>2020-06-25T19:55:20Z</updated>
     <id>tag:localhost,2020:06</id>
     <entry>
         <title>Oracle Forms 11 running as application in Java Webstart</title>
@@ -146,18 +146,18 @@
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
 &lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;weblogic-web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.bea.com/ns/weblogic/weblogic-web-app http://www.bea.com/ns/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd&quot; xmlns=&quot;http://www.bea.com/ns/weblogic/weblogic-web-app&quot;&amp;gt;
-&amp;lt;jsp-descriptor&amp;gt;
-&amp;lt;page-check-seconds&amp;gt;0&amp;lt;/page-check-seconds&amp;gt;
-&amp;lt;/jsp-descriptor&amp;gt;
-&amp;lt;container-descriptor&amp;gt;
-&amp;lt;servlet-reload-check-secs&amp;gt;0&amp;lt;/servlet-reload-check-secs&amp;gt;
-&amp;lt;resource-reload-check-secs&amp;gt;0&amp;lt;/resource-reload-check-secs&amp;gt;
-&amp;lt;/container-descriptor&amp;gt;
-&amp;lt;context-root&amp;gt;webstart_11g&amp;lt;/context-root&amp;gt;
-&amp;lt;fast-swap&amp;gt;
-&amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt;
-&amp;lt;refresh-interval&amp;gt;1&amp;lt;/refresh-interval&amp;gt;
-&amp;lt;/fast-swap&amp;gt;
+  &amp;lt;jsp-descriptor&amp;gt;
+    &amp;lt;page-check-seconds&amp;gt;0&amp;lt;/page-check-seconds&amp;gt;
+  &amp;lt;/jsp-descriptor&amp;gt;
+  &amp;lt;container-descriptor&amp;gt;
+    &amp;lt;servlet-reload-check-secs&amp;gt;0&amp;lt;/servlet-reload-check-secs&amp;gt;
+    &amp;lt;resource-reload-check-secs&amp;gt;0&amp;lt;/resource-reload-check-secs&amp;gt;
+  &amp;lt;/container-descriptor&amp;gt;
+  &amp;lt;context-root&amp;gt;webstart_11g&amp;lt;/context-root&amp;gt;
+    &amp;lt;fast-swap&amp;gt;
+    &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt;
+    &amp;lt;refresh-interval&amp;gt;1&amp;lt;/refresh-interval&amp;gt;
+  &amp;lt;/fast-swap&amp;gt;
 &amp;lt;/weblogic-web-app&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
