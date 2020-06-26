@@ -4,8 +4,221 @@
     <link href="https://tkleiber.github.io/"/>
     <link rel="self" type="application/atom+xml" href="https://tkleiber.github.io/feed.xml"/>
     <subtitle>The development devil is in the implementation details!</subtitle>
-    <updated>2020-06-26T23:19:36Z</updated>
+    <updated>2020-06-27T00:43:28Z</updated>
     <id>tag:localhost,2020:06</id>
+    <entry>
+        <title>Fasten your Oracle Forms and Reports 11g Server start on Unix derivates</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2012/Fasten+your+Oracle+Forms+and+Reports+11g+Server+start+on+Unix+derivates.html"/>
+        <updated>2012-12-21T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2012/Fasten+your+Oracle+Forms+and+Reports+11g+Server+start+on+Unix+derivates.html</id>
+        <category term="Oracle"/>
+        <category term="Forms"/>
+        <category term="Reports"/>
+        <category term="Forms-11g"/>
+        <category term="Reports-11g"/>
+        <category term="WebLogic"/>
+        <category term="Managed-Server"/>
+        <category term="JDK"/>
+        <category term="JRE"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Do you see a slow start of your WebLogic managed server for Forms &amp;amp; Reports on Unix derivate? We have this problem on SuSe SLES 11 and Forms and Reports 11.1.2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In November I attended the annual &lt;a href=&quot;http://www.doag.org&quot;&gt;DOAG&lt;/a&gt; (German Oracle User Group) conference in Nuremberg. There I&amp;#8217;ve heare an interesting presentation from &lt;a href=&quot;http://jan-peter.me&quot;&gt;Jan-Peter Timmermann&lt;/a&gt; about &quot;Performance with Forms 11gR2 Weblogic 10.3.x&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;One snippet of the presentation was an bug in the jdk which slows down the start of WebLogic managed servers. It has to do with the random number generator during loading the OPSS Policy Provider for security. This issue is discussed in detail in this blog &lt;a href=&quot;http://www.itonguard.com/20090313/weblogic-starts-slow&quot; class=&quot;bare&quot;&gt;http://www.itonguard.com/20090313/weblogic-starts-slow&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;These are the relevant log files before as an example for forms:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code class=&quot;language-linenums&quot; data-lang=&quot;linenums&quot;&gt;####&amp;lt;21.12.2012 07:38 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;WebLogicServer&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356071911941&amp;gt; &amp;lt;BEA-000000&amp;gt; &amp;lt;WebLogic Server &quot;WLS_FORMS&quot; version: WebLogic Server 10.3.5.0  Fri Apr 1 20:20:06 PDT 2011 1398638  Copyright (c) 1995, 2009, Oracle and/or its affiliates. All rights reserved.&amp;gt;
+####&amp;lt;21.12.2012 07:38 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;IIOP&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356071912371&amp;gt; &amp;lt;BEA-002014&amp;gt; &amp;lt;IIOP subsystem enabled.&amp;gt;
+####&amp;lt;21.12.2012 07:40 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;Security&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356072024665&amp;gt; &amp;lt;BEA-090894&amp;gt; &amp;lt;Successfully loaded the OPSS Policy Provider using oracle.security.jps.internal.policystore.JavaPolicyProvider.&amp;gt;
+####&amp;lt;21.12.2012 07:41 Uhr MEZ&amp;gt; &amp;lt;Notice&amp;gt; &amp;lt;WebLogicServer&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;main&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356072069175&amp;gt; &amp;lt;BEA-000360&amp;gt; &amp;lt;Server started in RUNNING mode&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You see, that initializing the OPSS Policy Provider, which seems to use the random number generator, needs 2 minutes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now we will make a simple change in the Oracle Middleware JDK Runtime file (we have here SUN JDK 1.6.0_26 64bit)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;em&gt;&amp;lt;JDK Home&amp;gt;/jre/lib/security/java.security&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Comment the original line as followed, an add a the marked new line:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code class=&quot;language-linenums&quot; data-lang=&quot;linenums&quot;&gt;#securerandom.source=file:/dev/urandom
+securerandom.source=file:/dev/./urandom&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now see the results for forms:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code class=&quot;language-linenums&quot; data-lang=&quot;linenums&quot;&gt;####&amp;lt;21.12.2012 07:57 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;WebLogicServer&amp;gt; &amp;lt;sdu10037&amp;gt; &amp;lt;&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356073038615&amp;gt; &amp;lt;BEA-000000&amp;gt; &amp;lt;WebLogic Server &quot;WLS_FORMS&quot; version: WebLogic Server 10.3.5.0  Fri Apr 1 20:20:06 PDT 2011 1398638  Copyright (c) 1995, 2009, Oracle and/or its affiliates. All rights reserved.&amp;gt;
+####&amp;lt;21.12.2012 07:57 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;IIOP&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356073039121&amp;gt; &amp;lt;BEA-002014&amp;gt; &amp;lt;IIOP subsystem enabled.&amp;gt;
+####&amp;lt;21.12.2012 07:57 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;Security&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356073042034&amp;gt; &amp;lt;BEA-090894&amp;gt; &amp;lt;Successfully loaded the OPSS Policy Provider using oracle.security.jps.internal.policystore.JavaPolicyProvider.&amp;gt;
+####&amp;lt;21.12.2012 07:58 Uhr MEZ&amp;gt; &amp;lt;Notice&amp;gt; &amp;lt;WebLogicServer&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;main&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356073086151&amp;gt; &amp;lt;BEA-000360&amp;gt; &amp;lt;Server started in RUNNING mode&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You see the loading of OPSS Policy Provider takes now no relevant time and the startup time in our case decrease from 3 to 1 minute. We see same improvement for the reports managed server.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Remember, your mileage may vary if&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Your are not on a affected unix derivate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You use not an jdk with this bug. Unfortunatly in the blog is not described the bug number.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Save JDeveloper application workings sets in the application workspace - please vote for this enhancement request</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html"/>
+        <updated>2012-12-04T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html</id>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="JDeveloper"/>
+        <category term="Working-Sets"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you create for an example a big adf application you may want to add all of your entities to one base application for reuse labels, validation and and so on. If you have a big database schema than in short time you have a problem to find your entity.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In JDeveloper there is a neat feature to overcome this problem: working sets! With this you can easily group your entities or other artefacts in logical working set, eg. for a sub application. Unfortunatly working sets are saved per user. There are several description how to &lt;a href=&quot;https://blogs.oracle.com/jheadstart/entry/jdeveloper_11g_working_sets_ho.html&quot;&gt;share&lt;/a&gt; this between your team members. But a better way would to distinct between user and application working sets. Application working set should be saved consequently in the application workspace (jws).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Therefore I have created enhancent request bug 15841657 : SAVE APPLICATION WORKING SETS IN THE APPLICATION WORKSPACE JWS.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you find this useful too, then create a service request, that you need this feature too. Unfortunatly there seems no other voting function for enhancement requests on oracle.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Oracle Reports Designer 11g 64bit on Windows7 64bit very buggy - Use Reports 32bit instead!</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2012/Oracle+Reports+Designer+11g+64bit+on+Windows7+64bit+very+buggy+-+Use+Reports+32bit+instead.html"/>
+        <updated>2012-07-06T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2012/Oracle+Reports+Designer+11g+64bit+on+Windows7+64bit+very+buggy+-+Use+Reports+32bit+instead.html</id>
+        <category term="Oracle"/>
+        <category term="Reports"/>
+        <category term="Reports-11g"/>
+        <category term="32bit"/>
+        <category term="64bit"/>
+        <category term="Windows7"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As I have seen in Oracle certification matrix Forms &amp;amp; Reports 11g 64bit is supported under Windows7 64bit. So I tried to install it and to work with it. Unfortunately there are serious bugs in it, please read for more information &lt;a href=&quot;https://support.oracle.com/epmos/faces/ui/km/DocContentDisplay.jspx?id=1395965.1&quot;&gt;MOS Doc ID 1395965.1&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;olist arabic&quot;&gt;
+&lt;ol class=&quot;arabic&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;After starting Reports Builder, trying to open &quot;Data Model&quot; or &quot;Web Source&quot; will crash the Report Builder&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Impossibility to create a Query based on a Pluggable Data Source (PDS) in reports builder&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reports Builder spins on CPU (grabbing full power of one CPU) when &quot;Copy/Paste&quot; functionality is used in Layout Model&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For 1./2. is a workaround to disable all Pluggable Data Source (PDS) in cauprefs.ora, if you don&amp;#8217;t use that feature.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;But for 3. is no workaround besides to use Forms &amp;amp; Reports 11g 32bit!&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>TranslationHub 11g is only available as 32 bit - requires Forms 6 Reports 11g too in 32 bit for Development</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2012/TranslationHub+11g+is+only+available+as+32+bit+-+requires+Forms+%26+Reports+11g+too+in+32+bit+for+Development.html"/>
+        <updated>2012-06-07T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2012/TranslationHub+11g+is+only+available+as+32+bit+-+requires+Forms+%26+Reports+11g+too+in+32+bit+for+Development.html</id>
+        <category term="Oracle"/>
+        <category term="Forms"/>
+        <category term="Reports"/>
+        <category term="TranslationHub"/>
+        <category term="Forms-11g"/>
+        <category term="Reports-11g"/>
+        <category term="TranslationHub-11g"/>
+        <category term="32bit"/>
+        <category term="64bit"/>
+        <category term="Windows7"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I have done the whole may scripting silent installs of several developer tools. Among them was Fusion Middleware 11.1.2 Forms &amp;amp; Reports. I see that oracle certifies the 64bit installers on win7 64bit and so I have successfully script this after a lot of time. I want not speak about the many errors in silent installers here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As we use TranslationHub for translating our forms, menus and reports, I tried last weeks to script this and after this to batch import all my original and translated modules as 11g versions, as this is required before roll out fusion middleware to our users.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;First I have seen that TranslationHub is only available in 32bit as standalone version outside Fusion Middleware. Additional there is no silent installer available for this separate package. Asking support for 64bit version and silent install option results in two enhancement requests. Everybody who has created such an request before know, that he does not get this in some weeks, very likely he got it never. Fortunately our scripting boys have recorded and repackaged this installer. The 32bit version installs on win7 64bit and starts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;But now begins the really horror: I could not see forms and reports in the import wizards, my batch jobs fails. The 32bit TranslationHub version seems not find the 64bit Forms version. So the work begins again - I had to script the 32bit version of Fusion Middleware 11.1.2 Forms&amp;amp; Reports for the developers. Fortunately this works very similar to 64bit, and I complete this package in several ours. Now&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;One additional note for TranslationHub: You must ensure that the first entry in the path variable is an 32bit Oracle Client for successful connect to your TranslationHub repository.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Have released PMD Jdeveloper Extension 4.3</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2012/Have+released+PMD+Jdeveloper+Extension+4.3.html"/>
+        <updated>2012-03-12T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2012/Have+released+PMD+Jdeveloper+Extension+4.3.html</id>
+        <category term="Oracle"/>
+        <category term="JDeveloper"/>
+        <category term="PMD"/>
+        <category term="Extension"/>
+        <category term="JDeveloper-10g"/>
+        <category term="JDeveloper-11g"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Sorry for a time without new post - but I have finished now my work on integrating last &lt;a href=&quot;http://pmd.sourceforge.net&quot;&gt;PMD&lt;/a&gt; version 4.3 into JDeveloper.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This is available now for JDeveloper 10.1.3.x, 11.1.1.6 and 11.1.2.x. There is no new functionality, as the most work intensive part was the rewriting for 11.1.2.x. There has changed a lot of JDeveloper api functionality. Additional I tried to solve a class loader conflict in JDeveloper 11.1.1.x with the delivered libraries from PMD 4.3, but I was not succesful. Fortunatly Oracle JDeveloper product management solved this conflict in 11.1.1.6, so I can deliver at least the extension for this JDeveloper version.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Please give it a try, you can download it via the standard update center &quot;Open Source and Partners Extensions&quot; in JDveloper itself or directly from the &lt;a href=&quot;https://sourceforge.net/projects/pmd/files/pmd-jdeveloper/pmd-jdeveloper-4.3/&quot;&gt;PMD SourceForge.net Project Page&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
     <entry>
         <title>Oracle Forms 11 running as application in Java Webstart</title>
         <author>
@@ -16,7 +229,7 @@
         <id>https://tkleiber.github.io/blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</id>
         <category term="Oracle"/>
         <category term="Forms"/>
-        <category term="11g"/>
+        <category term="Forms-11g"/>
         <category term="Java"/>
         <category term="Webstart"/>
         <content type="html">
@@ -204,7 +417,7 @@
         <id>https://tkleiber.github.io/blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</id>
         <category term="Oracle"/>
         <category term="Forms"/>
-        <category term="10g"/>
+        <category term="Forms-10g"/>
         <category term="Java"/>
         <category term="Webstart"/>
         <content type="html">
