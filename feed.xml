@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Develish Development</title>
+    <title>AMAPAC.IO</title>
     <link href="https://tkleiber.github.io/"/>
     <link rel="self" type="application/atom+xml" href="https://tkleiber.github.io/feed.xml"/>
-    <subtitle>The development devil is in the implementation details!</subtitle>
-    <updated>2020-06-29T13:04:02Z</updated>
+    <subtitle>As Much As Possible As Code</subtitle>
+    <updated>2020-06-29T21:27:05Z</updated>
     <id>tag:localhost,2020:06</id>
     <entry>
         <title>Fasten your Oracle Forms and Reports 11g Server start on Unix derivates</title>
@@ -38,7 +38,7 @@
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code class=&quot;language-linenums&quot; data-lang=&quot;linenums&quot;&gt;####&amp;lt;21.12.2012 07:38 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;WebLogicServer&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356071911941&amp;gt; &amp;lt;BEA-000000&amp;gt; &amp;lt;WebLogic Server &quot;WLS_FORMS&quot; version: WebLogic Server 10.3.5.0  Fri Apr 1 20:20:06 PDT 2011 1398638  Copyright (c) 1995, 2009, Oracle and/or its affiliates. All rights reserved.&amp;gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;####&amp;lt;21.12.2012 07:38 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;WebLogicServer&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356071911941&amp;gt; &amp;lt;BEA-000000&amp;gt; &amp;lt;WebLogic Server &quot;WLS_FORMS&quot; version: WebLogic Server 10.3.5.0  Fri Apr 1 20:20:06 PDT 2011 1398638  Copyright (c) 1995, 2009, Oracle and/or its affiliates. All rights reserved.&amp;gt;
 ####&amp;lt;21.12.2012 07:38 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;IIOP&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356071912371&amp;gt; &amp;lt;BEA-002014&amp;gt; &amp;lt;IIOP subsystem enabled.&amp;gt;
 ####&amp;lt;21.12.2012 07:40 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;Security&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356072024665&amp;gt; &amp;lt;BEA-090894&amp;gt; &amp;lt;Successfully loaded the OPSS Policy Provider using oracle.security.jps.internal.policystore.JavaPolicyProvider.&amp;gt;
 ####&amp;lt;21.12.2012 07:41 Uhr MEZ&amp;gt; &amp;lt;Notice&amp;gt; &amp;lt;WebLogicServer&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;main&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356072069175&amp;gt; &amp;lt;BEA-000360&amp;gt; &amp;lt;Server started in RUNNING mode&amp;gt;&lt;/code&gt;&lt;/pre&gt;
@@ -58,7 +58,7 @@
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code class=&quot;language-linenums&quot; data-lang=&quot;linenums&quot;&gt;#securerandom.source=file:/dev/urandom
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;#securerandom.source=file:/dev/urandom
 securerandom.source=file:/dev/./urandom&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -67,7 +67,7 @@ securerandom.source=file:/dev/./urandom&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code class=&quot;language-linenums&quot; data-lang=&quot;linenums&quot;&gt;####&amp;lt;21.12.2012 07:57 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;WebLogicServer&amp;gt; &amp;lt;sdu10037&amp;gt; &amp;lt;&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356073038615&amp;gt; &amp;lt;BEA-000000&amp;gt; &amp;lt;WebLogic Server &quot;WLS_FORMS&quot; version: WebLogic Server 10.3.5.0  Fri Apr 1 20:20:06 PDT 2011 1398638  Copyright (c) 1995, 2009, Oracle and/or its affiliates. All rights reserved.&amp;gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;####&amp;lt;21.12.2012 07:57 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;WebLogicServer&amp;gt; &amp;lt;sdu10037&amp;gt; &amp;lt;&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356073038615&amp;gt; &amp;lt;BEA-000000&amp;gt; &amp;lt;WebLogic Server &quot;WLS_FORMS&quot; version: WebLogic Server 10.3.5.0  Fri Apr 1 20:20:06 PDT 2011 1398638  Copyright (c) 1995, 2009, Oracle and/or its affiliates. All rights reserved.&amp;gt;
 ####&amp;lt;21.12.2012 07:57 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;IIOP&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356073039121&amp;gt; &amp;lt;BEA-002014&amp;gt; &amp;lt;IIOP subsystem enabled.&amp;gt;
 ####&amp;lt;21.12.2012 07:57 Uhr MEZ&amp;gt; &amp;lt;Info&amp;gt; &amp;lt;Security&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;[ACTIVE] ExecuteThread: &apos;0&apos; for queue: &apos;weblogic.kernel.Default (self-tuning)&apos;&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356073042034&amp;gt; &amp;lt;BEA-090894&amp;gt; &amp;lt;Successfully loaded the OPSS Policy Provider using oracle.security.jps.internal.policystore.JavaPolicyProvider.&amp;gt;
 ####&amp;lt;21.12.2012 07:58 Uhr MEZ&amp;gt; &amp;lt;Notice&amp;gt; &amp;lt;WebLogicServer&amp;gt; &amp;lt;localhost&amp;gt; &amp;lt;WLS_FORMS&amp;gt; &amp;lt;main&amp;gt; &amp;lt;&amp;lt;WLS Kernel&amp;gt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;&amp;gt; &amp;lt;1356073086151&amp;gt; &amp;lt;BEA-000360&amp;gt; &amp;lt;Server started in RUNNING mode&amp;gt;&lt;/code&gt;&lt;/pre&gt;
