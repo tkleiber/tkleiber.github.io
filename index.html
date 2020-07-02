@@ -70,33 +70,27 @@
                             <div class="row">
                                 <div class="small-3 medium-1 large-1 columns">
 <div class="termin">
-                                        <div class="month">Dec</div>
-                                        <div class="date">21</div>
-                                        <div class="year">2012</div>
+                                        <div class="month">Sep</div>
+                                        <div class="date">20</div>
+                                        <div class="year">2013</div>
                                     </div>                                    
                                 </div><div class="small-9 medium-11 large-11 columns">
                                     <div>
                                         <h2>
-                                            <a href="/blog/2012/Fasten+your+Oracle+Forms+and+Reports+11g+Server+start+on+Unix+derivates.html">Fasten your Oracle Forms and Reports 11g Server start on Unix derivates</a>
+                                            <a href="/blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html">Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE</a>
                                         </h2><p>
                                             <span>
                                                 <a href="/tags/Oracle.html" class="label">Oracle</a>
                                             </span><span>
-                                                <a href="/tags/Forms.html" class="label">Forms</a>
+                                                <a href="/tags/JDeveloper.html" class="label">JDeveloper</a>
                                             </span><span>
-                                                <a href="/tags/Reports.html" class="label">Reports</a>
+                                                <a href="/tags/JDeveloper-11.2.html" class="label">JDeveloper-11.2</a>
                                             </span><span>
-                                                <a href="/tags/Forms-11g.html" class="label">Forms-11g</a>
+                                                <a href="/tags/ADF-Mobile.html" class="label">ADF-Mobile</a>
                                             </span><span>
-                                                <a href="/tags/Reports-11g.html" class="label">Reports-11g</a>
+                                                <a href="/tags/Android.html" class="label">Android</a>
                                             </span><span>
-                                                <a href="/tags/WebLogic.html" class="label">WebLogic</a>
-                                            </span><span>
-                                                <a href="/tags/Managed-Server.html" class="label">Managed-Server</a>
-                                            </span><span>
-                                                <a href="/tags/JDK.html" class="label">JDK</a>
-                                            </span><span>
-                                                <a href="/tags/JRE.html" class="label">JRE</a>
+                                                <a href="/tags/External-Tools.html" class="label">External-Tools</a>
                                             </span>
                                         </p>
                                     </div>
@@ -105,69 +99,116 @@
                         </header><div class="row">
                             <div class="columns">
                                 <div class="paragraph">
-<p>Do you see a slow start of your WebLogic managed server for Forms &amp; Reports on Unix derivate? We have this problem on SuSe SLES 11 and Forms and Reports 11.1.2.</p>
+<p>If you tired from the android emulator speed you may have read Chris Muir&#8217;s article <a href="https://blogs.oracle.com/onesizedoesntfitall/entry/adf_mobile_avoiding_the_android">ADF Mobile: Avoiding the Android Emulator with AndroVM</a>.</p>
 </div>
 <div class="paragraph">
-<p>In November I attended the annual <a href="http://www.doag.org">DOAG</a> (German Oracle User Group) conference in Nuremberg. There I&#8217;ve heare an interesting presentation from <a href="http://jan-peter.me">Jan-Peter Timmermann</a> about "Performance with Forms 11gR2 Weblogic 10.3.x".</p>
+<p>In the meantime the successor of <a href="http://androvm.org/blog/">AndroVM</a> is <a href="https://cloud.genymotion.com/">GENYMOTION</a>.</p>
 </div>
 <div class="paragraph">
-<p>One snippet of the presentation was an bug in the jdk which slows down the start of WebLogic managed servers. It has to do with the random number generator during loading the OPSS Policy Provider for security. This issue is discussed in detail in this blog <a href="http://www.itonguard.com/20090313/weblogic-starts-slow" class="bare">http://www.itonguard.com/20090313/weblogic-starts-slow</a>.</p>
+<p>If you have configured the port forwarding section from the AndroVM or use GENYMOTION, then you have to deploy your ADF Mobile app first to apk-File and manually install this into to the virtual android image via the android sdk command adb. The virtual Android device must be started to do this.</p>
 </div>
 <div class="paragraph">
-<p>These are the relevant log files before as an example for forms:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">####&lt;21.12.2012 07:38 Uhr MEZ&gt; &lt;Info&gt; &lt;WebLogicServer&gt; &lt;localhost&gt; &lt;&gt; &lt;[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'&gt; &lt;&gt; &lt;&gt; &lt;&gt; &lt;1356071911941&gt; &lt;BEA-000000&gt; &lt;WebLogic Server "WLS_FORMS" version: WebLogic Server 10.3.5.0  Fri Apr 1 20:20:06 PDT 2011 1398638  Copyright (c) 1995, 2009, Oracle and/or its affiliates. All rights reserved.&gt;
-####&lt;21.12.2012 07:38 Uhr MEZ&gt; &lt;Info&gt; &lt;IIOP&gt; &lt;localhost&gt; &lt;WLS_FORMS&gt; &lt;[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'&gt; &lt;&lt;WLS Kernel&gt;&gt; &lt;&gt; &lt;&gt; &lt;1356071912371&gt; &lt;BEA-002014&gt; &lt;IIOP subsystem enabled.&gt;
-####&lt;21.12.2012 07:40 Uhr MEZ&gt; &lt;Info&gt; &lt;Security&gt; &lt;localhost&gt; &lt;WLS_FORMS&gt; &lt;[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'&gt; &lt;&lt;WLS Kernel&gt;&gt; &lt;&gt; &lt;&gt; &lt;1356072024665&gt; &lt;BEA-090894&gt; &lt;Successfully loaded the OPSS Policy Provider using oracle.security.jps.internal.policystore.JavaPolicyProvider.&gt;
-####&lt;21.12.2012 07:41 Uhr MEZ&gt; &lt;Notice&gt; &lt;WebLogicServer&gt; &lt;localhost&gt; &lt;WLS_FORMS&gt; &lt;main&gt; &lt;&lt;WLS Kernel&gt;&gt; &lt;&gt; &lt;&gt; &lt;1356072069175&gt; &lt;BEA-000360&gt; &lt;Server started in RUNNING mode&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You see, that initializing the OPSS Policy Provider, which seems to use the random number generator, needs 2 minutes.</p>
-</div>
-<div class="paragraph">
-<p>Now we will make a simple change in the Oracle Middleware JDK Runtime file (we have here SUN JDK 1.6.0_26 64bit)</p>
-</div>
-<div class="paragraph">
-<p><em>&lt;JDK Home&gt;/jre/lib/security/java.security</em></p>
-</div>
-<div class="paragraph">
-<p>Comment the original line as followed, an add a the marked new line:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">#securerandom.source=file:/dev/urandom
-securerandom.source=file:/dev/./urandom</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now see the results for forms:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">####&lt;21.12.2012 07:57 Uhr MEZ&gt; &lt;Info&gt; &lt;WebLogicServer&gt; &lt;sdu10037&gt; &lt;&gt; &lt;[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'&gt; &lt;&gt; &lt;&gt; &lt;&gt; &lt;1356073038615&gt; &lt;BEA-000000&gt; &lt;WebLogic Server "WLS_FORMS" version: WebLogic Server 10.3.5.0  Fri Apr 1 20:20:06 PDT 2011 1398638  Copyright (c) 1995, 2009, Oracle and/or its affiliates. All rights reserved.&gt;
-####&lt;21.12.2012 07:57 Uhr MEZ&gt; &lt;Info&gt; &lt;IIOP&gt; &lt;localhost&gt; &lt;WLS_FORMS&gt; &lt;[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'&gt; &lt;&lt;WLS Kernel&gt;&gt; &lt;&gt; &lt;&gt; &lt;1356073039121&gt; &lt;BEA-002014&gt; &lt;IIOP subsystem enabled.&gt;
-####&lt;21.12.2012 07:57 Uhr MEZ&gt; &lt;Info&gt; &lt;Security&gt; &lt;localhost&gt; &lt;WLS_FORMS&gt; &lt;[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'&gt; &lt;&lt;WLS Kernel&gt;&gt; &lt;&gt; &lt;&gt; &lt;1356073042034&gt; &lt;BEA-090894&gt; &lt;Successfully loaded the OPSS Policy Provider using oracle.security.jps.internal.policystore.JavaPolicyProvider.&gt;
-####&lt;21.12.2012 07:58 Uhr MEZ&gt; &lt;Notice&gt; &lt;WebLogicServer&gt; &lt;localhost&gt; &lt;WLS_FORMS&gt; &lt;main&gt; &lt;&lt;WLS Kernel&gt;&gt; &lt;&gt; &lt;&gt; &lt;1356073086151&gt; &lt;BEA-000360&gt; &lt;Server started in RUNNING mode&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You see the loading of OPSS Policy Provider takes now no relevant time and the startup time in our case decrease from 3 to 1 minute. We see same improvement for the reports managed server.</p>
-</div>
-<div class="paragraph">
-<p>Remember, your mileage may vary if</p>
+<p>To do the last step from JDeveloper IDE directly with 1 click following steps help to reach this:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Your are not on a affected unix derivate.</p>
+<p>Convention over configuration: Name all of your deployment profiles for android with the same name, eg. all adf mobile samples use the name "ANDROID_MOBILE_NATIVE_archive1"</p>
 </li>
 <li>
-<p>You use not an jdk with this bug. Unfortunatly in the blog is not described the bug number.</p>
+<p>Create in JDeveloper an external tool</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select from the menu <em>Tools &gt; External Tools &gt; New</em></p>
+</li>
+<li>
+<p>Select <em>Tool Type: External Program</em></p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20Select%20Tool%20Type%20External%20Program.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   Select Tool Type External Program">
+</div>
+</div>
+</li>
+<li>
+<p>Select Program Executable: adb.exe from your Android SDK.
+Enter Arguments: install ${workspace.dir}\deploy\ANDROID_MOBILE_NATIVE_archive1\${file.name.no.ext}.apk</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20Select%20Program%20Executable.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   Select Program Executable">
+</div>
+</div>
+</li>
+<li>
+<p>Enter Caption for Menu Items, eg.: Install apk file to virtual Android device</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20Enter%20Caption%20for%20Menu%20Items.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   Enter Caption for Menu Items">
+</div>
+</div>
+</li>
+<li>
+<p>Select Add Items to Menus: Navigator Context Menu</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20Select%20Add%20Items%20to%20Menus.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   Select Add Items to Menus">
+</div>
+</div>
+</li>
+<li>
+<p>Select Enabled When Specific File Types are selected: Application</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20Select%20Enabled%20When%20Specific%20File%20Types%20are%20selected.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   Select Enabled When Specific File Types are selected">
+</div>
+</div>
 </li>
 </ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Now you first deploy your Application to an Android package:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20deploy%20your%20Application%20to%20an%20Android%20package.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   deploy your Application to an Android package">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20deploy%20your%20Application%20to%20an%20Android%20package%202.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   deploy your Application to an Android package 2">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20deploy%20your%20Application%20to%20an%20Android%20package%203.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   deploy your Application to an Android package 3">
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can install this via application context menu directly to your virtual android device:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20install%20this%20via%20application%20context%20menu%20directly%20to%20your%20virtual%20android%20device.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   install this via application context menu directly to your virtual android device">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20install%20this%20via%20application%20context%20menu%20directly%20to%20your%20virtual%20android%20device%202.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   install this via application context menu directly to your virtual android device 2">
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can test your app in the virtual Android device:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Deploy%20your%20ADF%20Mobile%20App%20to%20a%20virtual%20Android%20device%20from%20JDeveloper%20IDE%20-%20test%20your%20app%20in%20the%20virtual%20Android%20device.png" alt="Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE   test your app in the virtual Android device">
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it!</p>
 </div>
                             </div>
                         </div>
@@ -180,23 +221,27 @@ securerandom.source=file:/dev/./urandom</code></pre>
                             <div class="row">
                                 <div class="small-3 medium-1 large-1 columns">
 <div class="termin">
-                                        <div class="month">Dec</div>
-                                        <div class="date">04</div>
-                                        <div class="year">2012</div>
+                                        <div class="month">Aug</div>
+                                        <div class="date">30</div>
+                                        <div class="year">2013</div>
                                     </div>                                    
                                 </div><div class="small-9 medium-11 large-11 columns">
                                     <div>
                                         <h2>
-                                            <a href="/blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html">Save JDeveloper application workings sets in the application workspace - please vote for this enhancement request</a>
+                                            <a href="/blog/2013/Have+released+PMD+Jdeveloper+Extension+5.0.5.html">Have released PMD JDeveloper Extension 5.0.5</a>
                                         </h2><p>
                                             <span>
                                                 <a href="/tags/Oracle.html" class="label">Oracle</a>
                                             </span><span>
-                                                <a href="/tags/ADF.html" class="label">ADF</a>
-                                            </span><span>
                                                 <a href="/tags/JDeveloper.html" class="label">JDeveloper</a>
                                             </span><span>
-                                                <a href="/tags/Working-Sets.html" class="label">Working-Sets</a>
+                                                <a href="/tags/JDeveloper-11.html" class="label">JDeveloper-11</a>
+                                            </span><span>
+                                                <a href="/tags/JDeveloper-12.html" class="label">JDeveloper-12</a>
+                                            </span><span>
+                                                <a href="/tags/PMD.html" class="label">PMD</a>
+                                            </span><span>
+                                                <a href="/tags/Extension.html" class="label">Extension</a>
                                             </span>
                                         </p>
                                     </div>
@@ -205,16 +250,21 @@ securerandom.source=file:/dev/./urandom</code></pre>
                         </header><div class="row">
                             <div class="columns">
                                 <div class="paragraph">
-<p>If you create for an example a big adf application you may want to add all of your entities to one base application for reuse labels, validation and and so on. If you have a big database schema than in short time you have a problem to find your entity.</p>
+<p>I have finished now my work on integrating last <a href="http://pmd.sourceforge.net/">PMD</a> version 5.0.5 into JDeveloper.</p>
 </div>
 <div class="paragraph">
-<p>In JDeveloper there is a neat feature to overcome this problem: working sets! With this you can easily group your entities or other artefacts in logical working set, eg. for a sub application. Unfortunatly working sets are saved per user. There are several description how to <a href="https://blogs.oracle.com/jheadstart/entry/jdeveloper_11g_working_sets_ho.html">share</a> this between your team members. But a better way would to distinct between user and application working sets. Application working set should be saved consequently in the application workspace (jws).</p>
+<p>This is available now for JDeveloper 11.1.1.6 upwards, 11.1.2.x. and 12.1.2. There is no new functionality, as the most work intensive part was the rewriting for PMD 5. There has changed a lot of api functionality.</p>
 </div>
 <div class="paragraph">
-<p>Therefore I have created enhancent request bug 15841657 : SAVE APPLICATION WORKING SETS IN THE APPLICATION WORKSPACE JWS.</p>
+<p>Please give it a try, you can download it via the standard update center "Open Source and Partners Extensions" in JDveloper itself</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Have%20released%20PMD%20JDeveloper%20Extension%205.0.5%20-%20update_center_11-1-2-5050.png" alt="Have released PMD JDeveloper Extension 5.0.5   update center 11 1 2 5050">
+</div>
 </div>
 <div class="paragraph">
-<p>If you find this useful too, then create a service request, that you need this feature too. Unfortunatly there seems no other voting function for enhancement requests on oracle.</p>
+<p>or directly from the <a href="https://sourceforge.net/projects/pmd/files/pmd-jdeveloper/pmd-jdeveloper-5.0.5/">PMD SourceForge.net Project Page</a>.</p>
 </div>
                             </div>
                         </div>
@@ -228,26 +278,30 @@ securerandom.source=file:/dev/./urandom</code></pre>
                                 <div class="small-3 medium-1 large-1 columns">
 <div class="termin">
                                         <div class="month">Jul</div>
-                                        <div class="date">06</div>
-                                        <div class="year">2012</div>
+                                        <div class="date">02</div>
+                                        <div class="year">2013</div>
                                     </div>                                    
                                 </div><div class="small-9 medium-11 large-11 columns">
                                     <div>
                                         <h2>
-                                            <a href="/blog/2012/Oracle+Reports+Designer+11g+64bit+on+Windows7+64bit+very+buggy+-+Use+Reports+32bit+instead.html">Oracle Reports Designer 11g 64bit on Windows7 64bit very buggy - Use Reports 32bit instead!</a>
+                                            <a href="/blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html">Write ADF static code analysis rules with PMD and running these in JDeveloper</a>
                                         </h2><p>
                                             <span>
                                                 <a href="/tags/Oracle.html" class="label">Oracle</a>
                                             </span><span>
-                                                <a href="/tags/Reports.html" class="label">Reports</a>
+                                                <a href="/tags/JDeveloper.html" class="label">JDeveloper</a>
                                             </span><span>
-                                                <a href="/tags/Reports-11g.html" class="label">Reports-11g</a>
+                                                <a href="/tags/JDeveloper-11.html" class="label">JDeveloper-11</a>
                                             </span><span>
-                                                <a href="/tags/32bit.html" class="label">32bit</a>
+                                                <a href="/tags/ADF.html" class="label">ADF</a>
                                             </span><span>
-                                                <a href="/tags/64bit.html" class="label">64bit</a>
+                                                <a href="/tags/ADF-11.html" class="label">ADF-11</a>
                                             </span><span>
-                                                <a href="/tags/Windows7.html" class="label">Windows7</a>
+                                                <a href="/tags/PMD.html" class="label">PMD</a>
+                                            </span><span>
+                                                <a href="/tags/External-Tools.html" class="label">External-Tools</a>
+                                            </span><span>
+                                                <a href="/tags/Static-Code-Analysis.html" class="label">Static-Code-Analysis</a>
                                             </span>
                                         </p>
                                     </div>
@@ -256,26 +310,149 @@ securerandom.source=file:/dev/./urandom</code></pre>
                         </header><div class="row">
                             <div class="columns">
                                 <div class="paragraph">
-<p>As I have seen in Oracle certification matrix Forms &amp; Reports 11g 64bit is supported under Windows7 64bit. So I tried to install it and to work with it. Unfortunately there are serious bugs in it, please read for more information <a href="https://support.oracle.com/epmos/faces/ui/km/DocContentDisplay.jspx?id=1395965.1">MOS Doc ID 1395965.1</a>:</p>
+<p>Do you know, that PMD can analyse XML files since version 5? Many of ADF files are XML configuration files - wouldn&#8217;t it be a good idea to create some static code analysis rules for ADF too?</p>
+</div>
+<div class="paragraph">
+<p>Unfortunatly oracle configuration files in most times create references to dtd&#8217;s, which are not exist anywhere in the path. Till PMD 5.0.1 such files results in errors, as PMD tries to validate this doctype. I have switched of this validation in PMD release <a href="http://sourceforge.net/p/pmd/bugs/1056">5.0.2</a></p>
+</div>
+<div class="paragraph">
+<p>Following article requires configuration of PMD as described in my blog <a href="blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">PMD Integration with JDeveloper through Ant External Tools</a>.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s start from the beginning.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>After starting Reports Builder, trying to open "Data Model" or "Web Source" will crash the Report Builder</p>
+<p>At the moment PMD only provide XML check&#8217;s against files with the extension *.xml, there is a feature request to <a href="http://sourceforge.net/p/pmd/feature-requests/568">change</a> this behaviour. So at the moment, we have to change the code by ourself to reach the result. Load the the <a href="http://sourceforge.net/projects/pmd/files/pmd/5.0.4/pmd-src-5.0.4.zip/download">5.0.4</a> source code.</p>
 </li>
 <li>
-<p>Impossibility to create a Query based on a Pluggable Data Source (PDS) in reports builder</p>
+<p>Look for the file src\main\java\net\sourceforge\pmd\lang\Language.java and replace the line</p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-java" data-lang="java">XML("XML", null, "xml", XmlRuleChainVisitor.class, "xml");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-java" data-lang="java">XML("XML", null, "xml", XmlRuleChainVisitor.class, "xml", "jws", "jpr", "cpx", "xcfg", "dcx", "jpx");&lt;/li&gt;</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Reports Builder spins on CPU (grabbing full power of one CPU) when "Copy/Paste" functionality is used in Layout Model</p>
+<p>Change to directory pmd-src-5.0.4</p>
+</li>
+<li>
+<p>set JAVA_HOME, e.g. to your 1.6 JDeveloper jdk</p>
+</li>
+<li>
+<p>run "mvn clean package", I have succesfully used maven 2.2.1 from &lt;JDev-Home&gt;\jdeveloper\apache-maven-2.2.1\bin&lt;/li&gt;
+&lt;li&gt;If you don&#8217;t need further extensions, you can instead running steps 2 till 5 the resulting pmd-5.0.4.jar from my side.</p>
+</li>
+<li>
+<p>Replace the file pmd-5.0.4.jar in pmd-bin-5.0.4\lib</p>
+</li>
+<li>
+<p>Now is the time to create the first adf static code analysis rule. In the adf architecture course I attend, there was a rule, that the taskflow behaviour "No controller transaction"
+should not be mixed with the other option of this selection list</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Write%20ADF%20static%20code%20analysis%20rules%20with%20PMD%20and%20running%20these%20in%20JDeveloper%20-%20No%20controller%20transaction.png" alt="Write ADF static code analysis rules with PMD and running these in JDeveloper   No controller transaction">
+</div>
+</div>
+<div class="paragraph">
+<p>In the sourcecode this property is described through the absence of the node adfc-config/task-flow-definition/transaction, the other options create this node and additional child nodes, here e.g. for the option "Always create new transaction"</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Write%20ADF%20static%20code%20analysis%20rules%20with%20PMD%20and%20running%20these%20in%20JDeveloper%20-%20Always%20create%20new%20transaction.png" alt="Write ADF static code analysis rules with PMD and running these in JDeveloper   Always create new transaction">
+</div>
+</div>
+</li>
+<li>
+<p>In PMD you can create two kind of rules: Java and XPath. For our xml Files XPath should be the efficient option. We have to put our configuraration e.g. in file my_pmd_rules.xml in the same directory as pmd.xml in the last <a href="blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">blog</a>. For the above rule the XPath query in line 14 find nodes, which does not contain the transaction node</p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0"?&gt;
+&lt;ruleset name="Oracle ADF rules" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd"&gt;
+  &lt;description&gt;This ruleset checks Oracle ADF code for bad stuff&lt;/description&gt;
+    &lt;!-- ADF Rules ############################################################################################### --&gt;
+  &lt;rule name="OracleAdfTaskflowShouldNotHaveNoControllerTransaktion" since="5.0" language="xml" message='ADF tasklows should normally not contain transaktion behavior "No Controller Transaction"'&gt;
+    &lt;priority&gt;1&lt;/priority&gt;
+    &lt;properties&gt;
+      &lt;property name="xpath"&gt;
+        &lt;value&gt;
+          &lt;![CDATA[
+            adfc-config/task-flow-definition[not(transaction)]
+          ]]&gt;
+         &lt;/value&gt;
+      &lt;/property&gt;
+    &lt;/properties&gt;
+  &lt;/rule&gt;
+&lt;/ruleset&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Now we have to change the configuration file pmd.xml from the last blog in the marked lines to call our new configuration and run this on files with defined Extensions</p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="windows-1252" ?&gt;
+&lt;project xmlns="antlib:org.apache.tools.ant" name="Project1" default="all" basedir="."&gt;
+  &lt;path id="classpathForPMD"&gt;
+   &lt;fileset dir="pmd-bin-5.0.4\lib"&gt;
+     &lt;include name="**/**.jar"/&gt;
+   &lt;/fileset&gt;
+  &lt;/path&gt;
+  &lt;taskdef name="pmd" classpathref="classpathForPMD" classname="net.sourceforge.pmd.ant.PMDTask"/&gt;
+  &lt;target name="pmdAll"&gt;
+    &lt;echo message="PMD is running on directory ${dir}" level="info"/&gt;
+    &lt;pmd rulesetfiles="my_pmd_rules.xml" failOnRuleViolation="true" minimumPriority="1"&gt;
+      &lt;fileset dir="${dir}"&gt;
+        &lt;include name="**/*.java"/&gt;
+        &lt;include name="**/*.xml"/&gt;
+        &lt;include name="**/*.jws"/&gt;
+        &lt;include name="**/*.jpr"/&gt;
+        &lt;include name="**/*.cpx"/&gt;
+        &lt;include name="**/*.xcfg"/&gt;
+        &lt;include name="**/*.dcx"/&gt;
+        &lt;include name="**/*.jpx"/&gt;
+      &lt;/fileset&gt;
+    &lt;/pmd&gt;
+  &lt;/target&gt;
+&lt;/project&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Now call again pmd from the Fusion Order Demo Application StoreFrontModule</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Write%20ADF%20static%20code%20analysis%20rules%20with%20PMD%20and%20running%20these%20in%20JDeveloper%20-%20Now%20call%20again%20pmd%20from%20the%20Fusion%20Order%20Demo%20Application.png" alt="Write ADF static code analysis rules with PMD and running these in JDeveloper   Now call again pmd from the Fusion Order Demo Application">
+</div>
+</div>
+</li>
+<li>
+<p>You can see the results for xml in the message pane. Unfortunatly the direct jump to violated files does not work at the moment as pmd delivers for every xml violation -1 as line, but I have created an <a href="https://sourceforge.net/p/pmd/bugs/1054/">bug</a> for this</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Write%20ADF%20static%20code%20analysis%20rules%20with%20PMD%20and%20running%20these%20in%20JDeveloper%20-%20results%20for%20xml%20in%20the%20message%20pane.png" alt="Write ADF static code analysis rules with PMD and running these in JDeveloper   results for xml in the message pane">
+</div>
+</div>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>For 1./2. is a workaround to disable all Pluggable Data Source (PDS) in cauprefs.ora, if you don&#8217;t use that feature.</p>
+<p>That&#8217;s it.</p>
 </div>
 <div class="paragraph">
-<p>But for 3. is no workaround besides to use Forms &amp; Reports 11g 32bit!</p>
+<p>Maybe somebody has an idea, where we can build an extension exchange for ADF rules, e.g. for creating rules for <a href="http://www.oracle.com/technetwork/developer-tools/adf/learnmore/adf-code-guidelines-v1-00-1845659.pdf">ADF Code Guidelines v1.00</a> or <a href="http://www.oracle.com/technetwork/developer-tools/adf/learnmore/adf-naming-layout-guidelines-v2-00-1904828.pdf">ADF Naming and Project Layout Guidelines v2.00</a>.</p>
+</div>
+<div class="paragraph">
+<p>Remember: you are not restricted to ADF files, e.g. we do checks to for JDeveloper application (jws) and project files (jpr) as well, as this are xml files too. The configuration you see already in step 2.</p>
 </div>
                             </div>
                         </div>

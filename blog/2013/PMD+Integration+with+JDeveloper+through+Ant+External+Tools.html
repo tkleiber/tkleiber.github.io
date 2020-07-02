@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AMAPAC.IO</title>
+        <link rel="stylesheet" href="/css/asciidoctor.css"/>
+        <link rel="stylesheet" href="/css/foundation.css"/>
+        <link rel="stylesheet" href="/css/social_foundicons.css"/>
+        <link rel="stylesheet" href="/css/prettify.css"/>
+        <link rel="stylesheet" href="/css/desert.css"/>
+        <link rel="stylesheet" href="/css/app.css"/>
+        
+        <script src="/js/vendor/modernizr.js"></script>
+        <script src="/js/app.js"></script>
+        
+    </head><body class="antialiased" onload="prettyPrint();">
+<div class="row">
+            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+                <div class="title-box">
+                    <div class="title-content">
+                        <h1>AMAPAC.IO</h1>
+                        <p>As Much As Possible As Code</p>
+                        <p class="title-contact">
+                            <a href="https://twitter.com/develishdevelop">
+                                <i class="foundicon-twitter"></i>
+                            </a><a href="https://www.linkedin.com/in/kleiber">
+                                <i class="foundicon-linkedin"></i>
+                            </a><a href="https://www.slideshare.net/tkleiber">
+                                <i class="foundicon-slideshare"></i>
+                            </a><a href="https://github.com/tkleiber">
+                                <i class="foundicon-github"></i>
+                            </a><a href="https://develishdevelopment.wordpress.com">
+                                <i class="foundicon-wordpress"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div><div class="sticky contain-to-grid">
+                    <nav class="top-bar" data-topbar="" role="navigation">
+                        <ul class="title-area">
+                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </li>
+                        </ul><section class="top-bar-section">
+                            <ul class="left">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li><li>
+                                    <a href="/archive.html">Archive</a>
+                                </li><li class="has-dropdown">
+                                    <a href="#">Projects</a><ul class="dropdown">
+                                        
+                                    </ul>
+                                </li><li>
+                                    <a href="/about.html">About</a>
+                                </li><li>
+                                    <a href="/feed.xml">Subscribe</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </div>        <div>
+<div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Jun</div>
+                                        <div class="date">26</div>
+                                        <div class="year">2013</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">PMD Integration with JDeveloper through Ant External Tools</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
+                                            </span><span>
+                                                <a href="/tags/JDeveloper.html" class="label">JDeveloper</a>
+                                            </span><span>
+                                                <a href="/tags/JDeveloper-11.html" class="label">JDeveloper-11</a>
+                                            </span><span>
+                                                <a href="/tags/PMD.html" class="label">PMD</a>
+                                            </span><span>
+                                                <a href="/tags/External-Tools.html" class="label">External-Tools</a>
+                                            </span><span>
+                                                <a href="/tags/Static-Code-Analysis.html" class="label">Static-Code-Analysis</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div class="paragraph">
+<p>In the past I read following blogs from Shay Shmeltzer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://blogs.oracle.com/shay/entry/checkstyle_integration_with_jdeveloper_through">CheckStyle Integration with JDeveloper through Ant External Tools</a></p>
+</li>
+<li>
+<p><a href="https://blogs.oracle.com/shay/entry/findbugs_integration_with_jdeveloper">FindBugs integration with JDeveloper</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Now (after little code <a href="http://sourceforge.net/p/pmd/bugs/1055/">change</a> in pmd) this integration is possible. I use here JDeveloper 11.2.0.4, with other versions this should be very similar. Now let&#8217;s start:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new folder</p>
+</li>
+<li>
+<p><a href="http://sourceforge.net/projects/pmd/files/pmd/5.0.4/pmd-bin-5.0.4.zip/download"">Download</a> PMD 5.0.4</p>
+</li>
+<li>
+<p>Extract the zip file into the created folder</p>
+</li>
+<li>
+<p>Create a file pmd.xml into the created folder</p>
+</li>
+<li>
+<p>Enter following code into the file pmd.xml:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="windows-1252" ?&gt;
+&lt;project xmlns="antlib:org.apache.tools.ant" name="Project1" default="all" basedir="."&gt;
+  &lt;path id="classpathForPMD"&gt;
+    &lt;fileset dir="pmd-bin-5.0.4\lib"&gt;
+      &lt;include name="**/**.jar"/&gt;
+    &lt;/fileset&gt;
+  &lt;/path&gt;
+  &lt;taskdef name="pmd" classpathref="classpathForPMD" classname="net.sourceforge.pmd.ant.PMDTask"/&gt;
+  &lt;target name="pmdAll"&gt;
+    &lt;echo message="PMD is running on directory ${dir}" level="info"/&gt;
+    &lt;pmd rulesetfiles="rulesets/internal/dogfood.xml" failOnRuleViolation="true" minimumPriority="1"&gt;
+      &lt;fileset dir="${dir}"&gt;
+        &lt;include name="**/src/**/*.java"/&gt;
+      &lt;/fileset&gt;
+    &lt;/pmd&gt;
+  &lt;/target&gt;
+  &lt;target name="pmd"&gt;
+    &lt;echo message="PMD is running on file ${dir}\${file}" level="info"/&gt;
+    &lt;pmd rulesetfiles="rulesets/internal/dogfood.xml" failOnRuleViolation="true"&gt;
+      &lt;fileset dir="${dir}"&gt;
+        &lt;include name="${file}"/&gt;
+      &lt;/fileset&gt;
+    &lt;/pmd&gt;
+  &lt;/target&gt;
+&lt;/project&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Select <em>Tools &gt; External Tools</em> from the JDeveloper menu</p>
+</li>
+<li>
+<p>Press Button <b class="button">New</b></p>
+</li>
+<li>
+<p>Select <em>Tool Type: Apache Ant</em></p>
+</li>
+<li>
+<p>Select your created pmd.xml file in <em>Ant Buildfile:</em></p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/PMD%20Integration%20with%20JDeveloper%20through%20Ant%20External%20Tools%20-%20Shuttle%20target%20pmdAll%20to%20SelectedTargets.png" alt="PMD Integration with JDeveloper through Ant External Tools   Shuttle target pmdAll to SelectedTargets">
+</div>
+</div>
+</li>
+<li>
+<p>Shuttle target pmdAll to SelectedTargets</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/PMD%20Integration%20with%20JDeveloper%20through%20Ant%20External%20Tools%20-%20Select%20your%20created%20pmd%20xml%20file%20in%20Ant%20Buildfile.png" alt="PMD Integration with JDeveloper through Ant External Tools   Select your created pmd xml file in Ant Buildfile">
+</div>
+</div>
+</li>
+<li>
+<p>Add Property dir with value ${file.dir}</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/PMD%20Integration%20with%20JDeveloper%20through%20Ant%20External%20Tools%20-%20Add%20Property%20dir%20with%20value%20file%20dir.png" alt="PMD Integration with JDeveloper through Ant External Tools   Add Property dir with value file dir">
+</div>
+</div>
+</li>
+<li>
+<p>Skip the <em>Options</em> and <em>Process</em> Step to leave the defaults</p>
+</li>
+<li>
+<p>Add the lib directory of pmd as additional classpath entry</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/PMD%20Integration%20with%20JDeveloper%20through%20Ant%20External%20Tools%20-%20Add%20the%20lib%20directory%20of%20pmd%20as%20additional%20classpath%20entry.png" alt="PMD Integration with JDeveloper through Ant External Tools   Add the lib directory of pmd as additional classpath entry">
+</div>
+</div>
+</li>
+<li>
+<p>Enter Caption and Icon as you want</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/PMD%20Integration%20with%20JDeveloper%20through%20Ant%20External%20Tools%20-%20Enter%20Caption%20and%20Icon%20as%20you%20want.png" alt="PMD Integration with JDeveloper through Ant External Tools   Enter Caption and Icon as you want">
+</div>
+</div>
+</li>
+<li>
+<p>Add the tool to the <em>Navigator Context Menu</em> and <em>Main Toolbar</em> and do not forget to set <em>Log Output to Messages Log</em></p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/PMD%20Integration%20with%20JDeveloper%20through%20Ant%20External%20Tools%20-%20Add%20the%20tool.png" alt="PMD Integration with JDeveloper through Ant External Tools   Add the tool">
+</div>
+</div>
+</li>
+<li>
+<p>Press <b class="button">Next</b> and <b class="button">Finish</b>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now you can call pmd e.g. from the <a href="http://www.oracle.com/technetwork/developer-tools/jdev/index-095536.html">fusion order demo application</a>:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/PMD%20Integration%20with%20JDeveloper%20through%20Ant%20External%20Tools%20-%20call%20pmd%20e.g.%20from%20the%20fusion%20order%20demo%20application.png" alt="PMD Integration with JDeveloper through Ant External Tools   call pmd e.g. from the fusion order demo application">
+</div>
+</div>
+<div class="paragraph">
+<p>You see the results of the ant process in the message pane and you can click on the link to open the file and jump to the rule violation:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/PMD%20Integration%20with%20JDeveloper%20through%20Ant%20External%20Tools%20-%20results%20of%20the%20ant%20process%20in%20the%20message%20pane.png" alt="PMD Integration with JDeveloper through Ant External Tools   results of the ant process in the message pane">
+</div>
+</div>
+<div class="paragraph">
+<p>In upcoming blogs I will show you how you can define your own rulesets (replacing the ones in pmd.xml) and how to use it with any kind of xml files, eg. jws, jpr, xcfg etc.</p>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>            
+        </div>
+<div class="row">
+            <div class="small-12 small-text-center">
+                <p class="muted credit">
+                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
+                </p>
+            </div>
+        </div>        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/vendor/prettify.js"></script>
+        <script>
+            $(document).foundation();
+            $(function() {
+               hljs.tabReplace = "  ";
+               hljs.initHighlighting();
+            });
+        </script>
+        
+    </body>
+</html>

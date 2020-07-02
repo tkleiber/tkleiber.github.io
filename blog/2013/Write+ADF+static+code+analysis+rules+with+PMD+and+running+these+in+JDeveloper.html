@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AMAPAC.IO</title>
+        <link rel="stylesheet" href="/css/asciidoctor.css"/>
+        <link rel="stylesheet" href="/css/foundation.css"/>
+        <link rel="stylesheet" href="/css/social_foundicons.css"/>
+        <link rel="stylesheet" href="/css/prettify.css"/>
+        <link rel="stylesheet" href="/css/desert.css"/>
+        <link rel="stylesheet" href="/css/app.css"/>
+        
+        <script src="/js/vendor/modernizr.js"></script>
+        <script src="/js/app.js"></script>
+        
+    </head><body class="antialiased" onload="prettyPrint();">
+<div class="row">
+            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+                <div class="title-box">
+                    <div class="title-content">
+                        <h1>AMAPAC.IO</h1>
+                        <p>As Much As Possible As Code</p>
+                        <p class="title-contact">
+                            <a href="https://twitter.com/develishdevelop">
+                                <i class="foundicon-twitter"></i>
+                            </a><a href="https://www.linkedin.com/in/kleiber">
+                                <i class="foundicon-linkedin"></i>
+                            </a><a href="https://www.slideshare.net/tkleiber">
+                                <i class="foundicon-slideshare"></i>
+                            </a><a href="https://github.com/tkleiber">
+                                <i class="foundicon-github"></i>
+                            </a><a href="https://develishdevelopment.wordpress.com">
+                                <i class="foundicon-wordpress"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div><div class="sticky contain-to-grid">
+                    <nav class="top-bar" data-topbar="" role="navigation">
+                        <ul class="title-area">
+                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </li>
+                        </ul><section class="top-bar-section">
+                            <ul class="left">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li><li>
+                                    <a href="/archive.html">Archive</a>
+                                </li><li class="has-dropdown">
+                                    <a href="#">Projects</a><ul class="dropdown">
+                                        
+                                    </ul>
+                                </li><li>
+                                    <a href="/about.html">About</a>
+                                </li><li>
+                                    <a href="/feed.xml">Subscribe</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </div>        <div>
+<div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Jul</div>
+                                        <div class="date">02</div>
+                                        <div class="year">2013</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html">Write ADF static code analysis rules with PMD and running these in JDeveloper</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
+                                            </span><span>
+                                                <a href="/tags/JDeveloper.html" class="label">JDeveloper</a>
+                                            </span><span>
+                                                <a href="/tags/JDeveloper-11.html" class="label">JDeveloper-11</a>
+                                            </span><span>
+                                                <a href="/tags/ADF.html" class="label">ADF</a>
+                                            </span><span>
+                                                <a href="/tags/ADF-11.html" class="label">ADF-11</a>
+                                            </span><span>
+                                                <a href="/tags/PMD.html" class="label">PMD</a>
+                                            </span><span>
+                                                <a href="/tags/External-Tools.html" class="label">External-Tools</a>
+                                            </span><span>
+                                                <a href="/tags/Static-Code-Analysis.html" class="label">Static-Code-Analysis</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div class="paragraph">
+<p>Do you know, that PMD can analyse XML files since version 5? Many of ADF files are XML configuration files - wouldn&#8217;t it be a good idea to create some static code analysis rules for ADF too?</p>
+</div>
+<div class="paragraph">
+<p>Unfortunatly oracle configuration files in most times create references to dtd&#8217;s, which are not exist anywhere in the path. Till PMD 5.0.1 such files results in errors, as PMD tries to validate this doctype. I have switched of this validation in PMD release <a href="http://sourceforge.net/p/pmd/bugs/1056">5.0.2</a></p>
+</div>
+<div class="paragraph">
+<p>Following article requires configuration of PMD as described in my blog <a href="blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">PMD Integration with JDeveloper through Ant External Tools</a>.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s start from the beginning.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>At the moment PMD only provide XML check&#8217;s against files with the extension *.xml, there is a feature request to <a href="http://sourceforge.net/p/pmd/feature-requests/568">change</a> this behaviour. So at the moment, we have to change the code by ourself to reach the result. Load the the <a href="http://sourceforge.net/projects/pmd/files/pmd/5.0.4/pmd-src-5.0.4.zip/download">5.0.4</a> source code.</p>
+</li>
+<li>
+<p>Look for the file src\main\java\net\sourceforge\pmd\lang\Language.java and replace the line</p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-java" data-lang="java">XML("XML", null, "xml", XmlRuleChainVisitor.class, "xml");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-java" data-lang="java">XML("XML", null, "xml", XmlRuleChainVisitor.class, "xml", "jws", "jpr", "cpx", "xcfg", "dcx", "jpx");&lt;/li&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Change to directory pmd-src-5.0.4</p>
+</li>
+<li>
+<p>set JAVA_HOME, e.g. to your 1.6 JDeveloper jdk</p>
+</li>
+<li>
+<p>run "mvn clean package", I have succesfully used maven 2.2.1 from &lt;JDev-Home&gt;\jdeveloper\apache-maven-2.2.1\bin&lt;/li&gt;
+&lt;li&gt;If you don&#8217;t need further extensions, you can instead running steps 2 till 5 the resulting pmd-5.0.4.jar from my side.</p>
+</li>
+<li>
+<p>Replace the file pmd-5.0.4.jar in pmd-bin-5.0.4\lib</p>
+</li>
+<li>
+<p>Now is the time to create the first adf static code analysis rule. In the adf architecture course I attend, there was a rule, that the taskflow behaviour "No controller transaction"
+should not be mixed with the other option of this selection list</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Write%20ADF%20static%20code%20analysis%20rules%20with%20PMD%20and%20running%20these%20in%20JDeveloper%20-%20No%20controller%20transaction.png" alt="Write ADF static code analysis rules with PMD and running these in JDeveloper   No controller transaction">
+</div>
+</div>
+<div class="paragraph">
+<p>In the sourcecode this property is described through the absence of the node adfc-config/task-flow-definition/transaction, the other options create this node and additional child nodes, here e.g. for the option "Always create new transaction"</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Write%20ADF%20static%20code%20analysis%20rules%20with%20PMD%20and%20running%20these%20in%20JDeveloper%20-%20Always%20create%20new%20transaction.png" alt="Write ADF static code analysis rules with PMD and running these in JDeveloper   Always create new transaction">
+</div>
+</div>
+</li>
+<li>
+<p>In PMD you can create two kind of rules: Java and XPath. For our xml Files XPath should be the efficient option. We have to put our configuraration e.g. in file my_pmd_rules.xml in the same directory as pmd.xml in the last <a href="blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">blog</a>. For the above rule the XPath query in line 14 find nodes, which does not contain the transaction node</p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0"?&gt;
+&lt;ruleset name="Oracle ADF rules" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd"&gt;
+  &lt;description&gt;This ruleset checks Oracle ADF code for bad stuff&lt;/description&gt;
+    &lt;!-- ADF Rules ############################################################################################### --&gt;
+  &lt;rule name="OracleAdfTaskflowShouldNotHaveNoControllerTransaktion" since="5.0" language="xml" message='ADF tasklows should normally not contain transaktion behavior "No Controller Transaction"'&gt;
+    &lt;priority&gt;1&lt;/priority&gt;
+    &lt;properties&gt;
+      &lt;property name="xpath"&gt;
+        &lt;value&gt;
+          &lt;![CDATA[
+            adfc-config/task-flow-definition[not(transaction)]
+          ]]&gt;
+         &lt;/value&gt;
+      &lt;/property&gt;
+    &lt;/properties&gt;
+  &lt;/rule&gt;
+&lt;/ruleset&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Now we have to change the configuration file pmd.xml from the last blog in the marked lines to call our new configuration and run this on files with defined Extensions</p>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="windows-1252" ?&gt;
+&lt;project xmlns="antlib:org.apache.tools.ant" name="Project1" default="all" basedir="."&gt;
+  &lt;path id="classpathForPMD"&gt;
+   &lt;fileset dir="pmd-bin-5.0.4\lib"&gt;
+     &lt;include name="**/**.jar"/&gt;
+   &lt;/fileset&gt;
+  &lt;/path&gt;
+  &lt;taskdef name="pmd" classpathref="classpathForPMD" classname="net.sourceforge.pmd.ant.PMDTask"/&gt;
+  &lt;target name="pmdAll"&gt;
+    &lt;echo message="PMD is running on directory ${dir}" level="info"/&gt;
+    &lt;pmd rulesetfiles="my_pmd_rules.xml" failOnRuleViolation="true" minimumPriority="1"&gt;
+      &lt;fileset dir="${dir}"&gt;
+        &lt;include name="**/*.java"/&gt;
+        &lt;include name="**/*.xml"/&gt;
+        &lt;include name="**/*.jws"/&gt;
+        &lt;include name="**/*.jpr"/&gt;
+        &lt;include name="**/*.cpx"/&gt;
+        &lt;include name="**/*.xcfg"/&gt;
+        &lt;include name="**/*.dcx"/&gt;
+        &lt;include name="**/*.jpx"/&gt;
+      &lt;/fileset&gt;
+    &lt;/pmd&gt;
+  &lt;/target&gt;
+&lt;/project&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Now call again pmd from the Fusion Order Demo Application StoreFrontModule</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Write%20ADF%20static%20code%20analysis%20rules%20with%20PMD%20and%20running%20these%20in%20JDeveloper%20-%20Now%20call%20again%20pmd%20from%20the%20Fusion%20Order%20Demo%20Application.png" alt="Write ADF static code analysis rules with PMD and running these in JDeveloper   Now call again pmd from the Fusion Order Demo Application">
+</div>
+</div>
+</li>
+<li>
+<p>You can see the results for xml in the message pane. Unfortunatly the direct jump to violated files does not work at the moment as pmd delivers for every xml violation -1 as line, but I have created an <a href="https://sourceforge.net/p/pmd/bugs/1054/">bug</a> for this</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Write%20ADF%20static%20code%20analysis%20rules%20with%20PMD%20and%20running%20these%20in%20JDeveloper%20-%20results%20for%20xml%20in%20the%20message%20pane.png" alt="Write ADF static code analysis rules with PMD and running these in JDeveloper   results for xml in the message pane">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it.</p>
+</div>
+<div class="paragraph">
+<p>Maybe somebody has an idea, where we can build an extension exchange for ADF rules, e.g. for creating rules for <a href="http://www.oracle.com/technetwork/developer-tools/adf/learnmore/adf-code-guidelines-v1-00-1845659.pdf">ADF Code Guidelines v1.00</a> or <a href="http://www.oracle.com/technetwork/developer-tools/adf/learnmore/adf-naming-layout-guidelines-v2-00-1904828.pdf">ADF Naming and Project Layout Guidelines v2.00</a>.</p>
+</div>
+<div class="paragraph">
+<p>Remember: you are not restricted to ADF files, e.g. we do checks to for JDeveloper application (jws) and project files (jpr) as well, as this are xml files too. The configuration you see already in step 2.</p>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>            
+        </div>
+<div class="row">
+            <div class="small-12 small-text-center">
+                <p class="muted credit">
+                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
+                </p>
+            </div>
+        </div>        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/vendor/prettify.js"></script>
+        <script>
+            $(document).foundation();
+            $(function() {
+               hljs.tabReplace = "  ";
+               hljs.initHighlighting();
+            });
+        </script>
+        
+    </body>
+</html>
