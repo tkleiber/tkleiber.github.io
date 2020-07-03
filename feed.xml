@@ -4,8 +4,786 @@
     <link href="https://tkleiber.github.io/"/>
     <link rel="self" type="application/atom+xml" href="https://tkleiber.github.io/feed.xml"/>
     <subtitle>As Much As Possible As Code</subtitle>
-    <updated>2020-07-02T23:53:03Z</updated>
+    <updated>2020-07-03T23:19:19Z</updated>
     <id>tag:localhost,2020:07</id>
+    <entry>
+        <title>Slides for my german presentation #DOAG2014 "The Dirty Dozen – ADF Migration to 12c in the IKB" available</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html"/>
+        <updated>2014-11-24T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html</id>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="ADF-11"/>
+        <category term="ADF-12"/>
+        <category term="JDeveloper"/>
+        <category term="JDeveloper-11"/>
+        <category term="JDeveloper-12"/>
+        <category term="ADF-Architecture"/>
+        <category term="Migration"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I have presented last week on DOAG 2014 in Nuremberg. For all non DOAG members - you can find the german presentation on &lt;a href=&quot;http://de.slideshare.net/tkleiber/das-dreckige-dutzend-adf-migration-nach-12c-in-der-ikb-doag-2014-prsentation&quot;&gt;Slideshare&lt;/a&gt; too.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/doag2014.jpg&quot; alt=&quot;doag2014&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>ADF Architecture Practice - JDeveloper Silent Install of Extensions</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html"/>
+        <updated>2014-11-19T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html</id>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="ADF-11"/>
+        <category term="ADF-12"/>
+        <category term="JDeveloper"/>
+        <category term="JDeveloper-11"/>
+        <category term="JDeveloper-12"/>
+        <category term="ADF-Architecture"/>
+        <category term="Silent-Install"/>
+        <category term="Extension"/>
+        <content type="html">
+            &lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This article describes how to standardize your JDeveloper Installation as requested in &lt;a href=&quot;http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments&quot;&gt;Planning &amp;amp; Getting Started - Team, Skills and Development Environments&lt;/a&gt;. It is part of the &lt;a href=&quot;ADF+Architecture+Practice+Series.html&quot;&gt;ADF Architecture Practice Series&lt;/a&gt; and describes the installation with examples for windows.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;version_12_1_x&quot;&gt;Version 12.1.x&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;There is a tool ojwebupdate to handle this. It is fully supported but it&amp;#8217;s not documented at the moment, documentation is planned for 12.1.4. But you can get a lot of info, if you call:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ojwebupdate /?&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The easiest thing is to download your reqired extension from the update centers. The update centers can be updated too, so the best thing is to call &quot;Check for updates&quot; in a manual installation and then look in your JDveloper system directory for a file updatecenters.xml.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Eg. if you want to install the extension &quot;JUnit Integration&quot; for version 12.1.3 in Windows 7 you have to go to the url, which is listed under &quot;Official Oracle Extensions and Updates&quot; by default in file&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;C:\Users\[Your User]\AppData\Roaming\JDeveloper\system12.1.3.0.41.140521.1008\o.ide\updatecenters.xml&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;At the moment this is &lt;a href=&quot;http://www.oracle.com/webfolder/technetwork/jdeveloper/downloads/1213center.xml&quot; class=&quot;bare&quot;&gt;http://www.oracle.com/webfolder/technetwork/jdeveloper/downloads/1213center.xml&lt;/a&gt;. Open this link, follow the link to &quot;JUnit Integration&quot; and download the required version. The right version can be determined by checking the requirement against your JDeveloper version or other extensions, you can find this information in the Help - About dialog. Or easier - you look at version, which version the manual installation would be installed and download this.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then you can call installation with following batch file:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;set oracle_home=C:\Oracle\JDev121300
+%oracle_home%\jdeveloper\jdev\bin\ojwebupdate -zips=[Path]\junit.zip&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Extensions can be depending on another extension, you see this in the requirements section of the url or when you try to install a single extension in a fresh manual installation. In this case you have to install the extensions in the right order.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;version_11_1_1_x&quot;&gt;Version 11.1.1.x&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The downloading of the file is similar to above, for version 11.1.1.7 you should download &quot;JUnit Integration&quot; extension at the moment from &lt;a href=&quot;http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/131167.xml&quot; class=&quot;bare&quot;&gt;http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/131167.xml&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can simply unzip the extensions into your installation. The target depends from the extension itself. Therefore open the zip file and look into the META-INF\bundle.xml file. If there is a tag , then this is the target. If this tag does not exist, the default target is %oracle_home%\jdeveloper\jdev\extensions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The following batch will install &quot;JUnit Integration&quot; and &quot;JUnit Integration for JDBC&quot; extensions in the right order (as the second requires the first) in JDeveloper 11.1.1.7.:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;set oracle_home=C:\Oracle\JDev111170
+unzip -o -q junit_bundle -d %oracle_home%\jdeveloper
+unzip -o -q junit-j2ee_bundle.zip -d %oracle_home%\jdeveloper\jdev\extensions
+rem housekeeping
+rmdir /S /Q %oracle_home%\jdeveloper\META-INF
+rmdir /S /Q %oracle_home%\jdeveloper\jdev\extensions\META-INF&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>See you at #DOAG2014 “The Dirty Dozen – ADF Migration to 12c in the IKB” room Kopenhagen on 11/19/2014 at 10:00 am</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+%E2%80%93+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html"/>
+        <updated>2014-11-17T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+%E2%80%93+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html</id>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="ADF-11"/>
+        <category term="ADF-12"/>
+        <category term="JDeveloper"/>
+        <category term="JDeveloper-11"/>
+        <category term="JDeveloper-12"/>
+        <category term="ADF-Architecture"/>
+        <category term="Migration"/>
+        <content type="html">
+            &lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/doag2014.jpg&quot; alt=&quot;doag2014&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The presentation is ready, time for travelling now.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I will speak over our experiences with following&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;provide user software&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;install servers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;iterative test migrations&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;migration plannig&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;real migration&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;and the problems and pitfall&amp;#8217;s we find on our way&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you speak german and you are interested in some of this, you should come and attend!&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>ADF Architecture Practice - JDeveloper Silent Patch</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html"/>
+        <updated>2014-10-22T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html</id>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="ADF-11"/>
+        <category term="ADF-12"/>
+        <category term="JDeveloper"/>
+        <category term="JDeveloper-11"/>
+        <category term="JDeveloper-12"/>
+        <category term="ADF-Architecture"/>
+        <category term="Silent-Install"/>
+        <category term="Silent-Patch"/>
+        <content type="html">
+            &lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This article describes how to standardize your JDeveloper Patching as requested in &lt;a href=&quot;http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments&quot;&gt;Getting Started - Team, Skills and Development Environments&lt;/a&gt;. It is part of the It is part of the &lt;a href=&quot;ADF+Architecture+Practice+Series.html&quot;&gt;ADF Architecture Practice Series&lt;/a&gt; and describes the patching with examples for windows.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;version_12_1_x&quot;&gt;Version 12.1.x&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In this version  the &lt;a href=&quot;http://docs.oracle.com/middleware/1213/core/OPATC/index.html&quot;&gt;Oracle OPatch&lt;/a&gt; is delivered with the &lt;a href=&quot;ADF+Architecture+Practice+-+JDeveloper+Silent+Install&quot;&gt;Silent Install&lt;/a&gt; of JDeveloper.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;All what you need is the patch file for your platform (e.g. p19591087_121300_Generic.zip for JDEVADF SECURITY PATCH UPDATE 12.1.3.0.0 CPUOCT2014). Unzip this patch file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then you call batch file similar to:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;set oracle_home=C:\Oracle\JDev121300
+pushd [path]\19591087
+%oracle_home%\OPatch\opatch apply -silent&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Revert the patch is similar, the response should look like&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;set oracle_home=C:\Oracle\JDev121300
+pushd [path]\19591087
+%oracle_home%\OPatch\opatch rollback -id 19591087 -silent&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In Line 3 you have to enter the patch number, which has to be reverted after -id.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;version_11_1_1_x&quot;&gt;Version 11.1.1.x&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In some of this versions Oracle OPatch is not delivered with the &lt;a href=&quot;ADF+Architecture+Practice+-+JDeveloper+Silent+Install&quot;&gt;Silent Install&lt;/a&gt; of JDeveloper. Please check if %oracle_home%\oracle_common\OPatch does exist. If not - you can download the latest version of OPatch &lt;a href=&quot;https://updates.oracle.com/download/6880880.html&quot;&gt;here&lt;/a&gt;. Please select your Platform and Release 11.1.0.0.0 as this correspond to your JDeveloper version. Unzip the downloaded file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In some versions (at least till 11.1.1.1.5) you need for the first patch a default product.xml file in the right place, as this cannot be created silently. Change the highlighted lines according to your environment:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;WINDOWS-1252&quot;?&amp;gt;
+&amp;lt;product&amp;gt;
+  &amp;lt;name value=&quot;SA_JDEV&quot;/&amp;gt;
+  &amp;lt;version value=&quot;11.1.1.5.0&quot;/&amp;gt;
+&amp;lt;/product&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For older versions of opatch maybe you have to add a response file for opatch, which you can create as described &lt;a href=&quot;http://mayank-jani.blogspot.de/2012/09/how-to-apply-opatchpsu-patch-in-silent.html#!/2012/09/how-to-apply-opatchpsu-patch-in-silent.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then you need the patch file for your platform (e.g. p19591065_111170_Generic.zip for JDEVADF SECURITY PATCH UPDATE 11.1.1.7.0 CPUOCT2014). Unzip this patch file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then you call batch file similar to:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;set oracle_home=C:\Oracle\JDev111170
+set java_home=%oracle_home%\jdk160_24
+rem opatch_home=[your unzipped OPatch home]
+set opatch_home=%oracle_home%\oracle_common\OPatch
+rem workaround for BUG 9613778: OPATCH-STAND-ALONE: ERROR &quot;OUI-67124:INVENTORY CHECK FAILED&quot; ON GERMAN WINDOWS
+rem set _JAVA_OPTIONS=&quot;-Duser.language=en&quot;
+rem workaround for silent creation of product.xml till at least version 11.1.1.5
+rem if not exist %oracle_home%\product.xml copy product.xml %oracle_home%\product.xml /V /Y
+rem if not exist %mw_home%\jdeveloper\product.xml copy product.xml %mw_home%\jdeveloper\product.xml /V /Y
+pushd [path]\19591087
+rem use switch -ocmrf, if you have an older opatch version, which  requires a response file
+rem use switch -jdk, if you have the downloaded opatch version
+rem cmd /c %opatch_home%\opatch apply -silent -ocmrf ocm.rsp -jdk %oracle_home%\jdk160_24
+%opatch_home%\opatch apply -silent
+rem Workaround for BUB 9613778: OPATCH-STAND-ALONE: ERROR &quot;OUI-67124:INVENTORY CHECK FAILED&quot; ON GERMAN WINDOWS
+rem set _JAVA_OPTIONS=&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Reverting patches is similar to 12.1.x.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;set oracle_home=C:\Oracle\JDev111170
+set java_home=%oracle_home%\jdk160_24
+rem opatch_home=[your unzipped OPatch home]
+set opatch_home=%oracle_home%\oracle_common\OPatch
+pushd [path]\19591087
+rem use switch -ocmrf, if you have an older opatch version, which  requires a response file
+rem use switch -jdk, if you have the downloaded opatch version
+rem cmd /c %opatch_home%\opatch rollback -id 19591087 -silent -ocmrf ocm.rsp -jdk %oracle_home%\jdk160_24
+%opatch_home%\opatch rollback -id 19591087 -silent&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>ADF Architecture Practice - JDeveloper Silent Install</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html"/>
+        <updated>2014-10-14T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html</id>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="ADF-11"/>
+        <category term="ADF-12"/>
+        <category term="JDeveloper"/>
+        <category term="JDeveloper-11"/>
+        <category term="JDeveloper-12"/>
+        <category term="ADF-Architecture"/>
+        <category term="Silent-Install"/>
+        <category term="Silent-Deinstall"/>
+        <content type="html">
+            &lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This article describes how to standardize your JDeveloper Installation as requested in &lt;a href=&quot;http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments&quot;&gt;Planning &amp;amp; Getting Started - Team, Skills and Development Environments&lt;/a&gt;. It is part of the &lt;a href=&quot;ADF+Architecture+Practice+Series.html&quot;&gt;ADF Architecture Practice Series&lt;/a&gt; and describes the installation with examples for windows.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;version_12_1_x&quot;&gt;Version 12.1.x&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In this version  the Oracle Universal Installer allows the &lt;a href=&quot;http://docs.oracle.com/middleware/1213/jdev/install/appendix_a.htm#sthref19&quot;&gt;silent installation of JDeveloper&lt;/a&gt;. All what you need is the installer file for your platform (e.g. jdev_suite_121300_win64.exe) and a response file. You can create your response file &lt;a href=&quot;http://docs.oracle.com/middleware/1213/core/OUIRF/silent.htm#CIHEGJDG&quot;&gt;as described in the documentation&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Run your product&amp;#8217;s graphical installer or installer, as described in your product installation guide.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For product installation, on the &lt;a href=&quot;http://docs.oracle.com/middleware/1213/core/OUIRF/install_screens.htm#CECIAFHE&quot;&gt;Installation Summary&lt;/a&gt; screen, click &lt;b class=&quot;button&quot;&gt;Save Response File&lt;/b&gt; to save your installation parameters to a response file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The resulting file should be look similar to the following code:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[ENGINE]
+
+#DO NOT CHANGE THIS.
+Response File Version=1.0.0.0.0
+
+[GENERIC]
+
+#This will be blank when there is nothing to be de-installed in distribution level
+SELECTED_DISTRIBUTION=JDeveloper Integrated Server Suite~12.1.3.0.0
+
+#The oracle home location. This can be an existing Oracle Home or a new Oracle Home
+ORACLE_HOME=C:\Oracle\JDev121300\&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then you call a command similar to:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jdev_suite_121300_win64.exe -silent -waitforcompletion -responseFile [complete path]\response.rsp&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Deinstallation is similar, the response should look like&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[ENGINE]
+
+#DO NOT CHANGE THIS.
+Response File Version=1.0.0.0.0
+
+[GENERIC]
+
+#This will be blank when there is nothing to be de-installed in distribution level
+SELECTED_DISTRIBUTION=JDeveloper Integrated Server Suite~12.1.3.0.0
+
+#The oracle home location. This can be an existing Oracle Home or a new Oracle Home
+ORACLE_HOME=C:\Oracle\JDev121300\&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then you call the deinstallation via following commands:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;set oracle_home=C:\Oracle\JDev121300
+rem %oracle_home%\oui\bin\deinstall.cmd -noconsole -silent
+&quot;%oracle_home%\oui\bin\internal\ilaunch.exe&quot; -noconsole -deinstall -silent ORACLE_HOME=&quot;%oracle_home%&quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Pay attention that we did not use line 2, as this exits your command shell on windows. But we want to have a return code and maybe doing some post deinstall work (Enhancement Request &lt;a href=&quot;https://support.oracle.com/epmos/faces/BugDisplay?id=19464646&quot;&gt;19464646&lt;/a&gt; is created). Instead we have looked what command deinstall.cmd generates and put this on line 3.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;version_11_1_1_x&quot;&gt;Version 11.1.1.x&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For this version you need the generic installer (eg. jdevstudio11117install.jar) and the 32bit JDK 1.6.0_24 (this is the delivered version for the manual install, 64bit version is not supported but works for most cases but not all). First you have to extract the msi JDK Installer as described &lt;a href=&quot;http://www.74k.org/extracting-java-msi-from-java-exe&quot;&gt;here&lt;/a&gt;. Then you have to &lt;a href=&quot;http://docs.oracle.com/cd/E28280_01/install.1111/e13666/ojdig.htm#CHDCDFEA&quot;&gt;create a file silent.xml&lt;/a&gt; which is the equivalent of response.rsp in 12.1.x.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;bea-installer&amp;gt;
+  &amp;lt;input-fields&amp;gt;
+    &amp;lt;data-value name=&quot;BEAHOME&quot; value=&quot;C:\Oracle\JDev111170&quot; /&amp;gt;
+    &amp;lt;data-value name=&quot;COMPONENT_PATHS&quot; value=&quot;JDeveloper and ADF/JDeveloper Studio|JDeveloper and ADF/Application Development Framework Runtime|WebLogic Server/Core Application Server|WebLogic Server/Administration Console|WebLogic Server/Configuration Wizard and Upgrade Framework|WebLogic Server/WebLogic JDBC Drivers|WebLogic Server/WebLogic Server Clients|WebLogic Server/WebLogic SCA|WebLogic Server/UDDI and Xquery Support&quot;/&amp;gt;
+    &amp;lt;data-value name=&quot;INSTALL_SHORTCUT_IN_ALL_USERS_FOLDER&quot; value=&quot;yes&quot;/&amp;gt;
+    &amp;lt;data-value name=&quot;LOCAL_JVMS&quot; value=&quot;C:\Oracle\JDev111170\jdk160_24\&quot;/&amp;gt;
+  &amp;lt;/input-fields&amp;gt;
+&amp;lt;/bea-installer&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then you can call Installation with following batch file:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;set mw_home=C:\Oracle\JDev111170
+set oracle_home==%mw_home%\oracle_common
+set java_home=%mw_home%\jdk160_24
+c:\windows\system32\msiexec.exe /i [complete path]\jdk1.6.0_24.msi /quiet ADDLOCAL=&quot;ToolsFeature,SourceFeature&quot; INSTALLDIR=&quot;%java_home%&quot; REBOOT=Suppress
+&quot;%java_home%\bin\java&quot; -jar jdevstudio11117install.jar -mode=silent -log=install.log -silent_xml=silent.xml&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can call the deinstallation with following batch file:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;set mw_home=C:\Oracle\JDev111170
+set oracle_home==%mw_home%\oracle_common
+set java_home=%oracle_home%\jdk160_24
+%mw_home%\utils\uninstall\uninstall.exe -mode=silent -log=uninstall.log
+c:\windows\system32\msiexec.exe /x [complete path]\jdk1.6.0_24.msi /quiet REBOOT=Suppress&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>ADF Architecture Practice Series</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+Series.html"/>
+        <updated>2014-10-13T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+Series.html</id>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="ADF-Architecture"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;From now on I will create a series of lessons to implement the knowledge of the ADF Architecture Course from Oracle ADF product management. Here you can find the &amp;lt;&lt;a href=&quot;http://www.youtube.com/user/adfarchtv&quot;&gt;videos&lt;/a&gt; and the &lt;a href=&quot;http://slideshare.net/chriscmuir/tag/add-architecture-tv&quot;&gt;presentations&lt;/a&gt;. This post will be the index of this lessons, so bookmark it for further use!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments&quot;&gt;Planning &amp;amp; Getting Started - Team, Skills and Development Environments&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Developer PC&amp;#8217;s&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;JDeveloper&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html&quot;&gt;Silent Install&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html&quot;&gt;Silent Patch&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html&quot;&gt;Silent Install of Extensions&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>"The Dirty Dozen - ADF Migration to 12c in the IKB" I&#8217;m a speaker at DOAG2014</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html"/>
+        <updated>2014-08-01T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html</id>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="ADF-11"/>
+        <category term="ADF-12"/>
+        <category term="JDeveloper"/>
+        <category term="JDeveloper-11"/>
+        <category term="JDeveloper-12"/>
+        <category term="ADF-Architecture"/>
+        <category term="Migration"/>
+        <content type="html">
+            &lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/doag2014.jpg&quot; alt=&quot;doag2014&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Today the &lt;a href=&quot;http://www.doag.org/konferenz/kprogramm.php?tag=2&amp;amp;locS=0&quot;&gt;official program&lt;/a&gt; is online for &lt;a href=&quot;http://www.doag.org/de/events/konferenzen/doag-2014.html&quot;&gt;DOAG conference 2014&lt;/a&gt; in Nuremberg. My presentation is confirmed  &quot;The Dirty Dozen - ADF Migration to 12c in the IKB&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I will speak over our experiences with following&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;provide user software&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;install servers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;iterative test migrations&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;migration plannig&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;real migration&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;and the problems and pitfall&amp;#8217;s we find on our way&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you speak german and you are interested in some of this, you should come and attend my presentation &lt;a href=&quot;http://www.doag.org/de/events/konferenzen/doag-2014.html&quot;&gt;DOAG conference 2014&lt;/a&gt; in room Kopenhagen on 11/18/2014 at 10:00.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Find problems when you develop: using XRebel with Oracle ADF</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2014/Find+problems+when+you+develop+-+using+XRebel+with+Oracle+ADF.html"/>
+        <updated>2014-06-30T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2014/Find+problems+when+you+develop+-+using+XRebel+with+Oracle+ADF.html</id>
+        <category term="Oracle"/>
+        <category term="JDeveloper"/>
+        <category term="JDeveloper-12"/>
+        <category term="ADF"/>
+        <category term="ADF-12"/>
+        <category term="Gui-Test"/>
+        <category term="XRebel"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Some days before &lt;a href=&quot;http://zeroturnaround.com/&quot;&gt;ZeroTurnaround&lt;/a&gt; has released &lt;a href=&quot;http://zeroturnaround.com/software/xrebel/&quot;&gt;XRebel&lt;/a&gt; , a new tool to recognized problems in your web applications, when you make your developer test.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This was promising, so I give it a short try for Oracle ADF applications. For this blog I use the Summit ADF application, delivered by Oracle, but I have tried with our own application too. Test is done in JDeveloper 12.1.2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After the download there are some easy steps of setup to do:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;First thing is to change an existing or add a new run configuration:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Find%20problems%20when%20you%20develop%20using%20XRebel%20with%20Oracle%20ADF%20-%20change%20an%20existing%20or%20add%20a%20new%20run%20configuration.png&quot; alt=&quot;Find problems when you develop using XRebel with Oracle ADF   change an existing or add a new run configuration&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Find%20problems%20when%20you%20develop%20using%20XRebel%20with%20Oracle%20ADF%20-%20change%20an%20existing%20or%20add%20a%20new%20run%20configuration%202.png&quot; alt=&quot;Find problems when you develop using XRebel with Oracle ADF   change an existing or add a new run configuration 2&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then edit this configuration&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Find%20problems%20when%20you%20develop%20using%20XRebel%20with%20Oracle%20ADF%20-%20edit%20this%20configuration.png&quot; alt=&quot;Find problems when you develop using XRebel with Oracle ADF   edit this configuration&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;and add XRebel path as described in the &lt;a href=&quot;http://manuals.zeroturnaround.com/xrebel/&quot;&gt;documentation&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Find%20problems%20when%20you%20develop%20using%20XRebel%20with%20Oracle%20ADF%20-%20add%20XRebel%20path%20as%20described%20in%20the%20documentation.png&quot; alt=&quot;Find problems when you develop using XRebel with Oracle ADF   add XRebel path as described in the documentation&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Save the configuration by pressing OK two times.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then open your Page and run it via the run configuration:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Find%20problems%20when%20you%20develop%20using%20XRebel%20with%20Oracle%20ADF%20-%20run%20it%20via%20the%20run%20configuration.png&quot; alt=&quot;Find problems when you develop using XRebel with Oracle ADF   run it via the run configuration&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As First you see one time a dialog to request and enter the trial license.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then you see the XRebel widget on the left side and after waiting some little time the first issues are shown.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Find%20problems%20when%20you%20develop%20using%20XRebel%20with%20Oracle%20ADF%20-%20first%20issues%20are%20shown.png&quot; alt=&quot;Find problems when you develop using XRebel with Oracle ADF   first issues are shown&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;From the default configuration (which can be changed with the gear in the widget) there seems a problem with the size of the session and with SQL Queries. If you drill down to the queries tab on the SQL page you see the execute queries, sorted by execution time, maybe the app should execute some of the queries at least not before changed to the tab, where it is used?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Find%20problems%20when%20you%20develop%20using%20XRebel%20with%20Oracle%20ADF%20-%20where%20it%20is%20used.png&quot; alt=&quot;Find problems when you develop using XRebel with Oracle ADF   where it is used&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Find%20problems%20when%20you%20develop%20using%20XRebel%20with%20Oracle%20ADF%20-%20where%20it%20is%20used%202.png&quot; alt=&quot;Find problems when you develop using XRebel with Oracle ADF   where it is used 2&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you look at the session size, then interesting is, that most of the session size is hold on the ODL log manager. Maybe oracle should think about this result, maybe there is a better way to hold this data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Find%20problems%20when%20you%20develop%20using%20XRebel%20with%20Oracle%20ADF%20-%20most%20of%20the%20session%20size%20is%20hold%20on%20the%20ODL%20log%20manager.png&quot; alt=&quot;Find problems when you develop using XRebel with Oracle ADF   most of the session size is hold on the ODL log manager&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;So download XRebel and give it chance on your ADF application.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Slides for my german presentation "Quality Assurance for ADF projects" available</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html"/>
+        <updated>2014-06-04T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html</id>
+        <category term="Oracle"/>
+        <category term="JDeveloper"/>
+        <category term="JDeveloper-11"/>
+        <category term="JDeveloper-12"/>
+        <category term="ADF"/>
+        <category term="ADF-11"/>
+        <category term="ADF-12"/>
+        <category term="Checkstyle"/>
+        <category term="FindBugs"/>
+        <category term="PMD"/>
+        <category term="JUnit"/>
+        <category term="Mockito"/>
+        <category term="PowerMock"/>
+        <category term="JaCoCo"/>
+        <category term="Unit-Test"/>
+        <category term="Acceptance-Test"/>
+        <category term="Gui-Test"/>
+        <category term="Code-Coverage"/>
+        <category term="Static-Code-Analysis"/>
+        <category term="Continous-Integration"/>
+        <category term="Jenkins"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I have presented today on DOAG Development 2014 in Dusseldorf. For all non DOAG members - you can find the german presentation on &lt;a href=&quot;http://www.slideshare.net/tkleiber/qualittssicherung-in-adf-projekten-der-ikb-deutschen-industriebank&quot;&gt;Slideshare&lt;/a&gt; too.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/2014-development_banner-speaker-180x180.jpg&quot; alt=&quot;2014 development banner speaker 180x180&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Quality Assurance for ADF projects</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2014/Quality+Assurance+for+ADF+projects.html"/>
+        <updated>2014-05-22T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2014/Quality+Assurance+for+ADF+projects.html</id>
+        <category term="Oracle"/>
+        <category term="JDeveloper"/>
+        <category term="JDeveloper-11"/>
+        <category term="JDeveloper-12"/>
+        <category term="ADF"/>
+        <category term="ADF-11"/>
+        <category term="ADF-12"/>
+        <category term="Checkstyle"/>
+        <category term="FindBugs"/>
+        <category term="PMD"/>
+        <category term="JUnit"/>
+        <category term="Mockito"/>
+        <category term="PowerMock"/>
+        <category term="JaCoCo"/>
+        <category term="Unit-Test"/>
+        <category term="Acceptance-Test"/>
+        <category term="Gui-Test"/>
+        <category term="Code-Coverage"/>
+        <category term="Static-Code-Analysis"/>
+        <category term="Continous-Integration"/>
+        <category term="Jenkins"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you speak german and you are interested in quality assurance for your ADF projects you should come and attend my presentation at &lt;a href=&quot;http://www.doag.org/home/development.html&quot;&gt;DOAG Development&lt;/a&gt; on 06/04/2014 in Duesseldorf.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I will show you, how you can implement in the JDeveloper IDE and in Continous Integration server Jenkins:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;static code analysis with PMD, FindBugs and Checkstyle&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Task&amp;#8217;s&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Commit tests with JUnit, Mockito and Powermock for Mockito&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Code coverage for commit tests with JaCoCo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Acceptance tests with JUnit and Selenium&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;See you!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/2014-development_banner-speaker-180x180.jpg&quot; alt=&quot;2014 development banner speaker 180x180&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
     <entry>
         <title>Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE</title>
         <author>
@@ -193,7 +971,7 @@ Enter Arguments: install ${workspace.dir}\deploy\ANDROID_MOBILE_NATIVE_archive1
 &lt;p&gt;Unfortunatly oracle configuration files in most times create references to dtd&amp;#8217;s, which are not exist anywhere in the path. Till PMD 5.0.1 such files results in errors, as PMD tries to validate this doctype. I have switched of this validation in PMD release &lt;a href=&quot;http://sourceforge.net/p/pmd/bugs/1056&quot;&gt;5.0.2&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Following article requires configuration of PMD as described in my blog &lt;a href=&quot;blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html&quot;&gt;PMD Integration with JDeveloper through Ant External Tools&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Following article requires configuration of PMD as described in my blog &lt;a href=&quot;PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html&quot;&gt;PMD Integration with JDeveloper through Ant External Tools&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Let&amp;#8217;s start from the beginning.&lt;/p&gt;
@@ -250,7 +1028,7 @@ should not be mixed with the other option of this selection list&lt;/p&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;In PMD you can create two kind of rules: Java and XPath. For our xml Files XPath should be the efficient option. We have to put our configuraration e.g. in file my_pmd_rules.xml in the same directory as pmd.xml in the last &lt;a href=&quot;blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html&quot;&gt;blog&lt;/a&gt;. For the above rule the XPath query in line 14 find nodes, which does not contain the transaction node&lt;/p&gt;
+&lt;p&gt;In PMD you can create two kind of rules: Java and XPath. For our xml Files XPath should be the efficient option. We have to put our configuraration e.g. in file my_pmd_rules.xml in the same directory as pmd.xml in the last &lt;a href=&quot;PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html&quot;&gt;blog&lt;/a&gt;. For the above rule the XPath query in line 14 find nodes, which does not contain the transaction node&lt;/p&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
 &lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;
@@ -995,8 +1773,8 @@ Put following code as &lt;em&gt;webstart_10g.jnlp&lt;/em&gt; to directory &lt;em
         <link href="https://tkleiber.github.io/blog/2011/Hello+world.html"/>
         <updated>2011-12-13T00:00:00Z</updated>
         <id>https://tkleiber.github.io/blog/2011/Hello+world.html</id>
-        <category term="blog"/>
-        <category term="asciidoc"/>
+        <category term="Blog"/>
+        <category term="Wordpress"/>
         <content type="html">
             &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Welcome to my new blog. After long time I have decided to create now my own blog at &lt;a href=&quot;http://wordpress.com/&quot;&gt;WordPress.com&lt;/a&gt;. Be excitedly for future content round about software development.&lt;/p&gt;

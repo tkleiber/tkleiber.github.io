@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AMAPAC.IO</title>
+        <link rel="stylesheet" href="/css/asciidoctor.css"/>
+        <link rel="stylesheet" href="/css/foundation.css"/>
+        <link rel="stylesheet" href="/css/social_foundicons.css"/>
+        <link rel="stylesheet" href="/css/prettify.css"/>
+        <link rel="stylesheet" href="/css/desert.css"/>
+        <link rel="stylesheet" href="/css/app.css"/>
+        
+        <script src="/js/vendor/modernizr.js"></script>
+        <script src="/js/app.js"></script>
+        
+    </head><body class="antialiased" onload="prettyPrint();">
+<div class="row">
+            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+                <div class="title-box">
+                    <div class="title-content">
+                        <h1>AMAPAC.IO</h1>
+                        <p>As Much As Possible As Code</p>
+                        <p class="title-contact">
+                            <a href="https://twitter.com/develishdevelop">
+                                <i class="foundicon-twitter"></i>
+                            </a><a href="https://www.linkedin.com/in/kleiber">
+                                <i class="foundicon-linkedin"></i>
+                            </a><a href="https://www.slideshare.net/tkleiber">
+                                <i class="foundicon-slideshare"></i>
+                            </a><a href="https://github.com/tkleiber">
+                                <i class="foundicon-github"></i>
+                            </a><a href="https://develishdevelopment.wordpress.com">
+                                <i class="foundicon-wordpress"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div><div class="sticky contain-to-grid">
+                    <nav class="top-bar" data-topbar="" role="navigation">
+                        <ul class="title-area">
+                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </li>
+                        </ul><section class="top-bar-section">
+                            <ul class="left">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li><li>
+                                    <a href="/archive.html">Archive</a>
+                                </li><li class="has-dropdown">
+                                    <a href="#">Projects</a><ul class="dropdown">
+                                        
+                                    </ul>
+                                </li><li>
+                                    <a href="/about.html">About</a>
+                                </li><li>
+                                    <a href="/feed.xml">Subscribe</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </div>        <div>
+<div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Nov</div>
+                                        <div class="date">19</div>
+                                        <div class="year">2014</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html">ADF Architecture Practice - JDeveloper Silent Install of Extensions</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
+                                            </span><span>
+                                                <a href="/tags/ADF.html" class="label">ADF</a>
+                                            </span><span>
+                                                <a href="/tags/ADF-11.html" class="label">ADF-11</a>
+                                            </span><span>
+                                                <a href="/tags/ADF-12.html" class="label">ADF-12</a>
+                                            </span><span>
+                                                <a href="/tags/JDeveloper.html" class="label">JDeveloper</a>
+                                            </span><span>
+                                                <a href="/tags/JDeveloper-11.html" class="label">JDeveloper-11</a>
+                                            </span><span>
+                                                <a href="/tags/JDeveloper-12.html" class="label">JDeveloper-12</a>
+                                            </span><span>
+                                                <a href="/tags/ADF-Architecture.html" class="label">ADF-Architecture</a>
+                                            </span><span>
+                                                <a href="/tags/Silent-Install.html" class="label">Silent-Install</a>
+                                            </span><span>
+                                                <a href="/tags/Extension.html" class="label">Extension</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>. It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the installation with examples for windows.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="version_12_1_x">Version 12.1.x</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is a tool ojwebupdate to handle this. It is fully supported but it&#8217;s not documented at the moment, documentation is planned for 12.1.4. But you can get a lot of info, if you call:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">ojwebupdate /?</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The easiest thing is to download your reqired extension from the update centers. The update centers can be updated too, so the best thing is to call "Check for updates" in a manual installation and then look in your JDveloper system directory for a file updatecenters.xml.</p>
+</div>
+<div class="paragraph">
+<p>Eg. if you want to install the extension "JUnit Integration" for version 12.1.3 in Windows 7 you have to go to the url, which is listed under "Official Oracle Extensions and Updates" by default in file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">C:\Users\[Your User]\AppData\Roaming\JDeveloper\system12.1.3.0.41.140521.1008\o.ide\updatecenters.xml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>At the moment this is <a href="http://www.oracle.com/webfolder/technetwork/jdeveloper/downloads/1213center.xml" class="bare">http://www.oracle.com/webfolder/technetwork/jdeveloper/downloads/1213center.xml</a>. Open this link, follow the link to "JUnit Integration" and download the required version. The right version can be determined by checking the requirement against your JDeveloper version or other extensions, you can find this information in the Help - About dialog. Or easier - you look at version, which version the manual installation would be installed and download this.</p>
+</div>
+<div class="paragraph">
+<p>Then you can call installation with following batch file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">set oracle_home=C:\Oracle\JDev121300
+%oracle_home%\jdeveloper\jdev\bin\ojwebupdate -zips=[Path]\junit.zip</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extensions can be depending on another extension, you see this in the requirements section of the url or when you try to install a single extension in a fresh manual installation. In this case you have to install the extensions in the right order.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="version_11_1_1_x">Version 11.1.1.x</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The downloading of the file is similar to above, for version 11.1.1.7 you should download "JUnit Integration" extension at the moment from <a href="http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/131167.xml" class="bare">http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/131167.xml</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can simply unzip the extensions into your installation. The target depends from the extension itself. Therefore open the zip file and look into the META-INF\bundle.xml file. If there is a tag , then this is the target. If this tag does not exist, the default target is %oracle_home%\jdeveloper\jdev\extensions.</p>
+</div>
+<div class="paragraph">
+<p>The following batch will install "JUnit Integration" and "JUnit Integration for JDBC" extensions in the right order (as the second requires the first) in JDeveloper 11.1.1.7.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">set oracle_home=C:\Oracle\JDev111170
+unzip -o -q junit_bundle -d %oracle_home%\jdeveloper
+unzip -o -q junit-j2ee_bundle.zip -d %oracle_home%\jdeveloper\jdev\extensions
+rem housekeeping
+rmdir /S /Q %oracle_home%\jdeveloper\META-INF
+rmdir /S /Q %oracle_home%\jdeveloper\jdev\extensions\META-INF</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it!</p>
+</div>
+</div>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>            
+        </div>
+<div class="row">
+            <div class="small-12 small-text-center">
+                <p class="muted credit">
+                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
+                </p>
+            </div>
+        </div>        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/vendor/prettify.js"></script>
+        <script>
+            $(document).foundation();
+            $(function() {
+               hljs.tabReplace = "  ";
+               hljs.initHighlighting();
+            });
+        </script>
+        
+    </body>
+</html>
