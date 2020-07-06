@@ -70,33 +70,31 @@
                             <div class="row">
                                 <div class="small-3 medium-1 large-1 columns">
 <div class="termin">
-                                        <div class="month">Nov</div>
-                                        <div class="date">24</div>
-                                        <div class="year">2014</div>
+                                        <div class="month">Sep</div>
+                                        <div class="date">09</div>
+                                        <div class="year">2015</div>
                                     </div>                                    
                                 </div><div class="small-9 medium-11 large-11 columns">
                                     <div>
                                         <h2>
-                                            <a href="/blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html">Slides for my german presentation #DOAG2014 "The Dirty Dozen – ADF Migration to 12c in the IKB" available</a>
+                                            <a href="/blog/2015/SLES+shell+script+to+check+required+os+packages+according+to+documentation+before+starting+oracle+forms+%26amp%3B+reports+installation.html">SLES shell script to check required os packages according to documentation before starting oracle forms &amp; reports installation</a>
                                         </h2><p>
                                             <span>
                                                 <a href="/tags/Oracle.html" class="label">Oracle</a>
                                             </span><span>
-                                                <a href="/tags/ADF.html" class="label">ADF</a>
+                                                <a href="/tags/Forms.html" class="label">Forms</a>
                                             </span><span>
-                                                <a href="/tags/ADF-11.html" class="label">ADF-11</a>
+                                                <a href="/tags/Forms-11.html" class="label">Forms-11</a>
                                             </span><span>
-                                                <a href="/tags/ADF-12.html" class="label">ADF-12</a>
+                                                <a href="/tags/Reports.html" class="label">Reports</a>
                                             </span><span>
-                                                <a href="/tags/JDeveloper.html" class="label">JDeveloper</a>
+                                                <a href="/tags/Reports-11.html" class="label">Reports-11</a>
                                             </span><span>
-                                                <a href="/tags/JDeveloper-11.html" class="label">JDeveloper-11</a>
+                                                <a href="/tags/Linux.html" class="label">Linux</a>
                                             </span><span>
-                                                <a href="/tags/JDeveloper-12.html" class="label">JDeveloper-12</a>
+                                                <a href="/tags/SLES.html" class="label">SLES</a>
                                             </span><span>
-                                                <a href="/tags/ADF-Architecture.html" class="label">ADF-Architecture</a>
-                                            </span><span>
-                                                <a href="/tags/Migration.html" class="label">Migration</a>
+                                                <a href="/tags/64bit.html" class="label">64bit</a>
                                             </span>
                                         </p>
                                     </div>
@@ -105,12 +103,159 @@
                         </header><div class="row">
                             <div class="columns">
                                 <div class="paragraph">
-<p>I have presented last week on DOAG 2014 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="http://de.slideshare.net/tkleiber/das-dreckige-dutzend-adf-migration-nach-12c-in-der-ikb-doag-2014-prsentation">Slideshare</a> too.</p>
+<p>Hi!</p>
 </div>
-<div class="imageblock">
+<div class="paragraph">
+<p>If you try to install Oracle Forms &amp; Reports 11.1.2.2 on SLES 11.3 than despite all installer checks are passed maybe you get a message like:</p>
+</div>
+<div class="paragraph">
+<p>Error in invoking target 'install' of makefile '&lt;FR_HOME&gt;/sqlplus/lib/ins_sqlplus.mk'.</p>
+</div>
+<div class="paragraph">
+<p>The reuirement check of the installer shows only missing openmotif classes which are not really required on SLES (see <a href="https://support.oracle.com/epmos/faces/DocumentDisplay?parent=SrDetailText&amp;sourceId=3-11330657471&amp;id=1567715.1">Doc ID 1567715.1</a>), but no problems with a compiler or something similar.</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<img src="../../images/doag2014.jpg" alt="doag2014">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">Checking for binutils-2.19-11.28; found binutils-2.23.1-0.23.15-x86_64. Passed
+Checking for gcc-4.3-62.198; found gcc-4.3-62.200.2-x86_64. Passed
+Checking for gcc-c++-4.3-62.198; found gcc-c++-4.3-62.200.2-x86_64. Passed
+Checking for glibc-2.9-13.2; found glibc-2.11.3-17.87.3-x86_64. Passed
+Checking for glibc-32bit-2.9-13.2; found glibc-32bit-2.11.3-17.87.3-x86_64. Passed
+Checking for glibc-devel-2.9; found glibc-devel-2.11.3-17.87.3-x86_64. Passed
+Checking for glibc-devel-32bit-2.9-13.2; found glibc-devel-32bit-2.11.3-17.87.3-x86_64. Passed
+Checking for libaio-0.3.104-140.22; found libaio-0.3.109-0.1.46-x86_64. Passed
+Checking for libaio-devel-0.3.104-140.22; found libaio-devel-0.3.109-0.1.46-x86_64. Passed
+Checking for libgcc43-4.3.3_20081022; found libgcc43-4.6.9-0.13.22-x86_64. Passed
+Checking for libstdc++43-4.3.3_20081022-11.18; found libstdc++43-4.6.9-0.13.22-x86_64. Passed
+Checking for libstdc++43-devel-4.3.3_20081022-11.18; found libstdc++43-devel-4.3.4_20091019-0.37.30-x86_64. Passed
+Checking for make-3.81; found make-3.81-128.20-x86_64. Passed
+Checking for sysstat-8.1.5-7.8; found sysstat-8.1.5-7.47.1-x86_64. Passed
+Checking for openmotif22-2.2.3; Not found. Failed &lt;&lt;&lt;&lt;
+Checking for openmotif-2.2.3; found openmotif-2.3.1-3.15.1-x86_64. Passed
+Check complete. The overall result of this check is: Failed &lt;&lt;&lt;&lt;</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>The problem here is, that sometime not all checks for os packages are really implemented in the installer. I have a SR to open a bug for this.</p>
+</div>
+<div class="paragraph">
+<p>In the meantime I have implemented a bash shell script to check against the required os packages in the documentation. For my problem these are listed <a href="http://docs.oracle.com/html/E25460_01/r2_fr_requirements.htm#BABEEIDD">here</a>. You can simple copy the required packages at the top of the script in the array sections.</p>
+</div>
+<div class="paragraph">
+<p>The magic contains some bash substring modifications an using the version compare option of zipper.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">#!/bin/bash
+
+array=(
+binutils-2.19-11.28
+gcc-4.3-62.198
+gcc-c++-4.3-62.198
+gcc-32bit-4.3
+glibc-2.9-13.2
+glibc-32bit-2.9-13.2
+glibc-devel-2.9
+glibc-devel-32bit-2.9-13.2
+ksh-93t
+libaio-0.3.104-140.22
+libaio-devel-0.3.104-140.22
+libaio-32bit-0.3.104
+libaio-devel-32bit-0.3.104
+libgcc43-4.3.3_20081022
+libstdc++43-4.3.3_20081022-11.18
+libstdc++43-devel-4.3.3_20081022-11.18
+libstdc++33-3.3.3
+libstdc++33-32bit-3.3.3
+libstdc++43-32bit-4.3.3_20081022
+libstdc++43-devel-32bit-4.3.3_20081022
+libstdc++-devel-4.3
+make-3.81
+openmotif-2.3.1-3.13
+openmotif-devel-32bit-2.3.1-3.13
+openmotif22-libs-32bit-2.2.4-138.17
+openmotif-libs-2.3.1-3.13
+openmotif-devel-2.3.1-3.13
+openmotif-libs-32bit-2.3.1-3.13
+openmotif21-libs-32bit-2.1.30MLI4-143.2
+openmotif22-libs-2.2.4-138.17
+sysstat-8.1.5-7.8
+)
+
+len=${#array[*]}
+i=0
+line='-------------------------------------------------------------------'
+while [[ $i -lt $len ]]; do
+
+  package_name_temp_1="${array[$i]%%.*}"
+  required_package_name="${package_name_temp_1%-*}"
+  required_package_version="${array[$i]/$required_package_name-/}"
+
+  installed_package_version="`rpm -q ${required_package_name} --queryformat %{version}-%{release}`"
+  RETCODE=$?
+  if [ $RETCODE -eq 0 ]; then
+    compare="`zypper --terse versioncmp ${required_package_version} ${installed_package_version}`"
+    if [ $compare -eq 1 ]; then
+      result1=fail;
+      echo [$result1] $required_package_name Reqired : $required_package_version Installed: $installed_package_version
+    else
+      result1=pass;
+      echo [$result1] $required_package_name Reqired : $required_package_version Installed: $installed_package_version
+    fi
+  else
+    echo [fail] $installed_package_version
+  fi
+
+  let i++;
+done</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you run this script you can see the failing packages on your platform:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">[pass] binutils Reqired : 2.19-11.28 Installed: 2.23.1-0.23.15
+[pass] gcc Reqired : 4.3-62.198 Installed: 4.3-62.200.2
+[pass] gcc-c++ Reqired : 4.3-62.198 Installed: 4.3-62.200.2
+[fail] package gcc-32bit is not installed
+[pass] glibc Reqired : 2.9-13.2 Installed: 2.11.3-17.84.1
+[pass] glibc-32bit Reqired : 2.9-13.2 Installed: 2.11.3-17.84.1
+[pass] glibc-devel Reqired : 2.9 Installed: 2.11.3-17.84.1
+[pass] glibc-devel-32bit Reqired : 2.9-13.2 Installed: 2.11.3-17.87.3
+[pass] ksh Reqired : 93t Installed: 93u-0.26.1
+[pass] libaio Reqired : 0.3.104-140.22 Installed: 0.3.109-0.1.46
+[pass] libaio-devel Reqired : 0.3.104-140.22 Installed: 0.3.109-0.1.46
+[pass] libaio-32bit Reqired : 0.3.104 Installed: 0.3.109-0.1.46
+[fail] package libaio-devel-32bit is not installed
+[pass] libgcc43 Reqired : 4.3.3_20081022 Installed: 4.6.9-0.13.22
+[pass] libstdc++43 Reqired : 4.3.3_20081022-11.18 Installed: 4.6.9-0.13.22
+[pass] libstdc++43-devel Reqired : 4.3.3_20081022-11.18 Installed: 4.3.4_20091019-0.37.30
+[pass] libstdc++33 Reqired : 3.3.3 Installed: 3.3.3-11.9
+[pass] libstdc++33-32bit Reqired : 3.3.3 Installed: 3.3.3-11.9
+[pass] libstdc++43-32bit Reqired : 4.3.3_20081022 Installed: 4.6.9-0.13.22
+[fail] package libstdc++43-devel-32bit is not installed
+[pass] libstdc++-devel Reqired : 4.3 Installed: 4.3-62.200.2
+[pass] make Reqired : 3.81 Installed: 3.81-128.20
+[pass] openmotif Reqired : 2.3.1-3.13 Installed: 2.3.1-3.15.1
+[fail] package openmotif-devel-32bit is not installed
+[fail] package openmotif22-libs-32bit is not installed
+[pass] openmotif-libs Reqired : 2.3.1-3.13 Installed: 2.3.1-3.15.1
+[pass] openmotif-devel Reqired : 2.3.1-3.13 Installed: 2.3.1-3.15.1
+[fail] package openmotif-libs-32bit is not installed
+[fail] package openmotif21-libs-32bit is not installed
+[pass] openmotif22-libs Reqired : 2.2.4-138.17 Installed: 2.2.4-193.1
+[pass] sysstat Reqired : 8.1.5-7.8 Installed: 8.1.5-7.47.1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The route cause for the error message in the installer are line 4 and 13, where 32bit Compiler are required for making sql plus despite this forms and reports installation is 64bit version.</p>
+</div>
+<div class="paragraph">
+<p>Maybe you can use this script with little modification in other environments.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it.</p>
 </div>
                             </div>
                         </div>
@@ -123,23 +268,17 @@
                             <div class="row">
                                 <div class="small-3 medium-1 large-1 columns">
 <div class="termin">
-                                        <div class="month">Nov</div>
-                                        <div class="date">19</div>
-                                        <div class="year">2014</div>
+                                        <div class="month">Jul</div>
+                                        <div class="date">21</div>
+                                        <div class="year">2015</div>
                                     </div>                                    
                                 </div><div class="small-9 medium-11 large-11 columns">
                                     <div>
                                         <h2>
-                                            <a href="/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html">ADF Architecture Practice - JDeveloper Silent Install of Extensions</a>
+                                            <a href="/blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html">"Bob the Builder: Build/Deploy of ADF enterprise applications" - I&#8217;m a speaker at DOAG2015</a>
                                         </h2><p>
                                             <span>
                                                 <a href="/tags/Oracle.html" class="label">Oracle</a>
-                                            </span><span>
-                                                <a href="/tags/ADF.html" class="label">ADF</a>
-                                            </span><span>
-                                                <a href="/tags/ADF-11.html" class="label">ADF-11</a>
-                                            </span><span>
-                                                <a href="/tags/ADF-12.html" class="label">ADF-12</a>
                                             </span><span>
                                                 <a href="/tags/JDeveloper.html" class="label">JDeveloper</a>
                                             </span><span>
@@ -147,129 +286,23 @@
                                             </span><span>
                                                 <a href="/tags/JDeveloper-12.html" class="label">JDeveloper-12</a>
                                             </span><span>
-                                                <a href="/tags/ADF-Architecture.html" class="label">ADF-Architecture</a>
-                                            </span><span>
-                                                <a href="/tags/Silent-Install.html" class="label">Silent-Install</a>
-                                            </span><span>
-                                                <a href="/tags/Extension.html" class="label">Extension</a>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div><hr/>
-                        </header><div class="row">
-                            <div class="columns">
-                                <div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>. It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the installation with examples for windows.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="version_12_1_x">Version 12.1.x</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>There is a tool ojwebupdate to handle this. It is fully supported but it&#8217;s not documented at the moment, documentation is planned for 12.1.4. But you can get a lot of info, if you call:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">ojwebupdate /?</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The easiest thing is to download your reqired extension from the update centers. The update centers can be updated too, so the best thing is to call "Check for updates" in a manual installation and then look in your JDveloper system directory for a file updatecenters.xml.</p>
-</div>
-<div class="paragraph">
-<p>Eg. if you want to install the extension "JUnit Integration" for version 12.1.3 in Windows 7 you have to go to the url, which is listed under "Official Oracle Extensions and Updates" by default in file</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">C:\Users\[Your User]\AppData\Roaming\JDeveloper\system12.1.3.0.41.140521.1008\o.ide\updatecenters.xml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>At the moment this is <a href="http://www.oracle.com/webfolder/technetwork/jdeveloper/downloads/1213center.xml" class="bare">http://www.oracle.com/webfolder/technetwork/jdeveloper/downloads/1213center.xml</a>. Open this link, follow the link to "JUnit Integration" and download the required version. The right version can be determined by checking the requirement against your JDeveloper version or other extensions, you can find this information in the Help - About dialog. Or easier - you look at version, which version the manual installation would be installed and download this.</p>
-</div>
-<div class="paragraph">
-<p>Then you can call installation with following batch file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">set oracle_home=C:\Oracle\JDev121300
-%oracle_home%\jdeveloper\jdev\bin\ojwebupdate -zips=[Path]\junit.zip</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Extensions can be depending on another extension, you see this in the requirements section of the url or when you try to install a single extension in a fresh manual installation. In this case you have to install the extensions in the right order.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="version_11_1_1_x">Version 11.1.1.x</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The downloading of the file is similar to above, for version 11.1.1.7 you should download "JUnit Integration" extension at the moment from <a href="http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/131167.xml" class="bare">http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/131167.xml</a>.</p>
-</div>
-<div class="paragraph">
-<p>You can simply unzip the extensions into your installation. The target depends from the extension itself. Therefore open the zip file and look into the META-INF\bundle.xml file. If there is a tag , then this is the target. If this tag does not exist, the default target is %oracle_home%\jdeveloper\jdev\extensions.</p>
-</div>
-<div class="paragraph">
-<p>The following batch will install "JUnit Integration" and "JUnit Integration for JDBC" extensions in the right order (as the second requires the first) in JDeveloper 11.1.1.7.:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">set oracle_home=C:\Oracle\JDev111170
-unzip -o -q junit_bundle -d %oracle_home%\jdeveloper
-unzip -o -q junit-j2ee_bundle.zip -d %oracle_home%\jdeveloper\jdev\extensions
-rem housekeeping
-rmdir /S /Q %oracle_home%\jdeveloper\META-INF
-rmdir /S /Q %oracle_home%\jdeveloper\jdev\extensions\META-INF</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>That&#8217;s it!</p>
-</div>
-</div>
-</div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div><div class="row">
-                <div class="small-12 middle-12 large-12 columns">
-                    <article class="wrap">
-                        <header>
-                            <div class="row">
-                                <div class="small-3 medium-1 large-1 columns">
-<div class="termin">
-                                        <div class="month">Nov</div>
-                                        <div class="date">17</div>
-                                        <div class="year">2014</div>
-                                    </div>                                    
-                                </div><div class="small-9 medium-11 large-11 columns">
-                                    <div>
-                                        <h2>
-                                            <a href="/blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+%E2%80%93+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html">See you at #DOAG2014 “The Dirty Dozen – ADF Migration to 12c in the IKB” room Kopenhagen on 11/19/2014 at 10:00 am</a>
-                                        </h2><p>
-                                            <span>
-                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
-                                            </span><span>
                                                 <a href="/tags/ADF.html" class="label">ADF</a>
                                             </span><span>
                                                 <a href="/tags/ADF-11.html" class="label">ADF-11</a>
                                             </span><span>
                                                 <a href="/tags/ADF-12.html" class="label">ADF-12</a>
                                             </span><span>
-                                                <a href="/tags/JDeveloper.html" class="label">JDeveloper</a>
-                                            </span><span>
-                                                <a href="/tags/JDeveloper-11.html" class="label">JDeveloper-11</a>
-                                            </span><span>
-                                                <a href="/tags/JDeveloper-12.html" class="label">JDeveloper-12</a>
-                                            </span><span>
                                                 <a href="/tags/ADF-Architecture.html" class="label">ADF-Architecture</a>
                                             </span><span>
-                                                <a href="/tags/Migration.html" class="label">Migration</a>
+                                                <a href="/tags/Build.html" class="label">Build</a>
+                                            </span><span>
+                                                <a href="/tags/Deploy.html" class="label">Deploy</a>
+                                            </span><span>
+                                                <a href="/tags/Branching.html" class="label">Branching</a>
+                                            </span><span>
+                                                <a href="/tags/Versioning.html" class="label">Versioning</a>
+                                            </span><span>
+                                                <a href="/tags/Continous-Integration.html" class="label">Continous-Integration</a>
                                             </span>
                                         </p>
                                     </div>
@@ -279,11 +312,11 @@ rmdir /S /Q %oracle_home%\jdeveloper\jdev\extensions\META-INF</code></pre>
                             <div class="columns">
                                 <div class="imageblock">
 <div class="content">
-<img src="../../images/doag2014.jpg" alt="doag2014">
+<img src="../../images/csm_2015-konferenz-ausstellung-logo_02_373181671d.jpg" alt="csm 2015 konferenz ausstellung logo 02 373181671d">
 </div>
 </div>
 <div class="paragraph">
-<p>The presentation is ready, time for travelling now.</p>
+<p>Today my presentation is confirmed: "Bob the Builder: Build/Deploy of ADF enterprise applications".</p>
 </div>
 <div class="paragraph">
 <p>I will speak over our experiences with following</p>
@@ -291,27 +324,104 @@ rmdir /S /Q %oracle_home%\jdeveloper\jdev\extensions\META-INF</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>provide user software</p>
+<p>build tools</p>
 </li>
 <li>
-<p>install servers</p>
+<p>deployment tools</p>
 </li>
 <li>
-<p>iterative test migrations</p>
+<p>architecture</p>
 </li>
 <li>
-<p>migration plannig</p>
+<p>versioning &amp; branching</p>
 </li>
 <li>
-<p>real migration</p>
+<p>continuous integration</p>
 </li>
 <li>
-<p>and the problems and pitfall&#8217;s we find on our way</p>
+<p>hot deployment in development</p>
+</li>
+<li>
+<p>compile &amp; runtime dependencies</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>If you speak german and you are interested in some of this, you should come and attend!</p>
+<p>If you speak german and you are interested in some of this, you should come and attend <a href="http://www.doag.org/de/events/konferenzen/doag-2015.html">DOAG 2015</a>.</p>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div><div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Jun</div>
+                                        <div class="date">30</div>
+                                        <div class="year">2015</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2015/Fix+code+editor+save+actions+in+JDeveloper+12.1.3+keep+the+order+of+actions.html">Fix code editor save actions in JDeveloper 12.1.3: keep the order of actions</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
+                                            </span><span>
+                                                <a href="/tags/JDeveloper.html" class="label">JDeveloper</a>
+                                            </span><span>
+                                                <a href="/tags/JDeveloper-12.html" class="label">JDeveloper-12</a>
+                                            </span><span>
+                                                <a href="/tags/Bug.html" class="label">Bug</a>
+                                            </span><span>
+                                                <a href="/tags/Patch.html" class="label">Patch</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div class="paragraph">
+<p>Hi!</p>
+</div>
+<div class="paragraph">
+<p>If you work with JDeveloper 12.1.3 and you work with code editor save actions the order of actions could be relevant for you. For an example you use lot of asterisk (*) imports and JDeveloper should edit the code to import only classes that you actually use in the code.</p>
+</div>
+<div class="paragraph">
+<p>For an example you have entered following save actions and hit ok</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Fix%20code%20editor%20save%20actions%20in%20JDeveloper%2012.1.3%20keep%20the%20order%20of%20actions%20-%20code_editor_save_actions_before_save.png" alt="Fix code editor save actions in JDeveloper 12.1.3 keep the order of actions   code editor save actions before save">
+</div>
+</div>
+<div class="paragraph">
+<p>After reopen the preference dialog you see that the order has be changed:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Fix%20code%20editor%20save%20actions%20in%20JDeveloper%2012.1.3%20keep%20the%20order%20of%20actions%20-%20code_editor_save_actions_after_save.png" alt="Fix code editor save actions in JDeveloper 12.1.3 keep the order of actions   code editor save actions after save">
+</div>
+</div>
+<div class="paragraph">
+<p>You run into <a href="https://support.oracle.com/epmos/faces/BugDisplay?id=19434883">Bug 19434883</a>: ORDER OF CODE EDITOR SAVE ACTIONS ARE NOT SAVED CORRECTLY.</p>
+</div>
+<div class="paragraph">
+<p>But no problem, there exist Patch <a href="https://support.oracle.com/epmos/faces/PatchDetail?patchId=19434883">19434883</a>: ORDER OF CODE EDITOR SAVE ACTIONS ARE NOT SAVED CORRECTLY.</p>
+</div>
+<div class="paragraph">
+<p>Remember to install the patches for <a href="../2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html">all</a> of your developers!</p>
+</div>
+<div class="paragraph">
+<p>Remember too, if you want to install more than one patch, there can be conflicts. Please test carefully, if all of your problems are solved for all patches after adding one more patch. Maybe you have to create a merge request in Oracle My Support.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it!</p>
 </div>
                             </div>
                         </div>
