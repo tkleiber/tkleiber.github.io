@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AMAPAC.IO</title>
+        <link rel="stylesheet" href="/css/asciidoctor.css"/>
+        <link rel="stylesheet" href="/css/foundation.css"/>
+        <link rel="stylesheet" href="/css/social_foundicons.css"/>
+        <link rel="stylesheet" href="/css/prettify.css"/>
+        <link rel="stylesheet" href="/css/desert.css"/>
+        <link rel="stylesheet" href="/css/app.css"/>
+        
+        <script src="/js/vendor/modernizr.js"></script>
+        <script src="/js/app.js"></script>
+        
+    </head><body class="antialiased" onload="prettyPrint();">
+<div class="row">
+            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+                <div class="title-box">
+                    <div class="title-content">
+                        <h1>AMAPAC.IO</h1>
+                        <p>As Much As Possible As Code</p>
+                        <p class="title-contact">
+                            <a href="https://twitter.com/develishdevelop">
+                                <i class="foundicon-twitter"></i>
+                            </a><a href="https://www.linkedin.com/in/kleiber">
+                                <i class="foundicon-linkedin"></i>
+                            </a><a href="https://www.slideshare.net/tkleiber">
+                                <i class="foundicon-slideshare"></i>
+                            </a><a href="https://github.com/tkleiber">
+                                <i class="foundicon-github"></i>
+                            </a><a href="https://develishdevelopment.wordpress.com">
+                                <i class="foundicon-wordpress"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div><div class="sticky contain-to-grid">
+                    <nav class="top-bar" data-topbar="" role="navigation">
+                        <ul class="title-area">
+                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </li>
+                        </ul><section class="top-bar-section">
+                            <ul class="left">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li><li>
+                                    <a href="/archive.html">Archive</a>
+                                </li><li class="has-dropdown">
+                                    <a href="#">Projects</a><ul class="dropdown">
+                                        
+                                    </ul>
+                                </li><li>
+                                    <a href="/about.html">About</a>
+                                </li><li>
+                                    <a href="/feed.xml">Subscribe</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </div>        <div>
+<div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Dec</div>
+                                        <div class="date">07</div>
+                                        <div class="year">2016</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html">Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Blue-Ocean.html" class="label">Blue-Ocean</a>
+                                            </span><span>
+                                                <a href="/tags/Continous-Integration-Continous.html" class="label">Continous-Integration-Continous</a>
+                                            </span><span>
+                                                <a href="/tags/Docker.html" class="label">Docker</a>
+                                            </span><span>
+                                                <a href="/tags/Infrastructure-as-Code.html" class="label">Infrastructure-as-Code</a>
+                                            </span><span>
+                                                <a href="/tags/Jenkins.html" class="label">Jenkins</a>
+                                            </span><span>
+                                                <a href="/tags/Pipeline.html" class="label">Pipeline</a>
+                                            </span><span>
+                                                <a href="/tags/Pipeline-Model-Definition.html" class="label">Pipeline-Model-Definition</a>
+                                            </span><span>
+                                                <a href="/tags/Vagrant.html" class="label">Vagrant</a>
+                                            </span><span>
+                                                <a href="/tags/Virtual-Development-Server.html" class="label">Virtual-Development-Server</a>
+                                            </span><span>
+                                                <a href="/tags/VirtualBox.html" class="label">VirtualBox</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div class="paragraph">
+<p>This is a follow up to earlier <a href="Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</a> blog.</p>
+</div>
+<div class="paragraph">
+<p>We now try to automated build of all needed images as soon as Oracle <a href="https://github.com/oracle/docker-images">GitHub</a> Sources changed or we need to build our Vagrant VirtualBox again from scratch.</p>
+</div>
+<div class="paragraph">
+<p>After we have already installed <a href="Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html">Jenkins</a> we now install first some needed plugins.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>We select explicit plugins at Jenkins Configuration</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_select_plugins.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins select plugins">
+</div>
+</div>
+</li>
+<li>
+<p>Pipeline and Pipeline Stage View</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_pipeline_plugins.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins pipeline plugins">
+</div>
+</div>
+</li>
+<li>
+<p>Git</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_git_plugin.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins git plugin">
+</div>
+</div>
+</li>
+<li>
+<p>SSH Slaves</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_ssh_slaves_plugin.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins ssh slaves plugin">
+</div>
+</div>
+</li>
+<li>
+<p>and wait for the install process</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_plugin_install_progress.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins plugin install progress">
+</div>
+</div>
+</li>
+<li>
+<p>Later we add Blue Ocean Beta via "Manage Jenkins" &gt; "Manage Plugins"</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_blue_ocean_plugin.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins blue ocean plugin">
+</div>
+</div>
+</li>
+<li>
+<p>After all is installed we restart Jenkins</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_blue_ocean_plugin_progress.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins blue ocean plugin progress">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After that we create our Jenkins pipeline via "New Item".</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>We give it a name and select pipeline.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_create_pipeline.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins create pipeline">
+</div>
+</div>
+</li>
+<li>
+<p>As we do not own the git repository and cannot create a hook there, we create a simple scm poll schedule.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_build_oracle_images_build_trigger.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins build oracle images build trigger">
+</div>
+</div>
+</li>
+<li>
+<p>Then we add our pipeline script.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_build_oracle_images_pipeline.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins build oracle images pipeline">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Here is the script for the moment, later after we have it successfully tested and implemented all builds of images we need, we will put it in it&#8217;s own git repository and call it from there. The script is written in <a href="https://github.com/jenkinsci/pipeline-model-definition-plugin">Pipeline Model Definition</a>, a config-like syntax for defining Pipelines.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-groovy" data-lang="groovy">pipeline {
+ agent label:'localhost_vagrant'
+ stages {
+  // Get the actual docker images sourcse from oracle git account
+  stage('Get Sources') {
+   steps {
+    git url: 'https://github.com/oracle/docker-images.git'
+   }
+  }
+  stage('Build Oracle Docker Images') {
+   steps {
+    parallel (
+     "Database XE 11.2.0.2" : {
+      dir('OracleDatabase/dockerfiles') {
+       // provide the downloaded source (via your oracle account) from the host
+       sh 'if [ ! -f 11.2.0.2/oracle-xe-11.2.0-1.0.x86_64.rpm.zip ]; then cp /software/Oracle/Database/oracle-xe-11.2.0-1.0.x86_64.rpm.zip 11.2.0.2/oracle-xe-11.2.0-1.0.x86_64.rpm.zip; fi'
+       // build the image
+       sh 'sudo ./buildDockerImage.sh  -v 11.2.0.2 -x'
+       // prepare the image for push to the local registry
+       sh 'docker tag oracle/database:11.2.0.2-xe localhost:5000/oracle/database:11.2.0.2-xe'
+       // push to the local registry
+       sh 'docker push localhost:5000/oracle/database:11.2.0.2-xe'
+      }
+     },
+     "WebLogic 12.2.1.2" : {
+     // server-jre is required for Weblogic
+      dir('OracleJava/java-8') {
+       // provide the downloaded source (via your oracle account) from the host
+       sh 'if [ ! -f server-jre-8u111-linux-x64.tar.gz ]; then cp /software/Oracle/Java/server-jre-8u111-linux-x64.tar.gz server-jre-8u111-linux-x64.tar.gz; fi'
+       // build the image
+       sh 'sudo ./build.sh'
+       // prepare the image for push to the local registry
+       sh 'docker tag oracle/serverjre:8 localhost:5000/oracle/serverjre:8'
+       // push to the local registry
+       sh 'docker push localhost:5000/oracle/serverjre:8'
+      }
+      dir('OracleWebLogic/dockerfiles') {
+       // provide the downloaded source (via your oracle account) from the host
+       sh 'if [ ! -f 12.2.1.2/fmw_12.2.1.2.0_wls_Disk1_1of1.zip ]; then cp /software/Oracle/WebLogic/fmw_12.2.1.2.0_wls_Disk1_1of1.zip 12.2.1.2/fmw_12.2.1.2.0_wls_Disk1_1of1.zip; fi'
+       // build the image
+       sh 'sudo ./buildDockerImage.sh -v 12.2.1.2 -g'
+       // prepare the image for push to the local registry
+       sh 'docker tag oracle/weblogic:12.2.1.2-generic localhost:5000/oracle/weblogic:12.2.1.2-generic'
+       // push to the local registry
+       sh 'docker push localhost:5000/oracle/weblogic:12.2.1.2-generic'
+      }
+     }
+    )
+   }
+  }
+  stage('Cleanup') {
+   steps {
+    // clean virtualbox
+    sh 'docker rmi --force localhost:5000/oracle/database:11.2.0.2-xe'
+    sh 'docker rmi --force oracle/database:11.2.0.2-xe'
+    sh 'docker rmi --force localhost:5000/oracle/weblogic:12.2.1.2-generic'
+    sh 'docker rmi --force oracle/weblogic:12.2.1.2-generic'
+    sh 'docker rmi --force localhost:5000/oracle/serverjre:8'
+    sh 'docker rmi --force oracle/serverjre:8'
+   }
+  }
+ }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can wait now the 15 min poll time or start the job manually.</p>
+</div>
+<div class="olist gallery ids="518">
+<ol class="gallery ids="518">
+<li>
+<p>In the standard view you can see several information about the pipeline stages. Click on "Open Blue Ocean" now.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_build_oracle_images_classic_result.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins build oracle images classic result">
+</div>
+</div>
+</li>
+<li>
+<p>You see now an overview of last runs. Click now on the latest on the top.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_build_oracle_images_blue_ocean_overview.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins build oracle images blue ocean overview">
+</div>
+</div>
+</li>
+<li>
+<p>Here you see at run-time a nice animation what&#8217;s actually going on and the according logs. For our pipeline you see here parallel steps in the run.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_build_oracle_images_blue_ocean_result.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins build oracle images blue ocean result">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After an "vagrant halt / vagrant up" you can control in your browser, that the created images are persistent in the local docker registry:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20docker_registry_persistent.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   docker registry persistent">
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/tkleiber/de.kleiber.devserver/tree/53a1136594393872f4ae7615db86757a9152f4e1">Here</a> you find the source code for this blog.</p>
+</div>
+<div class="paragraph">
+<p><a href="tags/Virtual-Development-Server.html">Here</a> you find more about the topic "Virtual Development Server".</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it.</p>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>            
+        </div>
+<div class="row">
+            <div class="small-12 small-text-center">
+                <p class="muted credit">
+                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
+                </p>
+            </div>
+        </div>        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/vendor/prettify.js"></script>
+        <script>
+            $(document).foundation();
+            $(function() {
+               hljs.tabReplace = "  ";
+               hljs.initHighlighting();
+            });
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AMAPAC.IO</title>
+        <link rel="stylesheet" href="/css/asciidoctor.css"/>
+        <link rel="stylesheet" href="/css/foundation.css"/>
+        <link rel="stylesheet" href="/css/social_foundicons.css"/>
+        <link rel="stylesheet" href="/css/prettify.css"/>
+        <link rel="stylesheet" href="/css/desert.css"/>
+        <link rel="stylesheet" href="/css/app.css"/>
+        
+        <script src="/js/vendor/modernizr.js"></script>
+        <script src="/js/app.js"></script>
+        
+    </head><body class="antialiased" onload="prettyPrint();">
+<div class="row">
+            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+                <div class="title-box">
+                    <div class="title-content">
+                        <h1>AMAPAC.IO</h1>
+                        <p>As Much As Possible As Code</p>
+                        <p class="title-contact">
+                            <a href="https://twitter.com/develishdevelop">
+                                <i class="foundicon-twitter"></i>
+                            </a><a href="https://www.linkedin.com/in/kleiber">
+                                <i class="foundicon-linkedin"></i>
+                            </a><a href="https://www.slideshare.net/tkleiber">
+                                <i class="foundicon-slideshare"></i>
+                            </a><a href="https://github.com/tkleiber">
+                                <i class="foundicon-github"></i>
+                            </a><a href="https://develishdevelopment.wordpress.com">
+                                <i class="foundicon-wordpress"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div><div class="sticky contain-to-grid">
+                    <nav class="top-bar" data-topbar="" role="navigation">
+                        <ul class="title-area">
+                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </li>
+                        </ul><section class="top-bar-section">
+                            <ul class="left">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li><li>
+                                    <a href="/archive.html">Archive</a>
+                                </li><li class="has-dropdown">
+                                    <a href="#">Projects</a><ul class="dropdown">
+                                        
+                                    </ul>
+                                </li><li>
+                                    <a href="/about.html">About</a>
+                                </li><li>
+                                    <a href="/feed.xml">Subscribe</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </div>        <div>
+<div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Aug</div>
+                                        <div class="date">19</div>
+                                        <div class="year">2016</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html">Virtual Development Server: Add swapfile to VirtualBox as requirement for installing Oracle or build Oracle docker images</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Virtual-Development-Server.html" class="label">Virtual-Development-Server</a>
+                                            </span><span>
+                                                <a href="/tags/Continous-Integration.html" class="label">Continous-Integration</a>
+                                            </span><span>
+                                                <a href="/tags/Infrastructure-as-Code.html" class="label">Infrastructure-as-Code</a>
+                                            </span><span>
+                                                <a href="/tags/Linux.html" class="label">Linux</a>
+                                            </span><span>
+                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
+                                            </span><span>
+                                                <a href="/tags/Vagrant.html" class="label">Vagrant</a>
+                                            </span><span>
+                                                <a href="/tags/VirtualBox.html" class="label">VirtualBox</a>
+                                            </span><span>
+                                                <a href="/tags/Docker.html" class="label">Docker</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div class="paragraph">
+<p>As I want later build Oracle docker images, some of this need a swapfile.</p>
+</div>
+<div class="paragraph">
+<p>Per default my used <a href="http://www.vagrantbox.es">Vagrantbox</a> does not have one, so later steps will fail.</p>
+</div>
+<div class="paragraph">
+<p>As in the last blog I use a Vagrant shell provider.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">...
+# add swapfile to the box
+config.vm.provision :shell, :path =&gt; "add_swap.sh"
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This calls the script add_swap.sh in the created VirtualBox machine.
+Make sure, that you create your swapfile on a supported file system.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">#!/bin/sh
+
+# size of swapfile in megabytes
+swapsize=2100
+
+# does the swap file already exist?
+grep -q "swapfile" /etc/fstab
+
+# if not then create it
+if [ $? -ne 0 ]; then
+  echo 'swapfile not found. Adding swapfile.'
+  # allocate the disk space
+  sudo fallocate -l ${swapsize}M /home/swapfile
+  # only owner can read and write
+  sudo chmod 600 /home/swapfile
+  # sets up swap area in the file
+  sudo mkswap /home/swapfile
+  # enable file for paging and swapping
+  # if this comes with "swapon failed: Invalid argument",
+  # check if the filesystem is supported for swap, xfs eg. is not
+  sudo swapon /home/swapfile
+  # mount the swapfile at boot
+  echo '/home/swapfile none swap defaults 0 0' &gt;&gt; /etc/fstab
+else
+  echo 'swapfile found. No changes made.'
+fi
+
+# output results to terminal
+df -h /home/swapfile
+cat /proc/swaps
+cat /proc/meminfo | grep Swap</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you have to recreate the VirtualBox machine via</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant destroy
+vagrant up</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the output you can now see, how the swapfile is added.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">...
+==&gt; default: Running provisioner: shell...
+default: Running: C:/Users/torst/AppData/Local/Temp/vagrant-shell20160819-14324-1a10xs8.sh
+==&gt; default: swapfile not found. Adding swapfile.
+==&gt; default: Setting up swapspace version 1, size = 2150396 KiB
+==&gt; default: no label, UUID=20ff8dbf-6282-4ba6-abe4-05c04c74aac8
+==&gt; default: Filesystem              Size  Used Avail Use% Mounted on
+==&gt; default: /dev/mapper/linux-home  3.8G  2.4G  1.5G  63% /home
+==&gt; default: Filename                           Type            Size    Used    Priority
+==&gt; default: /home/swapfile                          file               2150396 0       -1
+==&gt; default: SwapCached:            0 kB
+==&gt; default: SwapTotal:       2150396 kB
+==&gt; default: SwapFree:        2150396 kB
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/tkleiber/de.kleiber.devserver/tree/9b00e07140d4af0f65bf34c7658a80aae63b58d0">Here</a> you find the source code for this blog.</p>
+</div>
+<div class="paragraph">
+<p><a href="tags/Virtual-Development-Server.html">Here</a> you find more about the topic "Virtual Development Server".</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it.</p>
+</div>
+<div class="paragraph">
+<p>References:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://gist.github.com/shovon/9dd8d2d1a556b8bf9c82">Increasing swap size</a></p>
+</li>
+</ul>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>            
+        </div>
+<div class="row">
+            <div class="small-12 small-text-center">
+                <p class="muted credit">
+                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
+                </p>
+            </div>
+        </div>        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/vendor/prettify.js"></script>
+        <script>
+            $(document).foundation();
+            $(function() {
+               hljs.tabReplace = "  ";
+               hljs.initHighlighting();
+            });
+        </script>
+        
+    </body>
+</html>

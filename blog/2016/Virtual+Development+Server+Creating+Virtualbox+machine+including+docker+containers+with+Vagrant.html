@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AMAPAC.IO</title>
+        <link rel="stylesheet" href="/css/asciidoctor.css"/>
+        <link rel="stylesheet" href="/css/foundation.css"/>
+        <link rel="stylesheet" href="/css/social_foundicons.css"/>
+        <link rel="stylesheet" href="/css/prettify.css"/>
+        <link rel="stylesheet" href="/css/desert.css"/>
+        <link rel="stylesheet" href="/css/app.css"/>
+        
+        <script src="/js/vendor/modernizr.js"></script>
+        <script src="/js/app.js"></script>
+        
+    </head><body class="antialiased" onload="prettyPrint();">
+<div class="row">
+            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+                <div class="title-box">
+                    <div class="title-content">
+                        <h1>AMAPAC.IO</h1>
+                        <p>As Much As Possible As Code</p>
+                        <p class="title-contact">
+                            <a href="https://twitter.com/develishdevelop">
+                                <i class="foundicon-twitter"></i>
+                            </a><a href="https://www.linkedin.com/in/kleiber">
+                                <i class="foundicon-linkedin"></i>
+                            </a><a href="https://www.slideshare.net/tkleiber">
+                                <i class="foundicon-slideshare"></i>
+                            </a><a href="https://github.com/tkleiber">
+                                <i class="foundicon-github"></i>
+                            </a><a href="https://develishdevelopment.wordpress.com">
+                                <i class="foundicon-wordpress"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div><div class="sticky contain-to-grid">
+                    <nav class="top-bar" data-topbar="" role="navigation">
+                        <ul class="title-area">
+                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </li>
+                        </ul><section class="top-bar-section">
+                            <ul class="left">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li><li>
+                                    <a href="/archive.html">Archive</a>
+                                </li><li class="has-dropdown">
+                                    <a href="#">Projects</a><ul class="dropdown">
+                                        
+                                    </ul>
+                                </li><li>
+                                    <a href="/about.html">About</a>
+                                </li><li>
+                                    <a href="/feed.xml">Subscribe</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </div>        <div>
+<div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Aug</div>
+                                        <div class="date">12</div>
+                                        <div class="year">2016</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html">Virtual Development Server: Creating Virtualbox machine including docker containers with Vagrant</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Virtual-Development-Server.html" class="label">Virtual-Development-Server</a>
+                                            </span><span>
+                                                <a href="/tags/Continous-Integration.html" class="label">Continous-Integration</a>
+                                            </span><span>
+                                                <a href="/tags/Docker.html" class="label">Docker</a>
+                                            </span><span>
+                                                <a href="/tags/Infrastructure-as-Code.html" class="label">Infrastructure-as-Code</a>
+                                            </span><span>
+                                                <a href="/tags/Linux.html" class="label">Linux</a>
+                                            </span><span>
+                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
+                                            </span><span>
+                                                <a href="/tags/Vagrant.html" class="label">Vagrant</a>
+                                            </span><span>
+                                                <a href="/tags/VirtualBox.html" class="label">VirtualBox</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div class="paragraph">
+<p>As I want to decouple my development server from my computer as much as possible I want to create first a virtual machine with linux.</p>
+</div>
+<div class="paragraph">
+<p>Because I have used <a href="https://www.virtualbox.org">Oracle Virtualbox</a> in the past successfully, I will use it here too.</p>
+</div>
+<div class="paragraph">
+<p>As I want have later a reproducible environment via Infrastructure as code, I give <a href="https://www.vagrantup.com">Vagrant</a> a try for this. As source code management system I use GIT, my remote repository is located at <a href="https://github.com/tkleiber/de.kleiber.devserver">GitHub</a>.</p>
+</div>
+<div class="paragraph">
+<p>As I don&#8217;t want create a new linux from scratch, I have looked for a ready system at <a href="http://www.vagrantbox.es">Vagrantboxes</a>, which contains a new Oracle Linux version, and find a <a href="http://cloud.terry.im/vagrant/oraclelinux-7-x86_64.box">Oracle Linux 7.1</a> x86_64 system with Chef and Puppet preinstalled.</p>
+</div>
+<div class="paragraph">
+<p>Before I could start, I had to install on my Windows 10 computer <a href="https://www.vagrantup.com">Vagrant</a> 1.8.5 and <a href="https://www.virtualbox.org">Oracle Virtualbox</a> 5.0.16. Don&#8217;t use the 5.1 Version, as at this is not yet supported by vagrant 1.8.5.</p>
+</div>
+<div class="paragraph">
+<p>For automatic update of the Oracle VM VirtualBox Extension Pack, which is delivered with the ready box and is required for use of shared folders and more, you should install following plugin as described <a href="http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync">here</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant plugin install vagrant vbguest</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next I have created a directory of your choice and init there a Vagrantfile by calling</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant init</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then I changed the Vagrantfile as following, see the inline comments for documentation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">Vagrant.configure(2) do |config|
+
+  # Use the mentioned ready OEL 7 linux box
+  config.vm.box = "oraclelinux-7-x86_64.box"
+  config.vm.box_url = "http://cloud.terry.im/vagrant/oraclelinux-7-x86_64.box"
+
+  # Create a private network
+  config.vm.network "private_network", type: "dhcp"
+
+  # persistant storage for all docker container
+  config.vm.synced_folder "C:\\shared\\virtual_storage", "/virtual_storage", :mount_options =&gt; ["dmode=777","fmode=777"]
+
+  # virtualbox provider
+  config.vm.provider "virtualbox" do |vb|
+    # name in VirtualBox
+    vb.name = "Development Server"
+	end
+
+  # Docker Private Registry container for storing later builded docker images, which are not in the Docker Public Registry at https://hub.docker.com/
+  config.vm.provision "docker" do |d|
+    d.run "registry", image: "registry", daemonize: true, args: "-d -p 5000:5000 -v /virtual_storage/docker_registry:/var/lib/registry"
+  end
+
+end</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Run next from the created directory</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant up</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Following you see the output</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">Bringing machine 'default' up with 'virtualbox' provider...
+==&gt; default: Importing base box 'oraclelinux-7-x86_64.box'...
+==&gt; default: Matching MAC address for NAT networking...
+==&gt; default: Setting the name of the VM: Development Server
+==&gt; default: Clearing any previously set network interfaces...
+==&gt; default: Preparing network interfaces based on configuration...
+default: Adapter 1: nat
+default: Adapter 2: hostonly
+==&gt; default: Forwarding ports...
+default: 22 (guest) =&gt; 2222 (host) (adapter 1)
+==&gt; default: Booting VM...
+==&gt; default: Waiting for machine to boot. This may take a few minutes...
+default: SSH address: 127.0.0.1:2222
+default: SSH username: vagrant
+default: SSH auth method: private key
+default: Warning: Remote connection disconnect. Retrying...
+default:
+default: Vagrant insecure key detected. Vagrant will automatically replace
+default: this with a newly generated keypair for better security.
+default:
+default: Inserting generated public key within guest...
+default: Removing insecure key from the guest if it's present...
+default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==&gt; default: Machine booted and ready!
+[default] GuestAdditions versions on your host (5.0.26) and guest (5.0.12) do not match.
+Loaded plugins: ulninfo
+Package kernel-uek-devel-4.1.12-32.el7uek.x86_64 already installed and latest version
+Package gcc-4.8.5-4.el7.x86_64 already installed and latest version
+Package 1:make-3.82-21.el7.x86_64 already installed and latest version
+Package 4:perl-5.16.3-286.el7.x86_64 already installed and latest version
+Package bzip2-1.0.6-13.el7.x86_64 already installed and latest version
+Nothing to do
+Copy iso file C:\Program Files\Oracle\VirtualBox\VBoxGuestAdditions.iso into the box /tmp/VBoxGuestAdditions.iso
+mount: /dev/loop0 is write-protected, mounting read-only
+Installing Virtualbox Guest Additions 5.0.26 - guest version is 5.0.12
+Verifying archive integrity... All good.
+Uncompressing VirtualBox 5.0.26 Guest Additions for Linux............
+VirtualBox Guest Additions installer
+Removing installed version 5.0.12 of VirtualBox Guest Additions...
+Removing existing VirtualBox non-DKMS kernel modules[  OK  ]
+Copying additional installer modules ...
+Installing additional modules ...
+Removing existing VirtualBox non-DKMS kernel modules[  OK  ]
+Building the VirtualBox Guest Additions kernel modules
+Building the main Guest Additions module[  OK  ]
+Building the shared folder support module[  OK  ]
+Building the shared folder support module[  OK  ]
+Building the graphics driver module[  OK  ]
+Doing non-kernel setup of the Guest Additions[  OK  ]
+You should restart your guest to make sure the new modules are actually used
+
+==&gt; default: Checking for guest additions in VM...
+==&gt; default: Configuring and enabling network interfaces...
+==&gt; default: Mounting shared folders...
+default: /vagrant =&gt; C:/shared/scmlocal/blog
+default: /virtual_storage =&gt; C:/shared/virtual_storage
+==&gt; default: Running provisioner: docker...
+default: Installing Docker onto machine...
+==&gt; default: Starting Docker containers...
+==&gt; default: -- Container: registry</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In lines 1..24 you see the loading of the ready box and booting with the defined network</p>
+</li>
+<li>
+<p>In lines 25..50 the version of the VirtualBox GuestAdditions of the box is checked and after that replaced with the actual installed VirtualBox version. This happens only on the first "vagrant up" call.</p>
+</li>
+<li>
+<p>In lines 57..58 Docker is installed as a Vagrant Docker provider is called in the Vagrantfile line 20 and it does not exist in the box before.</p>
+</li>
+<li>
+<p>In lines 59..60 a Docker Private Registry container is started via loading docker image from the <a href="https://hub.docker.com">Docker Public Registry</a>. In a later blog we will use this Docker Private Registry container to hold our own created docker images like database and development tools. The pushed images are saved to a mapped host volume of my windows 10 computer.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can connect to the virtualbox directly via</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant ssh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The you can see the downloaded Docker Private Registry images and the started container from this images:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">[vagrant@oraclelinux7 ~]$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+registry            latest              c6c14b3960bd        13 days ago         33.28 MB
+[vagrant@oraclelinux7 ~]$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+739c1c9926b1        registry            "/entrypoint.sh /etc/"   5 minutes ago       Up 5 minutes        0.0.0.0:5000-&gt;5000/tcp   registry</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can now stop the Development Server via</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant halt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you startup again the server via</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant up</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>the provision steps are not replayed until you destroy the server or explicitly call the provision again via</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant provision</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/tkleiber/de.kleiber.devserver/tree/ba4ec913f5626364ec56cc3d574e13b23e016663">Here</a> you find the source code for this blog.</p>
+</div>
+<div class="paragraph">
+<p><a href="tags/Virtual-Development-Server.html">Here</a> you find more about the topic "Virtual Development Server".</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it.</p>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>            
+        </div>
+<div class="row">
+            <div class="small-12 small-text-center">
+                <p class="muted credit">
+                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
+                </p>
+            </div>
+        </div>        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/vendor/prettify.js"></script>
+        <script>
+            $(document).foundation();
+            $(function() {
+               hljs.tabReplace = "  ";
+               hljs.initHighlighting();
+            });
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AMAPAC.IO</title>
+        <link rel="stylesheet" href="/css/asciidoctor.css"/>
+        <link rel="stylesheet" href="/css/foundation.css"/>
+        <link rel="stylesheet" href="/css/social_foundicons.css"/>
+        <link rel="stylesheet" href="/css/prettify.css"/>
+        <link rel="stylesheet" href="/css/desert.css"/>
+        <link rel="stylesheet" href="/css/app.css"/>
+        
+        <script src="/js/vendor/modernizr.js"></script>
+        <script src="/js/app.js"></script>
+        
+    </head><body class="antialiased" onload="prettyPrint();">
+<div class="row">
+            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+                <div class="title-box">
+                    <div class="title-content">
+                        <h1>AMAPAC.IO</h1>
+                        <p>As Much As Possible As Code</p>
+                        <p class="title-contact">
+                            <a href="https://twitter.com/develishdevelop">
+                                <i class="foundicon-twitter"></i>
+                            </a><a href="https://www.linkedin.com/in/kleiber">
+                                <i class="foundicon-linkedin"></i>
+                            </a><a href="https://www.slideshare.net/tkleiber">
+                                <i class="foundicon-slideshare"></i>
+                            </a><a href="https://github.com/tkleiber">
+                                <i class="foundicon-github"></i>
+                            </a><a href="https://develishdevelopment.wordpress.com">
+                                <i class="foundicon-wordpress"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div><div class="sticky contain-to-grid">
+                    <nav class="top-bar" data-topbar="" role="navigation">
+                        <ul class="title-area">
+                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </li>
+                        </ul><section class="top-bar-section">
+                            <ul class="left">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li><li>
+                                    <a href="/archive.html">Archive</a>
+                                </li><li class="has-dropdown">
+                                    <a href="#">Projects</a><ul class="dropdown">
+                                        
+                                    </ul>
+                                </li><li>
+                                    <a href="/about.html">About</a>
+                                </li><li>
+                                    <a href="/feed.xml">Subscribe</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </div>        <div>
+<div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Nov</div>
+                                        <div class="date">25</div>
+                                        <div class="year">2016</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html">Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Continous-Integration.html" class="label">Continous-Integration</a>
+                                            </span><span>
+                                                <a href="/tags/Docker.html" class="label">Docker</a>
+                                            </span><span>
+                                                <a href="/tags/Infrastructure-as-Code.html" class="label">Infrastructure-as-Code</a>
+                                            </span><span>
+                                                <a href="/tags/Jenkins.html" class="label">Jenkins</a>
+                                            </span><span>
+                                                <a href="/tags/Linux.html" class="label">Linux</a>
+                                            </span><span>
+                                                <a href="/tags/Vagrant.html" class="label">Vagrant</a>
+                                            </span><span>
+                                                <a href="/tags/Virtual-Development-Server.html" class="label">Virtual-Development-Server</a>
+                                            </span><span>
+                                                <a href="/tags/VirtualBox.html" class="label">VirtualBox</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div class="paragraph">
+<p>For automation of all of my processes I need Jenkins in my development server.</p>
+</div>
+<div class="paragraph">
+<p>First I had installed Jenkins as Docker container via Vagrant Docker provider. But with this architecture it was very complicated to create docker images and run Docker containers on the Docker host, in this case my Vagrant Virtualbox.</p>
+</div>
+<div class="paragraph">
+<p>So for simplification I have decided to install Jenkins with the provisioning of the Vagrant Virtualbox via a shell provider in my Vagrantfile:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">...
+# persistant storage for jenkins
+config.vm.synced_folder "C:\\shared\\virtual_storage\\jenkins_home", "/var/lib/jenkins", type: "nfs", owner: 994, group: 992, create: true
+...
+# install jenkins
+config.vm.provision :shell, :path =&gt; "add_jenkins.sh"
+...</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First I map a shared folder of my Windows Host to the Vagrant Virtualbox to persist my Jenkins Configuration.</p>
+</li>
+<li>
+<p>Then I install Jenkins via the shell script add_jenkins.sh.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">sudo yum -y install java
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum -y install jenkins
+sudo sed -i -e 's/JENKINS_JAVA_OPTIONS="-Djava.awt.headless=true"/JENKINS_JAVA_OPTIONS="-Djava.awt.headless=true -Dmail.smtp.starttls.enable=true"/g' /etc/sysconfig/jenkins
+sudo service jenkins start</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jenkins requires java, so I install it first.</p>
+</li>
+<li>
+<p>After that I get the latest Long-Term Support (LTS) repository, import it and install Jenkins from there.</p>
+</li>
+<li>
+<p>Then I do some configuration, which I need for my jobs and start Jenkins.</p>
+</li>
+<li>
+<p>An open issue is, that I have to restart Jenkins after Vagrant restart, because the shared folders are unfortunatly mounted after service starts.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After first install you have to enter the credential information from the filesystem as requested, all later installations use the persistent Jenkins configuration, so you can login and start from where you have left Jenkins.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20unlock_jenkins.png" alt="Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   unlock jenkins">
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/tkleiber/de.kleiber.devserver/tree/7078584a88df39b38a669d096e3502d8343f1f1a">Here</a> you find the source code for this blog.</p>
+</div>
+<div class="paragraph">
+<p><a href="tags/Virtual-Development-Server.html">Here</a> you find more about the topic "Virtual Development Server".</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it.</p>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>            
+        </div>
+<div class="row">
+            <div class="small-12 small-text-center">
+                <p class="muted credit">
+                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
+                </p>
+            </div>
+        </div>        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/vendor/prettify.js"></script>
+        <script>
+            $(document).foundation();
+            $(function() {
+               hljs.tabReplace = "  ";
+               hljs.initHighlighting();
+            });
+        </script>
+        
+    </body>
+</html>

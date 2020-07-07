@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AMAPAC.IO</title>
+        <link rel="stylesheet" href="/css/asciidoctor.css"/>
+        <link rel="stylesheet" href="/css/foundation.css"/>
+        <link rel="stylesheet" href="/css/social_foundicons.css"/>
+        <link rel="stylesheet" href="/css/prettify.css"/>
+        <link rel="stylesheet" href="/css/desert.css"/>
+        <link rel="stylesheet" href="/css/app.css"/>
+        
+        <script src="/js/vendor/modernizr.js"></script>
+        <script src="/js/app.js"></script>
+        
+    </head><body class="antialiased" onload="prettyPrint();">
+<div class="row">
+            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+                <div class="title-box">
+                    <div class="title-content">
+                        <h1>AMAPAC.IO</h1>
+                        <p>As Much As Possible As Code</p>
+                        <p class="title-contact">
+                            <a href="https://twitter.com/develishdevelop">
+                                <i class="foundicon-twitter"></i>
+                            </a><a href="https://www.linkedin.com/in/kleiber">
+                                <i class="foundicon-linkedin"></i>
+                            </a><a href="https://www.slideshare.net/tkleiber">
+                                <i class="foundicon-slideshare"></i>
+                            </a><a href="https://github.com/tkleiber">
+                                <i class="foundicon-github"></i>
+                            </a><a href="https://develishdevelopment.wordpress.com">
+                                <i class="foundicon-wordpress"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div><div class="sticky contain-to-grid">
+                    <nav class="top-bar" data-topbar="" role="navigation">
+                        <ul class="title-area">
+                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </li>
+                        </ul><section class="top-bar-section">
+                            <ul class="left">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li><li>
+                                    <a href="/archive.html">Archive</a>
+                                </li><li class="has-dropdown">
+                                    <a href="#">Projects</a><ul class="dropdown">
+                                        
+                                    </ul>
+                                </li><li>
+                                    <a href="/about.html">About</a>
+                                </li><li>
+                                    <a href="/feed.xml">Subscribe</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </div>        <div>
+<div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Aug</div>
+                                        <div class="date">13</div>
+                                        <div class="year">2016</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html">Virtual Development Server: Add enough ram and disk space to VirtualBox for further server components</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Virtual-Development-Server.html" class="label">Virtual-Development-Server</a>
+                                            </span><span>
+                                                <a href="/tags/Continous-Integration.html" class="label">Continous-Integration</a>
+                                            </span><span>
+                                                <a href="/tags/Infrastructure-as-Code.html" class="label">Infrastructure-as-Code</a>
+                                            </span><span>
+                                                <a href="/tags/Linux.html" class="label">Linux</a>
+                                            </span><span>
+                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
+                                            </span><span>
+                                                <a href="/tags/Vagrant.html" class="label">Vagrant</a>
+                                            </span><span>
+                                                <a href="/tags/VirtualBox.html" class="label">VirtualBox</a>
+                                            </span><span>
+                                                <a href="/tags/VDI.html" class="label">VDI</a>
+                                            </span><span>
+                                                <a href="/tags/VDMK.html" class="label">VDMK</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div class="paragraph">
+<p>As I want later build docker images and run docker containers I have to provide enough disk space for this.</p>
+</div>
+<div class="paragraph">
+<p>Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk disks, these have a static size and are to small for my purposes.</p>
+</div>
+<div class="paragraph">
+<p>Therefore I convert the disk, which comes with the box, via Vagrant VirtualBox provider from vmdk to vdi, so that it allocate only the used disk space in the host system.
+Additional I add a second big disk:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">...
+# virtualbox provider
+config.vm.provider "virtualbox" do |vb|
+# name in VirtualBox
+vb.name = "Development Server"
+
+    # configure 16 GB memory
+    vb.customize ["modifyvm", :id, "--memory", "16384"]
+
+    # clone the original vmdk disk into a dynamic vdi disk, which only allocate the used space on the host
+    if ARGV[0] == "up" &amp;&amp; ! File.exist?("#{ENV["HOME"]}/VirtualBox VMs/#{vb.name}/#{vb.name}.vdi")
+      # configure the SATA controller for second disk port, for other box you may have another controller
+      vb.customize [
+        "storagectl", :id,
+        "--name", "SATA",
+        "--controller", "IntelAHCI",
+        "--portcount", "1",
+        "--hostiocache", "on"
+      ]
+      # clone the original disk, for other box you may have another disk name
+      vb.customize [
+        "clonehd", "#{ENV["HOME"]}/VirtualBox VMs/#{vb.name}/box-disk2.vmdk",
+             "#{ENV["HOME"]}/VirtualBox VMs/#{vb.name}/#{vb.name}.vdi",
+        "--format", "VDI"
+      ]
+      # attach the cloned disk to the controller
+      vb.customize [
+        "storageattach", :id,
+        "--storagectl", "SATA",
+        "--port", "0",
+        "--device", "0",
+        "--type", "hdd",
+        "--nonrotational", "on",
+        "--medium", "#{ENV["HOME"]}/VirtualBox VMs/#{vb.name}/#{vb.name}.vdi"
+      ]
+      # delete the original disk to release it's space
+      vb.customize [
+        "closemedium", "disk", "#{ENV["HOME"]}/VirtualBox VMs/#{vb.name}/box-disk2.vmdk",
+        "--delete"
+      ]
+    end
+
+    # create addtional big dynamic vdi disk for docker images
+    if !File.exist?("#{ENV["HOME"]}/VirtualBox VMs/#{vb.name}/#{vb.name}_docker.vdi")
+      # create addtional big dynamic vdi (200 GB)
+      vb.customize [
+        "createhd",
+        "--filename", "#{ENV["HOME"]}/VirtualBox VMs/#{vb.name}/#{vb.name}_docker.vdi",
+        "--format", "VDI",
+        "--size", 200 * 1024
+      ]
+      # attach the addtional disk to the controller
+      vb.customize [
+        "storageattach", :id,
+        "--storagectl", "SATA",
+        "--port", "1",
+        "--device", 0,
+        "--type", "hdd",
+        "--medium", "#{ENV["HOME"]}/VirtualBox VMs/#{vb.name}/#{vb.name}_docker.vdi"
+      ]
+    end
+  end
+
+  # shell provider
+  # format the additional disk and add the free space to the box
+  config.vm.provision :shell, :path =&gt; "add_disk.sh"
+  ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Lines 64..66 adds the additional disk space to a logical volume via a Vagrant shell provider, which calls the script add_disk.sh in the created VirtualBox machine.</p>
+</div>
+<div class="paragraph">
+<p>Resizing the first disk does not work, as therefore the machine has to be booted, which cannot be handled with Vagrant.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash"># exit immediately if a command exits with a non-zero status.
+set -e
+# activate debugging from here
+set -x
+
+if [ -f /etc/disk_added_date ] ; then
+echo "disk already added so exiting."
+exit 0
+fi
+
+# show diskspace of the logical volume before adding the disk
+df -h /dev/mapper/linux-root
+
+# partitioning the disk
+sudo fdisk -u /dev/sdb &lt;&lt;EOF n p t 8e w EOF
+
+# initialize the partition for use by logical volume manager
+sudo pvcreate /dev/sdb1
+
+# add the partition to volume group linux
+sudo vgextend linux /dev/sdb1
+
+# increase the size of the logical volume /dev/mapper/linux-root
+sudo lvextend --extents +51199 --resizefs /dev/mapper/linux-root
+
+# mark that the disk was added
+date &gt; /etc/disk_added_date
+
+# show diskspace of the logical volume after adding the disk
+df -h /dev/mapper/linux-root</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you have to recreate the VirtualBox machine via</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant destroy
+vagrant up</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the output you can now see, how the logical volume grows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">==&gt; default: Running provisioner: shell...
+default: Running: C:/Users/torst/AppData/Local/Temp/vagrant-shell20160812-2348-1ln6wrz.sh
+==&gt; default: ++ '[' -f /etc/disk_added_date ']'
+==&gt; default: ++ df -h /dev/mapper/linux-root
+==&gt; default: Filesystem              Size  Used Avail Use% Mounted on
+==&gt; default: /dev/mapper/linux-root   16G  1.9G   14G  12% /
+==&gt; default: ++ sudo fdisk -u /dev/sdb
+==&gt; default: Welcome to fdisk (util-linux 2.23.2).
+==&gt; default:
+==&gt; default: Changes will remain in memory only, until you decide to write them.
+==&gt; default: Be careful before using the write command.
+==&gt; default:
+==&gt; default:
+==&gt; default: Command (m for help): Partition type:
+==&gt; default:    p   primary (0 primary, 0 extended, 4 free)
+==&gt; default:    e   extended
+==&gt; default: Select (default p): Partition number (1-4, default 1): First sector (2048-419430399, default 2048): Using default value 2048
+==&gt; default: Last sector, +sectors or +size{K,M,G} (2048-419430399, default 419430399): Using default value 419430399
+==&gt; default: Partition 1 of type Linux and of size 200 GiB is set
+==&gt; default:
+==&gt; default: Command (m for help): Selected partition 1
+==&gt; default: Hex code (type L to list all codes): Hex code (type L to list all codes): Changed type of partition 'Linux' to 'Linux LVM'
+==&gt; default:
+==&gt; default: Command (m for help):
+==&gt; default: Device does not contain a recognized partition table
+==&gt; default: Building a new DOS disklabel with disk identifier 0xb4c74c64.
+==&gt; default: The partition table has been altered!
+==&gt; default:
+==&gt; default: Calling ioctl() to re-read partition table.
+==&gt; default: Syncing disks.
+==&gt; default: ++ sudo pvcreate /dev/sdb1
+==&gt; default:   Physical volume "/dev/sdb1" successfully created
+==&gt; default: ++ sudo vgextend linux /dev/sdb1
+==&gt; default:   Volume group "linux" successfully extended
+==&gt; default: ++ sudo lvextend --extents +51199 --resizefs /dev/mapper/linux-root
+==&gt; default:   Size of logical volume linux/root changed from 15.62 GiB (4000 extents) to 215.62 GiB (55199 extents).
+==&gt; default:   Logical volume root successfully resized.
+==&gt; default: meta-data=/dev/mapper/linux-root isize=256    agcount=4, agsize=1024000 blks
+==&gt; default:          =                       sectsz=512   attr=2, projid32bit=1
+==&gt; default:          =                       crc=0        finobt=0
+==&gt; default: data     =                       bsize=4096   blocks=4096000, imaxpct=25
+==&gt; default:          =                       sunit=0      swidth=0 blks
+==&gt; default: naming   =version 2              bsize=4096   ascii-ci=0 ftype=0
+==&gt; default: log      =internal               bsize=4096   blocks=2560, version=2
+==&gt; default:          =                       sectsz=512   sunit=0 blks, lazy-count=1
+==&gt; default: realtime =none                   extsz=4096   blocks=0, rtextents=0
+==&gt; default: data blocks changed from 4096000 to 56523776
+==&gt; default: ++ date
+==&gt; default: ++ df -h /dev/mapper/linux-root
+==&gt; default: Filesystem              Size  Used Avail Use% Mounted on
+==&gt; default: /dev/mapper/linux-root  216G  1.9G  214G   1% /</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/tkleiber/de.kleiber.devserver/tree/eebbea212f60f3345710ba07de62501aec69df6a">Here</a> you find the source code for this blog.</p>
+</div>
+<div class="paragraph">
+<p><a href="tags/Virtual-Development-Server.html">Here</a> you find more about the topic "Virtual Development Server".</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it.</p>
+</div>
+<div class="paragraph">
+<p>References:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://oracle-base.com/articles/vm/virtualbox-extend-disk-and-file-system">VirtualBox : Extend Virtual Disk and File System</a></p>
+</li>
+<li>
+<p><a href="http://stackoverflow.com/questions/14917353/resizing-disk-space-on-vagrant-boxant-box">Resizing disk space on vagrant box</a></p>
+</li>
+</ul>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>            
+        </div>
+<div class="row">
+            <div class="small-12 small-text-center">
+                <p class="muted credit">
+                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
+                </p>
+            </div>
+        </div>        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/vendor/prettify.js"></script>
+        <script>
+            $(document).foundation();
+            $(function() {
+               hljs.tabReplace = "  ";
+               hljs.initHighlighting();
+            });
+        </script>
+        
+    </body>
+</html>

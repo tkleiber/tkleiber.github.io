@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AMAPAC.IO</title>
+        <link rel="stylesheet" href="/css/asciidoctor.css"/>
+        <link rel="stylesheet" href="/css/foundation.css"/>
+        <link rel="stylesheet" href="/css/social_foundicons.css"/>
+        <link rel="stylesheet" href="/css/prettify.css"/>
+        <link rel="stylesheet" href="/css/desert.css"/>
+        <link rel="stylesheet" href="/css/app.css"/>
+        
+        <script src="/js/vendor/modernizr.js"></script>
+        <script src="/js/app.js"></script>
+        
+    </head><body class="antialiased" onload="prettyPrint();">
+<div class="row">
+            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+                <div class="title-box">
+                    <div class="title-content">
+                        <h1>AMAPAC.IO</h1>
+                        <p>As Much As Possible As Code</p>
+                        <p class="title-contact">
+                            <a href="https://twitter.com/develishdevelop">
+                                <i class="foundicon-twitter"></i>
+                            </a><a href="https://www.linkedin.com/in/kleiber">
+                                <i class="foundicon-linkedin"></i>
+                            </a><a href="https://www.slideshare.net/tkleiber">
+                                <i class="foundicon-slideshare"></i>
+                            </a><a href="https://github.com/tkleiber">
+                                <i class="foundicon-github"></i>
+                            </a><a href="https://develishdevelopment.wordpress.com">
+                                <i class="foundicon-wordpress"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div><div class="sticky contain-to-grid">
+                    <nav class="top-bar" data-topbar="" role="navigation">
+                        <ul class="title-area">
+                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </li>
+                        </ul><section class="top-bar-section">
+                            <ul class="left">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li><li>
+                                    <a href="/archive.html">Archive</a>
+                                </li><li class="has-dropdown">
+                                    <a href="#">Projects</a><ul class="dropdown">
+                                        
+                                    </ul>
+                                </li><li>
+                                    <a href="/about.html">About</a>
+                                </li><li>
+                                    <a href="/feed.xml">Subscribe</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </div>        <div>
+<div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Nov</div>
+                                        <div class="date">24</div>
+                                        <div class="year">2016</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2016/Fix+BEA-000394+Deadlock+detected+for+Weblogic+with+ADF+Applications+12.2.1.2.html">Fix "BEA-000394: Deadlock detected" for Weblogic with ADF Applications 12.2.1.2</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
+                                            </span><span>
+                                                <a href="/tags/WebLogic.html" class="label">WebLogic</a>
+                                            </span><span>
+                                                <a href="/tags/WebLogic-12.html" class="label">WebLogic-12</a>
+                                            </span><span>
+                                                <a href="/tags/Bug.html" class="label">Bug</a>
+                                            </span><span>
+                                                <a href="/tags/Patch.html" class="label">Patch</a>
+                                            </span><span>
+                                                <a href="/tags/Shared-Libraries.html" class="label">Shared-Libraries</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div class="paragraph">
+<p>If you try the newest version 12.2.1.2 (or maybe earlier versions too) you see, that your managed server does not restart, when</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>you have deployed your ADF application(s)</p>
+</li>
+<li>
+<p>you try to restart the managed server with ADF</p>
+</li>
+<li>
+<p>you use intentionally or not shared libraries in your weblogic-application.xml (see example below)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-xml" data-lang="xml">&lt;?xml version = '1.0' encoding = 'UTF-8'?&gt;
+&lt;weblogic-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.bea.com/ns/weblogic/weblogic-application http://www.bea.com/ns/weblogic/weblogic-application/1.0/weblogic-application.xsd"
+xmlns="http://www.bea.com/ns/weblogic/weblogic-application"&gt;
+  &lt;listener&gt;
+    &lt;listener-class&gt;oracle.adf.share.weblogic.listeners.ADFApplicationLifecycleListener&lt;/listener-class&gt;
+  &lt;/listener&gt;
+  &lt;listener&gt;
+    &lt;listener-class&gt;oracle.mds.lcm.weblogic.WLLifecycleListener&lt;/listener-class&gt;
+  &lt;/listener&gt;
+  &lt;library-ref&gt;
+    &lt;library-name&gt;adf.oracle.domain&lt;/library-name&gt;
+  &lt;/library-ref&gt;
+&lt;/weblogic-application&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You run into unpublished <a href="https://support.oracle.com/epmos/faces/BugDisplay?id=24490566">Bug 24490566</a>: INTERMITTENT DEADLOCK IN WLS STARTUP DURING ADF-SHARE-DEPLOYED-TESTS.</p>
+</div>
+<div class="paragraph">
+<p>But no problem, Oracle has created Patch <a href="https://support.oracle.com/epmos/faces/PatchDetail?patchId=24490566">24490566</a>: INTERMITTENT DEADLOCK IN WLS STARTUP DURING ADF-SHARE-DEPLOYED-TESTS for us for version 12.2.1.2.</p>
+</div>
+<div class="paragraph">
+<p>Remember to install the patches for <a href="../2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html">all</a> of your developers!</p>
+</div>
+<div class="paragraph">
+<p>Remember too, if you want to install more than one patch, there can be conflicts. Please test carefully, if all of your problems are solved for all patches after adding one more patch. Maybe you have to create a merge request in Oracle My Support.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it!</p>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>            
+        </div>
+<div class="row">
+            <div class="small-12 small-text-center">
+                <p class="muted credit">
+                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
+                </p>
+            </div>
+        </div>        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/vendor/prettify.js"></script>
+        <script>
+            $(document).foundation();
+            $(function() {
+               hljs.tabReplace = "  ";
+               hljs.initHighlighting();
+            });
+        </script>
+        
+    </body>
+</html>

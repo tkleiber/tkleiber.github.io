@@ -1,0 +1,393 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AMAPAC.IO</title>
+        <link rel="stylesheet" href="/css/asciidoctor.css"/>
+        <link rel="stylesheet" href="/css/foundation.css"/>
+        <link rel="stylesheet" href="/css/social_foundicons.css"/>
+        <link rel="stylesheet" href="/css/prettify.css"/>
+        <link rel="stylesheet" href="/css/desert.css"/>
+        <link rel="stylesheet" href="/css/app.css"/>
+        
+        <script src="/js/vendor/modernizr.js"></script>
+        <script src="/js/app.js"></script>
+        
+    </head><body class="antialiased" onload="prettyPrint();">
+<div class="row">
+            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+                <div class="title-box">
+                    <div class="title-content">
+                        <h1>AMAPAC.IO</h1>
+                        <p>As Much As Possible As Code</p>
+                        <p class="title-contact">
+                            <a href="https://twitter.com/develishdevelop">
+                                <i class="foundicon-twitter"></i>
+                            </a><a href="https://www.linkedin.com/in/kleiber">
+                                <i class="foundicon-linkedin"></i>
+                            </a><a href="https://www.slideshare.net/tkleiber">
+                                <i class="foundicon-slideshare"></i>
+                            </a><a href="https://github.com/tkleiber">
+                                <i class="foundicon-github"></i>
+                            </a><a href="https://develishdevelopment.wordpress.com">
+                                <i class="foundicon-wordpress"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div><div class="sticky contain-to-grid">
+                    <nav class="top-bar" data-topbar="" role="navigation">
+                        <ul class="title-area">
+                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </li>
+                        </ul><section class="top-bar-section">
+                            <ul class="left">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li><li>
+                                    <a href="/archive.html">Archive</a>
+                                </li><li class="has-dropdown">
+                                    <a href="#">Projects</a><ul class="dropdown">
+                                        
+                                    </ul>
+                                </li><li>
+                                    <a href="/about.html">About</a>
+                                </li><li>
+                                    <a href="/feed.xml">Subscribe</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </div>        <div>
+<div class="row">
+                <div class="small-12 middle-12 large-12 columns">
+                    <article class="wrap">
+                        <header>
+                            <div class="row">
+                                <div class="small-3 medium-1 large-1 columns">
+<div class="termin">
+                                        <div class="month">Sep</div>
+                                        <div class="date">06</div>
+                                        <div class="year">2016</div>
+                                    </div>                                    
+                                </div><div class="small-9 medium-11 large-11 columns">
+                                    <div>
+                                        <h2>
+                                            <a href="/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</a>
+                                        </h2><p>
+                                            <span>
+                                                <a href="/tags/Virtual-Development-Server.html" class="label">Virtual-Development-Server</a>
+                                            </span><span>
+                                                <a href="/tags/Continous-Integration.html" class="label">Continous-Integration</a>
+                                            </span><span>
+                                                <a href="/tags/Infrastructure-as-Code.html" class="label">Infrastructure-as-Code</a>
+                                            </span><span>
+                                                <a href="/tags/Linux.html" class="label">Linux</a>
+                                            </span><span>
+                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
+                                            </span><span>
+                                                <a href="/tags/Vagrant.html" class="label">Vagrant</a>
+                                            </span><span>
+                                                <a href="/tags/VirtualBox.html" class="label">VirtualBox</a>
+                                            </span><span>
+                                                <a href="/tags/Docker.html" class="label">Docker</a>
+                                            </span><span>
+                                                <a href="/tags/XE.html" class="label">XE</a>
+                                            </span><span>
+                                                <a href="/tags/XE-11.html" class="label">XE-11</a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </header><div class="row">
+                            <div class="columns">
+                                <div class="paragraph">
+<p>For later creation of containers as needed in the deployment process we have first to build docker images whenever we do not find suitable one in docker hub.</p>
+</div>
+<div class="paragraph">
+<p>For most of my development I need a oracle database. On the internet you can find a lot of Dockerfile&#8217;s for this, but no ready image. This is because for running a database you have to accept a license and this happens when you download the installation software. For private testing this license often is free.</p>
+</div>
+<div class="paragraph">
+<p>The basic cycle for all of this images is the same on my side:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Find a Docker image</p>
+</li>
+<li>
+<p>If not found download required Software and build a Docker image</p>
+</li>
+<li>
+<p>Build the Docker image</p>
+</li>
+<li>
+<p>Push the images to private docker registry or the public registry DockerHub</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Fortunately Oracle provides recently on <a href="https://github.com/oracle/docker-images">GitHub</a> a lot of working Dockerfile&#8217;s for building different product images. The creator Gerald Venzl desribes in this <a href="https://blogs.oracle.com/developer/entry/creating_and_oracle_database_docker">blog</a> how to create an Oracle EE image.</p>
+</div>
+<div class="paragraph">
+<p>Following you find an example for building Oracle XE 11.2.0.2 Image.</p>
+</div>
+<div class="paragraph">
+<p>First you have to clone the git repository to a directory of you choice, I choose C:\shared\scmlocal\docker-images.</p>
+</div>
+<div class="paragraph">
+<p>Put the downloaded installation source oracle-xe-11.2.0-1.0.x86_64.rpm.zip in the subdirectory C:\shared\scmlocal\docker-images\OracleDatabase\dockerfiles\11.2.0.2 as described in <a href="https://github.com/oracle/docker-images/tree/master/OracleDatabase">GitHub</a>.</p>
+</div>
+<div class="paragraph">
+<p>Next we have to map this directory to our virtualbox via following vagrant instructions. Additional we prepare port forwarding for accessing later the database from our host system.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">...
+# Port Forwardings for:
+# - Oracle database port
+config.vm.network "forwarded_port", guest: 1521, host: 1521
+# Oracle Application Express (APEX)
+config.vm.network "forwarded_port", guest: 8080, host: 8080
+...
+# map Oracle Docker Images installation path
+config.vm.synced_folder "C:\\shared\\scmlocal\\docker-images", "/docker-images", :mount_options =&gt; ["dmode=777","fmode=777"]
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After that restart the virtualbox and connect to it via</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant halt
+vagrant up
+vagrant ssh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the output you can see this mapping.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">...
+default: 1521 (guest) =&gt; 1521 (host) (adapter 1)
+default: 5000 (guest) =&gt; 5000 (host) (adapter 1)
+default: 8080 (guest) =&gt; 8080 (host) (adapter 1)
+...
+default: /docker-images =&gt; C:/shared/scmlocal/docker-images
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you create build the image with the Oracle XE (-x) database version (-v) 11.2.0.2 via the provided scripts from oracle. -i skips the MD5 checksum check, as the checksums are not checked in as UNIX text format and so does not work in our vagrant on windows / oel virtualbox combination.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">cd /docker-images/OracleDatabase/dockerfiles
+./buildDockerImage.sh -v 11.2.0.2 -x -i</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you have to wait some time. When the process is ready, you get at the time of this writing an image with the binaries installed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+oracle/database     11.2.0.2-xe         624d78c89ccb        About a minute ago   1.203 GB
+registry            latest              c6c14b3960bd        5 weeks ago          33.28 MB
+oraclelinux         latest              1988eb5b3fc6        6 weeks ago          278.2 MB</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next we tag this image for pushing to the local docker repository, which we have created in the first blog of this series and is up with every vagrant up of our virtualbox. After that we push it to the registry.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">docker tag oracle/database:11.2.0.2-xe localhost:5000/oracle/database:11.2.0.2-xe
+docker push localhost:5000/oracle/database:11.2.0.2-xe</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the output we see the succesful push.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">The push refers to a repository [localhost:5000/oracle/database]
+345dfbce8859: Pushed
+dd4b46d40894: Pushed
+11327e04fac0: Pushed
+11.2.0.2-xe: digest: sha256:82058ca2c5c201ff46471a8db4d9569da9869d420727595884050f94dad0ec85 size: 955</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now we will check, if we can create a Docker container from our image in the registry and the database is working in it. Therefore at first we delete the oracle/database and oraclelinux images from our virtualbox. Then we create the container.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">docker rmi 624d78c89ccb -f
+docker rmi 1988eb5b3fc6
+sudo docker run --shm-size=1g -p 1521:1521 -p 8080:8080 --name="db11.2.0.2-xe" --restart unless-stopped localhost:5000/oracle/database:11.2.0.2-xe</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In line 3 we pull the image from the local registry, start a container, open the ports 1521 and 8080 to the virtualbox and give the container a name.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">Unable to find image 'localhost:5000/oracle/database:11.2.0.2-xe' locally
+11.2.0.2-xe: Pulling from oracle/database
+
+10ec637c060c: Pull complete
+1902f66bc90b: Pull complete
+dd8942200fe1: Pull complete
+Digest: sha256:41ce1015c8f68ce063e855e7afa96000ededeef1e197e2181bc04c9577d73a1b
+Status: Downloaded newer image for localhost:5000/oracle/database:11.2.0.2-xe
+ORACLE AUTO GENERATED PASSWORD FOR SYS AND SYSTEM: 9f4e9a733e7983bc
+
+Oracle Database 11g Express Edition Configuration
+-------------------------------------------------
+This will configure on-boot properties of Oracle Database 11g Express
+Edition.  The following questions will determine whether the database should
+be starting upon system boot, the ports it will use, and the passwords that
+will be used for database accounts.  Press &lt;Enter&gt; to accept the defaults.
+Ctrl-C will abort.
+
+Specify the HTTP port that will be used for Oracle Application Express [8080]:
+Specify a port that will be used for the database listener [1521]:
+Specify a password to be used for database accounts.  Note that the same
+password will be used for SYS and SYSTEM.  Oracle recommends the use of
+different passwords for each database account.  This can be done after
+initial configuration:
+Confirm the password:
+
+Do you want Oracle Database 11g Express Edition to be started on boot (y/n) [y]:
+Starting Oracle Net Listener...Done
+Configuring database...Done
+Starting Oracle Database 11g Express Edition instance...Done
+Installation completed successfully.
+
+SQL*Plus: Release 11.2.0.2.0 Production on Tue Sep 6 09:41:22 2016
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL&gt;
+PL/SQL procedure successfully completed.
+
+SQL&gt; Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+#########################
+DATABASE IS READY TO USE!
+#########################
+db_recovery_file_dest_size of 10240 MB is 0.98% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Starting background process CJQ0
+Tue Sep 06 09:41:19 2016
+CJQ0 started with pid=26, OS id=759
+Tue Sep 06 09:41:24 2016
+XDB installed.
+XDB initialized.</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In line 9 you can see the autogenerated passwords.</p>
+</li>
+<li>
+<p>When line 46 appears, you can connect to the database.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With following command you can change the passwords of SYS and SYSTEM:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">sudo docker exec db11.2.0.2-xe /u01/app/oracle/setPassword.sh LetsDocker</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You see following output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">SQL*Plus: Release 11.2.0.2.0 Production on Tue Sep 6 15:49:34 2016
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+SQL&gt;
+User altered.
+SQL&gt;
+User altered.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As long as you not remove or manually stop the container, it restarts with the virtualbox now via:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight linenums"><code class="language-bash" data-lang="bash">vagrant halt
+vagrant up</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>At the moment you cannot make your database instance data persistent for this container, I have opened an <a href="https://github.com/oracle/docker-images/issues/141">issue</a> for this, but Gerald Venzl has promised to to implement this later.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/tkleiber/de.kleiber.devserver/tree/0fae841a2f843c8582e285e230e9e6b0ac3a7f30">Here</a> you find the source code for this blog.</p>
+</div>
+<div class="paragraph">
+<p><a href="tags/Virtual-Development-Server.html">Here</a> you find more about the topic "Virtual Development Server".</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it.</p>
+</div>
+<div class="paragraph">
+<p>References:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/oracle/docker-images">GitHub - oracle-docker-images Official source for Docker configurations, images, and examples of Dockerfiles for Oracle products</a></p>
+</li>
+<li>
+<p><a href="https://blogs.oracle.com/developer/entry/creating_and_oracle_database_docker">Creating and Oracle Database Docker image (Developing using Oracle technologies)</a></p>
+</li>
+</ul>
+</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>            
+        </div>
+<div class="row">
+            <div class="small-12 small-text-center">
+                <p class="muted credit">
+                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
+                </p>
+            </div>
+        </div>        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/vendor/prettify.js"></script>
+        <script>
+            $(document).foundation();
+            $(function() {
+               hljs.tabReplace = "  ";
+               hljs.initHighlighting();
+            });
+        </script>
+        
+    </body>
+</html>

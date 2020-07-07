@@ -4,8 +4,1900 @@
     <link href="https://tkleiber.github.io/"/>
     <link rel="self" type="application/atom+xml" href="https://tkleiber.github.io/feed.xml"/>
     <subtitle>As Much As Possible As Code</subtitle>
-    <updated>2020-07-06T22:09:30Z</updated>
+    <updated>2020-07-07T17:53:03Z</updated>
     <id>tag:localhost,2020:07</id>
+    <entry>
+        <title>Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html"/>
+        <updated>2016-12-07T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html</id>
+        <category term="Blue-Ocean"/>
+        <category term="Continous-Integration-Continous"/>
+        <category term="Docker"/>
+        <category term="Infrastructure-as-Code"/>
+        <category term="Jenkins"/>
+        <category term="Pipeline"/>
+        <category term="Pipeline-Model-Definition"/>
+        <category term="Vagrant"/>
+        <category term="Virtual-Development-Server"/>
+        <category term="VirtualBox"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This is a follow up to earlier &lt;a href=&quot;Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html&quot;&gt;Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others&lt;/a&gt; blog.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We now try to automated build of all needed images as soon as Oracle &lt;a href=&quot;https://github.com/oracle/docker-images&quot;&gt;GitHub&lt;/a&gt; Sources changed or we need to build our Vagrant VirtualBox again from scratch.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After we have already installed &lt;a href=&quot;Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html&quot;&gt;Jenkins&lt;/a&gt; we now install first some needed plugins.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;olist arabic&quot;&gt;
+&lt;ol class=&quot;arabic&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;We select explicit plugins at Jenkins Configuration&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_select_plugins.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins select plugins&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pipeline and Pipeline Stage View&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_pipeline_plugins.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins pipeline plugins&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Git&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_git_plugin.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins git plugin&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SSH Slaves&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_ssh_slaves_plugin.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins ssh slaves plugin&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;and wait for the install process&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_plugin_install_progress.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins plugin install progress&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Later we add Blue Ocean Beta via &quot;Manage Jenkins&quot; &amp;gt; &quot;Manage Plugins&quot;&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_blue_ocean_plugin.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins blue ocean plugin&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;After all is installed we restart Jenkins&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_blue_ocean_plugin_progress.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins blue ocean plugin progress&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After that we create our Jenkins pipeline via &quot;New Item&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;olist arabic&quot;&gt;
+&lt;ol class=&quot;arabic&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;We give it a name and select pipeline.&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_create_pipeline.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins create pipeline&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;As we do not own the git repository and cannot create a hook there, we create a simple scm poll schedule.&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_build_oracle_images_build_trigger.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins build oracle images build trigger&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then we add our pipeline script.&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_build_oracle_images_pipeline.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins build oracle images pipeline&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here is the script for the moment, later after we have it successfully tested and implemented all builds of images we need, we will put it in it&amp;#8217;s own git repository and call it from there. The script is written in &lt;a href=&quot;https://github.com/jenkinsci/pipeline-model-definition-plugin&quot;&gt;Pipeline Model Definition&lt;/a&gt;, a config-like syntax for defining Pipelines.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;pipeline {
+ agent label:&apos;localhost_vagrant&apos;
+ stages {
+  // Get the actual docker images sourcse from oracle git account
+  stage(&apos;Get Sources&apos;) {
+   steps {
+    git url: &apos;https://github.com/oracle/docker-images.git&apos;
+   }
+  }
+  stage(&apos;Build Oracle Docker Images&apos;) {
+   steps {
+    parallel (
+     &quot;Database XE 11.2.0.2&quot; : {
+      dir(&apos;OracleDatabase/dockerfiles&apos;) {
+       // provide the downloaded source (via your oracle account) from the host
+       sh &apos;if [ ! -f 11.2.0.2/oracle-xe-11.2.0-1.0.x86_64.rpm.zip ]; then cp /software/Oracle/Database/oracle-xe-11.2.0-1.0.x86_64.rpm.zip 11.2.0.2/oracle-xe-11.2.0-1.0.x86_64.rpm.zip; fi&apos;
+       // build the image
+       sh &apos;sudo ./buildDockerImage.sh  -v 11.2.0.2 -x&apos;
+       // prepare the image for push to the local registry
+       sh &apos;docker tag oracle/database:11.2.0.2-xe localhost:5000/oracle/database:11.2.0.2-xe&apos;
+       // push to the local registry
+       sh &apos;docker push localhost:5000/oracle/database:11.2.0.2-xe&apos;
+      }
+     },
+     &quot;WebLogic 12.2.1.2&quot; : {
+     // server-jre is required for Weblogic
+      dir(&apos;OracleJava/java-8&apos;) {
+       // provide the downloaded source (via your oracle account) from the host
+       sh &apos;if [ ! -f server-jre-8u111-linux-x64.tar.gz ]; then cp /software/Oracle/Java/server-jre-8u111-linux-x64.tar.gz server-jre-8u111-linux-x64.tar.gz; fi&apos;
+       // build the image
+       sh &apos;sudo ./build.sh&apos;
+       // prepare the image for push to the local registry
+       sh &apos;docker tag oracle/serverjre:8 localhost:5000/oracle/serverjre:8&apos;
+       // push to the local registry
+       sh &apos;docker push localhost:5000/oracle/serverjre:8&apos;
+      }
+      dir(&apos;OracleWebLogic/dockerfiles&apos;) {
+       // provide the downloaded source (via your oracle account) from the host
+       sh &apos;if [ ! -f 12.2.1.2/fmw_12.2.1.2.0_wls_Disk1_1of1.zip ]; then cp /software/Oracle/WebLogic/fmw_12.2.1.2.0_wls_Disk1_1of1.zip 12.2.1.2/fmw_12.2.1.2.0_wls_Disk1_1of1.zip; fi&apos;
+       // build the image
+       sh &apos;sudo ./buildDockerImage.sh -v 12.2.1.2 -g&apos;
+       // prepare the image for push to the local registry
+       sh &apos;docker tag oracle/weblogic:12.2.1.2-generic localhost:5000/oracle/weblogic:12.2.1.2-generic&apos;
+       // push to the local registry
+       sh &apos;docker push localhost:5000/oracle/weblogic:12.2.1.2-generic&apos;
+      }
+     }
+    )
+   }
+  }
+  stage(&apos;Cleanup&apos;) {
+   steps {
+    // clean virtualbox
+    sh &apos;docker rmi --force localhost:5000/oracle/database:11.2.0.2-xe&apos;
+    sh &apos;docker rmi --force oracle/database:11.2.0.2-xe&apos;
+    sh &apos;docker rmi --force localhost:5000/oracle/weblogic:12.2.1.2-generic&apos;
+    sh &apos;docker rmi --force oracle/weblogic:12.2.1.2-generic&apos;
+    sh &apos;docker rmi --force localhost:5000/oracle/serverjre:8&apos;
+    sh &apos;docker rmi --force oracle/serverjre:8&apos;
+   }
+  }
+ }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We can wait now the 15 min poll time or start the job manually.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;olist gallery ids=&quot;518&quot;&gt;
+&lt;ol class=&quot;gallery ids=&quot;518&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;In the standard view you can see several information about the pipeline stages. Click on &quot;Open Blue Ocean&quot; now.&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_build_oracle_images_classic_result.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins build oracle images classic result&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You see now an overview of last runs. Click now on the latest on the top.&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_build_oracle_images_blue_ocean_overview.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins build oracle images blue ocean overview&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Here you see at run-time a nice animation what&amp;#8217;s actually going on and the according logs. For our pipeline you see here parallel steps in the run.&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20jenkins_build_oracle_images_blue_ocean_result.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   jenkins build oracle images blue ocean result&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After an &quot;vagrant halt / vagrant up&quot; you can control in your browser, that the created images are persistent in the local docker registry:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20docker_registry_persistent.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   docker registry persistent&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tkleiber/de.kleiber.devserver/tree/53a1136594393872f4ae7615db86757a9152f4e1&quot;&gt;Here&lt;/a&gt; you find the source code for this blog.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;tags/Virtual-Development-Server.html&quot;&gt;Here&lt;/a&gt; you find more about the topic &quot;Virtual Development Server&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html"/>
+        <updated>2016-11-25T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html</id>
+        <category term="Continous-Integration"/>
+        <category term="Docker"/>
+        <category term="Infrastructure-as-Code"/>
+        <category term="Jenkins"/>
+        <category term="Linux"/>
+        <category term="Vagrant"/>
+        <category term="Virtual-Development-Server"/>
+        <category term="VirtualBox"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For automation of all of my processes I need Jenkins in my development server.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;First I had installed Jenkins as Docker container via Vagrant Docker provider. But with this architecture it was very complicated to create docker images and run Docker containers on the Docker host, in this case my Vagrant Virtualbox.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;So for simplification I have decided to install Jenkins with the provisioning of the Vagrant Virtualbox via a shell provider in my Vagrantfile:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;...
+# persistant storage for jenkins
+config.vm.synced_folder &quot;C:\\shared\\virtual_storage\\jenkins_home&quot;, &quot;/var/lib/jenkins&quot;, type: &quot;nfs&quot;, owner: 994, group: 992, create: true
+...
+# install jenkins
+config.vm.provision :shell, :path =&amp;gt; &quot;add_jenkins.sh&quot;
+...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;First I map a shared folder of my Windows Host to the Vagrant Virtualbox to persist my Jenkins Configuration.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then I install Jenkins via the shell script add_jenkins.sh.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo yum -y install java
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum -y install jenkins
+sudo sed -i -e &apos;s/JENKINS_JAVA_OPTIONS=&quot;-Djava.awt.headless=true&quot;/JENKINS_JAVA_OPTIONS=&quot;-Djava.awt.headless=true -Dmail.smtp.starttls.enable=true&quot;/g&apos; /etc/sysconfig/jenkins
+sudo service jenkins start&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Jenkins requires java, so I install it first.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;After that I get the latest Long-Term Support (LTS) repository, import it and install Jenkins from there.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then I do some configuration, which I need for my jobs and start Jenkins.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An open issue is, that I have to restart Jenkins after Vagrant restart, because the shared folders are unfortunatly mounted after service starts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After first install you have to enter the credential information from the filesystem as requested, all later installations use the persistent Jenkins configuration, so you can login and start from where you have left Jenkins.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/Virtual%20Development%20Server%20Install%20Jenkins%20for%20Continuos%20Integration%20Delivery%20Deployment%20-%20unlock_jenkins.png&quot; alt=&quot;Virtual Development Server Install Jenkins for Continuos Integration Delivery Deployment   unlock jenkins&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tkleiber/de.kleiber.devserver/tree/7078584a88df39b38a669d096e3502d8343f1f1a&quot;&gt;Here&lt;/a&gt; you find the source code for this blog.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;tags/Virtual-Development-Server.html&quot;&gt;Here&lt;/a&gt; you find more about the topic &quot;Virtual Development Server&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Fix "BEA-000394: Deadlock detected" for Weblogic with ADF Applications 12.2.1.2</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Fix+BEA-000394+Deadlock+detected+for+Weblogic+with+ADF+Applications+12.2.1.2.html"/>
+        <updated>2016-11-24T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Fix+BEA-000394+Deadlock+detected+for+Weblogic+with+ADF+Applications+12.2.1.2.html</id>
+        <category term="Oracle"/>
+        <category term="WebLogic"/>
+        <category term="WebLogic-12"/>
+        <category term="Bug"/>
+        <category term="Patch"/>
+        <category term="Shared-Libraries"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you try the newest version 12.2.1.2 (or maybe earlier versions too) you see, that your managed server does not restart, when&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;you have deployed your ADF application(s)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;you try to restart the managed server with ADF&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;you use intentionally or not shared libraries in your weblogic-application.xml (see example below)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&amp;gt;
+&amp;lt;weblogic-application xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xsi:schemaLocation=&quot;http://www.bea.com/ns/weblogic/weblogic-application http://www.bea.com/ns/weblogic/weblogic-application/1.0/weblogic-application.xsd&quot;
+xmlns=&quot;http://www.bea.com/ns/weblogic/weblogic-application&quot;&amp;gt;
+  &amp;lt;listener&amp;gt;
+    &amp;lt;listener-class&amp;gt;oracle.adf.share.weblogic.listeners.ADFApplicationLifecycleListener&amp;lt;/listener-class&amp;gt;
+  &amp;lt;/listener&amp;gt;
+  &amp;lt;listener&amp;gt;
+    &amp;lt;listener-class&amp;gt;oracle.mds.lcm.weblogic.WLLifecycleListener&amp;lt;/listener-class&amp;gt;
+  &amp;lt;/listener&amp;gt;
+  &amp;lt;library-ref&amp;gt;
+    &amp;lt;library-name&amp;gt;adf.oracle.domain&amp;lt;/library-name&amp;gt;
+  &amp;lt;/library-ref&amp;gt;
+&amp;lt;/weblogic-application&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You run into unpublished &lt;a href=&quot;https://support.oracle.com/epmos/faces/BugDisplay?id=24490566&quot;&gt;Bug 24490566&lt;/a&gt;: INTERMITTENT DEADLOCK IN WLS STARTUP DURING ADF-SHARE-DEPLOYED-TESTS.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;But no problem, Oracle has created Patch &lt;a href=&quot;https://support.oracle.com/epmos/faces/PatchDetail?patchId=24490566&quot;&gt;24490566&lt;/a&gt;: INTERMITTENT DEADLOCK IN WLS STARTUP DURING ADF-SHARE-DEPLOYED-TESTS for us for version 12.2.1.2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Remember to install the patches for &lt;a href=&quot;../2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html&quot;&gt;all&lt;/a&gt; of your developers!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Remember too, if you want to install more than one patch, there can be conflicts. Please test carefully, if all of your problems are solved for all patches after adding one more patch. Maybe you have to create a merge request in Oracle My Support.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>#DOAG2016 wrap up</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/DOAG2016+wrap+up.html"/>
+        <updated>2016-11-17T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/DOAG2016+wrap+up.html</id>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="ADF-12"/>
+        <category term="Continous-Integration"/>
+        <category term="DOAG"/>
+        <category term="Docker"/>
+        <category term="Forms-Forms-12"/>
+        <category term="Jenkins"/>
+        <category term="Hudson"/>
+        <category term="Java"/>
+        <category term="JavaScript-JavaScript"/>
+        <category term="JET"/>
+        <category term="Load-Test"/>
+        <category term="Performance"/>
+        <category term="Reports"/>
+        <category term="Static-Code-Analysis"/>
+        <content type="html">
+            &lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/doag_wegweiser.png&quot; alt=&quot;doag wegweiser&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Another DOAG is over and here is my summary.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;day_1&quot;&gt;Day 1&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Unfortunately the early train from duesseldorf arrives not before 9:30, so I missed the first morning slot. But on the other hand I this was the slot where I had to decide between 8 presentations, which I&amp;#8217;m interested in.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The first soft skill presentation was about &lt;strong&gt;creative techniques beyond brain storming&lt;/strong&gt;. The mentioned 3 techniques was all unknown for me, maybe I give it a try next time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The next presentation promises a &lt;strong&gt;live demo of a forms 12c&lt;/strong&gt; migration to production. Nothing really new here and remembers me for an &quot;beautify our village&quot; contest. But fairly enough for customers which absolutely want to remain on Oracle Forms. As Translation Hub 12c is not available and Oracle Reports 12c will be the last version, I think 11g will the last version we will use on our side before completing migration to ADF.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I attend two presentations, which shows &lt;strong&gt;Auraplayer&lt;/strong&gt; on top of Oracle Forms to provide mobile applications via Oracle Mobile Cloud Service (MCS). I understand the MCS thing, although I find it very complicated to use. But put another layer on complicated and most slowly Oracle Forms to create web services for mobile applications seems no use case for me. I doubt that the recording of web services works really well for complicated forms which switch the displayed items and canvases depending on the selected data. All samples was very simple forms, but the response time of the resulting mobile app was not acceptable for me.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The presentation about &lt;strong&gt;Continuous Integration in APEX&lt;/strong&gt; give me some new ideas for maybe replacing our actual deployment processes for PL/SQL in the future. Will have a look at the mentioned sql-maven-plugin, when we go for Maven for ADF too. Will check Rspec as BDD framework to run PL/SQL unit tests. Promising is the feature to tie together Selenium tests and data checks in the same Rspec test definition. One drop of bitterness remains, as the presenter had no idea how to solve a merge conflict. Seems that this was only a proof of concept and not really used daily there.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Best practices for PL/SQL performance&lt;/strong&gt; was a good reminder, what I all know about this topic but use to seldom. But will use some of the configuration things like native compilation of the system packages or PL/SQL optimization level in my docker instances for automatic testing to optimize test times.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;SQL tips and tricks&lt;/strong&gt; was a sovereign presentation, but shows me again that for several Oracle database releases only little improvements for the developer comes with.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;day_2&quot;&gt;Day 2&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In session &lt;strong&gt;Standing at a Crossroads, ADF and JET&lt;/strong&gt; Duncan Mills clearly show the differences between Oracle ADF and Oracle JET. Running gag: The &quot;Schnecke Chart&quot; for quick decision between both. Will look, if I can reuse this for other decisions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Next I tried an meeting at the &lt;strong&gt;Unconference&lt;/strong&gt; about &lt;strong&gt;continuous integration for PL/SQL&lt;/strong&gt;. But the most discussions really goes about the automation part. Most participants missed the most importantly definition of &lt;a href=&quot;https://en.wikipedia.org/wiki/Continuous_integration&quot;&gt;Continuous Integration&lt;/a&gt;: &quot; &amp;#8230;&amp;#8203;  continuous integration (CI) is the practice of merging all developer working copies to a shared mainline several times a day&quot;. Unfortunately I realize now that in the German Wikipedia translation this basis is completely softened: &quot;developer should integrate as often as possible&quot;. Not really new for me here, hope I have told something useful to the others.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Extending Oracle ADF BC Models to REST, Cloud and Mobile&lt;/strong&gt; was a good time to remember what&amp;#8217;s now possible as it really available and we now try another migration away from ADF 11g to the hottest version. I have seen this in the last conferences already.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Have read &lt;strong&gt;Deep Dive Into Oracle ADF Transactions: Advanced Techniques&lt;/strong&gt; in the web already, but the information was a little bit clearer after seeing Eugene Fedorenko live.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Something completely different: &lt;strong&gt;Free Load Testing Tools for Oracle Database&lt;/strong&gt;. I had known Swingbench before. SLOB is completely new for me and did not seen Apache JMeter JDBC test in this context before. Will test the last maybe in the future.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Top 10 stumble stones for ADF 12c&lt;/strong&gt; was very technical but cool, good to have Markus Klenke at our site while our coming migration next weeks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Faster, Better, Cheaper: Oracle ADF Development in the Cloud&lt;/strong&gt; - with lot of problems in the demo part. Maybe really because of the DOAG WiFi. Quick Tip for all presenters: as I know at DOAG conferences there is ever an laptop available with LAN, try to put it in your laptop! For the content: DCS seems to restricting to much. I prefer Jenkins over Hudson. No push option directly with commit in JDeveloper etc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Masking test data is very relevant in our banking busines, so I attend &lt;strong&gt;Oracle Data Redaction live in Telko&lt;/strong&gt;. Seems that there are many fall knits here, as this doesn&amp;#8217;t seem to solve all requirements out of the box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Before the evening keynote Günter Stürner and Jürgen Menge was awarded, congratulations to both.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Following keynote &lt;strong&gt;Hacking for managers&lt;/strong&gt; was very entertaining, if you are German then you should look on youtube for the &lt;a href=&quot;https://www.youtube.com/results?search_query=%09+Tobias+Schr%C3%B6del&quot;&gt;presenter&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now we are not ready for the evening party, we start the yearly &lt;strong&gt;German ADF Community meeting&lt;/strong&gt;. Interesting part was a presentation of the Tools Statement of Direction, which again clearly differentiate between ADF, MAF, JET, MAX and ABCS. We get the clear statement ADF is standard for SAAS and JET for PAAS development at Oracle. In my opinion Oracle miss to communicate this in other presentations and miss to further present ADF in the public. A lot of questions of the present Community members was answered here too. Later we eat together with some of the product managers and community members and discussed topics for future presentations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Later I go back to my hotel to remotely patch our fresh ADF 12.2.1.2 Server with patch for critical escalated bug to start our planned migration for ADF 11.1.1.5 next week. More later in a separate post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;day_3&quot;&gt;Day 3&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In &lt;strong&gt;Indiana Nimphius und der JavaScript Tempel des Todes&lt;/strong&gt; Frank shows us his view on the JavaScript Universum, maybe we can really not avoid this in the future on some business cases. But for the next time we will stay on strongly supported ADF and will reduce JavaScript usage there to the minimum.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Thank god the roll-out of SQL Developer 4.1.5 is not started already in our company. Will look how fast I can add the free &lt;a href=&quot;http://www.trivadis.com/de/plsql-cop&quot;&gt;PLSQL/COP&lt;/a&gt; SQL Developer Plugin of Philip Salvisberg from Trivadis to the silent install process. He showed in &lt;strong&gt;Fighting Bad PL/SQL&lt;/strong&gt; the theory and the practice how his static code analysis tool for PL/SQL does work. Depending on the outcome and the price maybe we will later implement in continuous integration.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The keynote &lt;strong&gt;Big Picture of digital revolution&lt;/strong&gt; wakes the expectation to us to take responsibility for the effects of digital revolution to the society and makes me very thoughtful.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After our hopefully successful migration to ADF 12.2.1.2 I want to change our deployment from ANT to Maven, so I attend the presentation &lt;strong&gt;Migration Maven Possibilities&lt;/strong&gt;. This gives a good reminder what to do at that point.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Very interesting presentation, which really does not deserves so few visitors, was &lt;strong&gt;Home Lab Setup and Familiarization of E-Business R12.2&quot;&lt;/strong&gt;. My time with E-Business Suite is over 15 years away, so I was surprised that I recognized much of the components. I think I&amp;#8217;m sure not to install E-Business Suite for the moment, but lot of the instructions for the Home Lab Setup could I reuse for other technologies. Some concepts for the E-Business Suite, eg. double filesystem for reducing offline time for patching, are very interesting.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;With last presentations I enter again the world of ThickDatabase paradigm. We ever know that executing business in the database seems faster as in the middle tier, but we had no proofs. Now Toon Koppelaars from Oracle itself give us this with a deep analysis. The question remains - will the other Oracle departments will learn from this?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;day_4&quot;&gt;Day 4&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Tomorrow I will be trained in Continuous Delivery with Oracle Fusion Middleware and Oracle Cloud. I will release another blogs, when implementing some findings from this training.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As you see I switch often between technologies. This happens not ever voluntary. Normally I interested more in the development like ADF, MAF and JET. This year these presentation are unfortunately distributed over the conference. So I have discussed this today with the DOAG executives, they will improve this next year.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Nevertheless I get a lot of ideas from presentations in technologies I do not or not regularly use, so sometime I intentionally choose from such interesting presentations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;A recommendation for all conference visitors. Read the abstracts before you go to a conference and maybe before you book! You avoid disappointments because of wrong expectations. Often the title has the only purpose to be accept the presentation and has little to do with the real content. Abstracts give you often a better idea about the content.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html"/>
+        <updated>2016-09-06T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html</id>
+        <category term="Virtual-Development-Server"/>
+        <category term="Continous-Integration"/>
+        <category term="Infrastructure-as-Code"/>
+        <category term="Linux"/>
+        <category term="Oracle"/>
+        <category term="Vagrant"/>
+        <category term="VirtualBox"/>
+        <category term="Docker"/>
+        <category term="XE"/>
+        <category term="XE-11"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For later creation of containers as needed in the deployment process we have first to build docker images whenever we do not find suitable one in docker hub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For most of my development I need a oracle database. On the internet you can find a lot of Dockerfile&amp;#8217;s for this, but no ready image. This is because for running a database you have to accept a license and this happens when you download the installation software. For private testing this license often is free.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The basic cycle for all of this images is the same on my side:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Find a Docker image&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If not found download required Software and build a Docker image&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build the Docker image&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Push the images to private docker registry or the public registry DockerHub&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Fortunately Oracle provides recently on &lt;a href=&quot;https://github.com/oracle/docker-images&quot;&gt;GitHub&lt;/a&gt; a lot of working Dockerfile&amp;#8217;s for building different product images. The creator Gerald Venzl desribes in this &lt;a href=&quot;https://blogs.oracle.com/developer/entry/creating_and_oracle_database_docker&quot;&gt;blog&lt;/a&gt; how to create an Oracle EE image.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Following you find an example for building Oracle XE 11.2.0.2 Image.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;First you have to clone the git repository to a directory of you choice, I choose C:\shared\scmlocal\docker-images.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Put the downloaded installation source oracle-xe-11.2.0-1.0.x86_64.rpm.zip in the subdirectory C:\shared\scmlocal\docker-images\OracleDatabase\dockerfiles\11.2.0.2 as described in &lt;a href=&quot;https://github.com/oracle/docker-images/tree/master/OracleDatabase&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Next we have to map this directory to our virtualbox via following vagrant instructions. Additional we prepare port forwarding for accessing later the database from our host system.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;...
+# Port Forwardings for:
+# - Oracle database port
+config.vm.network &quot;forwarded_port&quot;, guest: 1521, host: 1521
+# Oracle Application Express (APEX)
+config.vm.network &quot;forwarded_port&quot;, guest: 8080, host: 8080
+...
+# map Oracle Docker Images installation path
+config.vm.synced_folder &quot;C:\\shared\\scmlocal\\docker-images&quot;, &quot;/docker-images&quot;, :mount_options =&amp;gt; [&quot;dmode=777&quot;,&quot;fmode=777&quot;]
+...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After that restart the virtualbox and connect to it via&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant halt
+vagrant up
+vagrant ssh&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In the output you can see this mapping.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;...
+default: 1521 (guest) =&amp;gt; 1521 (host) (adapter 1)
+default: 5000 (guest) =&amp;gt; 5000 (host) (adapter 1)
+default: 8080 (guest) =&amp;gt; 8080 (host) (adapter 1)
+...
+default: /docker-images =&amp;gt; C:/shared/scmlocal/docker-images
+...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now you create build the image with the Oracle XE (-x) database version (-v) 11.2.0.2 via the provided scripts from oracle. -i skips the MD5 checksum check, as the checksums are not checked in as UNIX text format and so does not work in our vagrant on windows / oel virtualbox combination.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cd /docker-images/OracleDatabase/dockerfiles
+./buildDockerImage.sh -v 11.2.0.2 -x -i&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now you have to wait some time. When the process is ready, you get at the time of this writing an image with the binaries installed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+oracle/database     11.2.0.2-xe         624d78c89ccb        About a minute ago   1.203 GB
+registry            latest              c6c14b3960bd        5 weeks ago          33.28 MB
+oraclelinux         latest              1988eb5b3fc6        6 weeks ago          278.2 MB&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Next we tag this image for pushing to the local docker repository, which we have created in the first blog of this series and is up with every vagrant up of our virtualbox. After that we push it to the registry.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;docker tag oracle/database:11.2.0.2-xe localhost:5000/oracle/database:11.2.0.2-xe
+docker push localhost:5000/oracle/database:11.2.0.2-xe&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In the output we see the succesful push.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;The push refers to a repository [localhost:5000/oracle/database]
+345dfbce8859: Pushed
+dd4b46d40894: Pushed
+11327e04fac0: Pushed
+11.2.0.2-xe: digest: sha256:82058ca2c5c201ff46471a8db4d9569da9869d420727595884050f94dad0ec85 size: 955&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now we will check, if we can create a Docker container from our image in the registry and the database is working in it. Therefore at first we delete the oracle/database and oraclelinux images from our virtualbox. Then we create the container.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;docker rmi 624d78c89ccb -f
+docker rmi 1988eb5b3fc6
+sudo docker run --shm-size=1g -p 1521:1521 -p 8080:8080 --name=&quot;db11.2.0.2-xe&quot; --restart unless-stopped localhost:5000/oracle/database:11.2.0.2-xe&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In line 3 we pull the image from the local registry, start a container, open the ports 1521 and 8080 to the virtualbox and give the container a name.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Unable to find image &apos;localhost:5000/oracle/database:11.2.0.2-xe&apos; locally
+11.2.0.2-xe: Pulling from oracle/database
+
+10ec637c060c: Pull complete
+1902f66bc90b: Pull complete
+dd8942200fe1: Pull complete
+Digest: sha256:41ce1015c8f68ce063e855e7afa96000ededeef1e197e2181bc04c9577d73a1b
+Status: Downloaded newer image for localhost:5000/oracle/database:11.2.0.2-xe
+ORACLE AUTO GENERATED PASSWORD FOR SYS AND SYSTEM: 9f4e9a733e7983bc
+
+Oracle Database 11g Express Edition Configuration
+-------------------------------------------------
+This will configure on-boot properties of Oracle Database 11g Express
+Edition.  The following questions will determine whether the database should
+be starting upon system boot, the ports it will use, and the passwords that
+will be used for database accounts.  Press &amp;lt;Enter&amp;gt; to accept the defaults.
+Ctrl-C will abort.
+
+Specify the HTTP port that will be used for Oracle Application Express [8080]:
+Specify a port that will be used for the database listener [1521]:
+Specify a password to be used for database accounts.  Note that the same
+password will be used for SYS and SYSTEM.  Oracle recommends the use of
+different passwords for each database account.  This can be done after
+initial configuration:
+Confirm the password:
+
+Do you want Oracle Database 11g Express Edition to be started on boot (y/n) [y]:
+Starting Oracle Net Listener...Done
+Configuring database...Done
+Starting Oracle Database 11g Express Edition instance...Done
+Installation completed successfully.
+
+SQL*Plus: Release 11.2.0.2.0 Production on Tue Sep 6 09:41:22 2016
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL&amp;gt;
+PL/SQL procedure successfully completed.
+
+SQL&amp;gt; Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+#########################
+DATABASE IS READY TO USE!
+#########################
+db_recovery_file_dest_size of 10240 MB is 0.98% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Starting background process CJQ0
+Tue Sep 06 09:41:19 2016
+CJQ0 started with pid=26, OS id=759
+Tue Sep 06 09:41:24 2016
+XDB installed.
+XDB initialized.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In line 9 you can see the autogenerated passwords.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When line 46 appears, you can connect to the database.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;With following command you can change the passwords of SYS and SYSTEM:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo docker exec db11.2.0.2-xe /u01/app/oracle/setPassword.sh LetsDocker&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You see following output:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;SQL*Plus: Release 11.2.0.2.0 Production on Tue Sep 6 15:49:34 2016
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+SQL&amp;gt;
+User altered.
+SQL&amp;gt;
+User altered.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As long as you not remove or manually stop the container, it restarts with the virtualbox now via:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant halt
+vagrant up&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;At the moment you cannot make your database instance data persistent for this container, I have opened an &lt;a href=&quot;https://github.com/oracle/docker-images/issues/141&quot;&gt;issue&lt;/a&gt; for this, but Gerald Venzl has promised to to implement this later.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tkleiber/de.kleiber.devserver/tree/0fae841a2f843c8582e285e230e9e6b0ac3a7f30&quot;&gt;Here&lt;/a&gt; you find the source code for this blog.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;tags/Virtual-Development-Server.html&quot;&gt;Here&lt;/a&gt; you find more about the topic &quot;Virtual Development Server&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/oracle/docker-images&quot;&gt;GitHub - oracle-docker-images Official source for Docker configurations, images, and examples of Dockerfiles for Oracle products&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://blogs.oracle.com/developer/entry/creating_and_oracle_database_docker&quot;&gt;Creating and Oracle Database Docker image (Developing using Oracle technologies)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Set all WebLogic log levels to "Inherit" via WLST</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Set+all+WebLogic+log+levels+to+Inherit+via+WLST.html"/>
+        <updated>2016-08-22T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Set+all+WebLogic+log+levels+to+Inherit+via+WLST.html</id>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="WebLogic"/>
+        <category term="WLST"/>
+        <category term="Logging"/>
+        <category term="Silent-Install"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Logging is a very useful feature of WebLogic.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Unfortunately the log levels, which are set after a clean install of WebLogic or some of the Fusion Middleware product creates a lot of noise and therefore it costs I/O performance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Additional after analyzing an issue with logging often resetting the log level is forgotten.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here you get a script to reset the log levels at regular intervals or after a trace session.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;#!/usr/bin/python
+execfile(&apos;get_environment.py&apos;)
+connect(wlUser, wlPassword, wlAdminUrl)
+edit()
+loggers = listLoggers(target=managedServer, runtime=0)
+for key, value in loggers.items():
+if key &amp;lt;&amp;gt; &quot;&quot; and key &amp;lt;&amp;gt; &quot;ADF_PERFORMANCE_MONITOR_DATABASE&quot; and value &amp;lt;&amp;gt; &quot;&quot;:
+print &quot;set &quot; + key + &quot; from &quot; + value + &quot; to &amp;lt;Inherited&amp;gt;&quot;
+setLogLevel(target=managedServer, runtime=0, logger=key, level=&quot;&quot;)
+loggers = listLoggers(target=managedServer, runtime=0)
+exit()&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In line 2 a script is called to initialize your environment variables wlUser, wlPassword, wlAdminUrl and managedServer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In line 5 you get the list of loggers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In line 6..9 you iterate over this list.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In line 7 you can add your own restrictions. Here are already filtered all inherited loggers and one special tool logger for performance monitoring of ADF applications.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In line 10 the loggers are shown again for the result, you can remove this.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now call this script via&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ORACLE_HOME/oracle_common/common/bin/wlst.sh config_loglevel.py&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In the output you see similar output:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;------------------------------------------------------------------------+-----------------
+Logger                                                                  | Level
+------------------------------------------------------------------------+-----------------
+...
+oracle.ods.virtualization.accesslog                                     | ERROR:1
+...
+set oracle.ods.virtualization.accesslog from ERROR:1 to &amp;lt;Inherited&amp;gt;
+
+------------------------------------------------------------------------+-----------------
+Logger                                                                  | Level
+------------------------------------------------------------------------+-----------------
+...
+oracle.ods.virtualization.accesslog                                     | &amp;lt;Inherited&amp;gt;
+...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This version of the script change only the persistent logger levels (runtime=0), because we don&amp;#8217;t want influence running trace sessions. But as our servers are daily started, all runtime log levels are resetted at this point to the persistent one&amp;#8217;s.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/middleware/12211/lcm/FCCCR/GUID-F1855DB5-2890-407D-B68D-85989E0CC4FB.htm#FCCCR1597&quot;&gt;Log Configuration Commands&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Virtual Development Server: Add swapfile to VirtualBox as requirement for installing Oracle or build Oracle docker images</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html"/>
+        <updated>2016-08-19T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html</id>
+        <category term="Virtual-Development-Server"/>
+        <category term="Continous-Integration"/>
+        <category term="Infrastructure-as-Code"/>
+        <category term="Linux"/>
+        <category term="Oracle"/>
+        <category term="Vagrant"/>
+        <category term="VirtualBox"/>
+        <category term="Docker"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As I want later build Oracle docker images, some of this need a swapfile.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Per default my used &lt;a href=&quot;http://www.vagrantbox.es&quot;&gt;Vagrantbox&lt;/a&gt; does not have one, so later steps will fail.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As in the last blog I use a Vagrant shell provider.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;...
+# add swapfile to the box
+config.vm.provision :shell, :path =&amp;gt; &quot;add_swap.sh&quot;
+...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This calls the script add_swap.sh in the created VirtualBox machine.
+Make sure, that you create your swapfile on a supported file system.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;#!/bin/sh
+
+# size of swapfile in megabytes
+swapsize=2100
+
+# does the swap file already exist?
+grep -q &quot;swapfile&quot; /etc/fstab
+
+# if not then create it
+if [ $? -ne 0 ]; then
+  echo &apos;swapfile not found. Adding swapfile.&apos;
+  # allocate the disk space
+  sudo fallocate -l ${swapsize}M /home/swapfile
+  # only owner can read and write
+  sudo chmod 600 /home/swapfile
+  # sets up swap area in the file
+  sudo mkswap /home/swapfile
+  # enable file for paging and swapping
+  # if this comes with &quot;swapon failed: Invalid argument&quot;,
+  # check if the filesystem is supported for swap, xfs eg. is not
+  sudo swapon /home/swapfile
+  # mount the swapfile at boot
+  echo &apos;/home/swapfile none swap defaults 0 0&apos; &amp;gt;&amp;gt; /etc/fstab
+else
+  echo &apos;swapfile found. No changes made.&apos;
+fi
+
+# output results to terminal
+df -h /home/swapfile
+cat /proc/swaps
+cat /proc/meminfo | grep Swap&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now you have to recreate the VirtualBox machine via&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant destroy
+vagrant up&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In the output you can now see, how the swapfile is added.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;...
+==&amp;gt; default: Running provisioner: shell...
+default: Running: C:/Users/torst/AppData/Local/Temp/vagrant-shell20160819-14324-1a10xs8.sh
+==&amp;gt; default: swapfile not found. Adding swapfile.
+==&amp;gt; default: Setting up swapspace version 1, size = 2150396 KiB
+==&amp;gt; default: no label, UUID=20ff8dbf-6282-4ba6-abe4-05c04c74aac8
+==&amp;gt; default: Filesystem              Size  Used Avail Use% Mounted on
+==&amp;gt; default: /dev/mapper/linux-home  3.8G  2.4G  1.5G  63% /home
+==&amp;gt; default: Filename                           Type            Size    Used    Priority
+==&amp;gt; default: /home/swapfile                          file               2150396 0       -1
+==&amp;gt; default: SwapCached:            0 kB
+==&amp;gt; default: SwapTotal:       2150396 kB
+==&amp;gt; default: SwapFree:        2150396 kB
+...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tkleiber/de.kleiber.devserver/tree/9b00e07140d4af0f65bf34c7658a80aae63b58d0&quot;&gt;Here&lt;/a&gt; you find the source code for this blog.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;tags/Virtual-Development-Server.html&quot;&gt;Here&lt;/a&gt; you find more about the topic &quot;Virtual Development Server&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/shovon/9dd8d2d1a556b8bf9c82&quot;&gt;Increasing swap size&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Virtual Development Server: Add enough ram and disk space to VirtualBox for further server components</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html"/>
+        <updated>2016-08-13T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html</id>
+        <category term="Virtual-Development-Server"/>
+        <category term="Continous-Integration"/>
+        <category term="Infrastructure-as-Code"/>
+        <category term="Linux"/>
+        <category term="Oracle"/>
+        <category term="Vagrant"/>
+        <category term="VirtualBox"/>
+        <category term="VDI"/>
+        <category term="VDMK"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As I want later build docker images and run docker containers I have to provide enough disk space for this.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Per default the &lt;a href=&quot;http://www.vagrantbox.es&quot;&gt;Vagrantboxes&lt;/a&gt; have vmdk disks, these have a static size and are to small for my purposes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Therefore I convert the disk, which comes with the box, via Vagrant VirtualBox provider from vmdk to vdi, so that it allocate only the used disk space in the host system.
+Additional I add a second big disk:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;...
+# virtualbox provider
+config.vm.provider &quot;virtualbox&quot; do |vb|
+# name in VirtualBox
+vb.name = &quot;Development Server&quot;
+
+    # configure 16 GB memory
+    vb.customize [&quot;modifyvm&quot;, :id, &quot;--memory&quot;, &quot;16384&quot;]
+
+    # clone the original vmdk disk into a dynamic vdi disk, which only allocate the used space on the host
+    if ARGV[0] == &quot;up&quot; &amp;amp;&amp;amp; ! File.exist?(&quot;#{ENV[&quot;HOME&quot;]}/VirtualBox VMs/#{vb.name}/#{vb.name}.vdi&quot;)
+      # configure the SATA controller for second disk port, for other box you may have another controller
+      vb.customize [
+        &quot;storagectl&quot;, :id,
+        &quot;--name&quot;, &quot;SATA&quot;,
+        &quot;--controller&quot;, &quot;IntelAHCI&quot;,
+        &quot;--portcount&quot;, &quot;1&quot;,
+        &quot;--hostiocache&quot;, &quot;on&quot;
+      ]
+      # clone the original disk, for other box you may have another disk name
+      vb.customize [
+        &quot;clonehd&quot;, &quot;#{ENV[&quot;HOME&quot;]}/VirtualBox VMs/#{vb.name}/box-disk2.vmdk&quot;,
+             &quot;#{ENV[&quot;HOME&quot;]}/VirtualBox VMs/#{vb.name}/#{vb.name}.vdi&quot;,
+        &quot;--format&quot;, &quot;VDI&quot;
+      ]
+      # attach the cloned disk to the controller
+      vb.customize [
+        &quot;storageattach&quot;, :id,
+        &quot;--storagectl&quot;, &quot;SATA&quot;,
+        &quot;--port&quot;, &quot;0&quot;,
+        &quot;--device&quot;, &quot;0&quot;,
+        &quot;--type&quot;, &quot;hdd&quot;,
+        &quot;--nonrotational&quot;, &quot;on&quot;,
+        &quot;--medium&quot;, &quot;#{ENV[&quot;HOME&quot;]}/VirtualBox VMs/#{vb.name}/#{vb.name}.vdi&quot;
+      ]
+      # delete the original disk to release it&apos;s space
+      vb.customize [
+        &quot;closemedium&quot;, &quot;disk&quot;, &quot;#{ENV[&quot;HOME&quot;]}/VirtualBox VMs/#{vb.name}/box-disk2.vmdk&quot;,
+        &quot;--delete&quot;
+      ]
+    end
+
+    # create addtional big dynamic vdi disk for docker images
+    if !File.exist?(&quot;#{ENV[&quot;HOME&quot;]}/VirtualBox VMs/#{vb.name}/#{vb.name}_docker.vdi&quot;)
+      # create addtional big dynamic vdi (200 GB)
+      vb.customize [
+        &quot;createhd&quot;,
+        &quot;--filename&quot;, &quot;#{ENV[&quot;HOME&quot;]}/VirtualBox VMs/#{vb.name}/#{vb.name}_docker.vdi&quot;,
+        &quot;--format&quot;, &quot;VDI&quot;,
+        &quot;--size&quot;, 200 * 1024
+      ]
+      # attach the addtional disk to the controller
+      vb.customize [
+        &quot;storageattach&quot;, :id,
+        &quot;--storagectl&quot;, &quot;SATA&quot;,
+        &quot;--port&quot;, &quot;1&quot;,
+        &quot;--device&quot;, 0,
+        &quot;--type&quot;, &quot;hdd&quot;,
+        &quot;--medium&quot;, &quot;#{ENV[&quot;HOME&quot;]}/VirtualBox VMs/#{vb.name}/#{vb.name}_docker.vdi&quot;
+      ]
+    end
+  end
+
+  # shell provider
+  # format the additional disk and add the free space to the box
+  config.vm.provision :shell, :path =&amp;gt; &quot;add_disk.sh&quot;
+  ...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Lines 64..66 adds the additional disk space to a logical volume via a Vagrant shell provider, which calls the script add_disk.sh in the created VirtualBox machine.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Resizing the first disk does not work, as therefore the machine has to be booted, which cannot be handled with Vagrant.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# exit immediately if a command exits with a non-zero status.
+set -e
+# activate debugging from here
+set -x
+
+if [ -f /etc/disk_added_date ] ; then
+echo &quot;disk already added so exiting.&quot;
+exit 0
+fi
+
+# show diskspace of the logical volume before adding the disk
+df -h /dev/mapper/linux-root
+
+# partitioning the disk
+sudo fdisk -u /dev/sdb &amp;lt;&amp;lt;EOF n p t 8e w EOF
+
+# initialize the partition for use by logical volume manager
+sudo pvcreate /dev/sdb1
+
+# add the partition to volume group linux
+sudo vgextend linux /dev/sdb1
+
+# increase the size of the logical volume /dev/mapper/linux-root
+sudo lvextend --extents +51199 --resizefs /dev/mapper/linux-root
+
+# mark that the disk was added
+date &amp;gt; /etc/disk_added_date
+
+# show diskspace of the logical volume after adding the disk
+df -h /dev/mapper/linux-root&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now you have to recreate the VirtualBox machine via&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant destroy
+vagrant up&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In the output you can now see, how the logical volume grows:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;==&amp;gt; default: Running provisioner: shell...
+default: Running: C:/Users/torst/AppData/Local/Temp/vagrant-shell20160812-2348-1ln6wrz.sh
+==&amp;gt; default: ++ &apos;[&apos; -f /etc/disk_added_date &apos;]&apos;
+==&amp;gt; default: ++ df -h /dev/mapper/linux-root
+==&amp;gt; default: Filesystem              Size  Used Avail Use% Mounted on
+==&amp;gt; default: /dev/mapper/linux-root   16G  1.9G   14G  12% /
+==&amp;gt; default: ++ sudo fdisk -u /dev/sdb
+==&amp;gt; default: Welcome to fdisk (util-linux 2.23.2).
+==&amp;gt; default:
+==&amp;gt; default: Changes will remain in memory only, until you decide to write them.
+==&amp;gt; default: Be careful before using the write command.
+==&amp;gt; default:
+==&amp;gt; default:
+==&amp;gt; default: Command (m for help): Partition type:
+==&amp;gt; default:    p   primary (0 primary, 0 extended, 4 free)
+==&amp;gt; default:    e   extended
+==&amp;gt; default: Select (default p): Partition number (1-4, default 1): First sector (2048-419430399, default 2048): Using default value 2048
+==&amp;gt; default: Last sector, +sectors or +size{K,M,G} (2048-419430399, default 419430399): Using default value 419430399
+==&amp;gt; default: Partition 1 of type Linux and of size 200 GiB is set
+==&amp;gt; default:
+==&amp;gt; default: Command (m for help): Selected partition 1
+==&amp;gt; default: Hex code (type L to list all codes): Hex code (type L to list all codes): Changed type of partition &apos;Linux&apos; to &apos;Linux LVM&apos;
+==&amp;gt; default:
+==&amp;gt; default: Command (m for help):
+==&amp;gt; default: Device does not contain a recognized partition table
+==&amp;gt; default: Building a new DOS disklabel with disk identifier 0xb4c74c64.
+==&amp;gt; default: The partition table has been altered!
+==&amp;gt; default:
+==&amp;gt; default: Calling ioctl() to re-read partition table.
+==&amp;gt; default: Syncing disks.
+==&amp;gt; default: ++ sudo pvcreate /dev/sdb1
+==&amp;gt; default:   Physical volume &quot;/dev/sdb1&quot; successfully created
+==&amp;gt; default: ++ sudo vgextend linux /dev/sdb1
+==&amp;gt; default:   Volume group &quot;linux&quot; successfully extended
+==&amp;gt; default: ++ sudo lvextend --extents +51199 --resizefs /dev/mapper/linux-root
+==&amp;gt; default:   Size of logical volume linux/root changed from 15.62 GiB (4000 extents) to 215.62 GiB (55199 extents).
+==&amp;gt; default:   Logical volume root successfully resized.
+==&amp;gt; default: meta-data=/dev/mapper/linux-root isize=256    agcount=4, agsize=1024000 blks
+==&amp;gt; default:          =                       sectsz=512   attr=2, projid32bit=1
+==&amp;gt; default:          =                       crc=0        finobt=0
+==&amp;gt; default: data     =                       bsize=4096   blocks=4096000, imaxpct=25
+==&amp;gt; default:          =                       sunit=0      swidth=0 blks
+==&amp;gt; default: naming   =version 2              bsize=4096   ascii-ci=0 ftype=0
+==&amp;gt; default: log      =internal               bsize=4096   blocks=2560, version=2
+==&amp;gt; default:          =                       sectsz=512   sunit=0 blks, lazy-count=1
+==&amp;gt; default: realtime =none                   extsz=4096   blocks=0, rtextents=0
+==&amp;gt; default: data blocks changed from 4096000 to 56523776
+==&amp;gt; default: ++ date
+==&amp;gt; default: ++ df -h /dev/mapper/linux-root
+==&amp;gt; default: Filesystem              Size  Used Avail Use% Mounted on
+==&amp;gt; default: /dev/mapper/linux-root  216G  1.9G  214G   1% /&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tkleiber/de.kleiber.devserver/tree/eebbea212f60f3345710ba07de62501aec69df6a&quot;&gt;Here&lt;/a&gt; you find the source code for this blog.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;tags/Virtual-Development-Server.html&quot;&gt;Here&lt;/a&gt; you find more about the topic &quot;Virtual Development Server&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://oracle-base.com/articles/vm/virtualbox-extend-disk-and-file-system&quot;&gt;VirtualBox : Extend Virtual Disk and File System&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/14917353/resizing-disk-space-on-vagrant-boxant-box&quot;&gt;Resizing disk space on vagrant box&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Virtual Development Server: Creating Virtualbox machine including docker containers with Vagrant</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html"/>
+        <updated>2016-08-12T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html</id>
+        <category term="Virtual-Development-Server"/>
+        <category term="Continous-Integration"/>
+        <category term="Docker"/>
+        <category term="Infrastructure-as-Code"/>
+        <category term="Linux"/>
+        <category term="Oracle"/>
+        <category term="Vagrant"/>
+        <category term="VirtualBox"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As I want to decouple my development server from my computer as much as possible I want to create first a virtual machine with linux.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Because I have used &lt;a href=&quot;https://www.virtualbox.org&quot;&gt;Oracle Virtualbox&lt;/a&gt; in the past successfully, I will use it here too.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As I want have later a reproducible environment via Infrastructure as code, I give &lt;a href=&quot;https://www.vagrantup.com&quot;&gt;Vagrant&lt;/a&gt; a try for this. As source code management system I use GIT, my remote repository is located at &lt;a href=&quot;https://github.com/tkleiber/de.kleiber.devserver&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As I don&amp;#8217;t want create a new linux from scratch, I have looked for a ready system at &lt;a href=&quot;http://www.vagrantbox.es&quot;&gt;Vagrantboxes&lt;/a&gt;, which contains a new Oracle Linux version, and find a &lt;a href=&quot;http://cloud.terry.im/vagrant/oraclelinux-7-x86_64.box&quot;&gt;Oracle Linux 7.1&lt;/a&gt; x86_64 system with Chef and Puppet preinstalled.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Before I could start, I had to install on my Windows 10 computer &lt;a href=&quot;https://www.vagrantup.com&quot;&gt;Vagrant&lt;/a&gt; 1.8.5 and &lt;a href=&quot;https://www.virtualbox.org&quot;&gt;Oracle Virtualbox&lt;/a&gt; 5.0.16. Don&amp;#8217;t use the 5.1 Version, as at this is not yet supported by vagrant 1.8.5.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For automatic update of the Oracle VM VirtualBox Extension Pack, which is delivered with the ready box and is required for use of shared folders and more, you should install following plugin as described &lt;a href=&quot;http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync&quot;&gt;here&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant plugin install vagrant vbguest&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Next I have created a directory of your choice and init there a Vagrantfile by calling&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant init&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then I changed the Vagrantfile as following, see the inline comments for documentation:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Vagrant.configure(2) do |config|
+
+  # Use the mentioned ready OEL 7 linux box
+  config.vm.box = &quot;oraclelinux-7-x86_64.box&quot;
+  config.vm.box_url = &quot;http://cloud.terry.im/vagrant/oraclelinux-7-x86_64.box&quot;
+
+  # Create a private network
+  config.vm.network &quot;private_network&quot;, type: &quot;dhcp&quot;
+
+  # persistant storage for all docker container
+  config.vm.synced_folder &quot;C:\\shared\\virtual_storage&quot;, &quot;/virtual_storage&quot;, :mount_options =&amp;gt; [&quot;dmode=777&quot;,&quot;fmode=777&quot;]
+
+  # virtualbox provider
+  config.vm.provider &quot;virtualbox&quot; do |vb|
+    # name in VirtualBox
+    vb.name = &quot;Development Server&quot;
+	end
+
+  # Docker Private Registry container for storing later builded docker images, which are not in the Docker Public Registry at https://hub.docker.com/
+  config.vm.provision &quot;docker&quot; do |d|
+    d.run &quot;registry&quot;, image: &quot;registry&quot;, daemonize: true, args: &quot;-d -p 5000:5000 -v /virtual_storage/docker_registry:/var/lib/registry&quot;
+  end
+
+end&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Run next from the created directory&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant up&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Following you see the output&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Bringing machine &apos;default&apos; up with &apos;virtualbox&apos; provider...
+==&amp;gt; default: Importing base box &apos;oraclelinux-7-x86_64.box&apos;...
+==&amp;gt; default: Matching MAC address for NAT networking...
+==&amp;gt; default: Setting the name of the VM: Development Server
+==&amp;gt; default: Clearing any previously set network interfaces...
+==&amp;gt; default: Preparing network interfaces based on configuration...
+default: Adapter 1: nat
+default: Adapter 2: hostonly
+==&amp;gt; default: Forwarding ports...
+default: 22 (guest) =&amp;gt; 2222 (host) (adapter 1)
+==&amp;gt; default: Booting VM...
+==&amp;gt; default: Waiting for machine to boot. This may take a few minutes...
+default: SSH address: 127.0.0.1:2222
+default: SSH username: vagrant
+default: SSH auth method: private key
+default: Warning: Remote connection disconnect. Retrying...
+default:
+default: Vagrant insecure key detected. Vagrant will automatically replace
+default: this with a newly generated keypair for better security.
+default:
+default: Inserting generated public key within guest...
+default: Removing insecure key from the guest if it&apos;s present...
+default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==&amp;gt; default: Machine booted and ready!
+[default] GuestAdditions versions on your host (5.0.26) and guest (5.0.12) do not match.
+Loaded plugins: ulninfo
+Package kernel-uek-devel-4.1.12-32.el7uek.x86_64 already installed and latest version
+Package gcc-4.8.5-4.el7.x86_64 already installed and latest version
+Package 1:make-3.82-21.el7.x86_64 already installed and latest version
+Package 4:perl-5.16.3-286.el7.x86_64 already installed and latest version
+Package bzip2-1.0.6-13.el7.x86_64 already installed and latest version
+Nothing to do
+Copy iso file C:\Program Files\Oracle\VirtualBox\VBoxGuestAdditions.iso into the box /tmp/VBoxGuestAdditions.iso
+mount: /dev/loop0 is write-protected, mounting read-only
+Installing Virtualbox Guest Additions 5.0.26 - guest version is 5.0.12
+Verifying archive integrity... All good.
+Uncompressing VirtualBox 5.0.26 Guest Additions for Linux............
+VirtualBox Guest Additions installer
+Removing installed version 5.0.12 of VirtualBox Guest Additions...
+Removing existing VirtualBox non-DKMS kernel modules[  OK  ]
+Copying additional installer modules ...
+Installing additional modules ...
+Removing existing VirtualBox non-DKMS kernel modules[  OK  ]
+Building the VirtualBox Guest Additions kernel modules
+Building the main Guest Additions module[  OK  ]
+Building the shared folder support module[  OK  ]
+Building the shared folder support module[  OK  ]
+Building the graphics driver module[  OK  ]
+Doing non-kernel setup of the Guest Additions[  OK  ]
+You should restart your guest to make sure the new modules are actually used
+
+==&amp;gt; default: Checking for guest additions in VM...
+==&amp;gt; default: Configuring and enabling network interfaces...
+==&amp;gt; default: Mounting shared folders...
+default: /vagrant =&amp;gt; C:/shared/scmlocal/blog
+default: /virtual_storage =&amp;gt; C:/shared/virtual_storage
+==&amp;gt; default: Running provisioner: docker...
+default: Installing Docker onto machine...
+==&amp;gt; default: Starting Docker containers...
+==&amp;gt; default: -- Container: registry&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In lines 1..24 you see the loading of the ready box and booting with the defined network&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In lines 25..50 the version of the VirtualBox GuestAdditions of the box is checked and after that replaced with the actual installed VirtualBox version. This happens only on the first &quot;vagrant up&quot; call.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In lines 57..58 Docker is installed as a Vagrant Docker provider is called in the Vagrantfile line 20 and it does not exist in the box before.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In lines 59..60 a Docker Private Registry container is started via loading docker image from the &lt;a href=&quot;https://hub.docker.com&quot;&gt;Docker Public Registry&lt;/a&gt;. In a later blog we will use this Docker Private Registry container to hold our own created docker images like database and development tools. The pushed images are saved to a mapped host volume of my windows 10 computer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can connect to the virtualbox directly via&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant ssh&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The you can see the downloaded Docker Private Registry images and the started container from this images:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;[vagrant@oraclelinux7 ~]$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+registry            latest              c6c14b3960bd        13 days ago         33.28 MB
+[vagrant@oraclelinux7 ~]$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+739c1c9926b1        registry            &quot;/entrypoint.sh /etc/&quot;   5 minutes ago       Up 5 minutes        0.0.0.0:5000-&amp;gt;5000/tcp   registry&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can now stop the Development Server via&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant halt&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you startup again the server via&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant up&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;the provision steps are not replayed until you destroy the server or explicitly call the provision again via&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant provision&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tkleiber/de.kleiber.devserver/tree/ba4ec913f5626364ec56cc3d574e13b23e016663&quot;&gt;Here&lt;/a&gt; you find the source code for this blog.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;tags/Virtual-Development-Server.html&quot;&gt;Here&lt;/a&gt; you find more about the topic &quot;Virtual Development Server&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Virtual Development Server: The idea</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Virtual+Development+Server+The+idea.html"/>
+        <updated>2016-08-11T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+The+idea.html</id>
+        <category term="Virtual-Development-Server"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For long time I had the idea to create a virtual development server for testing some ideas and play with some new and old technologies.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The several components should be easy replaceable and should influence my computer as little as possible.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;So in the next blogs of this series I will discuss several technologies like vagrant, docker, jenkins and several oracle database and development stacks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;tags/Virtual-Development-Server.html&quot;&gt;Here&lt;/a&gt; you find more about the topic &quot;Virtual Development Server&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Please stay tuned!&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Oracle TranslationHub neither supported for 12c Database, 12c Forms/Reports or 64 bit!</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Oracle+TranslationHub+neither+supported+for+12c+Database+12c+Forms+Reports+or+64+bit.html"/>
+        <updated>2016-03-16T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Oracle+TranslationHub+neither+supported+for+12c+Database+12c+Forms+Reports+or+64+bit.html</id>
+        <category term="Oracle"/>
+        <category term="Forms"/>
+        <category term="Forms-11"/>
+        <category term="Forms-12"/>
+        <category term="Reports"/>
+        <category term="Reports-11"/>
+        <category term="Reports-12"/>
+        <category term="TranslationHub"/>
+        <category term="32bit"/>
+        <category term="64bit"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you need TranslationHub (Windows only) for your forms and reports development and plan to move to one of the following&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;12c Database for your TranslationHub repository&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;12c Forms/Reports (only available for 64 bit Windows)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;higher version of 64 bit 11g Forms/Reports&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;then please immediately stop! None of this combination works with TranslationHub!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For the last point I had created enhancement request &lt;a href=&quot;https://support.oracle.com/epmos/faces/BugDisplay?parent=DOCUMENT&amp;amp;sourceId=1559704.1&amp;amp;id=14155931&quot;&gt;14155931&lt;/a&gt; back in June 2012!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For the first point I had created a service request last week I and get following answer:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;quoteblock&quot;&gt;
+&lt;blockquote&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Unfortunately, OTH is no longer supported or being developed. Customers can continue to use OTH as-is.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;About the errors, based on today&amp;#8217;s standards, OTH has several limitations:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;It is a 32bit product and expects to co-exist with a 32bit DB and optional Forms/Reports installation. 64bit installations will not work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Likely OTH will not work correctly on newer operating systems like Windows 8.1 or newer. It likely will also not be stable on Windows 7-x64 either, although it may generally seem to function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It may be possible to use a version 12 database as the target database for OTH projects, however this has never been certified and therefore shouldn&amp;#8217;t be supported if issues arise.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Although Oracle currently do not have replacement for OTH, the Forms team is working on a possible alternative that may be available in the future. If customers require the use of OTH immediately, they should consider installing and using it in an environment that was previously certified for its use.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The Oracle Technology Network Forums should be considered (for the customer) if there are questions about OTH.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://community.oracle.com/community/development_tools/forms&quot; class=&quot;bare&quot;&gt;https://community.oracle.com/community/development_tools/forms&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Product Management is aware of the importance of this situation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Any news regarding OTH will be published on Forms&amp;#8217;s OTN page, however, for the moment, unfortunately, there is not much we can help with, in Support.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As 11g Database and 11g Forms will run out of support soon in my opinion Oracle has immediately to provide a working 64bit TranslationHub for 12c Database and Forms as long you has no replacement for this tool.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;What do you think?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Update: See the according discussion on the &lt;a href=&quot;https://community.oracle.com/message/13751591&quot;&gt;forms forum&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>#Javaland 2016 conference day 2</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Javaland+2016+conference+day+2.html"/>
+        <updated>2016-03-10T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Javaland+2016+conference+day+2.html</id>
+        <category term="Javaland"/>
+        <category term="Conferences"/>
+        <category term="Java"/>
+        <category term="Oracle"/>
+        <category term="ADF"/>
+        <category term="Unit-Test"/>
+        <category term="Continous-Integration"/>
+        <category term="Database"/>
+        <category term="Database-Migration"/>
+        <category term="Flyway"/>
+        <category term="Liquibase"/>
+        <category term="Feature-Toggles"/>
+        <category term="Security"/>
+        <category term="User-Experience"/>
+        <category term="UX"/>
+        <content type="html">
+            &lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This was my second day:&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;michael_tamm_optivo_gmbhfeature_toggles_on_steroids&quot;&gt;Michael Tamm (optivo GmbH): Feature Toggles on Steroids&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Very good summary off all topic&amp;#8217;s covering feature toggles. Wish I had this summary 2 years before, were we have evaluated this. Unfortunately furthermore no solutions for declarative frameworks like Oracle ADF with it&amp;#8217;s wizards and xml configurations, which later generated code. Ironic answer to my question: &quot;Don&amp;#8217;t use frameworks - use Java&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;alexander_casall_saxonia_systems_aguser_experience_fortechies&quot;&gt;Alexander Casall (Saxonia Systems AG): User Experience for techies&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now comes something completely different. As least I had expected. No techniques etc.. There are really german standards &quot;Ergonomics of human-system interaction&quot; in &lt;a href=&quot;http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=38009&quot;&gt;ISO 9241 - 110&lt;/a&gt; (Dialogue principles) and &lt;a href=&quot;http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=52075&quot;&gt;ISO 9241 - 210&lt;/a&gt; (Ergonomics of human-system interaction). I have to read this, if it really would help in development, or the presenter interprets this on its own. Nice and surprising presentation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;adam_gowdiak_security_explorations_java_insecurity_keynote&quot;&gt;Adam Gowdiak (Security Explorations): &amp;lt;Java (in)security (Keynote)&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The presenter is really angry about Oracle and Co. and the security in Java. Nevertheless it seems he has specialized only on this topic and earn this money on this. So I doesn&amp;#8217;t know, if somebody or another product is better. What about security in OpenJDK? And what are now my alternatives? A little depressing keynote.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;lars_röwekamp_open_knowledge_gmbh_courage_to_professionalism&quot;&gt;Lars Röwekamp (open knowledge GmbH): Courage to professionalism&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I don&amp;#8217;t know, what I had expected here, but this was a nice surprise too. The talk was about to find a common language between customer, analyst, developer and other roles. The patterns &quot;Rich Entities&quot; and &quot;Value Objects&quot; helps to find a way out of the helper, util and manager class hell and seems to improve the readability of the code for all stakeholders. But how will this fit in declarative Frameworks like Oracle ADF and it&amp;#8217;s generated classes? Have to think about it. Very good speaker!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;wolfgang_weigend_oracle_deutschland_build_and_monitor_cloud_paas_with_jvms_nashorn_javascripts&quot;&gt;Wolfgang Weigend (Oracle Deutschland): Build and Monitor Cloud PaaS with JVM&amp;#8217;s Nashorn JavaScripts&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Unfortunately the worst presentation comes from Oracle itself. To be fair: this presentation should be held by Bruno Borges, which was prevented to come to Javaland. Tip: Never hold a presentation, which is created by another person, if you don&amp;#8217;t know, what he know about the subject. But I&amp;#8217;m not sure if I had understood more, if Bruno had held the presentation. I didn&amp;#8217;t find a red thread in the slides. And I must add, I didn&amp;#8217;t really find an alternative presentation in this time slot.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;alexander_heusingfeld_tammo_van_lessen_innoq_deutschland_gmbh_when_microservices_meet_real_world_projects_lessons_learned&quot;&gt;Alexander Heusingfeld, Tammo van Lessen (innoQ Deutschland GmbH): When Microservices Meet Real-World Projects: Lessons Learned&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Interesting presentation but the topic was missed. This had little to do with Microservice, more what a consultant or any person has to learn on his way from Junior to Senior: communicate, communicate, communicate. Especially when you want to change something.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;stephan_kaps_bundesversicherungsamt_flyway_vs_liquibase_battle_of_the_database_migration_tools&quot;&gt;Stephan Kaps (Bundesversicherungsamt): Flyway vs. LiquiBase - Battle of the database migration tools&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I wanted to do this comparison several times before, but had never enough time. Now I&amp;#8217;m relative sure that I will start with Liquibase in my next private project before I develop the application. This was the subjective winner of the battle too. I&amp;#8217;m overwhelmed by the mass of features of both tools. Very good summary!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;architecture_kata&quot;&gt;Architecture Kata&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This was a nice workshop to plan the application and technical architecture of a given small set of requirements. Result for me: the many participants from a lot of other companies comes to very similar architecture depending on the assumption they made. In real life you have to communicate again and again with your stakeholders to get answered all of the questions and get quick feedback from them. I have urgently to refresh my knowledge of tools for UML diagramming and graphical presentations. And for structured proceeding maybe I should look for &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Open_Group_Architecture_Framework&quot;&gt;TOGAF&lt;/a&gt; training?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This was inspiring conference, which gives me a lot of fresh ideas and reminders for some spilled goals for my private and company projects. I think we&amp;#8217;ll see us next year!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>#Javaland 2016 conference day 1</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2016/Javaland+2016+conference+day+1.html"/>
+        <updated>2016-03-09T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2016/Javaland+2016+conference+day+1.html</id>
+        <category term="Javaland"/>
+        <category term="Conferences"/>
+        <category term="Java"/>
+        <category term="Oracle"/>
+        <category term="JDeveloper"/>
+        <category term="ADF"/>
+        <category term="XRebel"/>
+        <category term="Behaviour-Test"/>
+        <category term="Load-Test"/>
+        <category term="Mutation-Test"/>
+        <category term="Unit-Test"/>
+        <category term="Code-Coverage"/>
+        <category term="Documentation"/>
+        <category term="Jenkins"/>
+        <category term="Jenkins-Pipelines"/>
+        <content type="html">
+            &lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This year I have decided to give the &lt;a href=&quot;https://twitter.com/hashtag/javaland?src=hash&quot;&gt;Javaland&lt;/a&gt; conference a try. I&amp;#8217;m not a java professional, but in the program was listed a lot of interesting testing presentations, so my company booked for me.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The location in &lt;a href=&quot;http://www.phantasialand.de&quot;&gt;Phantasierend&lt;/a&gt; &lt;a href=&quot;https://www.bruehl.de&quot;&gt;Brühl&lt;/a&gt; near cologne was very fine. Unfortunately the conference rooms had not enough space this year so for some presentation you have to go to 2 rooms outside of the parc. Additionally it is not understandable, why there is not wlan for such a conference.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This was my first day:&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;jeremias_rößler_retestbehavioral_diff_as_new_test_paradigm&quot;&gt;Jeremias Rößler (&lt;a href=&quot;http://retest.de&quot;&gt;ReTest&lt;/a&gt;): Behavioral Diff as new test paradigm&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Why I don&amp;#8217;t record a test with all information of my page objects, eliminate all variable parts until it is stable and reproducible and define this a my basic truth. If a code change break this test I check the problems, if these were expected or not. Good idea but - how many data created this and how long does it take to compare all this with previous successful run. I hope this new startup will give us effective tools for this paradigm.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;simon_maple_zeroturnaroundis_your_profiler_speaking_the_same_language_as_you&quot;&gt;Simon Maple (&lt;a href=&quot;https://zeroturnaround.com/&quot;&gt;ZeroTurnaround&lt;/a&gt;): Is Your Profiler Speaking the Same Language as You?&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;When I can trust the Profiler, what are the basics of it and how can I ensure that the right data are available for it. Which traps exist, when instrumenting for tracing and logging. Nice insights, but I&amp;#8217;m sure I have to reread the presentation to fully understand.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;exhibition_hall_after_lunch&quot;&gt;Exhibition Hall after lunch&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Played around with a Jenkins docker instance and the new &lt;a href=&quot;https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Plugin&quot;&gt;Pipeline Plugin&lt;/a&gt; (formerly named Workflow Plugin) at the &lt;a href=&quot;https://www.cloudbees.com/&quot;&gt;Cloudbees&lt;/a&gt; booth. I had a nice short talk with &lt;a href=&quot;https://www.linkedin.com/in/bcygan&quot;&gt;Bernhard Cygan&lt;/a&gt; about some other Jenkins topics.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;tobias_kraft_ralf_müller_exensio_gmbh_spock_and_geb_clear_and_comprehensible_tests&quot;&gt;Tobias Kraft, Ralf Müller (exensio GmbH): Spock and Geb: Clear and comprehensible tests&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This is an interesting combination of frameworks for human readable behavior tests. I&amp;#8217;m not sure if it is really enterprise ready (do you use version 0.x?). Will this work with Oracle ADF development too? Have to check this as next opportunity.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;sven_ruppert_macros_reply_practical_mutation_testing&quot;&gt;Sven Ruppert (Macros Reply): Practical mutation testing&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This seems to be the long searched key to find the right tests on the corner cases of our applications. I have mandatory to prove the mentioned &lt;a href=&quot;http://pitest.org/&quot;&gt;PIT&lt;/a&gt; framework Very charismatic and tough presenter.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;roel_spilker_topdeskreinier_zwitserloot_medipc_nllombok_the_boilerplate_buster_its_a_kind_of_magic&quot;&gt;Roel Spilker (TOPdesk), Reinier Zwitserloot (medipc.nl): Lombok: The Boilerplate Buster. It&amp;#8217;s a Kind of Magic!&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Is this the way to hide generated and framework required code, like standard getters and setters, from the really interesting code, which implements my requirements? It is implemented as a java compiler plugin. Have to check immediately, if this will work with Oracle JDeveloper too. In Eclipse the structure shows the code of generated class, which contains the generated boilerplates via the lombok framework annotations. And what changes are required to fulfill now my static code analysis rules which work on the source code. Additional this was a very entertaining presentation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;bert_jan_schrijver_jpointcontinuous_performance_automated_load_testing_with_gatling&quot;&gt;Bert Jan Schrijver (JPoint): Continuous Performance: Automated Load Testing with Gatling&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As our PoC of JMeter was not really satisfying especially for maintenance of test cases and the load testing should not cost anything at least at the moment, we should definitely this opensource tool a try. Especially the combination of the recorder and the presenter converter scripts to java looks promising. Maybe we could reuse the page object locators from our Selenium tests?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;hubert_klein_ikkink_jdrivenwriting_documentation_with_asciidoctor_is_awesome&quot;&gt;Hubert Klein Ikkink (JDriven): Writing Documentation with Asciidoctor Is Awesome&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Focus on content instead of formatting in your documentation! With this tool it seem to be possible to really versioning and therefore to diff your documentation between commits. And still you can generate via templates modern output formats e.g. like HTML 5 or PDF. With a clever combination of features you can annotate your code with markers, to reuse this actual code between this markers in your documentation. And via ASCII art you can generate simple diagrams too. I will absolutely try this on my private projects soon.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;community_hall_meet_the_libs&quot;&gt;Community Hall - Meet the libs&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The motto was: show me your favorite opensource lib and I show your mine:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Sven Ruppert again - &lt;a href=&quot;https://github.com/ProxyBuilder/proxybuilder&quot;&gt;Proxybuilder&lt;/a&gt;: Change the behavior of deep code for different purposes of CDI eg. Metrics, Logging or testing. Maybe interesting for my future tests.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Roland Huß - Jolokia: JMX Bean access via JSON over HTTP, interesting but don&amp;#8217;t know if I ever need this&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Asciidoctor again: Jump additional over some of tool integrations&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://keycloak.jboss.org/&quot;&gt;Keycloak&lt;/a&gt;: If I ever need a SSO or IDM solution for my private projects this will the first citizen in my tool chain.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wildfly swarm: Interesting but actually I did not touch JBoss or Wildfly in my projects.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;dinner&quot;&gt;Dinner&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Generally very good food, I had not expected this here. At dinner I meet at my desk with some staff of canoo, which set up the &lt;a href=&quot;http://www.canoo.com/news/2015/10/27/javaone-voting-machine&quot;&gt;voting machines&lt;/a&gt; at Javaland too. Nice and diverting talk, thank you guys!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
     <entry>
         <title>SLES shell script to check required os packages according to documentation before starting oracle forms &amp; reports installation</title>
         <author>
