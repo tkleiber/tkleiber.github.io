@@ -1,11 +1,952 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>AMAPAC.IO</title>
+    <title>As Much As Possible As Code (AMAPAC)</title>
     <link href="https://tkleiber.github.io/"/>
     <link rel="self" type="application/atom+xml" href="https://tkleiber.github.io/feed.xml"/>
-    <subtitle>As Much As Possible As Code</subtitle>
-    <updated>2020-07-07T17:53:03Z</updated>
+    <subtitle>Try to automate your IT!</subtitle>
+    <updated>2020-07-09T11:45:03Z</updated>
     <id>tag:localhost,2020:07</id>
+    <entry>
+        <title>Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I&#8217;m a speaker at DOAG2019</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2019/Agile+Oracle+Database+Modeling+and+Development+%28AgileOracleDatabase%29+-+I+m+a+speaker+at+DOAG2019.html"/>
+        <updated>2019-11-18T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2019/Agile+Oracle+Database+Modeling+and+Development+%28AgileOracleDatabase%29+-+I+m+a+speaker+at+DOAG2019.html</id>
+        <category term="Database"/>
+        <category term="Deploy"/>
+        <category term="Git"/>
+        <category term="Jenkins"/>
+        <category term="Liquibase"/>
+        <category term="Database-Modelling"/>
+        <category term="Oracle"/>
+        <category term="PL/SQL"/>
+        <category term="utPLSQL"/>
+        <content type="html">
+            &lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/doag-2019-konferenz-ausstellung-banner-180x180-speaker.jpg&quot; alt=&quot;doag 2019 konferenz ausstellung banner 180x180 speaker&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We try to be agile in developing and merging our features into branches when they are ready for use.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Test Driven Development is on everyone&amp;#8217;s lips with Java and other languages.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Whether we develop ADF or JET or Spring, we try to apply these techniques in many places.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;But what is the real basis of most of our applications?
+This is the Oracle database with its data model and programming language PL/SQL!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Again and again we hear that merging data model scripts and PL/SQL programs is not practicable.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;But how are we supposed to develop our frontend according to these techniques, if we don&amp;#8217;t start with it in the backend?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In the lecture and the demo&amp;#8217;s I will show you how you can further develop your data model and your programs in the database agile and test driven from requirement till refactoring.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can see how tools like Git, Liquibase, utPLSQL and Jenkins work together.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you speak german and you are interested in some of this, you should come and attend my &lt;a href=&quot;https://programm.doag.org/doag/2019/#/scheduledEvent/584762&quot;&gt;presentation&lt;/a&gt; at DOAG 2019 Nuremberg on Wednesday, Nov. 20, 17:00 in room Istanbul.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>"Regulatorics: Offside is when the referee whistles" - I&#8217;m a speaker at DOAG2018</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html"/>
+        <updated>2018-07-17T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html</id>
+        <category term="ADF"/>
+        <category term="ADF-12"/>
+        <category term="Atlassian"/>
+        <category term="Bitbucket"/>
+        <category term="Branching"/>
+        <category term="Build"/>
+        <category term="Commit-Test"/>
+        <category term="Conferences"/>
+        <category term="Continous-Integration"/>
+        <category term="Deploy"/>
+        <category term="Git"/>
+        <category term="Jenkins"/>
+        <category term="JIRA"/>
+        <category term="Oracle"/>
+        <category term="Pipelines"/>
+        <category term="SOA"/>
+        <category term="SOA-12"/>
+        <category term="Unit-Test"/>
+        <content type="html">
+            &lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/doag-2018-konferenz-ausstellung-banner-180x180-referent.jpg&quot; alt=&quot;doag 2018 konferenz ausstellung banner 180x180 referent&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Today my presentation is confirmed: &quot;Regulatorics: Offside is when the referee whistles&quot;. Maybe the German title will be better understood: &quot;Regulatorik: Abseits ist, wenn der Schiedsrichter pfeift&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The regulatory system has more and more influence on our software development.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Regulatory authorities, external and internal Auditors are increasingly examining our IT and not longer only our business processes and balance sheets.
+Some of them have better trained IT experts as we can find on the free market.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;General standards such as ISO/IEC 2700X but also banking-specific standards such as BAIT and MaRisk now pose challenges that generally only large software manufacturers know.
+Approximately 40 % of our projects are now regulatory-driven.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Therefore, we are currently redefining our development process in order to implement the following requirements, among others
+* Unchangeability of the tested artefacts after the test
+* Functional segregation
+* Detection of accidental changes or intentional manipulations of the application&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The lecture shows the vision of such a safe process. It shows the current status of implementation in SOA and ADF development, for example:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Migration of version management to GIT in Atlassian BitBucket&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Application and selection criteria for a branching model
+* Mandatory code reviews in Atlassian BitBucket&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build and Deployment Pipelines in Jenkins&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Automatic documentation in JIRA Issue via Bitbucket and Jenkins.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Maybe you too can minimize the additional work and continue to work agile to meet such requirements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you speak german and you are interested in some of this, you should come and attend DOAG 2018.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>DOAG2017 wrap up</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2017/DOAG2017+wrap+up.html"/>
+        <updated>2017-12-01T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2017/DOAG2017+wrap+up.html</id>
+        <category term="ABCS"/>
+        <category term="ADF"/>
+        <category term="ADF-12"/>
+        <category term="APEX"/>
+        <category term="Bitcoin"/>
+        <category term="Blockchain"/>
+        <category term="Cloud"/>
+        <category term="Code-Coverage"/>
+        <category term="Continous-Integration"/>
+        <category term="DBADev"/>
+        <category term="DevOps"/>
+        <category term="Disruption"/>
+        <category term="DOAG"/>
+        <category term="Docker"/>
+        <category term="Forms"/>
+        <category term="Forms-12"/>
+        <category term="Fusion-Middleware"/>
+        <category term="Java"/>
+        <category term="JavaScript"/>
+        <category term="Jenkins"/>
+        <category term="JET"/>
+        <category term="Oracle"/>
+        <category term="PL/SQL"/>
+        <category term="Quality-Assurance"/>
+        <category term="Reports"/>
+        <category term="Reports-12"/>
+        <category term="Static-Code-Analysis"/>
+        <category term="Virtualization"/>
+        <category term="WebLogic"/>
+        <content type="html">
+            &lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/doag_wegweiser.png&quot; alt=&quot;doag wegweiser&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Another DOAG is over and here is my summary.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;day_1&quot;&gt;Day 1&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As my presentation is planned for noon I arrived this year on the evening before, so I could attend the early sessions on 8:30.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;sten_vesterli_apex_adf_or_abcs_a_real_life_application_built_in_3_tools&quot;&gt;&lt;a href=&quot;https://twitter.com/stenvesterli&quot;&gt;Sten Vesterli&lt;/a&gt;: APEX, ADF, or ABCS? A real-life application built in 3 tools&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;He compares the development of a real application in APEX, ADF and ABCS. He don&amp;#8217;t believe that ABCS is usable from end users and shows interesting problems with the date pickers in APEX and ADF.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;welcome_by_doag_and_oracle&quot;&gt;Welcome by DOAG and Oracle&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Stefan Kinnen from DOAG welcomes the attendees and gives an short overview for the conference. The part of the Kenneth Johansen from Oracle was very dry in the contrast.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;keynote_neil_sholay_tracking_the_inevitable_how_to_plan_for_likely_and_disruptive_business_scenarios&quot;&gt;Keynote: &lt;a href=&quot;https://twitter.com/NeilSholay&quot;&gt;Neil Sholay&lt;/a&gt; - Tracking the Inevitable (How to plan for likely and disruptive business scenarios.)&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Quite the reverse the colleague of Kenneth Johansen. He present interesting views about the ongoing disruption in every business and how to prepare for this. Unfortunately the presentation is not available for download.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;markus_lohn_road_to_the_oracle_cloud&quot;&gt;&lt;a href=&quot;https://twitter.com/MarkusLohn&quot;&gt;Markus Lohn&lt;/a&gt;: Road to the (Oracle) Cloud&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The next title was pure understatement. As I know Markus expanded his talk to the details of a complex SOA &amp;amp; ESB migration report, which most of the attendees sure does not expect. I think at least my boss not :-). I left this a little earlier as now I had to go to stage.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;torsten_kleiber_plsql_therefore_test_automation_for_those_who_bind_themselves_forever&quot;&gt;&lt;a href=&quot;https://twitter.com/develishdevelop&quot;&gt;Torsten Kleiber&lt;/a&gt;: PL/SQL: Therefore test automation for those who bind themselves forever!&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After several presentations about ADF and the related development life cycle I decided this year to speak about the selection process of a PL/SQL testing tool. Additional I &lt;a href=&quot;../2016/DOAG2016+wrap+up.html&quot;&gt;promised&lt;/a&gt; to do some of this last year. The room was packed with round about 100 people, which I unfortunately never reached with ADF in the past. Despite some technical problems when starting and in the demo&amp;#8217;s all went fine and I will thank again all my attendees. You find my presentation additional &lt;a href=&quot;https://www.slideshare.net/tkleiber/plsql-drum-test-automatisiere-wer-sich-sich-ewig-bindet-doag-2017&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Because of some discussion with my attendees and lunch I skipped the next slot.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;sabine_heimsath_jan_karremans_dbadev_like_dog_and_cat_it_doesnt_have_to_be&quot;&gt;&lt;a href=&quot;https://twitter.com/oraesque&quot;&gt;Sabine Heimsath&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/johnnyq72&quot;&gt;Jan Karremans&lt;/a&gt;: #DBADev - Like dog and cat? It doesn&amp;#8217;t have to be!&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This was a &quot;lightweight&quot; simulated battle between DBA and DB developers. I little bit oversimplified, but ok, unfortunately I seen none of our DBA&amp;#8217;s in the audience.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;alexander_weber_cloud_service_heaven_and_hell_application_and_data_away&quot;&gt;&lt;a href=&quot;https://www.xing.com/companies/endlichohg&quot;&gt;Alexander Weber&lt;/a&gt;: Cloud service - heaven and hell (application and data away)&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This was report from a real world oracle database cloud customer with an APEX app. Maybe I will remind me to look at his experience, when we will ever go the cloud.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;bryn_llewellyn_ten_rules_for_doing_a_plsql_performance_experiment&quot;&gt;&lt;a href=&quot;http://twitter.com/BrynLite&quot;&gt;Bryn Llewellyn&lt;/a&gt;: Ten Rules for Doing a PL/SQL Performance Experiment&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Bryn shows how to best analyze and broke down a performance problem and the idea&amp;#8217;s are often not restricted to PL/SQL. Lesson learned &quot;Don&amp;#8217;t use SET TIMING ON&quot;, as this includes additional network roundtrips.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;elmar_juergens_the_sow_does_not_get_fat_from_weighing_plsql_quality_analysis&quot;&gt;&lt;a href=&quot;https://twitter.com/ElmarJuergens&quot;&gt;Elmar Juergens&lt;/a&gt;: The sow does not get fat from weighing: PL/SQL quality analysis&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I see already a similar presentation from Elmar Juergens at &lt;a href=&quot;Javaland+2017+wrap+up.html&quot;&gt;Javaland 2017&lt;/a&gt;. Same message this time. Additional he recommend to measure at first only the changed source code via a diffing algorithm to only identifying the changed lines. Most tools can&amp;#8217;t do this. Will have a look at his own tool sometime. Additional our bosses want Elmar Juergens for a presentation for our developers. Will look if this will change their minds an they will look a least a bit more at the existing measured violation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;day_2&quot;&gt;Day 2&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;markus_klenke_better_more_beautiful_more_modern_barely_used_beads_in_adf&quot;&gt;&lt;a href=&quot;https://twitter.com/MarkusKlenke&quot;&gt;Markus Klenke&lt;/a&gt;: Better, more beautiful, more modern: barely used beads in ADF&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Markus likes ADF and show this. Fine that he is at our company site to help us with this.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;daniel_hillinger_tobias_deml_battle_database_virtualization&quot;&gt;&lt;a href=&quot;https://twitter.com/daniel8192&quot;&gt;Daniel Hillinger&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/TobiasDemlDBA&quot;&gt;Tobias Deml&lt;/a&gt;: Battle: Database Virtualization&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;First at the beginning the decision was made, who of the both is pro and who is contra. Nice format to find the arguments for this. I&amp;#8217;ve learned that all databases in the same virtualization farm has to be the same license and options, if you want not to pay to much. Additional it&amp;#8217;s not usual to begin if you have fewer than 100 database instances.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;thorsten_wussow_let_the_orchestra_play_docker_orchestration_and_visualization&quot;&gt;&lt;a href=&quot;https://twitter.com/Thwussi&quot;&gt;Thorsten Wussow&lt;/a&gt;: Let the orchestra play - Docker orchestration and visualization&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Unfortunately, my expectations were disappointed here because most demos didn&amp;#8217;t work. Not a good start to use the technology.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;dominic_weiser_continuous_integration_in_database_development&quot;&gt;&lt;a href=&quot;https://twitter.com/DmncWsr&quot;&gt;Dominic Weiser&lt;/a&gt;: Continuous integration in database development&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This was another nice database CI presentation which contains utPLSQL, and the presenter had enough time to show the CI part on Jenkins too. Similar you can find in my upload too, but I had not enough time in my talk to present.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;duncan_mills_web_components_the_oracle_way&quot;&gt;&lt;a href=&quot;https://twitter.com/DuncanMills&quot;&gt;Duncan Mills&lt;/a&gt;: Web Components, the Oracle Way&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Duncan describes how to define and use own components in Oracle Jet as professional as ever. Unfortunately I see that he has moved from ADF product management to JET architecture team now.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;michael_schulze_tools_for_diagnosing_weblogic_fmw_performance_problems&quot;&gt;&lt;a href=&quot;https://www.linkedin.com/in/michael-schulze-4b31a7153&quot;&gt;Michael Schulze&lt;/a&gt;: Tools for diagnosing Weblogic (FMW) performance problems&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;A surprice for me - lot of new tools and information for my toolchain.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;markus_lohn_quo_vadis_agile_software_development&quot;&gt;&lt;a href=&quot;https://twitter.com/MarkusLohn&quot;&gt;Markus Lohn&lt;/a&gt;: Quo Vadis Agile Software Development&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Again Markus on the stage. He shows his Agile project experiences on several customers and I&amp;#8217;m not sure if he mentioned us or not.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;bryn_llewellyn_guarding_your_data_behind_a_hard_shell_plsql_api_the_details&quot;&gt;&lt;a href=&quot;http://twitter.com/BrynLite&quot;&gt;Bryn Llewellyn&lt;/a&gt;: Guarding your Data Behind a Hard Shell PL/SQL API - the Details&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Bryn shows here a security model for how accessing the data via an secure API which contains of 4 schema layers: data, code, implementation, API. Unfortunately this is not really good handled by some of Oracle own development frameworks like ADF despite you develop only on the rest API on top. But definitely give it a try.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;roland_dürre_knud_johannsen_christian_botta_creative_communication&quot;&gt;&lt;a href=&quot;https://twitter.com/RolandDuerre&quot;&gt;Roland Dürre&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/KJohannsen&quot;&gt;Knud Johannsen&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/VisualBraindump&quot;&gt;Christian Botta&lt;/a&gt;: Creative communication&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The paintings was good but the rest was very esoteric presentation of philosophic messages. I think I was to inspired by the vita of mr. Botta when selected this slot, this was not what I had expected.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;awards&quot;&gt;Awards&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Before the evening keynote &lt;a href=&quot;https://www.doag.org/de/home/news/ulrike-schwinn-wird-doag-botschafterin-fuer-technologien/detail/&quot;&gt;Ulrike Schwinn&lt;/a&gt; was awarded, congratulations! Over my career I heard a lot of presentations from her, which was impressive, none where I&amp;#8217;m not learned something new.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;keynote_karl_heinz_land_digital_darwinism_the_silent_attack_on_your_business_model_and_brand&quot;&gt;Keynote - &lt;a href=&quot;https://twitter.com/karlheinzland&quot;&gt;Karl-Heinz Land&lt;/a&gt;: Digital Darwinism: The Silent Attack on your Business Model and Brand&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Good and provocative but unfortunately in my opinion also with some mistakes. The law of moore does not &lt;a href=&quot;http://www.giga.de/extra/ratgeber/specials/mooresches-gesetz-defintion-und-ende-von-moore-s-law-einfach-erklaert&quot;&gt;apply anymore&lt;/a&gt;, and this was his main explanation, why all will be automated in the near future. Yes automation will happen, but only where a real business case is. If you see that over 50% of internet traffic &lt;a href=&quot;https://www.recode.net/2017/6/8/15757594/future-internet-traffic-watch-live-video-facebook-google-netflix&quot;&gt;is eaten by video streaming&lt;/a&gt; already, than I think this will hamper this process. Blockchain is not an oprating system, it is an distributed secure database. But it comes with cost, which actually is not paid, for example: &lt;a href=&quot;https://t.co/27I0iozvCj&quot;&gt;A Bitcoin transaction consumes more electricity than a one-person household per month&lt;/a&gt;. And the verification of security need to many time. This has to be solved or Blockchain will only be used productive in edge case. Generally I&amp;#8217;m more a fan of &lt;a href=&quot;https://twitter.com/wilddueck&quot;&gt;WildDueck&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;adf_community_meeting&quot;&gt;ADF Community Meeting&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Unfortunately this was the greatest disappointment of the whole DOAG conference for me. &lt;a href=&quot;../2016/DOAG2016+wrap+up.html&quot;&gt;Once again&lt;/a&gt; we discussed several things&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ADF is not visible from Oracle because not actually marketed&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Errors in JDeveloper: the IDE for ADF and lack of support for this&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Provide an Virtual Machine for ADF development. This is ok for trying out, but will not supported in restricted environment at customers as at my company - a bank. At least this should not be an replacement of support for JDeveloper&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Should we open the community to other technologies like SOA, JET, ABCS an so on. My opinion: definitely no, as this is the final dead of ADF in the community.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We see that some of the important product managers move to JET and does not support us anymore.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In this atmosphere this year no common dinner happens after the meeting.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After that I spent the time with some colleagues at the evening party. This year I see early clearing the rooms of the NCC. I don&amp;#8217;t know if the starting Scope alliance party was the cause, but maybe they will do this next year on the first day instead?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;day_3&quot;&gt;Day 3&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;hans_eichenberger_dbaas_with_apex_5_1_frontend_and_oracle_multitenant_option&quot;&gt;Hans Eichenberger: DBaaS with APEX 5.1 Frontend and Oracle Multitenant Option&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Will repeat my tweet here: The developer dreams come true - getting an inhouse sandbox database in minutes from the DBA! Whoops - unfortunately not my company!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;adam_lukaszewski_boost_your_forms_development_with_git_and_forms_api_master&quot;&gt;&lt;a href=&quot;https://twitter.com/AdamLukaszewski&quot;&gt;Adam Lukaszewski&lt;/a&gt;: Boost your Forms Development with GIT and Forms API Master&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;At the moment I define a future proof build and deployment process at my company for the loan platform. Part of this is security and mandatory review. So the presented Forms API Master tool is the perfect tool for handling the review and merge process of branches for our legacy Forms and Reports development. Will look how to implement this in Atlassian BitBucket.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;keynote_robert_schröder_the_difference_between_errors_and_failures_experiences_in_aviation&quot;&gt;Keynote - Robert Schröder: The Difference between Errors and Failures - Experiences in Aviation&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Key message are for me: Accept that failures happen, learn from failures and change your processes accordingly. Define a clear language for your business.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;marcus_hammer_die_hürden_großer_adf_anwendungen&quot;&gt;&lt;a href=&quot;https://twitter.com/marcus_hamm3r&quot;&gt;Marcus Hammer&lt;/a&gt;: Die Hürden großer ADF-Anwendungen&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Not really new for us, but as we speak a lot with other colleagues from his company the solutions are mostly known for us - and for the whole ADF community in Germany. Interesting is the decision to implement batch processing in Java too, seems that it is problematic to get PL/SQL staff right now. I&amp;#8217;m not understanding the decision to write an own framework for database deployment, but as this was not his own topic, he could not answer why Liquibase or Flyway does not fulfill their requirements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;frank_munz_weblogic_12c_and_java_cloud_service&quot;&gt;&lt;a href=&quot;https://twitter.com/frankmunz&quot;&gt;Frank Munz&lt;/a&gt;: WebLogic 12c and Java Cloud Service&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I missed Franks sessions last years, but often look at his slides in the web. This was a very good entry in differentiating the different Oracle Cloud Services, which I could use for Java Development. Oracle Java Cloud Service is only one of it and should correctly named Oracle WebLogic Cloud Service. Great another naming dropping: Application Container Cloud should better by named as Language as a Service. Look at the slides to get the whole picture.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;alex_nuijten_regular_expressions_say_what&quot;&gt;&lt;a href=&quot;https://twitter.com/alexnuijten&quot;&gt;Alex Nuijten&lt;/a&gt;: Regular Expressions: Say What?&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The best example that you can learn ever something new from a good presenter, despite you think you know all about a topic and you have already read the presentation before. For an example: a regular expression looks already for the longest possible match, which could be the whole string instead of the searched pattern. Interesting too the connect by regexp_count for splitting a string into rows. And look at the standard patterns in dbms_redact before you write your own, if it is not there write it in your own package for reuse.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;frank_munzmicroservices_runtimes&quot;&gt;&lt;a href=&quot;https://twitter.com/frankmunz&quot;&gt;Frank Munz&lt;/a&gt;: Microservices Runtimes&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The second presentation of Frank I attend compares the actual available Runtimes on the market. But special interesting was the intro into micro services: are you sure you need this and do you know, what nobody tells you about latency and so on? Or do you know that accessing another micro service can need 100000 times more than accessing a functionality in the same monolith?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Again this year I attend colorful bouquet of presentations and again it pay&amp;#8217;s off to look at the whole conference program and some abstracts and presentations before to minimize disappointments.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Generally I attend to few development sessions, maybe because I use other technologies or know already the presented topic. But my feeling is that there are really fewer development presentations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Interesting is that finally many Development, Deployment, QA, TDD and CI/CD technologies used in other development languages find it&amp;#8217;s way into classic Oracle development technologies like Oracle PL/SQL, Forms and Reports.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For the event organization I see a little degradation of service this year, for example the quality of the food or the cleaning of toilets and rooms. And a no go: Missing water for presenters in some rooms!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Provide access to WebLogic DMS Spy Servlet for readonly users</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html"/>
+        <updated>2017-08-30T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html</id>
+        <category term="Linux"/>
+        <category term="Oracle"/>
+        <category term="WebLogic"/>
+        <category term="WebLogic-12"/>
+        <content type="html">
+            &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For security reasons and to prevent the configuration drift it is recommendable to use read only for analyzing problems.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For read only access of configuration and logs WebLogic provides out of the box the group Monitors. Unfortunately you cannot access &lt;a href=&quot;https://docs.oracle.com/middleware/12212/lcm/ASPER/GUID-F1201ECA-AF97-4C96-9926-53F6C25A58D3.htm#ASPER99002&quot;&gt;DMS Spy Servlet&lt;/a&gt; with this group, which is useful for analyse runtime values of the server. Only users which belongs to the Administrators group and therefore have full access can access DMS Spy Servlet and this is not configurable in WebLogic by default.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here you can see how to add groups on linux to the DMS Spy Servlet deployment:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pushd $ORACLE_HOME/oracle_common/modules/oracle.dms
+cp dms.war dms.war.`date +%y.%m.%d.%H:%M`
+unzip dms.war WEB-INF/weblogic.xml
+sed -i &apos;/Monitors/d&apos; WEB-INF/weblogic.xml
+sed -i &apos;/^         &amp;lt;principal-name&amp;gt;Administrators&amp;lt;\/principal-name&amp;gt;$/a\         &amp;lt;principal-name&amp;gt;Monitors&amp;lt;\/principal-name&amp;gt;&apos; WEB-INF/weblogic.xml
+zip dms.war WEB-INF/weblogic.xml
+rm -r WEB-INF
+popd&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Following is the responsible snippet in weblogic.xml before:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;security-role-assignment&amp;gt;
+  &amp;lt;role-name&amp;gt;Admin&amp;lt;/role-name&amp;gt;
+  &amp;lt;principal-name&amp;gt;Administrators&amp;lt;/principal-name&amp;gt;
+&amp;lt;/security-role-assignment&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;and after modification:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight linenums&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;security-role-assignment&amp;gt;
+  &amp;lt;role-name&amp;gt;Admin&amp;lt;/role-name&amp;gt;
+  &amp;lt;principal-name&amp;gt;Administrators&amp;lt;/principal-name&amp;gt;
+  &amp;lt;principal-name&amp;gt;Monitors&amp;lt;/principal-name&amp;gt;
+&amp;lt;/security-role-assignment&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After this modification you have to restart the WebLogic Server.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>"PL/SQL: Therefore, whoever binds forever: automate your tests" - I&#8217;m a speaker at DOAG2017</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html"/>
+        <updated>2017-07-18T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html</id>
+        <category term="Branching"/>
+        <category term="Build"/>
+        <category term="Commit-Test"/>
+        <category term="Conferences"/>
+        <category term="Continous-Integration"/>
+        <category term="Database"/>
+        <category term="Deploy"/>
+        <category term="Jenkins"/>
+        <category term="Oracle"/>
+        <category term="PL/SQL"/>
+        <category term="SQL-Developer"/>
+        <category term="Unit-Test"/>
+        <category term="utPLSQL"/>
+        <content type="html">
+            &lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/2017-k-a-banner-180x180_speaker-eng.jpg&quot; alt=&quot;2017 k a banner 180x180 speaker eng&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Today my presentation is confirmed: &quot;Therefore, whoever binds forever: automate your tests&quot;. Maybe the German title will be the better understood: &quot;PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I will speak over my experiences with following&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;several PL/SQL testing tools like at least&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://utplsql.github.io&quot;&gt;utPLSQL&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html&quot;&gt;Oracle SQL Developer&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;maybe &lt;a href=&quot;http://rspec.info&quot;&gt;RSpec&lt;/a&gt; with &lt;a href=&quot;https://github.com/rsim/ruby-plsql&quot;&gt;ruby-plsql&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I will give you a demo of this tools and compare their capabilities for&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;architecture&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;branching&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;continuous integration&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;code coverage&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you speak german and you are interested in some of this, you should come and attend DOAG 2017.&lt;/p&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>Javaland 2017 wrap up</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2017/Javaland+2017+wrap+up.html"/>
+        <updated>2017-04-01T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2017/Javaland+2017+wrap+up.html</id>
+        <category term="ADF-Architecture"/>
+        <category term="Code-Coverage"/>
+        <category term="Continous-Integration"/>
+        <category term="Docker"/>
+        <category term="Gui-Test"/>
+        <category term="Infrastructure-as-Code"/>
+        <category term="Java"/>
+        <category term="JDeveloper"/>
+        <category term="Jenkins"/>
+        <category term="Linux"/>
+        <category term="Static-Code-Analysis"/>
+        <category term="Vagrant"/>
+        <category term="VirtualBox"/>
+        <content type="html">
+            &lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Yes - I did it again and attend &lt;a href=&quot;https://twitter.com/hashtag/javaland?src=hash&quot;&gt;Javaland&lt;/a&gt;, conference in &lt;a href=&quot;http://www.phantasialand.de&quot;&gt;Phantasialand&lt;/a&gt; &lt;a href=&quot;https://www.bruehl.de&quot;&gt;Brühl&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;It was not easy this year to concentrate on the sessions because of the hottest march of the last 100 years. But the quality of the sessions beats the weather. Maybe again my invest in reading the abstracts and filter the sessions before the conference has payed off.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;day_1_conference&quot;&gt;Day 1 Conference&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;jens_schauderdocumentation_slides_withasciidocgit_gradle_and_reveal_js&quot;&gt;&lt;a href=&quot;https://twitter.com/jensschauder&quot;&gt;Jens Schauder&lt;/a&gt;: &lt;a href=&quot;http://blog.schauderhaft.de/asciidoctor-talk/talk.html#/&quot;&gt;documentation &amp;amp; slides with AsciiDoc, Git, Gradle and Reveal.js&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Jens shows in this early morning session how we can version and so diffing and merging our documentation and presentations via text based markup languages. Now I have to puzzle the pieces together for generating my future documents from code. One question remains - what if we have to share the work on the documentation work with non programmers?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;jean_jacques_van_oosten_chief_digital_officer_rewe_groupthe_role_of_the_cdo_as_chief_product_owner&quot;&gt;Jean-Jacques van Oosten, Chief Digital Officer Rewe Group: The role of the CDO as Chief Product Owner&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This presentation shows REWE as on the right way for digitalization. But somehow I did not get rid of the feeling, that this was more a recruiting campaign to get the right people for the job. Have to speak with some of my friends, which are working there in the field. Interesting is the goal to develop all IT itself and do not buy from competitors perhaps. This needs lot of money and resources.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;steffen_schluff_sebastian_damm_oio_orientation_in_objects_gmbhmust_feature_branches_and_continuous_integration_contradict_each_other&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=356621&quot;&gt;Steffen Schluff&lt;/a&gt;, &lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=375362&quot;&gt;Sebastian Damm&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/sippsack/status/846665346258026497&quot;&gt;OIO - Orientation in Objects GmbH&lt;/a&gt;: &lt;a href=&quot;https://programm.javaland.eu/2017/talk.html#talk?talkId=529345&quot;&gt;Must Feature Branches and Continuous Integration contradict each other?&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I know most of the facts already but here these was ordered and coherent derived from literature and practices. Conclusion - with the right tools you can live with the compromise.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;gorge_albrecht_readable_tests_with_assertj&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=374903&quot;&gt;Gorge Albrecht&lt;/a&gt;, &lt;a href=&quot;http://code-mentor.com/slides/2017-03-28_JavaLand_2017_Presentation_ReadableTestsWithAssertJ.pdf&quot;&gt;Readable tests with AssertJ&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Unfortunately I come a little bit late, because there is not planned a big break for lunch. It seems here I have missed the point before: I had hope that the test output is more readable for the tester, not for the programmer. The only disappointing session for me.&amp;lt;/div&amp;gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;sven_ruppert_hacking_with_mutation_testing&quot;&gt;&lt;a href=&quot;https://twitter.com/svenruppert&quot;&gt;Sven&lt;/a&gt; &lt;a href=&quot;https://github.com/svenruppert&quot;&gt;Ruppert&lt;/a&gt;: &lt;a href=&quot;https://github.com/Java-Events/20170328_JavaLand2017_MutationTesting&quot;&gt;Hacking with Mutation Testing&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After I have heard Sven&amp;#8217;s session for &lt;a href=&quot;http://pitest.org/&quot;&gt;PIT&lt;/a&gt; framework last year on Javaland I found not the time till today to work with this. Unfortunately I bring my company laptop which does not allow to download files from maven over the VPN as the company man in the middle webwasher replaces the original certificates. Sven does his best to support me, but I could not solve this in this time. In the evening on my way to home a nameless attendee give me an hint to disable the ssl check in maven locally. So I could test Sven&amp;#8217;s solution branch right before midnight successfully!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;carola_lilienthal_wps_workplace_solutions_gmbhfrom_pair_programming_to_mob_architecting&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=371855&quot;&gt;Carola Lilienthal&lt;/a&gt;, WPS - Workplace Solutions GmbH: &lt;a href=&quot;https://programm.javaland.eu/2017/talk.html#talk?talkId=529329&quot;&gt;From Pair Programming to Mob Architecting&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;A little bit late, I enter this fully packed room. This was announced before via &quot;chili&quot; in the conference planner, so no excuse for me. But as I could not make notes standing on the door in the last row, I think I have here to reread the presentation to give a concrete summary here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;stefan_schlott_beone_stuttgart_gmbhsecurity_in_the_development_team&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=364378&quot;&gt;Stefan Schlott&lt;/a&gt;, BeOne Stuttgart GmbH: &lt;a href=&quot;https://programm.javaland.eu/2017/talk.html#talk?talkId=529333&quot;&gt;Security in the development team&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The presenter gives some hints for small development teams to make it fit for security. Unfortunately most of this are not happened in big companies too. Additional most developers are not interested in this too. In this session first I heard the term required Caretaker on this conference, which should repeated in several sessions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;mario_mann_novatec_consulting_gmbhapplication_performance_management_with_open_source_tooling&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=375162&quot;&gt;Mario Mann&lt;/a&gt;, Novatec Consulting GmbH: Application Performance Management with Open-Source-Tooling&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As session name promises: He show different tools for different purposes of APM including it&amp;#8217;s own. Key message: No one tool for all purposes. Interesting some example test of the Javaland homepage.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;martin_thompson_real_logickeynote_listening_to_the_design_pressures&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=368659&quot;&quot;&gt;Martin Thompson&lt;/a&gt;, Real Logic: &lt;a href=&quot;https://programm.javaland.eu/2017/talk.html#talk?talkId=529951&quot;&gt;Keynote: Listening to the Design Pressures&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The second keynote starts with statement that &quot;non functional requirements&quot; should be changed to &quot;quality attributes&quot;. Further he states that in most cases all new hypes are covers of earlier research. So he recommend to first search for the original ideas. He mapped an &lt;a href=&quot;https://twitter.com/mjpt777/status/847351359183532032&quot;&gt;example&lt;/a&gt; from 1983 and mapped several statements in the content to actual hypes. We have to bring back simplicity and other core techniques, as hardware will not grow anymore as in the past and will not solve our growing requirements. Doing it working and fast together in one step will give other design decisions as doing it separately.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;meet_the_lib&quot;&gt;Meet-the-Lib&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;While most other people try the rides of &lt;a href=&quot;http://www.phantasialand.de&quot;&gt;Phantasialand&lt;/a&gt;, I attend this format. Same motto as last year: show me your favorite opensource lib and I show your mine. Not all was interessant for me, but some of this I would never heard, when not here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://projectlombok.org&quot;&gt;Lombok&lt;/a&gt;: Boilerplate generator, unfortunately not really usable in JDeveloper&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Service_provider_interface&quot;&gt;SPI&lt;/a&gt;- Service Provider Interface: interesting, but see no use case at the moment&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://jqassistant.org&quot;&gt;jQAssistant&lt;/a&gt;: QA for your code, very interesting open analysis tool, have to read the corresponding missed &lt;a href=&quot;https://programm.javaland.eu/2017/talk.html#talk?talkId=529250&quot;&gt;presentation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Form Checker: generic validation and creation of HTML forms for portals, no use case in our framework development&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Future of Spring: concurrent JEE framework to ADF&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Jax-RS Hypermedia: maybe later when REST required in our development&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After dinner and some drinks I return to cologne.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;day_2_conference&quot;&gt;Day 2 Conference&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;elmar_juergens_tu_münchen_und_cqse_gmbh_how_sensiblewe_use_our_quality_analysis&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=374707&quot;&gt;Elmar Juergens&lt;/a&gt;, TU München und CQSE GmbH: &lt;a href=&quot;https://www.cqse.eu/en/blog/vortrag-qc-javaland-2017&quot;&gt;How sensible we use our quality analysis?&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&quot;From weighing alone the pig will not be fat&quot;. Many analyse it&amp;#8217;s code but do little against the results. He shows very entertaining the combination of research and practical steps to wake the interest to change the code. Again you need a Caretaker here. But remember &quot;Management by numbers is not by professionals but by amateurs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;rustam_mehmandarov_computas_asfield_notes_of_a_command_line_ninja&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=371752&quot;&gt;Rustam Mehmandarov&lt;/a&gt;, Computas AS: &lt;a href=&quot;https://programm.javaland.eu/2017/talk.html#talk?talkId=529579&quot;&gt;Field Notes of a Command Line Ninja&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Lot&amp;#8217;s of linux command line tricks, have to attach my notes to every bash call from now. Very entertaining.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;thorsten_maier_orientation_in_objects_gmbhresilient_software_design_patterns&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=364571&quot;&gt;Thorsten Maier&lt;/a&gt;, Orientation in Objects GmbH: Resilient Software Design Patterns&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Good overview, key message: Use it only if you really need it, as it adds new layers to your software stack.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;falk_sippach_orientation_in_objects_gmbh_continous_architecture_documentation&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=363284&quot;&gt;Falk Sippach&lt;/a&gt;, Orientation in Objects GmbH: Continous Architecture Documentation&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This presentation was a good complement to Jens Schauder from Day 1. Falk shows the &quot;documentation smells&quot; as reasons to use here again markdown based documentation to generate to different target formats and audience. Additional he show some tips and tricks for the used tools.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;stephan_classen_canoo_engineering_ag_robust_readable_web_ui_tests_with_page_object_pattern_geb_and_spock&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=371796&quot;&gt;Stephan Classen&lt;/a&gt;, Canoo Engineering AG: &lt;a href=&quot;https://programm.javaland.eu/2017/talk.html#talk?talkId=529591&quot;&gt;Robust, readable Web UI Tests with page object pattern, Geb and Spock&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Good presenter, but I&amp;#8217;m not really convinced from this wrapper tools (Selenium &amp;gt; Geb &amp;gt; Spock) in different technology stacks. Maybe sometime I will try it to be sure?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;frank_pientka_materna_gmbh_information_communicationsload_and_performance_tests_with_jmeter_or_gatling&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=358568&quot;&gt;Frank Pientka&lt;/a&gt;, MATERNA GmbH Information &amp;amp; Communications: &lt;a href=&quot;https://www.heise.de/developer/artikel/Last-und-Performance-Tests-mit-JMeter-oder-Gatling-3648505.html&quot;&gt;Load and Performance tests with ‎JMeter or Gatling&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The speaker gives a very wide overview of both tools, I have definitely to reread this. Especial interesting is the feature of both tools (and the wrapper Taurus) to reuse selenium tests for load tests. Have to check this out!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;martin_reinhardt_holisticon_agresponsive_testing_with_thegalen_framework&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=374697&quot;&gt;Martin Reinhardt&lt;/a&gt;, Holisticon AG: &lt;a href=&quot;https://holisticon.github.io/presentations/2017-javaland-galen/#/&quot;&gt;Responsive Testing with the Galen Framework&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Presenter shows this interesting framework, but it same a little bit complicated to me. At the moment not usable for me, as it have no IDE Support for JDeveloper.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;thomas_darimont_eurodata_ag_thomasdarimontopen_source_identity_management_mit_keycloak&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=368549&quot;&gt;Thomas Darimont&lt;/a&gt;, eurodata AG, &lt;a href=&quot;https://twitter.com/thomasdarimont&quot;&gt;@thomasdarimont&lt;/a&gt;: &lt;a href=&quot;https://programm.javaland.eu/2017/talk.html#talk?talkId=529500&quot;&gt;Open Source Identity Management mit Keycloak&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I had see some of this in last year &quot;Meet the libs&quot; format. As I had some plans for private application development, this seems the ultimately completest and free AIM solution for me. The speaker had deep understanding of the product and he packed this last presentation full with his knowledge. If you need somebody to set up your system, you should hire him!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;day_3_workshops&quot;&gt;Day 3 - Workshops&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;gerd_aschemanncontinuous_delivery_of_continuous_delivery&quot;&gt;&lt;a href=&quot;https://programm.javaland.eu/2017/speaker.html#speaker?speakerId=363283&quot;&quot;&gt;Gerd Aschemann&lt;/a&gt;: &lt;a href=&quot;https://programm.javaland.eu/2017/talk.html#talk?talkId=531243&quot;&gt;Continuous Delivery of Continuous Delivery&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The trainer here has too a deep knowledge of the area and put all of this into this workshop.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We started with the creation of a VirtualBox via Vagrant. The we added script provisioner to install puppet into the box. With another script provisioner we start the installation and configuration of Jenkins via puppet scripts and modules. After that we installed Docker in the VirtualBox via another puppet script. On top of this we automatically create jenkins jobs to start a Docker container containing Maven and building there a simple Java Application. As last step we add an Nexus container to deploy the resulting artefacts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The trainer provides us with some theory, but most time was practical work. Additional to the described steps we add some configurations for testing the created infrastructure and minimize the creation time of the infrastructure via caching.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The whole time we push our local git repositories to an central instance of the trainer where our environment are build (or not) via a central Jenkins instance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The extensive workshop scenario, the different operating systems and bugs in the newest version of vagrant make it more difficult to reproduce all steps just in time. But we get all sources and slides to reproduce the scenario later at home.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Despite I have already started an similar scenario at home before, I get a lot of fresh input for my future work here. This workshop was every minute worth.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Same as last year: This was inspiring conference, which gives me a lot of fresh ideas and reminders for some spilled goals for my private and company projects. I think we&amp;#8217;ll see us next year!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;improvements_for_next_year&quot;&gt;Improvements for next year&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;There are some for next year in &lt;a href=&quot;http://www.phantasialand.de&quot;&gt;Phantasialand&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Please deliver stable and fast internet at least for the speakers and the workshops.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Put the labs and community workshops out from the exhibition hall to filter the noise from soundchecks and nighthacking.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you see via the favorites of dukecon, that rooms are full, maybe you can change locations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For workshops provide big enough tables for comfortable working.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
+    <entry>
+        <title>DEVCAMP17 wrap up</title>
+        <author>
+            <name>Torsten Kleiber</name>
+        </author>
+        <link href="https://tkleiber.github.io/blog/2017/DEVCAMP17+wrap+up.html"/>
+        <updated>2017-02-09T00:00:00Z</updated>
+        <id>https://tkleiber.github.io/blog/2017/DEVCAMP17+wrap+up.html</id>
+        <category term="ADF"/>
+        <category term="Continous-Integration"/>
+        <category term="Forms"/>
+        <category term="Java"/>
+        <category term="JDeveloper"/>
+        <category term="Jenkins"/>
+        <category term="Oracle"/>
+        <category term="PL/SQL"/>
+        <category term="Report"/>
+        <category term="Unit-Test"/>
+        <content type="html">
+            &lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Yesterday I attend the annual &lt;a href=&quot;https://en.wikipedia.org/wiki/BarCamp&quot;&gt;barcamp&lt;/a&gt; &lt;a href=&quot;https://devcamp.doag.org&quot;&gt;DEVCAMP&lt;/a&gt; of the &lt;a href=&quot;http://www.doag.org&quot;&gt;DOAG&lt;/a&gt; development community. There are mostly developers with SQL, PL/SQL, Forms &amp;amp; Reports, ADF, JET background and some Java, Javascript and APEX developers too. And not to forget: 1 dba and some managers. Here is my summary.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I arrived on evening before just in time for the &lt;strong&gt;life cooking event&lt;/strong&gt; and later at the bar to meet lot of the people I already know and some new too.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The morning begins with a short introduction to the format of a barcamp.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As warm up &lt;a href=&quot;https://twitter.com/jensschauder&quot;&gt;Jens Schauder&lt;/a&gt; starts with an &lt;strong&gt;talk about clean code&lt;/strong&gt;. He begins to compare what the lack of hygiene for Middle Ages mean and the statement that we are in the IT Middle ages. In extreme cases not tested and not understandable software can kills people! So the task for every day is &quot;write an test&quot; and refactor the code to clean code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then the &lt;strong&gt;barcamp planning&lt;/strong&gt; starts. In short time three slots are filled up and the really barcamp starts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;../../images/DEVCAMP17%20wrap%20up.jpg&quot; alt=&quot;DEVCAMP17 wrap up&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Influenced by the starting talk next there was a session related to &lt;strong&gt;clean code and how to implement the related processes&lt;/strong&gt;. You should teach a little bit of the theory behind it. It is essential to decide all rules with the whole team and review the continuous use of it. If the rules are not followed, then first you should ask why this happens and listen for the reasons. &lt;a href=&quot;https://twitter.com/jensschauder&quot;&gt;Jens Schauder&lt;/a&gt; recommends here these &lt;a href=&quot;https://twitter.com/jensschauder/status/829295177521045504&quot;&gt;books&lt;/a&gt;. Maybe you have to adjust the rules to convince all developers. But in extreme cases of deny any of the decided rules you should escalate and delegate this to the responsible manager.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Next session was about &lt;strong&gt;how to test heterogeneous applications&lt;/strong&gt;, especially SQL, PL/SQL and Forms but others too. I mentioned here two possible strategies, which both has it&amp;#8217;s tradeoffs:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;olist arabic&quot;&gt;
+&lt;ol class=&quot;arabic&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;End to end testing with expensive Tools, which provides all the required technology plugins, eg.&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.oracle.com/technetwork/oem/app-test/index.html&quot;&gt;Oracle Application Testing Suite&lt;/a&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www8.hp.com/de/de/software-solutions/unified-functional-automated-testing/index.html&quot;&gt;HP Unified Functional Testing&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.microfocus.com/de-de/products/silk-portfolio&quot;&gt;Micro Focus Silk&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Technology testing and mocking the behavior of interfaces to other technologies, you have to learn all off this and provide the infrastructure for it.&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;SQL/PLSQL:&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Repository based: Quest Code Tester for Oracle (Option for &lt;a href=&quot;https://www.quest.com/products/toad-for-oracle&quot;&gt;TOAD&lt;/a&gt; or &lt;a href=&quot;https://www.quest.com/products/sql-navigator&quot;&gt;SQL Navigator&lt;/a&gt;), &lt;a href=&quot;http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html&quot;&gt;Oracle SQL Developer&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PL/SQL based: &lt;a href=&quot;https://utplsql.github.io&quot;&gt;utPLSQL&lt;/a&gt; with Frontends Ounit or &lt;a href=&quot;https://sourceforge.net/projects/jutex&quot;&gt;Jutex&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Other: &lt;a href=&quot;http://dbfit.github.io/dbfit/index.html&quot;&gt;DbFit&lt;/a&gt;, &lt;a href=&quot;http://dbunit.sourceforge.net&quot;&gt;DbUnit&lt;/a&gt;, &lt;a href=&quot;https://github.com/rsim/ruby-plsql-spec&quot;&gt;ruby-plsql-spec&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Forms&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://support.smartbear.com/testcomplete/docs/app-testing/desktop/oracle-forms/index.html&quot;&gt;AuraTester&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://support.smartbear.com/testcomplete/docs/app-testing/desktop/oracle-forms/index.html&quot;&gt;Smartbear TestComplete&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I noticed here that testing is mainly seen as to check the contract between developer and customer, sometimes useful for regression test but seldom as required for changing or refactoring the code. The participants seems to be overwhelmed by the amount of tools and effort to do automatic testing. Yes - there is a lot to do in advance, which pays off later.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In the next break I get a shortcut for actual requirement for forms change to implement some kind of SSO without additional servers. I get some nice hints and have now to check, if one of this is successful. This are the advantages of networking here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The we discussed about &lt;strong&gt;Alternatives to Oracle Reports&lt;/strong&gt;. Seems that it depends on your requirements, which tool to choose. Please do an value analysis here. So if you need pixel exact layout or want not pay much money &lt;a href=&quot;http://www.oracle.com/technetwork/middleware/bi-publisher/overview/index.html&quot;&gt;Oracle Business Intelligence Publisher&lt;/a&gt; will not your friend. If you search for an active community maybe you should not choose &lt;a href=&quot;http://www.eclipse.org/birt&quot;&gt;Eclipse BIRT&lt;/a&gt; or at least use the commercial version from Actuate. But both of these and Jasper Reports are used from present participants. Further alternatives seem to be &lt;a href=&quot;http://www.crystalreports.com&quot;&gt;SAP Chrystal Reports&lt;/a&gt; and &lt;a href=&quot;https://www.pentaho.com&quot;&gt;Pentaho&lt;/a&gt;. And don&amp;#8217;t forget to test exotic features like &lt;a href=&quot;https://en.wikipedia.org/wiki/Widows_and_orphans&quot;&gt;widows and orphans&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;After a coffee break we discussed the &lt;strong&gt;future of &lt;a href=&quot;http://www.oracle.com/technetwork/developer-tools/adf/overview/index.html&quot;&gt;Oracle ADF&lt;/a&gt;&lt;/strong&gt;. The punchline here was: ADF is not dead, but JDeveloper is very buggy. None of the participants does really miss any bit feature, but most struggles with the IDE. It seems, that the problems are bigger, when you work on windows. Maybe some of the product managers should be forced to worked again with windows to see our problems. I have articulated there 2 problems with the ADF community. I we try to raise the acceptance we should not try to extend the focus of the activities to alternative technologies as MAF or JET. Second we should not self call ADF into question on every conference, we should leave this part to the fans of other technologies.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The last session again turns around &lt;strong&gt;automatic testing of PL/SQL&lt;/strong&gt;, some repeating to the described session above.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In closing session most of the participants said, that they want to come back next year. Maybe it is better to put some fixed sessions or workshops, as this is easier to describe to the bosses as &quot;I will go this event, but it is not clear, what will happens there.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I have learned not so much new things this year, but I attend these time more the known to me technologies. But I get the confirmation, that most of the things we do or plan do to are on the right track.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Unfortunately I observed some people in the sessions, which comes only to search for finding confirmations to reject for itself, what at least the initiator of the topic want to do.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You find more informations in &lt;a href=&quot;https://twitter.com/search?f=tweets&amp;amp;q=%23DEVCAMP17&amp;amp;src=typd&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </content>
+    </entry>
     <entry>
         <title>Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</title>
         <author>
@@ -404,7 +1345,7 @@ xmlns=&quot;http://www.bea.com/ns/weblogic/weblogic-application&quot;&amp;gt;
         </content>
     </entry>
     <entry>
-        <title>#DOAG2016 wrap up</title>
+        <title>DOAG2016 wrap up</title>
         <author>
             <name>Torsten Kleiber</name>
         </author>
@@ -1650,7 +2591,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
         </content>
     </entry>
     <entry>
-        <title>#Javaland 2016 conference day 2</title>
+        <title>Javaland 2016 conference day 2</title>
         <author>
             <name>Torsten Kleiber</name>
         </author>
@@ -1758,7 +2699,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
         </content>
     </entry>
     <entry>
-        <title>#Javaland 2016 conference day 1</title>
+        <title>Javaland 2016 conference day 1</title>
         <author>
             <name>Torsten Kleiber</name>
         </author>
@@ -2242,7 +3183,7 @@ done&lt;/code&gt;&lt;/pre&gt;
         </content>
     </entry>
     <entry>
-        <title>Slides for my german presentation #DOAG2014 "The Dirty Dozen – ADF Migration to 12c in the IKB" available</title>
+        <title>Slides for my german presentation DOAG2014 "The Dirty Dozen – ADF Migration to 12c in the IKB" available</title>
         <author>
             <name>Torsten Kleiber</name>
         </author>
@@ -2364,7 +3305,7 @@ rmdir /S /Q %oracle_home%\jdeveloper\jdev\extensions\META-INF&lt;/code&gt;&lt;/p
         </content>
     </entry>
     <entry>
-        <title>See you at #DOAG2014 “The Dirty Dozen – ADF Migration to 12c in the IKB” room Kopenhagen on 11/19/2014 at 10:00 am</title>
+        <title>See you at DOAG 2014 “The Dirty Dozen – ADF Migration to 12c in the IKB” room Kopenhagen on 11/19/2014 at 10:00 am</title>
         <author>
             <name>Torsten Kleiber</name>
         </author>
