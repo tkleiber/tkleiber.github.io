@@ -4,7 +4,7 @@
     <link href="https://tkleiber.github.io/"/>
     <link rel="self" type="application/atom+xml" href="https://tkleiber.github.io/feed.xml"/>
     <subtitle>Try to automate your IT!</subtitle>
-    <updated>2020-07-09T11:45:03Z</updated>
+    <updated>2020-07-09T21:59:15Z</updated>
     <id>tag:localhost,2020:07</id>
     <entry>
         <title>Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I&#8217;m a speaker at DOAG2019</title>
@@ -948,7 +948,7 @@ popd&lt;/code&gt;&lt;/pre&gt;
         </content>
     </entry>
     <entry>
-        <title>Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</title>
+        <title>Virtual Development Server: Provide Docker images in docker registry for Oracle via Jenkins</title>
         <author>
             <name>Torsten Kleiber</name>
         </author>
