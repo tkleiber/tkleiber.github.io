@@ -229,7 +229,7 @@ done</code></pre>
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">[pass] binutils Reqired : 2.19-11.28 Installed: 2.23.1-0.23.15
 [pass] gcc Reqired : 4.3-62.198 Installed: 4.3-62.200.2
 [pass] gcc-c++ Reqired : 4.3-62.198 Installed: 4.3-62.200.2
-[fail] package gcc-32bit is not installed
+[fail] package gcc-32bit is not installed <i class="conum" data-value="1"></i><b>(1)</b>
 [pass] glibc Reqired : 2.9-13.2 Installed: 2.11.3-17.84.1
 [pass] glibc-32bit Reqired : 2.9-13.2 Installed: 2.11.3-17.84.1
 [pass] glibc-devel Reqired : 2.9 Installed: 2.11.3-17.84.1
@@ -238,7 +238,7 @@ done</code></pre>
 [pass] libaio Reqired : 0.3.104-140.22 Installed: 0.3.109-0.1.46
 [pass] libaio-devel Reqired : 0.3.104-140.22 Installed: 0.3.109-0.1.46
 [pass] libaio-32bit Reqired : 0.3.104 Installed: 0.3.109-0.1.46
-[fail] package libaio-devel-32bit is not installed
+[fail] package libaio-devel-32bit is not installed <i class="conum" data-value="2"></i><b>(2)</b>
 [pass] libgcc43 Reqired : 4.3.3_20081022 Installed: 4.6.9-0.13.22
 [pass] libstdc++43 Reqired : 4.3.3_20081022-11.18 Installed: 4.6.9-0.13.22
 [pass] libstdc++43-devel Reqired : 4.3.3_20081022-11.18 Installed: 4.3.4_20091019-0.37.30
@@ -259,8 +259,17 @@ done</code></pre>
 [pass] sysstat Reqired : 8.1.5-7.8 Installed: 8.1.5-7.47.1</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>The route cause for the error message in the installer are line 4 and 13, where 32bit Compiler are required for making sql plus despite this forms and reports installation is 64bit version.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This and</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>this error are the route cause for the error message in the installer, because 32bit Compiler is required for making sql plus despite this forms and reports installation is 64bit version.</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Maybe you can use this script with little modification in other environments.</p>

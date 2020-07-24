@@ -189,7 +189,7 @@ end</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Bringing machine 'default' up with 'virtualbox' provider...
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Bringing machine 'default' up with 'virtualbox' provider... <i class="conum" data-value="1"></i><b>(1)</b>
 ==&gt; default: Importing base box 'oraclelinux-7-x86_64.box'...
 ==&gt; default: Matching MAC address for NAT networking...
 ==&gt; default: Setting the name of the VM: Development Server
@@ -213,7 +213,7 @@ default: Inserting generated public key within guest...
 default: Removing insecure key from the guest if it's present...
 default: Key inserted! Disconnecting and reconnecting using new SSH key...
 ==&gt; default: Machine booted and ready!
-[default] GuestAdditions versions on your host (5.0.26) and guest (5.0.12) do not match.
+[default] GuestAdditions versions on your host (5.0.26) and guest (5.0.12) do not match.<i class="conum" data-value="2"></i><b>(2)</b>
 Loaded plugins: ulninfo
 Package kernel-uek-devel-4.1.12-32.el7uek.x86_64 already installed and latest version
 Package gcc-4.8.5-4.el7.x86_64 already installed and latest version
@@ -245,27 +245,31 @@ You should restart your guest to make sure the new modules are actually used
 ==&gt; default: Mounting shared folders...
 default: /vagrant =&gt; C:/shared/scmlocal/blog
 default: /virtual_storage =&gt; C:/shared/virtual_storage
-==&gt; default: Running provisioner: docker...
+==&gt; default: Running provisioner: docker...<i class="conum" data-value="3"></i><b>(3)</b>
 default: Installing Docker onto machine...
-==&gt; default: Starting Docker containers...
+==&gt; default: Starting Docker containers...<i class="conum" data-value="4"></i><b>(4)</b>
 ==&gt; default: -- Container: registry</code></pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>In lines 1..24 you see the loading of the ready box and booting with the defined network</p>
-</li>
-<li>
-<p>In lines 25..50 the version of the VirtualBox GuestAdditions of the box is checked and after that replaced with the actual installed VirtualBox version. This happens only on the first "vagrant up" call.</p>
-</li>
-<li>
-<p>In lines 57..58 Docker is installed as a Vagrant Docker provider is called in the Vagrantfile line 20 and it does not exist in the box before.</p>
-</li>
-<li>
-<p>In lines 59..60 a Docker Private Registry container is started via loading docker image from the <a href="https://hub.docker.com">Docker Public Registry</a>. In a later blog we will use this Docker Private Registry container to hold our own created docker images like database and development tools. The pushed images are saved to a mapped host volume of my windows 10 computer.</p>
-</li>
-</ul>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>you see the loading of the ready box and booting with the defined network</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>the version of the VirtualBox GuestAdditions of the box is checked and after that replaced with the actual installed VirtualBox version. This happens only on the first "vagrant up" call.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Docker is installed as a Vagrant Docker provider is called in the Vagrantfile line 20 and it does not exist in the box before.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>a Docker Private Registry container is started via loading docker image from the <a href="https://hub.docker.com">Docker Public Registry</a>. In a later blog we will use this Docker Private Registry container to hold our own created docker images like database and development tools. The pushed images are saved to a mapped host volume of my windows 10 computer.</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>You can connect to the virtualbox directly via</p>

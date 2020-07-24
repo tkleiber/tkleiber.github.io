@@ -191,12 +191,21 @@ ORACLE_HOME=C:\Oracle\JDev121300\</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">set oracle_home=C:\Oracle\JDev121300
-rem %oracle_home%\oui\bin\deinstall.cmd -noconsole -silent
-"%oracle_home%\oui\bin\internal\ilaunch.exe" -noconsole -deinstall -silent ORACLE_HOME="%oracle_home%"</code></pre>
+rem %oracle_home%\oui\bin\deinstall.cmd -noconsole -silent <i class="conum" data-value="1"></i><b>(1)</b>
+"%oracle_home%\oui\bin\internal\ilaunch.exe" -noconsole -deinstall -silent ORACLE_HOME="%oracle_home%" <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Pay attention that we did not use line 2, as this exits your command shell on windows. But we want to have a return code and maybe doing some post deinstall work (Enhancement Request <a href="https://support.oracle.com/epmos/faces/BugDisplay?id=19464646">19464646</a> is created). Instead we have looked what command deinstall.cmd generates and put this on line 3.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Pay attention that we did not use this line, as this exits your command shell on windows. But we want to have a return code and maybe doing some post deinstall work (Enhancement Request <a href="https://support.oracle.com/epmos/faces/BugDisplay?id=19464646">19464646</a> is created).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Instead we have looked what command deinstall.cmd generates and put this on this line.</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

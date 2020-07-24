@@ -125,36 +125,41 @@ Unfortunately the log levels, which are set after a clean install of WebLogic or
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">#!/usr/bin/python
-execfile('get_environment.py')
+execfile('get_environment.py') <i class="conum" data-value="1"></i><b>(1)</b>
 connect(wlUser, wlPassword, wlAdminUrl)
 edit()
-loggers = listLoggers(target=managedServer, runtime=0)
-for key, value in loggers.items():
-if key &lt;&gt; "" and key &lt;&gt; "ADF_PERFORMANCE_MONITOR_DATABASE" and value &lt;&gt; "":
+loggers = listLoggers(target=managedServer, runtime=0) <i class="conum" data-value="2"></i><b>(2)</b>
+for key, value in loggers.items(): <i class="conum" data-value="3"></i><b>(3)</b>
+if key &lt;&gt; "" and key &lt;&gt; "ADF_PERFORMANCE_MONITOR_DATABASE" and value &lt;&gt; "": <i class="conum" data-value="4"></i><b>(4)</b>
 print "set " + key + " from " + value + " to &lt;Inherited&gt;"
 setLogLevel(target=managedServer, runtime=0, logger=key, level="")
-loggers = listLoggers(target=managedServer, runtime=0)
+loggers = listLoggers(target=managedServer, runtime=0) <i class="conum" data-value="5"></i><b>(5)</b>
 exit()</code></pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>In line 2 a script is called to initialize your environment variables wlUser, wlPassword, wlAdminUrl and managedServer.</p>
-</li>
-<li>
-<p>In line 5 you get the list of loggers.</p>
-</li>
-<li>
-<p>In line 6..9 you iterate over this list.</p>
-</li>
-<li>
-<p>In line 7 you can add your own restrictions. Here are already filtered all inherited loggers and one special tool logger for performance monitoring of ADF applications.</p>
-</li>
-<li>
-<p>In line 10 the loggers are shown again for the result, you can remove this.</p>
-</li>
-</ul>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>a script is called to initialize your environment variables wlUser, wlPassword, wlAdminUrl and managedServer.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>get the list of loggers.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>iterate over this list.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>you can add your own restrictions. Here are already filtered all inherited loggers and one special tool logger for performance monitoring of ADF applications.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>the loggers are shown again for the result, you can remove this.</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Now call this script via</p>
