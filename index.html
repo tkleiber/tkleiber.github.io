@@ -1,609 +1,813 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
     <head>
-<meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8">
         <title>As Much As Possible As Code (AMAPAC)</title>
-        <link rel="stylesheet" href="/css/asciidoctor.css"/>
-        <link rel="stylesheet" href="/css/foundation.css"/>
-        <link rel="stylesheet" href="/css/social_foundicons.css"/>
-        <link rel="stylesheet" href="/css/prettify.css"/>
-        <link rel="stylesheet" href="/css/desert.css"/>
-        <link rel="stylesheet" href="/css/app.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Try to automate your IT!">
+        <meta name="author" content="Torsten Kleiber">
+        <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
+        <meta name="generator" content="JBake">
         
-        <script src="/js/vendor/modernizr.js"></script>
-        <script src="/js/app.js"></script>
+        <!--Facebook Card-->
+		<meta property="og:type" content="article" />
+		<meta property="og:title"  content="As Much As Possible As Code (AMAPAC)" />
+		<meta property="og:description" content="Try to automate your IT!"/>
+		<meta property="og:image" content="https://tkleiber.github.io/img/yosemite.jpg" />
         
-    </head><body class="antialiased" onload="prettyPrint();">
-<div class="row">
-            <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
-                <div class="title-box">
-                    <div class="title-content">
-                        <h1>As Much As Possible As Code (AMAPAC)</h1>
-                        <p>Try to automate your IT!</p>
-                        <p class="title-contact">
-                            <a href="https://twitter.com/develishdevelop">
-                                <i class="foundicon-twitter"></i>
-                            </a><a href="https://www.linkedin.com/in/kleiber">
-                                <i class="foundicon-linkedin"></i>
-                            </a><a href="https://www.slideshare.net/tkleiber">
-                                <i class="foundicon-slideshare"></i>
-                            </a><a href="https://github.com/tkleiber">
-                                <i class="foundicon-github"></i>
-                            </a><a href="https://develishdevelopment.wordpress.com">
-                                <i class="foundicon-wordpress"></i>
-                            </a>
-                        </p>
+        <!--Twitter card -->
+        
+        <meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="As Much As Possible As Code (AMAPAC)">
+		<meta name="twitter:creator" content="@develishdevelop">
+		<meta name="twitter:description" content="Try to automate your IT!">
+		<meta name="twitter:image" content="https://tkleiber.github.io/img/yosemite.jpg">
+		</th:if>
+        <!-- Bootstrap Core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- highlightjs Code Formatter -->
+        <link href="vendor/highlightjs/styles/default.css" rel="stylesheet" type="text/css">
+        <script src="vendor/highlightjs//highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <!-- Theme CSS -->
+        <link href="css/asciidoctor.css" rel="stylesheet">
+        <link href="css/clean-blog.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300&amp;text=As%20Much%20As%20Possible%20As%20Code%20(AMAPAC)'
+           rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="shortcut icon" href="favicon.png"/>
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">As Much As Possible As Code (AMAPAC)</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Header -->
+        <!-- Set your background image for this header on the line below. -->
+        <header class="intro-header" style="background-image: url(&#39;img/index-cover.jpg&#39;) ; background-color:#101010">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="site-heading">
+                            <h1>As Much As Possible As Code (AMAPAC)</h1>
+                            <hr class="small" />
+                            <span class="subheading">Try to automate your IT!</span>
+                        </div>
                     </div>
-                </div><div class="sticky contain-to-grid">
-                    <nav class="top-bar" data-topbar="" role="navigation">
-                        <ul class="title-area">
-                            <li class="name"></li><!--Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone--><li class="toggle-topbar menu-icon">
-                                <a href="#">
-                                    <span>Menu</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html">
+                                <h2 class="post-title">Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I am a speaker at DOAG2019</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 18, 2019</span>
+                                <span> Tags: <span> <a   href="tags/Database.html" class="" >Database</a></span><span> <a   href="tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="tags/Git.html" class="" >Git</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Liquibase.html" class="" >Liquibase</a></span><span> <a   href="tags/Database-Modelling.html" class="" >Database-Modelling</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/PL/SQL.html" class="" >PL/SQL</a></span><span> <a   href="tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
+                            <p>We try to be agile in developing and merging our features into branches when they are ready for use.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html">
+                                <h2 class="post-title">&quot;Regulatorics: Offside is when the referee whistles&quot; - I am a speaker at DOAG2018</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>July 17, 2018</span>
+                                <span> Tags: <span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/Atlassian.html" class="" >Atlassian</a></span><span> <a   href="tags/Bitbucket.html" class="" >Bitbucket</a></span><span> <a   href="tags/Branching.html" class="" >Branching</a></span><span> <a   href="tags/Build.html" class="" >Build</a></span><span> <a   href="tags/Commit-Test.html" class="" >Commit-Test</a></span><span> <a   href="tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="tags/Git.html" class="" >Git</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/JIRA.html" class="" >JIRA</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Pipelines.html" class="" >Pipelines</a></span><span> <a   href="tags/SOA.html" class="" >SOA</a></span><span> <a   href="tags/SOA-12.html" class="" >SOA-12</a></span><span> <a   href="tags/Unit-Test.html" class="" >Unit-Test</a></span></span></p>
+                            <p>Today my presentation is confirmed: "Regulatorics: Offside is when the referee whistles". Maybe the German title will be better understood: "Regulatorik: Abseits ist, wenn der Schiedsrichter pfeift".</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2017/DOAG2017+wrap+up.html">
+                                <h2 class="post-title">DOAG2017 wrap up</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>December 01, 2017</span>
+                                <span> Tags: <span> <a   href="tags/ABCS.html" class="" >ABCS</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/APEX.html" class="" >APEX</a></span><span> <a   href="tags/Bitcoin.html" class="" >Bitcoin</a></span><span> <a   href="tags/Blockchain.html" class="" >Blockchain</a></span><span> <a   href="tags/Cloud.html" class="" >Cloud</a></span><span> <a   href="tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/DBADev.html" class="" >DBADev</a></span><span> <a   href="tags/DevOps.html" class="" >DevOps</a></span><span> <a   href="tags/Disruption.html" class="" >Disruption</a></span><span> <a   href="tags/DOAG.html" class="" >DOAG</a></span><span> <a   href="tags/Docker.html" class="" >Docker</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Forms-12.html" class="" >Forms-12</a></span><span> <a   href="tags/Fusion-Middleware.html" class="" >Fusion-Middleware</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/JavaScript.html" class="" >JavaScript</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/JET.html" class="" >JET</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/PL/SQL.html" class="" >PL/SQL</a></span><span> <a   href="tags/Quality-Assurance.html" class="" >Quality-Assurance</a></span><span> <a   href="tags/Reports.html" class="" >Reports</a></span><span> <a   href="tags/Reports-12.html" class="" >Reports-12</a></span><span> <a   href="tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="tags/Virtualization.html" class="" >Virtualization</a></span><span> <a   href="tags/WebLogic.html" class="" >WebLogic</a></span></span></p>
+                            <p>Another DOAG is over and here is my summary.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html">
+                                <h2 class="post-title">Provide access to WebLogic DMS Spy Servlet for readonly users</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 30, 2017</span>
+                                <span> Tags: <span> <a   href="tags/Linux.html" class="" >Linux</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/WebLogic.html" class="" >WebLogic</a></span><span> <a   href="tags/WebLogic-12.html" class="" >WebLogic-12</a></span></span></p>
+                            <p>For security reasons and to prevent the configuration drift it is recommendable to use read only access of WebLogic configuration for analyzing problems.
+For read only access of configuration and logs WebLogic provides out of the box the group Monitors. Unfortunately you cannot access <a href="https://docs.oracle.com/middleware/12212/lcm/ASPER/GUID-F1201ECA-AF97-4C96-9926-53F6C25A58D3.htm#ASPER99002">DMS Spy Servlet</a> with this group, which is useful for analyse runtime values of the server. Only users which belongs to the Administrators group and therefore have full access can access DMS Spy Servlet and this is not configurable in WebLogic by default.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html">
+                                <h2 class="post-title">&quot;PL/SQL: Therefore, whoever binds forever: automate your tests&quot; - I am a speaker at DOAG2017</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>July 18, 2017</span>
+                                <span> Tags: <span> <a   href="tags/Branching.html" class="" >Branching</a></span><span> <a   href="tags/Build.html" class="" >Build</a></span><span> <a   href="tags/Commit-Test.html" class="" >Commit-Test</a></span><span> <a   href="tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Database.html" class="" >Database</a></span><span> <a   href="tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/PL/SQL.html" class="" >PL/SQL</a></span><span> <a   href="tags/SQL-Developer.html" class="" >SQL-Developer</a></span><span> <a   href="tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
+                            <p>Today my presentation is confirmed: "Therefore, whoever binds forever: automate your tests". Maybe the German title will be the better understood: "PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!"</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2017/Javaland+2017+wrap+up.html">
+                                <h2 class="post-title">Javaland 2017 wrap up</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>April 01, 2017</span>
+                                <span> Tags: <span> <a   href="tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Docker.html" class="" >Docker</a></span><span> <a   href="tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Linux.html" class="" >Linux</a></span><span> <a   href="tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
+                            <p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
+It was not easy this year to concentrate on the sessions because of the hottest march of the last 100 years. But the quality of the sessions beats the weather. Maybe again my invest in reading the abstracts and filter the sessions before the conference has payed off.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2017/DEVCAMP17+wrap+up.html">
+                                <h2 class="post-title">DEVCAMP17 wrap up</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>February 09, 2017</span>
+                                <span> Tags: <span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/PL/SQL.html" class="" >PL/SQL</a></span><span> <a   href="tags/Report.html" class="" >Report</a></span><span> <a   href="tags/Unit-Test.html" class="" >Unit-Test</a></span></span></p>
+                            <p>Yesterday I attend the annual <a href="https://en.wikipedia.org/wiki/BarCamp">barcamp</a> <a href="https://devcamp.doag.org">DEVCAMP</a> of the <a href="http://www.doag.org">DOAG</a> development community. There are mostly developers with SQL, PL/SQL, Forms &amp; Reports, ADF, JET background and some Java, Javascript and APEX developers too. And not to forget: 1 dba and some managers. Here is my summary.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html">
+                                <h2 class="post-title">Virtual Development Server: Provide Docker images in docker registry for Oracle via Jenkins</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>December 07, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Blue-Ocean.html" class="" >Blue-Ocean</a></span><span> <a   href="tags/Continous-Integration-Continous.html" class="" >Continous-Integration-Continous</a></span><span> <a   href="tags/Docker.html" class="" >Docker</a></span><span> <a   href="tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Pipeline.html" class="" >Pipeline</a></span><span> <a   href="tags/Pipeline-Model-Definition.html" class="" >Pipeline-Model-Definition</a></span><span> <a   href="tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
+                            <p>This is a follow up to earlier <a href="Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</a> blog. We now try to automate the build of all needed images as soon as Oracle <a href="https://github.com/oracle/docker-images">GitHub</a> Sources changed or we need to build our Vagrant VirtualBox again from scratch.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html">
+                                <h2 class="post-title">Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 25, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Docker.html" class="" >Docker</a></span><span> <a   href="tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Linux.html" class="" >Linux</a></span><span> <a   href="tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
+                            <p>For automation of all of my processes I need Jenkins in my development server.
+First I had installed Jenkins as Docker container via Vagrant Docker provider.
+But with this architecture it was very complicated to create docker images and run Docker containers on the Docker host, in this case my Vagrant Virtualbox.
+So for simplification I have decided to install Jenkins with the provisioning of the Vagrant Virtualbox via a shell provider in my Vagrantfile.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Fix+BEA-000394+Deadlock+detected+for+Weblogic+with+ADF+Applications+12.2.1.2.html">
+                                <h2 class="post-title">Fix &quot;BEA-000394: Deadlock detected&quot; for Weblogic with ADF Applications 12.2.1.2</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 24, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/WebLogic.html" class="" >WebLogic</a></span><span> <a   href="tags/WebLogic-12.html" class="" >WebLogic-12</a></span><span> <a   href="tags/Bug.html" class="" >Bug</a></span><span> <a   href="tags/Patch.html" class="" >Patch</a></span><span> <a   href="tags/Shared-Libraries.html" class="" >Shared-Libraries</a></span></span></p>
+                            <p>If you try the newest version 12.2.1.2 (or maybe earlier versions too) you see, that your managed server does not restart</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/DOAG2016+wrap+up.html">
+                                <h2 class="post-title">DOAG2016 wrap up</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 17, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/DOAG.html" class="" >DOAG</a></span><span> <a   href="tags/Docker.html" class="" >Docker</a></span><span> <a   href="tags/Forms-Forms-12.html" class="" >Forms-Forms-12</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Hudson.html" class="" >Hudson</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/JavaScript-JavaScript.html" class="" >JavaScript-JavaScript</a></span><span> <a   href="tags/JET.html" class="" >JET</a></span><span> <a   href="tags/Load-Test.html" class="" >Load-Test</a></span><span> <a   href="tags/Performance.html" class="" >Performance</a></span><span> <a   href="tags/Reports.html" class="" >Reports</a></span><span> <a   href="tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
+                            <p>Another DOAG is over and here is my summary.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html">
+                                <h2 class="post-title">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>September 06, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="tags/Linux.html" class="" >Linux</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="tags/VirtualBox.html" class="" >VirtualBox</a></span><span> <a   href="tags/Docker.html" class="" >Docker</a></span><span> <a   href="tags/XE.html" class="" >XE</a></span><span> <a   href="tags/XE-11.html" class="" >XE-11</a></span></span></p>
+                            <p>For later creation of containers as needed in the deployment process we have first to build docker images whenever we do not find suitable one in docker hub.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Set+all+WebLogic+log+levels+to+Inherit+via+WLST.html">
+                                <h2 class="post-title">Set all WebLogic log levels to &quot;Inherit&quot; via WLST</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 22, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/WebLogic.html" class="" >WebLogic</a></span><span> <a   href="tags/WLST.html" class="" >WLST</a></span><span> <a   href="tags/Logging.html" class="" >Logging</a></span><span> <a   href="tags/Silent-Install.html" class="" >Silent-Install</a></span></span></p>
+                            <p>Logging is a very useful feature of WebLogic.
+Unfortunately the log levels, which are set after a clean install of WebLogic or some of the Fusion Middleware product creates a lot of noise and therefore it costs I/O performance.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html">
+                                <h2 class="post-title">Virtual Development Server: Add swapfile to VirtualBox as requirement for installing Oracle or build Oracle docker images</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 19, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="tags/Linux.html" class="" >Linux</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="tags/VirtualBox.html" class="" >VirtualBox</a></span><span> <a   href="tags/Docker.html" class="" >Docker</a></span></span></p>
+                            <p>As I want later build Oracle docker images, some of this need a swapfile.
+Per default my used <a href="http://www.vagrantbox.es">Vagrantbox</a> does not have one, so later steps will fail.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html">
+                                <h2 class="post-title">Virtual Development Server: Add enough ram and disk space to VirtualBox for further server components</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 13, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="tags/Linux.html" class="" >Linux</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="tags/VirtualBox.html" class="" >VirtualBox</a></span><span> <a   href="tags/VDI.html" class="" >VDI</a></span><span> <a   href="tags/VDMK.html" class="" >VDMK</a></span></span></p>
+                            <p>As I want later build docker images and run docker containers I have to provide enough ram and disk space for this.
+Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk disks, these have a static size and are to small for my purposes.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html">
+                                <h2 class="post-title">Virtual Development Server: Creating Virtualbox machine including docker containers with Vagrant</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 12, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Docker.html" class="" >Docker</a></span><span> <a   href="tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="tags/Linux.html" class="" >Linux</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
+                            <p>As I want to decouple my development server from my computer as much as possible I want to create first a virtual machine with linux.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Virtual+Development+Server+The+idea.html">
+                                <h2 class="post-title">Virtual Development Server: The idea</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 11, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span></span></p>
+                            <p>For long time I had the idea to create a virtual development server for testing some ideas and play with some new and old technologies.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Oracle+TranslationHub+neither+supported+for+12c+Database+12c+Forms+Reports+or+64+bit.html">
+                                <h2 class="post-title">Oracle TranslationHub neither supported for 12c Database, 12c Forms/Reports or 64 bit!</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>March 16, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Forms-11.html" class="" >Forms-11</a></span><span> <a   href="tags/Forms-12.html" class="" >Forms-12</a></span><span> <a   href="tags/Reports.html" class="" >Reports</a></span><span> <a   href="tags/Reports-11.html" class="" >Reports-11</a></span><span> <a   href="tags/Reports-12.html" class="" >Reports-12</a></span><span> <a   href="tags/TranslationHub.html" class="" >TranslationHub</a></span><span> <a   href="tags/32bit.html" class="" >32bit</a></span><span> <a   href="tags/64bit.html" class="" >64bit</a></span></span></p>
+                            <p>If you need TranslationHub (Windows only) for your forms and reports development please immediately stop if you plan to move to one of the these</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Javaland+2016+conference+day+2.html">
+                                <h2 class="post-title">Javaland 2016 conference day 2</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>March 10, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Javaland.html" class="" >Javaland</a></span><span> <a   href="tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Database.html" class="" >Database</a></span><span> <a   href="tags/Database-Migration.html" class="" >Database-Migration</a></span><span> <a   href="tags/Flyway.html" class="" >Flyway</a></span><span> <a   href="tags/Liquibase.html" class="" >Liquibase</a></span><span> <a   href="tags/Feature-Toggles.html" class="" >Feature-Toggles</a></span><span> <a   href="tags/Security.html" class="" >Security</a></span><span> <a   href="tags/User-Experience.html" class="" >User-Experience</a></span><span> <a   href="tags/UX.html" class="" >UX</a></span></span></p>
+                            <p>This was my second day on Javaland 2016.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2016/Javaland+2016+conference+day+1.html">
+                                <h2 class="post-title">Javaland 2016 conference day 1</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>March 09, 2016</span>
+                                <span> Tags: <span> <a   href="tags/Javaland.html" class="" >Javaland</a></span><span> <a   href="tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/XRebel.html" class="" >XRebel</a></span><span> <a   href="tags/Behaviour-Test.html" class="" >Behaviour-Test</a></span><span> <a   href="tags/Load-Test.html" class="" >Load-Test</a></span><span> <a   href="tags/Mutation-Test.html" class="" >Mutation-Test</a></span><span> <a   href="tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="tags/Documentation.html" class="" >Documentation</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Jenkins-Pipelines.html" class="" >Jenkins-Pipelines</a></span></span></p>
+                            <p>This year I have decided to give the <a href="https://twitter.com/hashtag/javaland2016?src=hash">Javaland</a> conference a try.
+I&#8217;m not a java professional, but in the program was listed a lot of interesting testing presentations, so my company booked for me.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2015/SLES+shell+script+to+check+required+os+packages+according+to+documentation+before+starting+oracle+forms+and+reports+installation.html">
+                                <h2 class="post-title">SLES shell script to check required os packages according to documentation before starting oracle forms and reports installation</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>September 09, 2015</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Forms-11.html" class="" >Forms-11</a></span><span> <a   href="tags/Reports.html" class="" >Reports</a></span><span> <a   href="tags/Reports-11.html" class="" >Reports-11</a></span><span> <a   href="tags/Linux.html" class="" >Linux</a></span><span> <a   href="tags/SLES.html" class="" >SLES</a></span><span> <a   href="tags/64bit.html" class="" >64bit</a></span></span></p>
+                            <p>If you try to install Oracle Forms &amp; Reports 11.1.2.2 on SLES 11.3 than despite all installer checks are passed maybe you get a error message.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html">
+                                <h2 class="post-title">&quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; - I am a speaker at DOAG2015</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>July 21, 2015</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="tags/Build.html" class="" >Build</a></span><span> <a   href="tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="tags/Branching.html" class="" >Branching</a></span><span> <a   href="tags/Versioning.html" class="" >Versioning</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span></span></p>
+                            <p>Today my presentation is confirmed: "Bob the Builder: Build/Deploy of ADF enterprise applications".</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2015/Fix+code+editor+save+actions+in+JDeveloper+12.1.3+keep+the+order+of+actions.html">
+                                <h2 class="post-title">Fix code editor save actions in JDeveloper 12.1.3: keep the order of actions</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 30, 2015</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/Bug.html" class="" >Bug</a></span><span> <a   href="tags/Patch.html" class="" >Patch</a></span></span></p>
+                            <p>If you work with JDeveloper 12.1.3 and you work with code editor save actions the order of actions could be relevant for you.
+For an example you use lot of asterisk (*) imports and JDeveloper should edit the code to import only classes that you actually use in the code.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2015/Fix+completion+insight+in+JDeveloper+12.1.3+show+return+type+again.html">
+                                <h2 class="post-title">Fix completion insight in JDeveloper 12.1.3: show return type again</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 29, 2015</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/Bug.html" class="" >Bug</a></span><span> <a   href="tags/Patch.html" class="" >Patch</a></span></span></p>
+                            <p>If you work with JDeveloper 12.1.3 you may missing the return type of methods in completion insight.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html">
+                                <h2 class="post-title">Slides for my german presentation DOAG2014 &quot;The Dirty Dozen – ADF Migration to 12c in the IKB&quot; available</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 24, 2014</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="tags/Migration.html" class="" >Migration</a></span></span></p>
+                            <p>I have presented last week on DOAG 2014 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="http://de.slideshare.net/tkleiber/das-dreckige-dutzend-adf-migration-nach-12c-in-der-ikb-doag-2014-prsentation">Slideshare</a> too.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html">
+                                <h2 class="post-title">ADF Architecture Practice - JDeveloper Silent Install of Extensions</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 19, 2014</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="tags/Silent-Install.html" class="" >Silent-Install</a></span><span> <a   href="tags/Extension.html" class="" >Extension</a></span></span></p>
+                            <p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>. It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the installation with examples for windows.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html">
+                                <h2 class="post-title">See you at DOAG 2014 “The Dirty Dozen – ADF Migration to 12c in the IKB” room Kopenhagen on 11/19/2014 at 10:00 am</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 17, 2014</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="tags/Migration.html" class="" >Migration</a></span></span></p>
+                            <p>The presentation is ready, time for travelling now.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html">
+                                <h2 class="post-title">ADF Architecture Practice - JDeveloper Silent Patch</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>October 22, 2014</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="tags/Silent-Install.html" class="" >Silent-Install</a></span><span> <a   href="tags/Silent-Patch.html" class="" >Silent-Patch</a></span></span></p>
+                            <p>This article describes how to standardize your JDeveloper Patching as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Getting Started - Team, Skills and Development Environments</a>.
+It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the patching with examples for windows.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html">
+                                <h2 class="post-title">ADF Architecture Practice - JDeveloper Silent Install</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>October 14, 2014</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="tags/Silent-Install.html" class="" >Silent-Install</a></span><span> <a   href="tags/Silent-Deinstall.html" class="" >Silent-Deinstall</a></span></span></p>
+                            <p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>. It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the installation with examples for windows.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2014/ADF+Architecture+Practice+Series.html">
+                                <h2 class="post-title">ADF Architecture Practice Series</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>October 13, 2014</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span></span></p>
+                            <p>From now on I will create a series of lessons to implement the knowledge of the ADF Architecture Course from Oracle ADF product management. Here you can find the &lt;<a href="http://www.youtube.com/user/adfarchtv">videos</a> and the <a href="http://slideshare.net/chriscmuir/tag/add-architecture-tv">presentations</a>. This post will be the index of this lessons, so bookmark it for further use!</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html">
+                                <h2 class="post-title">&quot;The Dirty Dozen - ADF Migration to 12c in the IKB&quot; - I am a speaker at DOAG2014</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 01, 2014</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="tags/Migration.html" class="" >Migration</a></span></span></p>
+                            <p>Today the <a href="http://www.doag.org/konferenz/kprogramm.php?tag=2&amp;locS=0">official program</a> is online for <a href="http://www.doag.org/de/events/konferenzen/doag-2014.html">DOAG conference 2014</a> in Nuremberg. My presentation is confirmed  "The Dirty Dozen - ADF Migration to 12c in the IKB".</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2014/Find+problems+when+you+develop+-+using+XRebel+with+Oracle+ADF.html">
+                                <h2 class="post-title">Find problems when you develop: using XRebel with Oracle ADF</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 30, 2014</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="tags/XRebel.html" class="" >XRebel</a></span></span></p>
+                            <p>Some days before <a href="http://zeroturnaround.com/">ZeroTurnaround</a> has released <a href="http://zeroturnaround.com/software/xrebel/">XRebel</a> , a new tool to recognized problems in your web applications, when you make your developer test.
+This was promising, so I give it a short try for Oracle ADF applications.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html">
+                                <h2 class="post-title">Slides for my german presentation &quot;Quality Assurance for ADF projects&quot; available</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 04, 2014</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/Checkstyle.html" class="" >Checkstyle</a></span><span> <a   href="tags/FindBugs.html" class="" >FindBugs</a></span><span> <a   href="tags/PMD.html" class="" >PMD</a></span><span> <a   href="tags/JUnit.html" class="" >JUnit</a></span><span> <a   href="tags/Mockito.html" class="" >Mockito</a></span><span> <a   href="tags/PowerMock.html" class="" >PowerMock</a></span><span> <a   href="tags/JaCoCo.html" class="" >JaCoCo</a></span><span> <a   href="tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="tags/Acceptance-Test.html" class="" >Acceptance-Test</a></span><span> <a   href="tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span></span></p>
+                            <p>I have presented today on DOAG Development 2014 in Dusseldorf. For all non DOAG members - you can find the german presentation on <a href="http://www.slideshare.net/tkleiber/qualittssicherung-in-adf-projekten-der-ikb-deutschen-industriebank">Slideshare</a> too.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2014/Quality+Assurance+for+ADF+projects.html">
+                                <h2 class="post-title">Quality Assurance for ADF projects</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>May 22, 2014</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="tags/Checkstyle.html" class="" >Checkstyle</a></span><span> <a   href="tags/FindBugs.html" class="" >FindBugs</a></span><span> <a   href="tags/PMD.html" class="" >PMD</a></span><span> <a   href="tags/JUnit.html" class="" >JUnit</a></span><span> <a   href="tags/Mockito.html" class="" >Mockito</a></span><span> <a   href="tags/PowerMock.html" class="" >PowerMock</a></span><span> <a   href="tags/JaCoCo.html" class="" >JaCoCo</a></span><span> <a   href="tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="tags/Acceptance-Test.html" class="" >Acceptance-Test</a></span><span> <a   href="tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span></span></p>
+                            <p>If you speak german and you are interested in quality assurance for your ADF projects you should come and attend my presentation at <a href="http://www.doag.org/home/development.html">DOAG Development</a> on 06/04/2014 in Duesseldorf.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html">
+                                <h2 class="post-title">Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>September 20, 2013</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.2.html" class="" >JDeveloper-11.2</a></span><span> <a   href="tags/ADF-Mobile.html" class="" >ADF-Mobile</a></span><span> <a   href="tags/Android.html" class="" >Android</a></span><span> <a   href="tags/External-Tools.html" class="" >External-Tools</a></span></span></p>
+                            <p>If you tired from the android emulator speed you may have read Chris Muir&#8217;s article <a href="https://blogs.oracle.com/onesizedoesntfitall/entry/adf_mobile_avoiding_the_android">ADF Mobile: Avoiding the Android Emulator with AndroVM</a>.
+In the meantime the successor AndroVM is <a href="https://cloud.genymotion.com/">GENYMOTION</a>.
+Let&#8217;s integrate this instead now!</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2013/Have+released+PMD+Jdeveloper+Extension+5.0.5.html">
+                                <h2 class="post-title">Have released PMD JDeveloper Extension 5.0.5</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 30, 2013</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="tags/PMD.html" class="" >PMD</a></span><span> <a   href="tags/Extension.html" class="" >Extension</a></span></span></p>
+                            <p>I have finished now my work on integrating last <a href="http://pmd.sourceforge.net/">PMD</a> version 5.0.5 into JDeveloper.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html">
+                                <h2 class="post-title">Write ADF static code analysis rules with PMD and running these in JDeveloper</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>July 02, 2013</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="tags/PMD.html" class="" >PMD</a></span><span> <a   href="tags/External-Tools.html" class="" >External-Tools</a></span><span> <a   href="tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
+                            <p>Do you know, that PMD can analyse XML files since version 5? Many of ADF files are XML configuration files - wouldn&#8217;t it be a good idea to create some static code analysis rules for ADF too?</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">
+                                <h2 class="post-title">PMD Integration with JDeveloper through Ant External Tools</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 26, 2013</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="tags/PMD.html" class="" >PMD</a></span><span> <a   href="tags/External-Tools.html" class="" >External-Tools</a></span><span> <a   href="tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
+                            <p>After little code <a href="http://sourceforge.net/p/pmd/bugs/1055/">change</a> in pmd the integration like described in some blogs from Shay Shmeltzer is now possible.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2012/Fasten+your+Oracle+Forms+and+Reports+11g+Server+start+on+Unix+derivates.html">
+                                <h2 class="post-title">Fasten your Oracle Forms and Reports 11g Server start on Unix derivates</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>December 21, 2012</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Reports.html" class="" >Reports</a></span><span> <a   href="tags/Forms-11.html" class="" >Forms-11</a></span><span> <a   href="tags/Reports-11.html" class="" >Reports-11</a></span><span> <a   href="tags/WebLogic.html" class="" >WebLogic</a></span><span> <a   href="tags/Managed-Server.html" class="" >Managed-Server</a></span><span> <a   href="tags/JDK.html" class="" >JDK</a></span><span> <a   href="tags/JRE.html" class="" >JRE</a></span></span></p>
+                            <p>Do you see a slow start of your WebLogic managed server for Forms &amp; Reports on Unix derivate?
+We had this problem too on SuSe SLES 11 and Forms and Reports 11.1.2.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html">
+                                <h2 class="post-title">Save JDeveloper application workings sets in the application workspace - please vote for this enhancement request</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>December 04, 2012</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/Working-Sets.html" class="" >Working-Sets</a></span></span></p>
+                            <p>If you create for an example a big adf application you may want to add all of your entities to one base application for reuse labels, validation and and so on. If you have a big database schema than in short time you have a problem to find your entity.
+In JDeveloper there is a neat feature to overcome this problem: working sets!</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2012/Oracle+Reports+Designer+11g+64bit+on+Windows7+64bit+very+buggy+-+Use+Reports+32bit+instead.html">
+                                <h2 class="post-title">Oracle Reports Designer 11g 64bit on Windows7 64bit very buggy - Use Reports 32bit instead!</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>July 06, 2012</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Reports.html" class="" >Reports</a></span><span> <a   href="tags/Reports-11.html" class="" >Reports-11</a></span><span> <a   href="tags/32bit.html" class="" >32bit</a></span><span> <a   href="tags/64bit.html" class="" >64bit</a></span><span> <a   href="tags/Windows7.html" class="" >Windows7</a></span></span></p>
+                            <p>As I have seen in Oracle certification matrix Forms &amp; Reports 11g 64bit is supported under Windows7 64bit.
+So I tried to install it and to work with it.
+Unfortunately there are serious bugs in it, please read for more information <a href="https://support.oracle.com/epmos/faces/ui/km/DocContentDisplay.jspx?id=1395965.1">MOS Doc ID 1395965.1</a>.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2012/TranslationHub+11g+is+only+available+as+32+bit+-+requires+Forms+and+Reports+11g+too+in+32+bit+for+Development.html">
+                                <h2 class="post-title">TranslationHub 11g is only available as 32 bit - requires Forms and Reports 11g too in 32 bit for Development</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 07, 2012</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Reports.html" class="" >Reports</a></span><span> <a   href="tags/TranslationHub.html" class="" >TranslationHub</a></span><span> <a   href="tags/Forms-11.html" class="" >Forms-11</a></span><span> <a   href="tags/Reports-11.html" class="" >Reports-11</a></span><span> <a   href="tags/TranslationHub-11.html" class="" >TranslationHub-11</a></span><span> <a   href="tags/32bit.html" class="" >32bit</a></span><span> <a   href="tags/64bit.html" class="" >64bit</a></span><span> <a   href="tags/Windows7.html" class="" >Windows7</a></span></span></p>
+                            <p>I have done the whole may scripting silent installs of several developer tools.
+Among them was Fusion Middleware 11.1.2 Forms &amp; Reports.
+I see that oracle certifies the 64bit installers on win7 64bit and so I have successfully script this after a lot of time.
+I want not speak about the many errors in silent installers here.
+But what if you want to use TranslationHub too?</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2012/Have+released+PMD+Jdeveloper+Extension+4.3.html">
+                                <h2 class="post-title">Have released PMD JDeveloper Extension 4.3</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>March 12, 2012</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/PMD.html" class="" >PMD</a></span><span> <a   href="tags/Extension.html" class="" >Extension</a></span><span> <a   href="tags/JDeveloper-10.html" class="" >JDeveloper-10</a></span><span> <a   href="tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span></span></p>
+                            <p>Sorry for a time without new post - but I have finished now my work on integrating last <a href="http://pmd.sourceforge.net">PMD</a> version 4.3 into JDeveloper.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html">
+                                <h2 class="post-title">Oracle Forms 11 running as application in Java Webstart</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>January 22, 2012</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Forms-11.html" class="" >Forms-11</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/Webstart.html" class="" >Webstart</a></span></span></p>
+                            <p>According to my last post today I will show you the basic configuration for forms 11g.
+Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works too!</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html">
+                                <h2 class="post-title">Oracle Forms 10 running as application in Java Webstart</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>December 27, 2011</span>
+                                <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Forms-10.html" class="" >Forms-10</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/Webstart.html" class="" >Webstart</a></span></span></p>
+                            <p>Many people miss in webforms the possibility to run forms as a separate application.
+They have a lot of problems to handle browser back button an so on.
+The good news - there is a way to do this with Java Webstart.
+The bad news - it is not supported by Oracle.
+But we run this since four years now and is very stable.</p>
+                        </div>
+                        <hr/>
+                    
+                        <div class="post-preview"  >
+                            <a href="blog/2011/Hello+world.html">
+                                <h2 class="post-title">Hello world!</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>December 13, 2011</span>
+                                <span> Tags: <span> <a   href="tags/Blog.html" class="" >Blog</a></span><span> <a   href="tags/Wordpress.html" class="" >Wordpress</a></span></span></p>
+                            <p>Welcome to my new blog. After long time I have decided to create now my own blog at <a href="http://wordpress.com/">WordPress.com</a>. Be excitedly for future content round about software development.</p>
+                        </div>
+                        <hr/>
+                    
+                    
+                    <!-- Pager -->
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <ul class="list-inline text-center"> 
+                            <li>
+                                <a href="feed.xml" title="Subscribe to RSS feed">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
                                 </a>
                             </li>
-                        </ul><section class="top-bar-section">
-                            <ul class="left">
-                                <li>
-                                    <a href="/index.html">Home</a>
-                                </li><li>
-                                    <a href="/archive.html">Archive</a>
-                                </li><li class="has-dropdown">
-                                    <a href="#">Projects</a><ul class="dropdown">
-                                        
-                                    </ul>
-                                </li><li>
-                                    <a href="/about.html">About</a>
-                                </li><li>
-                                    <a href="/feed.xml">Subscribe</a>
-                                </li>
-                            </ul>
-                        </section>
-                    </nav>
+                            <li>
+                                <a href="https://twitter.com/develishdevelop">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/tkleiber">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linkedin.com/in/kleiber/">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.xing.com/profile/Torsten_Kleiber/">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.slideshare.net/tkleiber/">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-slideshare fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="copyright text-muted">&copy;  <span>Torsten Kleiber</span> <span>2020</span> | Clean Blog theme by <a href="https://startbootstrap.com/template-overviews/clean-blog/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.4</span></a></p>
+                    </div>
                 </div>
             </div>
-        </div>        <div>
-<div class="row">
-                <div class="small-12 middle-12 large-12 columns">
-                    <article class="wrap">
-                        <header>
-                            <div class="row">
-                                <div class="small-3 medium-1 large-1 columns">
-<div class="termin">
-                                        <div class="month">Nov</div>
-                                        <div class="date">18</div>
-                                        <div class="year">2019</div>
-                                    </div>                                    
-                                </div><div class="small-9 medium-11 large-11 columns">
-                                    <div>
-                                        <h2>
-                                            <a href="/blog/2019/Agile+Oracle+Database+Modeling+and+Development+%28AgileOracleDatabase%29+-+I+m+a+speaker+at+DOAG2019.html">Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I&#8217;m a speaker at DOAG2019</a>
-                                        </h2><p>
-                                            <span>
-                                                <a href="/tags/Database.html" class="label">Database</a>
-                                            </span><span>
-                                                <a href="/tags/Deploy.html" class="label">Deploy</a>
-                                            </span><span>
-                                                <a href="/tags/Git.html" class="label">Git</a>
-                                            </span><span>
-                                                <a href="/tags/Jenkins.html" class="label">Jenkins</a>
-                                            </span><span>
-                                                <a href="/tags/Liquibase.html" class="label">Liquibase</a>
-                                            </span><span>
-                                                <a href="/tags/Database-Modelling.html" class="label">Database-Modelling</a>
-                                            </span><span>
-                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
-                                            </span><span>
-                                                <a href="/tags/PL/SQL.html" class="label">PL/SQL</a>
-                                            </span><span>
-                                                <a href="/tags/utPLSQL.html" class="label">utPLSQL</a>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div><hr/>
-                        </header><div class="row">
-                            <div class="columns">
-                                <div class="imageblock">
-<div class="content">
-<img src="../../images/doag-2019-konferenz-ausstellung-banner-180x180-speaker.jpg" alt="doag 2019 konferenz ausstellung banner 180x180 speaker">
-</div>
-</div>
-<div class="paragraph">
-<p>We try to be agile in developing and merging our features into branches when they are ready for use.</p>
-</div>
-<div class="paragraph">
-<p>Test Driven Development is on everyone&#8217;s lips with Java and other languages.</p>
-</div>
-<div class="paragraph">
-<p>Whether we develop ADF or JET or Spring, we try to apply these techniques in many places.</p>
-</div>
-<div class="paragraph">
-<p>But what is the real basis of most of our applications?
-This is the Oracle database with its data model and programming language PL/SQL!</p>
-</div>
-<div class="paragraph">
-<p>Again and again we hear that merging data model scripts and PL/SQL programs is not practicable.</p>
-</div>
-<div class="paragraph">
-<p>But how are we supposed to develop our frontend according to these techniques, if we don&#8217;t start with it in the backend?</p>
-</div>
-<div class="paragraph">
-<p>In the lecture and the demo&#8217;s I will show you how you can further develop your data model and your programs in the database agile and test driven from requirement till refactoring.</p>
-</div>
-<div class="paragraph">
-<p>You can see how tools like Git, Liquibase, utPLSQL and Jenkins work together.</p>
-</div>
-<div class="paragraph">
-<p>If you speak german and you are interested in some of this, you should come and attend my <a href="https://programm.doag.org/doag/2019/#/scheduledEvent/584762">presentation</a> at DOAG 2019 Nuremberg on Wednesday, Nov. 20, 17:00 in room Istanbul.</p>
-</div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div><div class="row">
-                <div class="small-12 middle-12 large-12 columns">
-                    <article class="wrap">
-                        <header>
-                            <div class="row">
-                                <div class="small-3 medium-1 large-1 columns">
-<div class="termin">
-                                        <div class="month">Jul</div>
-                                        <div class="date">17</div>
-                                        <div class="year">2018</div>
-                                    </div>                                    
-                                </div><div class="small-9 medium-11 large-11 columns">
-                                    <div>
-                                        <h2>
-                                            <a href="/blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html">"Regulatorics: Offside is when the referee whistles" - I&#8217;m a speaker at DOAG2018</a>
-                                        </h2><p>
-                                            <span>
-                                                <a href="/tags/ADF.html" class="label">ADF</a>
-                                            </span><span>
-                                                <a href="/tags/ADF-12.html" class="label">ADF-12</a>
-                                            </span><span>
-                                                <a href="/tags/Atlassian.html" class="label">Atlassian</a>
-                                            </span><span>
-                                                <a href="/tags/Bitbucket.html" class="label">Bitbucket</a>
-                                            </span><span>
-                                                <a href="/tags/Branching.html" class="label">Branching</a>
-                                            </span><span>
-                                                <a href="/tags/Build.html" class="label">Build</a>
-                                            </span><span>
-                                                <a href="/tags/Commit-Test.html" class="label">Commit-Test</a>
-                                            </span><span>
-                                                <a href="/tags/Conferences.html" class="label">Conferences</a>
-                                            </span><span>
-                                                <a href="/tags/Continous-Integration.html" class="label">Continous-Integration</a>
-                                            </span><span>
-                                                <a href="/tags/Deploy.html" class="label">Deploy</a>
-                                            </span><span>
-                                                <a href="/tags/Git.html" class="label">Git</a>
-                                            </span><span>
-                                                <a href="/tags/Jenkins.html" class="label">Jenkins</a>
-                                            </span><span>
-                                                <a href="/tags/JIRA.html" class="label">JIRA</a>
-                                            </span><span>
-                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
-                                            </span><span>
-                                                <a href="/tags/Pipelines.html" class="label">Pipelines</a>
-                                            </span><span>
-                                                <a href="/tags/SOA.html" class="label">SOA</a>
-                                            </span><span>
-                                                <a href="/tags/SOA-12.html" class="label">SOA-12</a>
-                                            </span><span>
-                                                <a href="/tags/Unit-Test.html" class="label">Unit-Test</a>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div><hr/>
-                        </header><div class="row">
-                            <div class="columns">
-                                <div class="imageblock">
-<div class="content">
-<img src="../../images/doag-2018-konferenz-ausstellung-banner-180x180-referent.jpg" alt="doag 2018 konferenz ausstellung banner 180x180 referent">
-</div>
-</div>
-<div class="paragraph">
-<p>Today my presentation is confirmed: "Regulatorics: Offside is when the referee whistles". Maybe the German title will be better understood: "Regulatorik: Abseits ist, wenn der Schiedsrichter pfeift".</p>
-</div>
-<div class="paragraph">
-<p>The regulatory system has more and more influence on our software development.</p>
-</div>
-<div class="paragraph">
-<p>Regulatory authorities, external and internal Auditors are increasingly examining our IT and not longer only our business processes and balance sheets.
-Some of them have better trained IT experts as we can find on the free market.</p>
-</div>
-<div class="paragraph">
-<p>General standards such as ISO/IEC 2700X but also banking-specific standards such as BAIT and MaRisk now pose challenges that generally only large software manufacturers know.
-Approximately 40 % of our projects are now regulatory-driven.</p>
-</div>
-<div class="paragraph">
-<p>Therefore, we are currently redefining our development process in order to implement the following requirements, among others
-* Unchangeability of the tested artefacts after the test
-* Functional segregation
-* Detection of accidental changes or intentional manipulations of the application</p>
-</div>
-<div class="paragraph">
-<p>The lecture shows the vision of such a safe process. It shows the current status of implementation in SOA and ADF development, for example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Migration of version management to GIT in Atlassian BitBucket</p>
-</li>
-<li>
-<p>Application and selection criteria for a branching model
-* Mandatory code reviews in Atlassian BitBucket</p>
-</li>
-<li>
-<p>Build and Deployment Pipelines in Jenkins</p>
-</li>
-<li>
-<p>Automatic documentation in JIRA Issue via Bitbucket and Jenkins.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Maybe you too can minimize the additional work and continue to work agile to meet such requirements.</p>
-</div>
-<div class="paragraph">
-<p>If you speak german and you are interested in some of this, you should come and attend DOAG 2018.</p>
-</div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div><div class="row">
-                <div class="small-12 middle-12 large-12 columns">
-                    <article class="wrap">
-                        <header>
-                            <div class="row">
-                                <div class="small-3 medium-1 large-1 columns">
-<div class="termin">
-                                        <div class="month">Dec</div>
-                                        <div class="date">01</div>
-                                        <div class="year">2017</div>
-                                    </div>                                    
-                                </div><div class="small-9 medium-11 large-11 columns">
-                                    <div>
-                                        <h2>
-                                            <a href="/blog/2017/DOAG2017+wrap+up.html">DOAG2017 wrap up</a>
-                                        </h2><p>
-                                            <span>
-                                                <a href="/tags/ABCS.html" class="label">ABCS</a>
-                                            </span><span>
-                                                <a href="/tags/ADF.html" class="label">ADF</a>
-                                            </span><span>
-                                                <a href="/tags/ADF-12.html" class="label">ADF-12</a>
-                                            </span><span>
-                                                <a href="/tags/APEX.html" class="label">APEX</a>
-                                            </span><span>
-                                                <a href="/tags/Bitcoin.html" class="label">Bitcoin</a>
-                                            </span><span>
-                                                <a href="/tags/Blockchain.html" class="label">Blockchain</a>
-                                            </span><span>
-                                                <a href="/tags/Cloud.html" class="label">Cloud</a>
-                                            </span><span>
-                                                <a href="/tags/Code-Coverage.html" class="label">Code-Coverage</a>
-                                            </span><span>
-                                                <a href="/tags/Continous-Integration.html" class="label">Continous-Integration</a>
-                                            </span><span>
-                                                <a href="/tags/DBADev.html" class="label">DBADev</a>
-                                            </span><span>
-                                                <a href="/tags/DevOps.html" class="label">DevOps</a>
-                                            </span><span>
-                                                <a href="/tags/Disruption.html" class="label">Disruption</a>
-                                            </span><span>
-                                                <a href="/tags/DOAG.html" class="label">DOAG</a>
-                                            </span><span>
-                                                <a href="/tags/Docker.html" class="label">Docker</a>
-                                            </span><span>
-                                                <a href="/tags/Forms.html" class="label">Forms</a>
-                                            </span><span>
-                                                <a href="/tags/Forms-12.html" class="label">Forms-12</a>
-                                            </span><span>
-                                                <a href="/tags/Fusion-Middleware.html" class="label">Fusion-Middleware</a>
-                                            </span><span>
-                                                <a href="/tags/Java.html" class="label">Java</a>
-                                            </span><span>
-                                                <a href="/tags/JavaScript.html" class="label">JavaScript</a>
-                                            </span><span>
-                                                <a href="/tags/Jenkins.html" class="label">Jenkins</a>
-                                            </span><span>
-                                                <a href="/tags/JET.html" class="label">JET</a>
-                                            </span><span>
-                                                <a href="/tags/Oracle.html" class="label">Oracle</a>
-                                            </span><span>
-                                                <a href="/tags/PL/SQL.html" class="label">PL/SQL</a>
-                                            </span><span>
-                                                <a href="/tags/Quality-Assurance.html" class="label">Quality-Assurance</a>
-                                            </span><span>
-                                                <a href="/tags/Reports.html" class="label">Reports</a>
-                                            </span><span>
-                                                <a href="/tags/Reports-12.html" class="label">Reports-12</a>
-                                            </span><span>
-                                                <a href="/tags/Static-Code-Analysis.html" class="label">Static-Code-Analysis</a>
-                                            </span><span>
-                                                <a href="/tags/Virtualization.html" class="label">Virtualization</a>
-                                            </span><span>
-                                                <a href="/tags/WebLogic.html" class="label">WebLogic</a>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div><hr/>
-                        </header><div class="row">
-                            <div class="columns">
-                                <div id="preamble">
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="../../images/doag_wegweiser.png" alt="doag wegweiser">
-</div>
-</div>
-<div class="paragraph">
-<p>Another DOAG is over and here is my summary.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="day_1">Day 1</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As my presentation is planned for noon I arrived this year on the evening before, so I could attend the early sessions on 8:30.</p>
-</div>
-<div class="sect2">
-<h3 id="sten_vesterli_apex_adf_or_abcs_a_real_life_application_built_in_3_tools"><a href="https://twitter.com/stenvesterli">Sten Vesterli</a>: APEX, ADF, or ABCS? A real-life application built in 3 tools</h3>
-<div class="paragraph">
-<p>He compares the development of a real application in APEX, ADF and ABCS. He don&#8217;t believe that ABCS is usable from end users and shows interesting problems with the date pickers in APEX and ADF.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="welcome_by_doag_and_oracle">Welcome by DOAG and Oracle</h3>
-<div class="paragraph">
-<p>Stefan Kinnen from DOAG welcomes the attendees and gives an short overview for the conference. The part of the Kenneth Johansen from Oracle was very dry in the contrast.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="keynote_neil_sholay_tracking_the_inevitable_how_to_plan_for_likely_and_disruptive_business_scenarios">Keynote: <a href="https://twitter.com/NeilSholay">Neil Sholay</a> - Tracking the Inevitable (How to plan for likely and disruptive business scenarios.)</h3>
-<div class="paragraph">
-<p>Quite the reverse the colleague of Kenneth Johansen. He present interesting views about the ongoing disruption in every business and how to prepare for this. Unfortunately the presentation is not available for download.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="markus_lohn_road_to_the_oracle_cloud"><a href="https://twitter.com/MarkusLohn">Markus Lohn</a>: Road to the (Oracle) Cloud</h3>
-<div class="paragraph">
-<p>The next title was pure understatement. As I know Markus expanded his talk to the details of a complex SOA &amp; ESB migration report, which most of the attendees sure does not expect. I think at least my boss not :-). I left this a little earlier as now I had to go to stage.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="torsten_kleiber_plsql_therefore_test_automation_for_those_who_bind_themselves_forever"><a href="https://twitter.com/develishdevelop">Torsten Kleiber</a>: PL/SQL: Therefore test automation for those who bind themselves forever!</h3>
-<div class="paragraph">
-<p>After several presentations about ADF and the related development life cycle I decided this year to speak about the selection process of a PL/SQL testing tool. Additional I <a href="../2016/DOAG2016+wrap+up.html">promised</a> to do some of this last year. The room was packed with round about 100 people, which I unfortunately never reached with ADF in the past. Despite some technical problems when starting and in the demo&#8217;s all went fine and I will thank again all my attendees. You find my presentation additional <a href="https://www.slideshare.net/tkleiber/plsql-drum-test-automatisiere-wer-sich-sich-ewig-bindet-doag-2017">here</a>.</p>
-</div>
-<div class="paragraph">
-<p>Because of some discussion with my attendees and lunch I skipped the next slot.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="sabine_heimsath_jan_karremans_dbadev_like_dog_and_cat_it_doesnt_have_to_be"><a href="https://twitter.com/oraesque">Sabine Heimsath</a>, <a href="https://twitter.com/johnnyq72">Jan Karremans</a>: #DBADev - Like dog and cat? It doesn&#8217;t have to be!</h3>
-<div class="paragraph">
-<p>This was a "lightweight" simulated battle between DBA and DB developers. I little bit oversimplified, but ok, unfortunately I seen none of our DBA&#8217;s in the audience.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="alexander_weber_cloud_service_heaven_and_hell_application_and_data_away"><a href="https://www.xing.com/companies/endlichohg">Alexander Weber</a>: Cloud service - heaven and hell (application and data away)</h3>
-<div class="paragraph">
-<p>This was report from a real world oracle database cloud customer with an APEX app. Maybe I will remind me to look at his experience, when we will ever go the cloud.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="bryn_llewellyn_ten_rules_for_doing_a_plsql_performance_experiment"><a href="http://twitter.com/BrynLite">Bryn Llewellyn</a>: Ten Rules for Doing a PL/SQL Performance Experiment</h3>
-<div class="paragraph">
-<p>Bryn shows how to best analyze and broke down a performance problem and the idea&#8217;s are often not restricted to PL/SQL. Lesson learned "Don&#8217;t use SET TIMING ON", as this includes additional network roundtrips.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="elmar_juergens_the_sow_does_not_get_fat_from_weighing_plsql_quality_analysis"><a href="https://twitter.com/ElmarJuergens">Elmar Juergens</a>: The sow does not get fat from weighing: PL/SQL quality analysis</h3>
-<div class="paragraph">
-<p>I see already a similar presentation from Elmar Juergens at <a href="Javaland+2017+wrap+up.html">Javaland 2017</a>. Same message this time. Additional he recommend to measure at first only the changed source code via a diffing algorithm to only identifying the changed lines. Most tools can&#8217;t do this. Will have a look at his own tool sometime. Additional our bosses want Elmar Juergens for a presentation for our developers. Will look if this will change their minds an they will look a least a bit more at the existing measured violation.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="day_2">Day 2</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="markus_klenke_better_more_beautiful_more_modern_barely_used_beads_in_adf"><a href="https://twitter.com/MarkusKlenke">Markus Klenke</a>: Better, more beautiful, more modern: barely used beads in ADF</h3>
-<div class="paragraph">
-<p>Markus likes ADF and show this. Fine that he is at our company site to help us with this.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="daniel_hillinger_tobias_deml_battle_database_virtualization"><a href="https://twitter.com/daniel8192">Daniel Hillinger</a>, <a href="https://twitter.com/TobiasDemlDBA">Tobias Deml</a>: Battle: Database Virtualization</h3>
-<div class="paragraph">
-<p>First at the beginning the decision was made, who of the both is pro and who is contra. Nice format to find the arguments for this. I&#8217;ve learned that all databases in the same virtualization farm has to be the same license and options, if you want not to pay to much. Additional it&#8217;s not usual to begin if you have fewer than 100 database instances.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="thorsten_wussow_let_the_orchestra_play_docker_orchestration_and_visualization"><a href="https://twitter.com/Thwussi">Thorsten Wussow</a>: Let the orchestra play - Docker orchestration and visualization</h3>
-<div class="paragraph">
-<p>Unfortunately, my expectations were disappointed here because most demos didn&#8217;t work. Not a good start to use the technology.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="dominic_weiser_continuous_integration_in_database_development"><a href="https://twitter.com/DmncWsr">Dominic Weiser</a>: Continuous integration in database development</h3>
-<div class="paragraph">
-<p>This was another nice database CI presentation which contains utPLSQL, and the presenter had enough time to show the CI part on Jenkins too. Similar you can find in my upload too, but I had not enough time in my talk to present.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="duncan_mills_web_components_the_oracle_way"><a href="https://twitter.com/DuncanMills">Duncan Mills</a>: Web Components, the Oracle Way</h3>
-<div class="paragraph">
-<p>Duncan describes how to define and use own components in Oracle Jet as professional as ever. Unfortunately I see that he has moved from ADF product management to JET architecture team now.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="michael_schulze_tools_for_diagnosing_weblogic_fmw_performance_problems"><a href="https://www.linkedin.com/in/michael-schulze-4b31a7153">Michael Schulze</a>: Tools for diagnosing Weblogic (FMW) performance problems</h3>
-<div class="paragraph">
-<p>A surprice for me - lot of new tools and information for my toolchain.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="markus_lohn_quo_vadis_agile_software_development"><a href="https://twitter.com/MarkusLohn">Markus Lohn</a>: Quo Vadis Agile Software Development</h3>
-<div class="paragraph">
-<p>Again Markus on the stage. He shows his Agile project experiences on several customers and I&#8217;m not sure if he mentioned us or not.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="bryn_llewellyn_guarding_your_data_behind_a_hard_shell_plsql_api_the_details"><a href="http://twitter.com/BrynLite">Bryn Llewellyn</a>: Guarding your Data Behind a Hard Shell PL/SQL API - the Details</h3>
-<div class="paragraph">
-<p>Bryn shows here a security model for how accessing the data via an secure API which contains of 4 schema layers: data, code, implementation, API. Unfortunately this is not really good handled by some of Oracle own development frameworks like ADF despite you develop only on the rest API on top. But definitely give it a try.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="roland_dürre_knud_johannsen_christian_botta_creative_communication"><a href="https://twitter.com/RolandDuerre">Roland Dürre</a>, <a href="https://twitter.com/KJohannsen">Knud Johannsen</a>, <a href="https://twitter.com/VisualBraindump">Christian Botta</a>: Creative communication</h3>
-<div class="paragraph">
-<p>The paintings was good but the rest was very esoteric presentation of philosophic messages. I think I was to inspired by the vita of mr. Botta when selected this slot, this was not what I had expected.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="awards">Awards</h3>
-<div class="paragraph">
-<p>Before the evening keynote <a href="https://www.doag.org/de/home/news/ulrike-schwinn-wird-doag-botschafterin-fuer-technologien/detail/">Ulrike Schwinn</a> was awarded, congratulations! Over my career I heard a lot of presentations from her, which was impressive, none where I&#8217;m not learned something new.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="keynote_karl_heinz_land_digital_darwinism_the_silent_attack_on_your_business_model_and_brand">Keynote - <a href="https://twitter.com/karlheinzland">Karl-Heinz Land</a>: Digital Darwinism: The Silent Attack on your Business Model and Brand</h3>
-<div class="paragraph">
-<p>Good and provocative but unfortunately in my opinion also with some mistakes. The law of moore does not <a href="http://www.giga.de/extra/ratgeber/specials/mooresches-gesetz-defintion-und-ende-von-moore-s-law-einfach-erklaert">apply anymore</a>, and this was his main explanation, why all will be automated in the near future. Yes automation will happen, but only where a real business case is. If you see that over 50% of internet traffic <a href="https://www.recode.net/2017/6/8/15757594/future-internet-traffic-watch-live-video-facebook-google-netflix">is eaten by video streaming</a> already, than I think this will hamper this process. Blockchain is not an oprating system, it is an distributed secure database. But it comes with cost, which actually is not paid, for example: <a href="https://t.co/27I0iozvCj">A Bitcoin transaction consumes more electricity than a one-person household per month</a>. And the verification of security need to many time. This has to be solved or Blockchain will only be used productive in edge case. Generally I&#8217;m more a fan of <a href="https://twitter.com/wilddueck">WildDueck</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="adf_community_meeting">ADF Community Meeting</h3>
-<div class="paragraph">
-<p>Unfortunately this was the greatest disappointment of the whole DOAG conference for me. <a href="../2016/DOAG2016+wrap+up.html">Once again</a> we discussed several things</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>ADF is not visible from Oracle because not actually marketed</p>
-</li>
-<li>
-<p>Errors in JDeveloper: the IDE for ADF and lack of support for this</p>
-</li>
-<li>
-<p>Provide an Virtual Machine for ADF development. This is ok for trying out, but will not supported in restricted environment at customers as at my company - a bank. At least this should not be an replacement of support for JDeveloper</p>
-</li>
-<li>
-<p>Should we open the community to other technologies like SOA, JET, ABCS an so on. My opinion: definitely no, as this is the final dead of ADF in the community.</p>
-</li>
-<li>
-<p>We see that some of the important product managers move to JET and does not support us anymore.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>In this atmosphere this year no common dinner happens after the meeting.</p>
-</div>
-<div class="paragraph">
-<p>After that I spent the time with some colleagues at the evening party. This year I see early clearing the rooms of the NCC. I don&#8217;t know if the starting Scope alliance party was the cause, but maybe they will do this next year on the first day instead?</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="day_3">Day 3</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="hans_eichenberger_dbaas_with_apex_5_1_frontend_and_oracle_multitenant_option">Hans Eichenberger: DBaaS with APEX 5.1 Frontend and Oracle Multitenant Option</h3>
-<div class="paragraph">
-<p>Will repeat my tweet here: The developer dreams come true - getting an inhouse sandbox database in minutes from the DBA! Whoops - unfortunately not my company!</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="adam_lukaszewski_boost_your_forms_development_with_git_and_forms_api_master"><a href="https://twitter.com/AdamLukaszewski">Adam Lukaszewski</a>: Boost your Forms Development with GIT and Forms API Master</h3>
-<div class="paragraph">
-<p>At the moment I define a future proof build and deployment process at my company for the loan platform. Part of this is security and mandatory review. So the presented Forms API Master tool is the perfect tool for handling the review and merge process of branches for our legacy Forms and Reports development. Will look how to implement this in Atlassian BitBucket.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="keynote_robert_schröder_the_difference_between_errors_and_failures_experiences_in_aviation">Keynote - Robert Schröder: The Difference between Errors and Failures - Experiences in Aviation</h3>
-<div class="paragraph">
-<p>Key message are for me: Accept that failures happen, learn from failures and change your processes accordingly. Define a clear language for your business.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="marcus_hammer_die_hürden_großer_adf_anwendungen"><a href="https://twitter.com/marcus_hamm3r">Marcus Hammer</a>: Die Hürden großer ADF-Anwendungen</h3>
-<div class="paragraph">
-<p>Not really new for us, but as we speak a lot with other colleagues from his company the solutions are mostly known for us - and for the whole ADF community in Germany. Interesting is the decision to implement batch processing in Java too, seems that it is problematic to get PL/SQL staff right now. I&#8217;m not understanding the decision to write an own framework for database deployment, but as this was not his own topic, he could not answer why Liquibase or Flyway does not fulfill their requirements.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="frank_munz_weblogic_12c_and_java_cloud_service"><a href="https://twitter.com/frankmunz">Frank Munz</a>: WebLogic 12c and Java Cloud Service</h3>
-<div class="paragraph">
-<p>I missed Franks sessions last years, but often look at his slides in the web. This was a very good entry in differentiating the different Oracle Cloud Services, which I could use for Java Development. Oracle Java Cloud Service is only one of it and should correctly named Oracle WebLogic Cloud Service. Great another naming dropping: Application Container Cloud should better by named as Language as a Service. Look at the slides to get the whole picture.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="alex_nuijten_regular_expressions_say_what"><a href="https://twitter.com/alexnuijten">Alex Nuijten</a>: Regular Expressions: Say What?</h3>
-<div class="paragraph">
-<p>The best example that you can learn ever something new from a good presenter, despite you think you know all about a topic and you have already read the presentation before. For an example: a regular expression looks already for the longest possible match, which could be the whole string instead of the searched pattern. Interesting too the connect by regexp_count for splitting a string into rows. And look at the standard patterns in dbms_redact before you write your own, if it is not there write it in your own package for reuse.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="frank_munzmicroservices_runtimes"><a href="https://twitter.com/frankmunz">Frank Munz</a>: Microservices Runtimes</h3>
-<div class="paragraph">
-<p>The second presentation of Frank I attend compares the actual available Runtimes on the market. But special interesting was the intro into micro services: are you sure you need this and do you know, what nobody tells you about latency and so on? Or do you know that accessing another micro service can need 100000 times more than accessing a functionality in the same monolith?</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="conclusion">Conclusion</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Again this year I attend colorful bouquet of presentations and again it pay&#8217;s off to look at the whole conference program and some abstracts and presentations before to minimize disappointments.</p>
-</div>
-<div class="paragraph">
-<p>Generally I attend to few development sessions, maybe because I use other technologies or know already the presented topic. But my feeling is that there are really fewer development presentations.</p>
-</div>
-<div class="paragraph">
-<p>Interesting is that finally many Development, Deployment, QA, TDD and CI/CD technologies used in other development languages find it&#8217;s way into classic Oracle development technologies like Oracle PL/SQL, Forms and Reports.</p>
-</div>
-<div class="paragraph">
-<p>For the event organization I see a little degradation of service this year, for example the quality of the food or the cleaning of toilets and rooms. And a no go: Missing water for presenters in some rooms!</p>
-</div>
-<div class="paragraph">
-<p>That&#8217;s it!</p>
-</div>
-</div>
-</div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div><div class="row"><div class="small-12 columns"><hr/>Older post are available in the <a href="/archive.html">archive</a></div></div>            
-        </div>
-<div class="row">
-            <div class="small-12 small-text-center">
-                <p class="muted credit">
-                    2014 - 2020 | Mixed with <a href="http://foundation.zurb.com/">Foundation v5.5.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a>
-                </p>
-            </div>
-        </div>        <script src="/js/vendor/jquery.js"></script>
-        <script src="/js/foundation.min.js"></script>
-        <script src="/js/vendor/prettify.js"></script>
-        <script>
-            $(document).foundation();
-            $(function() {
-               hljs.tabReplace = "  ";
-               hljs.initHighlighting();
-            });
-        </script>
+        </footer>
+
+        <!-- jQuery -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="vendor/bootstrap/js/bootstrap.min.js" ></script>
+
+        <!-- Theme JavaScript -->
+        <script src="js/clean-blog.min.js"></script>
+
+        
         
     </body>
+
 </html>

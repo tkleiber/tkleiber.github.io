@@ -1,98 +1,145 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://tkleiber.github.io/about.html</loc><lastmod>2011-12-13</lastmod>
+        <loc>https://tkleiber.github.io/about.html</loc>
+        <lastmod>2011-12-13</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2019/Agile+Oracle+Database+Modeling+and+Development+%28AgileOracleDatabase%29+-+I+m+a+speaker+at+DOAG2019.html</loc><lastmod>2019-11-18</lastmod>
+        <loc>https://tkleiber.github.io/blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html</loc>
+        <lastmod>2019-11-18</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html</loc><lastmod>2018-07-17</lastmod>
+        <loc>https://tkleiber.github.io/blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html</loc>
+        <lastmod>2018-07-17</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2017/DOAG2017+wrap+up.html</loc><lastmod>2017-12-01</lastmod>
+        <loc>https://tkleiber.github.io/blog/2017/DOAG2017+wrap+up.html</loc>
+        <lastmod>2017-12-01</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html</loc><lastmod>2017-08-30</lastmod>
+        <loc>https://tkleiber.github.io/blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html</loc>
+        <lastmod>2017-08-30</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html</loc><lastmod>2017-07-18</lastmod>
+        <loc>https://tkleiber.github.io/blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html</loc>
+        <lastmod>2017-07-18</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2017/Javaland+2017+wrap+up.html</loc><lastmod>2017-04-01</lastmod>
+        <loc>https://tkleiber.github.io/blog/2017/Javaland+2017+wrap+up.html</loc>
+        <lastmod>2017-04-01</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2017/DEVCAMP17+wrap+up.html</loc><lastmod>2017-02-09</lastmod>
+        <loc>https://tkleiber.github.io/blog/2017/DEVCAMP17+wrap+up.html</loc>
+        <lastmod>2017-02-09</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html</loc><lastmod>2016-12-07</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html</loc>
+        <lastmod>2016-12-07</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html</loc><lastmod>2016-11-25</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html</loc>
+        <lastmod>2016-11-25</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Fix+BEA-000394+Deadlock+detected+for+Weblogic+with+ADF+Applications+12.2.1.2.html</loc><lastmod>2016-11-24</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Fix+BEA-000394+Deadlock+detected+for+Weblogic+with+ADF+Applications+12.2.1.2.html</loc>
+        <lastmod>2016-11-24</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/DOAG2016+wrap+up.html</loc><lastmod>2016-11-17</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/DOAG2016+wrap+up.html</loc>
+        <lastmod>2016-11-17</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html</loc><lastmod>2016-09-06</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html</loc>
+        <lastmod>2016-09-06</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Set+all+WebLogic+log+levels+to+Inherit+via+WLST.html</loc><lastmod>2016-08-22</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Set+all+WebLogic+log+levels+to+Inherit+via+WLST.html</loc>
+        <lastmod>2016-08-22</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html</loc><lastmod>2016-08-19</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html</loc>
+        <lastmod>2016-08-19</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html</loc><lastmod>2016-08-13</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html</loc>
+        <lastmod>2016-08-13</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html</loc><lastmod>2016-08-12</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html</loc>
+        <lastmod>2016-08-12</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+The+idea.html</loc><lastmod>2016-08-11</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Virtual+Development+Server+The+idea.html</loc>
+        <lastmod>2016-08-11</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Oracle+TranslationHub+neither+supported+for+12c+Database+12c+Forms+Reports+or+64+bit.html</loc><lastmod>2016-03-16</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Oracle+TranslationHub+neither+supported+for+12c+Database+12c+Forms+Reports+or+64+bit.html</loc>
+        <lastmod>2016-03-16</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Javaland+2016+conference+day+2.html</loc><lastmod>2016-03-10</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Javaland+2016+conference+day+2.html</loc>
+        <lastmod>2016-03-10</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2016/Javaland+2016+conference+day+1.html</loc><lastmod>2016-03-09</lastmod>
+        <loc>https://tkleiber.github.io/blog/2016/Javaland+2016+conference+day+1.html</loc>
+        <lastmod>2016-03-09</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2015/SLES+shell+script+to+check+required+os+packages+according+to+documentation+before+starting+oracle+forms+and+reports+installation.html</loc><lastmod>2015-09-09</lastmod>
+        <loc>https://tkleiber.github.io/blog/2015/SLES+shell+script+to+check+required+os+packages+according+to+documentation+before+starting+oracle+forms+and+reports+installation.html</loc>
+        <lastmod>2015-09-09</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html</loc><lastmod>2015-07-21</lastmod>
+        <loc>https://tkleiber.github.io/blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html</loc>
+        <lastmod>2015-07-21</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2015/Fix+code+editor+save+actions+in+JDeveloper+12.1.3+keep+the+order+of+actions.html</loc><lastmod>2015-06-30</lastmod>
+        <loc>https://tkleiber.github.io/blog/2015/Fix+code+editor+save+actions+in+JDeveloper+12.1.3+keep+the+order+of+actions.html</loc>
+        <lastmod>2015-06-30</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2015/Fix+completion+insight+in+JDeveloper+12.1.3+show+return+type+again.html</loc><lastmod>2015-06-29</lastmod>
+        <loc>https://tkleiber.github.io/blog/2015/Fix+completion+insight+in+JDeveloper+12.1.3+show+return+type+again.html</loc>
+        <lastmod>2015-06-29</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html</loc><lastmod>2014-11-24</lastmod>
+        <loc>https://tkleiber.github.io/blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html</loc>
+        <lastmod>2014-11-24</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html</loc><lastmod>2014-11-19</lastmod>
+        <loc>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html</loc>
+        <lastmod>2014-11-19</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+%E2%80%93+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html</loc><lastmod>2014-11-17</lastmod>
+        <loc>https://tkleiber.github.io/blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html</loc>
+        <lastmod>2014-11-17</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html</loc><lastmod>2014-10-22</lastmod>
+        <loc>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html</loc>
+        <lastmod>2014-10-22</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html</loc><lastmod>2014-10-14</lastmod>
+        <loc>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html</loc>
+        <lastmod>2014-10-14</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+Series.html</loc><lastmod>2014-10-13</lastmod>
+        <loc>https://tkleiber.github.io/blog/2014/ADF+Architecture+Practice+Series.html</loc>
+        <lastmod>2014-10-13</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html</loc><lastmod>2014-08-01</lastmod>
+        <loc>https://tkleiber.github.io/blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html</loc>
+        <lastmod>2014-08-01</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2014/Find+problems+when+you+develop+-+using+XRebel+with+Oracle+ADF.html</loc><lastmod>2014-06-30</lastmod>
+        <loc>https://tkleiber.github.io/blog/2014/Find+problems+when+you+develop+-+using+XRebel+with+Oracle+ADF.html</loc>
+        <lastmod>2014-06-30</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html</loc><lastmod>2014-06-04</lastmod>
+        <loc>https://tkleiber.github.io/blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html</loc>
+        <lastmod>2014-06-04</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2014/Quality+Assurance+for+ADF+projects.html</loc><lastmod>2014-05-22</lastmod>
+        <loc>https://tkleiber.github.io/blog/2014/Quality+Assurance+for+ADF+projects.html</loc>
+        <lastmod>2014-05-22</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html</loc><lastmod>2013-09-20</lastmod>
+        <loc>https://tkleiber.github.io/blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html</loc>
+        <lastmod>2013-09-20</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2013/Have+released+PMD+Jdeveloper+Extension+5.0.5.html</loc><lastmod>2013-08-30</lastmod>
+        <loc>https://tkleiber.github.io/blog/2013/Have+released+PMD+Jdeveloper+Extension+5.0.5.html</loc>
+        <lastmod>2013-08-30</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html</loc><lastmod>2013-07-02</lastmod>
+        <loc>https://tkleiber.github.io/blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html</loc>
+        <lastmod>2013-07-02</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html</loc><lastmod>2013-06-26</lastmod>
+        <loc>https://tkleiber.github.io/blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html</loc>
+        <lastmod>2013-06-26</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2012/Fasten+your+Oracle+Forms+and+Reports+11g+Server+start+on+Unix+derivates.html</loc><lastmod>2012-12-21</lastmod>
+        <loc>https://tkleiber.github.io/blog/2012/Fasten+your+Oracle+Forms+and+Reports+11g+Server+start+on+Unix+derivates.html</loc>
+        <lastmod>2012-12-21</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html</loc><lastmod>2012-12-04</lastmod>
+        <loc>https://tkleiber.github.io/blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html</loc>
+        <lastmod>2012-12-04</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2012/Oracle+Reports+Designer+11g+64bit+on+Windows7+64bit+very+buggy+-+Use+Reports+32bit+instead.html</loc><lastmod>2012-07-06</lastmod>
+        <loc>https://tkleiber.github.io/blog/2012/Oracle+Reports+Designer+11g+64bit+on+Windows7+64bit+very+buggy+-+Use+Reports+32bit+instead.html</loc>
+        <lastmod>2012-07-06</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2012/TranslationHub+11g+is+only+available+as+32+bit+-+requires+Forms+%26+Reports+11g+too+in+32+bit+for+Development.html</loc><lastmod>2012-06-07</lastmod>
+        <loc>https://tkleiber.github.io/blog/2012/TranslationHub+11g+is+only+available+as+32+bit+-+requires+Forms+and+Reports+11g+too+in+32+bit+for+Development.html</loc>
+        <lastmod>2012-06-07</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2012/Have+released+PMD+Jdeveloper+Extension+4.3.html</loc><lastmod>2012-03-12</lastmod>
+        <loc>https://tkleiber.github.io/blog/2012/Have+released+PMD+Jdeveloper+Extension+4.3.html</loc>
+        <lastmod>2012-03-12</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</loc><lastmod>2012-01-22</lastmod>
+        <loc>https://tkleiber.github.io/blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</loc>
+        <lastmod>2012-01-22</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</loc><lastmod>2011-12-27</lastmod>
+        <loc>https://tkleiber.github.io/blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</loc>
+        <lastmod>2011-12-27</lastmod>
     </url><url>
-        <loc>https://tkleiber.github.io/blog/2011/Hello+world.html</loc><lastmod>2011-12-13</lastmod>
+        <loc>https://tkleiber.github.io/blog/2011/Hello+world.html</loc>
+        <lastmod>2011-12-13</lastmod>
     </url>
 </urlset>
