@@ -192,13 +192,14 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading h1,
+  .intro-header .post-heading h1 ,
   .intro-header .page-heading h1 {
     font-size: 80px;
   }
 }
-.intro-header .site-heading h1 { font-family:'Lato', sans-serif; font-weight:300}
-
-.intro-header .post-heading h1 {
+.intro-header .site-heading h1 ,
+.intro-header .post-heading h1 ,
+.intro-header .page-heading h1 {
   font-size: 35px;
 }
 .intro-header .post-heading .subheading,
@@ -222,9 +223,6 @@ hr.small {
   color: white;
 }
 @media only screen and (min-width: 768px) {
-  .intro-header .post-heading h1 {
-    font-size: 55px;
-  }
   .intro-header .post-heading .subheading {
     font-size: 30px;
   }
