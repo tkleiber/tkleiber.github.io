@@ -2,31 +2,38 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-    <head>
+<head>
+
         <meta charset="utf-8">
-        <title>As Much As Possible As Code (AMAPAC)</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Try to automate your IT!">
         <meta name="author" content="Torsten Kleiber">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>As Much As Possible As Code (AMAPAC)</title>
+
         <meta name='robots' content='index, follow'>
         <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
         <meta name="generator" content="JBake">
         
         <!--Facebook Card-->
-		<meta property="og:type" content="article" />
-		<meta property="og:title"  content="As Much As Possible As Code (AMAPAC)" />
-		<meta property="og:description" content="Try to automate your IT!"/>
-		<meta property="og:image" content="https://www.amapac.io//img/amapac_share_card.png" />
+    		<meta property="og:type" content="article" />
+		    <meta property="og:title"  content="As Much As Possible As Code (AMAPAC)" />
+		    <meta property="og:description" content="Try to automate your IT!"/>
+		    <meta property="og:image" content="https://www.amapac.io/img/amapac_share_card.png" />
         
         <!--Twitter card -->
         
-        <meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="As Much As Possible As Code (AMAPAC)">
-		<meta name="twitter:creator" content="@develishdevelop">
-		<meta name="twitter:description" content="Try to automate your IT!">
-		<meta name="twitter:image" content="https://www.amapac.io//img/amapac_share_card.png">
-		
-        <!-- Bootstrap Core CSS -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="As Much As Possible As Code (AMAPAC)">
+		        <meta name="twitter:creator" content="@develishdevelop">
+		        <meta name="twitter:description" content="Try to automate your IT!">
+		        <meta name="twitter:image" content="https://www.amapac.io/img/amapac_share_card.png">
+		    
+
+        <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- highlightjs Code Formatter -->
@@ -34,15 +41,17 @@
         <script src="../vendor/highlightjs//highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
-        <!-- Theme CSS -->
-        <link href="../css/asciidoctor.css" rel="stylesheet">
-        <link href="../css/clean-blog.css" rel="stylesheet">
         <!-- Custom Fonts -->
-        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Lato:300&amp;text=Continous-Integration'
-           rel='stylesheet' type='text/css'>
+              rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- Custom styles for this template -->
+        <link href="../css/asciidoctor.css" rel="stylesheet">
+        <link href="../css/clean-blog.min.css" rel="stylesheet">
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -53,335 +62,328 @@
         <link rel="shortcut icon" href="../favicon.png"/>
     </head>
 
-    <body>
+<body>
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        Menu <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="../index.html">As Much As Possible As Code (AMAPAC)</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">As Much As Possible As Code (AMAPAC)</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <!--ul class="navbar-nav ml-auto" th:remove="all-but-first"-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
                             <a href="../about.html">About</a>
                         </li>
-                        
-                        
-                        
+                        <!--li class="nav-item">
+                            <a class="nav-link" href="tags.html">Tags</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="archive.html">Archive</a>
+                        </li-->
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container -->
         </nav>
 
-        <!-- Page Header -->
-        <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <div class="site-heading">
-                            <h1>Continous-Integration</h1>
-                            <hr class="small" />
-                            <span class="subheading">tagged posts</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Continous-Integration</h1>
+            <span class="subheading">tagged posts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-        <!-- Main Content -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html">
-                                <h2 class="post-title">&quot;Regulatorics: Offside is when the referee whistles&quot; - I am a speaker at DOAG2018</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>July 17, 2018</span>
-                                <span> Tags: <span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/Atlassian.html" class="" >Atlassian</a></span><span> <a   href="../tags/Bitbucket.html" class="" >Bitbucket</a></span><span> <a   href="../tags/Branching.html" class="" >Branching</a></span><span> <a   href="../tags/Build.html" class="" >Build</a></span><span> <a   href="../tags/Commit-Test.html" class="" >Commit-Test</a></span><span> <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="../tags/Git.html" class="" >Git</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/JIRA.html" class="" >JIRA</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/Pipelines.html" class="" >Pipelines</a></span><span> <a   href="../tags/SOA.html" class="" >SOA</a></span><span> <a   href="../tags/SOA-12.html" class="" >SOA-12</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span></span></p>
-                            <p>Today my presentation is confirmed: "Regulatorics: Offside is when the referee whistles". Maybe the German title will be better understood: "Regulatorik: Abseits ist, wenn der Schiedsrichter pfeift".</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2017/DOAG2017+wrap+up.html">
-                                <h2 class="post-title">DOAG2017 wrap up</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>December 01, 2017</span>
-                                <span> Tags: <span> <a   href="../tags/ABCS.html" class="" >ABCS</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/APEX.html" class="" >APEX</a></span><span> <a   href="../tags/Bitcoin.html" class="" >Bitcoin</a></span><span> <a   href="../tags/Blockchain.html" class="" >Blockchain</a></span><span> <a   href="../tags/Cloud.html" class="" >Cloud</a></span><span> <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/DBADev.html" class="" >DBADev</a></span><span> <a   href="../tags/DevOps.html" class="" >DevOps</a></span><span> <a   href="../tags/Disruption.html" class="" >Disruption</a></span><span> <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/Forms.html" class="" >Forms</a></span><span> <a   href="../tags/Forms-12.html" class="" >Forms-12</a></span><span> <a   href="../tags/Fusion-Middleware.html" class="" >Fusion-Middleware</a></span><span> <a   href="../tags/Java.html" class="" >Java</a></span><span> <a   href="../tags/JavaScript.html" class="" >JavaScript</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/JET.html" class="" >JET</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/PL/SQL.html" class="" >PL/SQL</a></span><span> <a   href="../tags/Quality-Assurance.html" class="" >Quality-Assurance</a></span><span> <a   href="../tags/Reports.html" class="" >Reports</a></span><span> <a   href="../tags/Reports-12.html" class="" >Reports-12</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="../tags/Virtualization.html" class="" >Virtualization</a></span><span> <a   href="../tags/WebLogic.html" class="" >WebLogic</a></span></span></p>
-                            <p>Another DOAG is over and here is my summary.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html">
-                                <h2 class="post-title">&quot;PL/SQL: Therefore, whoever binds forever: automate your tests&quot; - I am a speaker at DOAG2017</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>July 18, 2017</span>
-                                <span> Tags: <span> <a   href="../tags/Branching.html" class="" >Branching</a></span><span> <a   href="../tags/Build.html" class="" >Build</a></span><span> <a   href="../tags/Commit-Test.html" class="" >Commit-Test</a></span><span> <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Database.html" class="" >Database</a></span><span> <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/PL/SQL.html" class="" >PL/SQL</a></span><span> <a   href="../tags/SQL-Developer.html" class="" >SQL-Developer</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="../tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
-                            <p>Today my presentation is confirmed: "Therefore, whoever binds forever: automate your tests". Maybe the German title will be the better understood: "PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!"</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2017/Javaland+2017+wrap+up.html">
-                                <h2 class="post-title">Javaland 2017 wrap up</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>April 01, 2017</span>
-                                <span> Tags: <span> <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Java.html" class="" >Java</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
-                            <p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <div class="post-preview"  >
+            <a href="../blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html">
+              <h2 class="post-title">&quot;Regulatorics: Offside is when the referee whistles&quot; - I am a speaker at DOAG2018</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>July 17, 2018</span>
+              <span> Tags: <span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/Atlassian.html" class="" >Atlassian</a></span><span> <a   href="../tags/Bitbucket.html" class="" >Bitbucket</a></span><span> <a   href="../tags/Branching.html" class="" >Branching</a></span><span> <a   href="../tags/Build.html" class="" >Build</a></span><span> <a   href="../tags/Commit-Test.html" class="" >Commit-Test</a></span><span> <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="../tags/Git.html" class="" >Git</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/JIRA.html" class="" >JIRA</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/Pipelines.html" class="" >Pipelines</a></span><span> <a   href="../tags/SOA.html" class="" >SOA</a></span><span> <a   href="../tags/SOA-12.html" class="" >SOA-12</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span></span></p>
+            <p>Today my presentation is confirmed: "Regulatorics: Offside is when the referee whistles". Maybe the German title will be better understood: "Regulatorik: Abseits ist, wenn der Schiedsrichter pfeift".</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2017/DOAG2017+wrap+up.html">
+              <h2 class="post-title">DOAG2017 wrap up</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>December 01, 2017</span>
+              <span> Tags: <span> <a   href="../tags/ABCS.html" class="" >ABCS</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/APEX.html" class="" >APEX</a></span><span> <a   href="../tags/Bitcoin.html" class="" >Bitcoin</a></span><span> <a   href="../tags/Blockchain.html" class="" >Blockchain</a></span><span> <a   href="../tags/Cloud.html" class="" >Cloud</a></span><span> <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/DBADev.html" class="" >DBADev</a></span><span> <a   href="../tags/DevOps.html" class="" >DevOps</a></span><span> <a   href="../tags/Disruption.html" class="" >Disruption</a></span><span> <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/Forms.html" class="" >Forms</a></span><span> <a   href="../tags/Forms-12.html" class="" >Forms-12</a></span><span> <a   href="../tags/Fusion-Middleware.html" class="" >Fusion-Middleware</a></span><span> <a   href="../tags/Java.html" class="" >Java</a></span><span> <a   href="../tags/JavaScript.html" class="" >JavaScript</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/JET.html" class="" >JET</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/PL/SQL.html" class="" >PL/SQL</a></span><span> <a   href="../tags/Quality-Assurance.html" class="" >Quality-Assurance</a></span><span> <a   href="../tags/Reports.html" class="" >Reports</a></span><span> <a   href="../tags/Reports-12.html" class="" >Reports-12</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="../tags/Virtualization.html" class="" >Virtualization</a></span><span> <a   href="../tags/WebLogic.html" class="" >WebLogic</a></span></span></p>
+            <p>Another DOAG is over and here is my summary.</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html">
+              <h2 class="post-title">&quot;PL/SQL: Therefore, whoever binds forever: automate your tests&quot; - I am a speaker at DOAG2017</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>July 18, 2017</span>
+              <span> Tags: <span> <a   href="../tags/Branching.html" class="" >Branching</a></span><span> <a   href="../tags/Build.html" class="" >Build</a></span><span> <a   href="../tags/Commit-Test.html" class="" >Commit-Test</a></span><span> <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Database.html" class="" >Database</a></span><span> <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/PL/SQL.html" class="" >PL/SQL</a></span><span> <a   href="../tags/SQL-Developer.html" class="" >SQL-Developer</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="../tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
+            <p>Today my presentation is confirmed: "Therefore, whoever binds forever: automate your tests". Maybe the German title will be the better understood: "PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!"</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2017/Javaland+2017+wrap+up.html">
+              <h2 class="post-title">Javaland 2017 wrap up</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>April 01, 2017</span>
+              <span> Tags: <span> <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Java.html" class="" >Java</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
+            <p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
 It was not easy this year to concentrate on the sessions because of the hottest march of the last 100 years. But the quality of the sessions beats the weather. Maybe again my invest in reading the abstracts and filter the sessions before the conference has payed off.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2017/DEVCAMP17+wrap+up.html">
-                                <h2 class="post-title">DEVCAMP17 wrap up</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>February 09, 2017</span>
-                                <span> Tags: <span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Forms.html" class="" >Forms</a></span><span> <a   href="../tags/Java.html" class="" >Java</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/PL/SQL.html" class="" >PL/SQL</a></span><span> <a   href="../tags/Report.html" class="" >Report</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span></span></p>
-                            <p>Yesterday I attend the annual <a href="https://en.wikipedia.org/wiki/BarCamp">barcamp</a> <a href="https://devcamp.doag.org">DEVCAMP</a> of the <a href="http://www.doag.org">DOAG</a> development community. There are mostly developers with SQL, PL/SQL, Forms &amp; Reports, ADF, JET background and some Java, Javascript and APEX developers too. And not to forget: 1 dba and some managers. Here is my summary.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html">
-                                <h2 class="post-title">Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>November 25, 2016</span>
-                                <span> Tags: <span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
-                            <p>For automation of all of my processes I need Jenkins in my development server.
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2017/DEVCAMP17+wrap+up.html">
+              <h2 class="post-title">DEVCAMP17 wrap up</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>February 09, 2017</span>
+              <span> Tags: <span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Forms.html" class="" >Forms</a></span><span> <a   href="../tags/Java.html" class="" >Java</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/PL/SQL.html" class="" >PL/SQL</a></span><span> <a   href="../tags/Report.html" class="" >Report</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span></span></p>
+            <p>Yesterday I attend the annual <a href="https://en.wikipedia.org/wiki/BarCamp">barcamp</a> <a href="https://devcamp.doag.org">DEVCAMP</a> of the <a href="http://www.doag.org">DOAG</a> development community. There are mostly developers with SQL, PL/SQL, Forms &amp; Reports, ADF, JET background and some Java, Javascript and APEX developers too. And not to forget: 1 dba and some managers. Here is my summary.</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html">
+              <h2 class="post-title">Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>November 25, 2016</span>
+              <span> Tags: <span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
+            <p>For automation of all of my processes I need Jenkins in my development server.
 First I had installed Jenkins as Docker container via Vagrant Docker provider.
 But with this architecture it was very complicated to create docker images and run Docker containers on the Docker host, in this case my Vagrant Virtualbox.
 So for simplification I have decided to install Jenkins with the provisioning of the Vagrant Virtualbox via a shell provider in my Vagrantfile.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2016/DOAG2016+wrap+up.html">
-                                <h2 class="post-title">DOAG2016 wrap up</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>November 17, 2016</span>
-                                <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/Forms-Forms-12.html" class="" >Forms-Forms-12</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/Hudson.html" class="" >Hudson</a></span><span> <a   href="../tags/Java.html" class="" >Java</a></span><span> <a   href="../tags/JavaScript-JavaScript.html" class="" >JavaScript-JavaScript</a></span><span> <a   href="../tags/JET.html" class="" >JET</a></span><span> <a   href="../tags/Load-Test.html" class="" >Load-Test</a></span><span> <a   href="../tags/Performance.html" class="" >Performance</a></span><span> <a   href="../tags/Reports.html" class="" >Reports</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
-                            <p>Another DOAG is over and here is my summary.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html">
-                                <h2 class="post-title">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>September 06, 2016</span>
-                                <span> Tags: <span> <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/XE.html" class="" >XE</a></span><span> <a   href="../tags/XE-11.html" class="" >XE-11</a></span></span></p>
-                            <p>For later creation of containers as needed in the deployment process we have first to build docker images whenever we do not find suitable one in docker hub.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html">
-                                <h2 class="post-title">Virtual Development Server: Add swapfile to VirtualBox as requirement for installing Oracle or build Oracle docker images</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>August 19, 2016</span>
-                                <span> Tags: <span> <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span></span></p>
-                            <p>As I want later build Oracle docker images, some of this need a swapfile.
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2016/DOAG2016+wrap+up.html">
+              <h2 class="post-title">DOAG2016 wrap up</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>November 17, 2016</span>
+              <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/Forms-Forms-12.html" class="" >Forms-Forms-12</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="../tags/Hudson.html" class="" >Hudson</a></span><span> <a   href="../tags/Java.html" class="" >Java</a></span><span> <a   href="../tags/JavaScript-JavaScript.html" class="" >JavaScript-JavaScript</a></span><span> <a   href="../tags/JET.html" class="" >JET</a></span><span> <a   href="../tags/Load-Test.html" class="" >Load-Test</a></span><span> <a   href="../tags/Performance.html" class="" >Performance</a></span><span> <a   href="../tags/Reports.html" class="" >Reports</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
+            <p>Another DOAG is over and here is my summary.</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html">
+              <h2 class="post-title">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>September 06, 2016</span>
+              <span> Tags: <span> <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/XE.html" class="" >XE</a></span><span> <a   href="../tags/XE-11.html" class="" >XE-11</a></span></span></p>
+            <p>For later creation of containers as needed in the deployment process we have first to build docker images whenever we do not find suitable one in docker hub.</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html">
+              <h2 class="post-title">Virtual Development Server: Add swapfile to VirtualBox as requirement for installing Oracle or build Oracle docker images</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>August 19, 2016</span>
+              <span> Tags: <span> <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span></span></p>
+            <p>As I want later build Oracle docker images, some of this need a swapfile.
 Per default my used <a href="http://www.vagrantbox.es">Vagrantbox</a> does not have one, so later steps will fail.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html">
-                                <h2 class="post-title">Virtual Development Server: Add enough ram and disk space to VirtualBox for further server components</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>August 13, 2016</span>
-                                <span> Tags: <span> <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span> <a   href="../tags/VDI.html" class="" >VDI</a></span><span> <a   href="../tags/VDMK.html" class="" >VDMK</a></span></span></p>
-                            <p>As I want later build docker images and run docker containers I have to provide enough ram and disk space for this.
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html">
+              <h2 class="post-title">Virtual Development Server: Add enough ram and disk space to VirtualBox for further server components</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>August 13, 2016</span>
+              <span> Tags: <span> <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span> <a   href="../tags/VDI.html" class="" >VDI</a></span><span> <a   href="../tags/VDMK.html" class="" >VDMK</a></span></span></p>
+            <p>As I want later build docker images and run docker containers I have to provide enough ram and disk space for this.
 Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk disks, these have a static size and are to small for my purposes.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html">
-                                <h2 class="post-title">Virtual Development Server: Creating Virtualbox machine including docker containers with Vagrant</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>August 12, 2016</span>
-                                <span> Tags: <span> <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
-                            <p>As I want to decouple my development server from my computer as much as possible I want to create first a virtual machine with linux.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2016/Javaland+2016+conference+day+2.html">
-                                <h2 class="post-title">Javaland 2016 conference day 2</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>March 10, 2016</span>
-                                <span> Tags: <span> <a   href="../tags/Javaland.html" class="" >Javaland</a></span><span> <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="../tags/Java.html" class="" >Java</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Database.html" class="" >Database</a></span><span> <a   href="../tags/Database-Migration.html" class="" >Database-Migration</a></span><span> <a   href="../tags/Flyway.html" class="" >Flyway</a></span><span> <a   href="../tags/Liquibase.html" class="" >Liquibase</a></span><span> <a   href="../tags/Feature-Toggles.html" class="" >Feature-Toggles</a></span><span> <a   href="../tags/Security.html" class="" >Security</a></span><span> <a   href="../tags/User-Experience.html" class="" >User-Experience</a></span><span> <a   href="../tags/UX.html" class="" >UX</a></span></span></p>
-                            <p>This was my second day on Javaland 2016.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html">
-                                <h2 class="post-title">&quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; - I am a speaker at DOAG2015</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>July 21, 2015</span>
-                                <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="../tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="../tags/Build.html" class="" >Build</a></span><span> <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="../tags/Branching.html" class="" >Branching</a></span><span> <a   href="../tags/Versioning.html" class="" >Versioning</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span></span></p>
-                            <p>Today my presentation is confirmed: "Bob the Builder: Build/Deploy of ADF enterprise applications".</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html">
-                                <h2 class="post-title">Slides for my german presentation &quot;Quality Assurance for ADF projects&quot; available</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>June 04, 2014</span>
-                                <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="../tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/Checkstyle.html" class="" >Checkstyle</a></span><span> <a   href="../tags/FindBugs.html" class="" >FindBugs</a></span><span> <a   href="../tags/PMD.html" class="" >PMD</a></span><span> <a   href="../tags/JUnit.html" class="" >JUnit</a></span><span> <a   href="../tags/Mockito.html" class="" >Mockito</a></span><span> <a   href="../tags/PowerMock.html" class="" >PowerMock</a></span><span> <a   href="../tags/JaCoCo.html" class="" >JaCoCo</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="../tags/Acceptance-Test.html" class="" >Acceptance-Test</a></span><span> <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span></span></p>
-                            <p>I have presented today on DOAG Development 2014 in Dusseldorf. For all non DOAG members - you can find the german presentation on <a href="http://www.slideshare.net/tkleiber/qualittssicherung-in-adf-projekten-der-ikb-deutschen-industriebank">Slideshare</a> too.</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2014/Quality+Assurance+for+ADF+projects.html">
-                                <h2 class="post-title">Quality Assurance for ADF projects</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>May 22, 2014</span>
-                                <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="../tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/Checkstyle.html" class="" >Checkstyle</a></span><span> <a   href="../tags/FindBugs.html" class="" >FindBugs</a></span><span> <a   href="../tags/PMD.html" class="" >PMD</a></span><span> <a   href="../tags/JUnit.html" class="" >JUnit</a></span><span> <a   href="../tags/Mockito.html" class="" >Mockito</a></span><span> <a   href="../tags/PowerMock.html" class="" >PowerMock</a></span><span> <a   href="../tags/JaCoCo.html" class="" >JaCoCo</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="../tags/Acceptance-Test.html" class="" >Acceptance-Test</a></span><span> <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span></span></p>
-                            <p>If you speak german and you are interested in quality assurance for your ADF projects you should come and attend my presentation at <a href="http://www.doag.org/home/development.html">DOAG Development</a> on 06/04/2014 in Duesseldorf.</p>
-                        </div>
-                        <hr/>
-                    
-                    
-                </div>
-            </div>
-        </div>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html">
+              <h2 class="post-title">Virtual Development Server: Creating Virtualbox machine including docker containers with Vagrant</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>August 12, 2016</span>
+              <span> Tags: <span> <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Docker.html" class="" >Docker</a></span><span> <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="../tags/Linux.html" class="" >Linux</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
+            <p>As I want to decouple my development server from my computer as much as possible I want to create first a virtual machine with linux.</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2016/Javaland+2016+conference+day+2.html">
+              <h2 class="post-title">Javaland 2016 conference day 2</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>March 10, 2016</span>
+              <span> Tags: <span> <a   href="../tags/Javaland.html" class="" >Javaland</a></span><span> <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="../tags/Java.html" class="" >Java</a></span><span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Database.html" class="" >Database</a></span><span> <a   href="../tags/Database-Migration.html" class="" >Database-Migration</a></span><span> <a   href="../tags/Flyway.html" class="" >Flyway</a></span><span> <a   href="../tags/Liquibase.html" class="" >Liquibase</a></span><span> <a   href="../tags/Feature-Toggles.html" class="" >Feature-Toggles</a></span><span> <a   href="../tags/Security.html" class="" >Security</a></span><span> <a   href="../tags/User-Experience.html" class="" >User-Experience</a></span><span> <a   href="../tags/UX.html" class="" >UX</a></span></span></p>
+            <p>This was my second day on Javaland 2016.</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html">
+              <h2 class="post-title">&quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; - I am a speaker at DOAG2015</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>July 21, 2015</span>
+              <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="../tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="../tags/Build.html" class="" >Build</a></span><span> <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="../tags/Branching.html" class="" >Branching</a></span><span> <a   href="../tags/Versioning.html" class="" >Versioning</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span></span></p>
+            <p>Today my presentation is confirmed: "Bob the Builder: Build/Deploy of ADF enterprise applications".</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html">
+              <h2 class="post-title">Slides for my german presentation &quot;Quality Assurance for ADF projects&quot; available</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>June 04, 2014</span>
+              <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="../tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/Checkstyle.html" class="" >Checkstyle</a></span><span> <a   href="../tags/FindBugs.html" class="" >FindBugs</a></span><span> <a   href="../tags/PMD.html" class="" >PMD</a></span><span> <a   href="../tags/JUnit.html" class="" >JUnit</a></span><span> <a   href="../tags/Mockito.html" class="" >Mockito</a></span><span> <a   href="../tags/PowerMock.html" class="" >PowerMock</a></span><span> <a   href="../tags/JaCoCo.html" class="" >JaCoCo</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="../tags/Acceptance-Test.html" class="" >Acceptance-Test</a></span><span> <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span></span></p>
+            <p>I have presented today on DOAG Development 2014 in Dusseldorf. For all non DOAG members - you can find the german presentation on <a href="http://www.slideshare.net/tkleiber/qualittssicherung-in-adf-projekten-der-ikb-deutschen-industriebank">Slideshare</a> too.</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2014/Quality+Assurance+for+ADF+projects.html">
+              <h2 class="post-title">Quality Assurance for ADF projects</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>May 22, 2014</span>
+              <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="../tags/JDeveloper-12.html" class="" >JDeveloper-12</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="../tags/ADF-12.html" class="" >ADF-12</a></span><span> <a   href="../tags/Checkstyle.html" class="" >Checkstyle</a></span><span> <a   href="../tags/FindBugs.html" class="" >FindBugs</a></span><span> <a   href="../tags/PMD.html" class="" >PMD</a></span><span> <a   href="../tags/JUnit.html" class="" >JUnit</a></span><span> <a   href="../tags/Mockito.html" class="" >Mockito</a></span><span> <a   href="../tags/PowerMock.html" class="" >PowerMock</a></span><span> <a   href="../tags/JaCoCo.html" class="" >JaCoCo</a></span><span> <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="../tags/Acceptance-Test.html" class="" >Acceptance-Test</a></span><span> <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span></span></p>
+            <p>If you speak german and you are interested in quality assurance for your ADF projects you should come and attend my presentation at <a href="http://www.doag.org/home/development.html">DOAG Development</a> on 06/04/2014 in Duesseldorf.</p>
+          </div>
+          <hr>
+        
+        
+      </div>
+    </div>
+  </div>
 
-        <!-- Footer -->
-        <footer>
+  <!-- Footer -->
+  <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="col-lg-8 col-md-10 mx-auto">
                         <ul class="list-inline text-center"> 
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="../feed.xml" title="Subscribe to RSS feed">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-rss fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="https://twitter.com/develishdevelop">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="https://github.com/tkleiber">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="https://linkedin.com/in/kleiber/">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="https://www.xing.com/profile/Torsten_Kleiber/">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="https://www.slideshare.net/tkleiber/">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-slideshare fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-slideshare fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
                         </ul>
-                        <p class="copyright text-muted">&copy;  <span>Torsten Kleiber</span> <span>2020</span> | Clean Blog theme by <a href="https://startbootstrap.com/template-overviews/clean-blog/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.4</span></a></p>
+                        <p class="copyright text-muted">&copy;  <span>Torsten Kleiber</span> <span>2020</span> | <a href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.4</span></a></p>
                     </div>
                 </div>
             </div>
         </footer>
 
-        <!-- jQuery -->
-        <script src="../vendor/jquery/jquery.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" ></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="../vendor/bootstrap/js/bootstrap.min.js" ></script>
+  <!-- Custom scripts for this template -->
+  <script src="../js/clean-blog.min.js"></script>
 
-        <!-- Theme JavaScript -->
-        <script src="../js/clean-blog.min.js"></script>
+  
 
-        
-    </body>
+</body>
 
 </html>

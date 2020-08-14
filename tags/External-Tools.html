@@ -2,31 +2,38 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-    <head>
+<head>
+
         <meta charset="utf-8">
-        <title>As Much As Possible As Code (AMAPAC)</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Try to automate your IT!">
         <meta name="author" content="Torsten Kleiber">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>As Much As Possible As Code (AMAPAC)</title>
+
         <meta name='robots' content='index, follow'>
         <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
         <meta name="generator" content="JBake">
         
         <!--Facebook Card-->
-		<meta property="og:type" content="article" />
-		<meta property="og:title"  content="As Much As Possible As Code (AMAPAC)" />
-		<meta property="og:description" content="Try to automate your IT!"/>
-		<meta property="og:image" content="https://www.amapac.io//img/amapac_share_card.png" />
+    		<meta property="og:type" content="article" />
+		    <meta property="og:title"  content="As Much As Possible As Code (AMAPAC)" />
+		    <meta property="og:description" content="Try to automate your IT!"/>
+		    <meta property="og:image" content="https://www.amapac.io/img/amapac_share_card.png" />
         
         <!--Twitter card -->
         
-        <meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="As Much As Possible As Code (AMAPAC)">
-		<meta name="twitter:creator" content="@develishdevelop">
-		<meta name="twitter:description" content="Try to automate your IT!">
-		<meta name="twitter:image" content="https://www.amapac.io//img/amapac_share_card.png">
-		
-        <!-- Bootstrap Core CSS -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="As Much As Possible As Code (AMAPAC)">
+		        <meta name="twitter:creator" content="@develishdevelop">
+		        <meta name="twitter:description" content="Try to automate your IT!">
+		        <meta name="twitter:image" content="https://www.amapac.io/img/amapac_share_card.png">
+		    
+
+        <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- highlightjs Code Formatter -->
@@ -34,15 +41,17 @@
         <script src="../vendor/highlightjs//highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
-        <!-- Theme CSS -->
-        <link href="../css/asciidoctor.css" rel="stylesheet">
-        <link href="../css/clean-blog.css" rel="stylesheet">
         <!-- Custom Fonts -->
-        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Lato:300&amp;text=External-Tools'
-           rel='stylesheet' type='text/css'>
+              rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- Custom styles for this template -->
+        <link href="../css/asciidoctor.css" rel="stylesheet">
+        <link href="../css/clean-blog.min.css" rel="stylesheet">
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -53,175 +62,168 @@
         <link rel="shortcut icon" href="../favicon.png"/>
     </head>
 
-    <body>
+<body>
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        Menu <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="../index.html">As Much As Possible As Code (AMAPAC)</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">As Much As Possible As Code (AMAPAC)</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <!--ul class="navbar-nav ml-auto" th:remove="all-but-first"-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
                             <a href="../about.html">About</a>
                         </li>
-                        
-                        
-                        
+                        <!--li class="nav-item">
+                            <a class="nav-link" href="tags.html">Tags</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="archive.html">Archive</a>
+                        </li-->
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container -->
         </nav>
 
-        <!-- Page Header -->
-        <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <div class="site-heading">
-                            <h1>External-Tools</h1>
-                            <hr class="small" />
-                            <span class="subheading">tagged posts</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>External-Tools</h1>
+            <span class="subheading">tagged posts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-        <!-- Main Content -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html">
-                                <h2 class="post-title">Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>September 20, 2013</span>
-                                <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.2.html" class="" >JDeveloper-11.2</a></span><span> <a   href="../tags/ADF-Mobile.html" class="" >ADF-Mobile</a></span><span> <a   href="../tags/Android.html" class="" >Android</a></span><span> <a   href="../tags/External-Tools.html" class="" >External-Tools</a></span></span></p>
-                            <p>If you tired from the android emulator speed you may have read Chris Muir&#8217;s article <a href="https://blogs.oracle.com/onesizedoesntfitall/entry/adf_mobile_avoiding_the_android">ADF Mobile: Avoiding the Android Emulator with AndroVM</a>.
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <div class="post-preview"  >
+            <a href="../blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html">
+              <h2 class="post-title">Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>September 20, 2013</span>
+              <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.2.html" class="" >JDeveloper-11.2</a></span><span> <a   href="../tags/ADF-Mobile.html" class="" >ADF-Mobile</a></span><span> <a   href="../tags/Android.html" class="" >Android</a></span><span> <a   href="../tags/External-Tools.html" class="" >External-Tools</a></span></span></p>
+            <p>If you tired from the android emulator speed you may have read Chris Muir&#8217;s article <a href="https://blogs.oracle.com/onesizedoesntfitall/entry/adf_mobile_avoiding_the_android">ADF Mobile: Avoiding the Android Emulator with AndroVM</a>.
 In the meantime the successor AndroVM is <a href="https://cloud.genymotion.com/">GENYMOTION</a>.
 Let&#8217;s integrate this instead now!</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html">
-                                <h2 class="post-title">Write ADF static code analysis rules with PMD and running these in JDeveloper</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>July 02, 2013</span>
-                                <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="../tags/PMD.html" class="" >PMD</a></span><span> <a   href="../tags/External-Tools.html" class="" >External-Tools</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
-                            <p>Do you know, that PMD can analyse XML files since version 5? Many of ADF files are XML configuration files - wouldn&#8217;t it be a good idea to create some static code analysis rules for ADF too?</p>
-                        </div>
-                        <hr/>
-                    
-                        <div class="post-preview"  >
-                            <a href="../blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">
-                                <h2 class="post-title">PMD Integration with JDeveloper through Ant External Tools</h2>
-                                
-                            </a>
-                            <p class="post-meta">
-                                Posted by <b>Torsten Kleiber</b>
-                                on <span>June 26, 2013</span>
-                                <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="../tags/PMD.html" class="" >PMD</a></span><span> <a   href="../tags/External-Tools.html" class="" >External-Tools</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
-                            <p>After little code <a href="http://sourceforge.net/p/pmd/bugs/1055/">change</a> in pmd the integration like described in some blogs from Shay Shmeltzer is now possible.</p>
-                        </div>
-                        <hr/>
-                    
-                    
-                </div>
-            </div>
-        </div>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html">
+              <h2 class="post-title">Write ADF static code analysis rules with PMD and running these in JDeveloper</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>July 02, 2013</span>
+              <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="../tags/ADF.html" class="" >ADF</a></span><span> <a   href="../tags/ADF-11.html" class="" >ADF-11</a></span><span> <a   href="../tags/PMD.html" class="" >PMD</a></span><span> <a   href="../tags/External-Tools.html" class="" >External-Tools</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
+            <p>Do you know, that PMD can analyse XML files since version 5? Many of ADF files are XML configuration files - wouldn&#8217;t it be a good idea to create some static code analysis rules for ADF too?</p>
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
+            <a href="../blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">
+              <h2 class="post-title">PMD Integration with JDeveloper through Ant External Tools</h2>
+              
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>June 26, 2013</span>
+              <span> Tags: <span> <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="../tags/JDeveloper-11.html" class="" >JDeveloper-11</a></span><span> <a   href="../tags/PMD.html" class="" >PMD</a></span><span> <a   href="../tags/External-Tools.html" class="" >External-Tools</a></span><span> <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
+            <p>After little code <a href="http://sourceforge.net/p/pmd/bugs/1055/">change</a> in pmd the integration like described in some blogs from Shay Shmeltzer is now possible.</p>
+          </div>
+          <hr>
+        
+        
+      </div>
+    </div>
+  </div>
 
-        <!-- Footer -->
-        <footer>
+  <!-- Footer -->
+  <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="col-lg-8 col-md-10 mx-auto">
                         <ul class="list-inline text-center"> 
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="../feed.xml" title="Subscribe to RSS feed">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-rss fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="https://twitter.com/develishdevelop">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="https://github.com/tkleiber">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="https://linkedin.com/in/kleiber/">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="https://www.xing.com/profile/Torsten_Kleiber/">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list-inline-item">
                                 <a href="https://www.slideshare.net/tkleiber/">
                                     <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-slideshare fa-stack-1x fa-inverse"></i>
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-slideshare fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
                         </ul>
-                        <p class="copyright text-muted">&copy;  <span>Torsten Kleiber</span> <span>2020</span> | Clean Blog theme by <a href="https://startbootstrap.com/template-overviews/clean-blog/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.4</span></a></p>
+                        <p class="copyright text-muted">&copy;  <span>Torsten Kleiber</span> <span>2020</span> | <a href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.4</span></a></p>
                     </div>
                 </div>
             </div>
         </footer>
 
-        <!-- jQuery -->
-        <script src="../vendor/jquery/jquery.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" ></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="../vendor/bootstrap/js/bootstrap.min.js" ></script>
+  <!-- Custom scripts for this template -->
+  <script src="../js/clean-blog.min.js"></script>
 
-        <!-- Theme JavaScript -->
-        <script src="../js/clean-blog.min.js"></script>
+  
 
-        
-    </body>
+</body>
 
 </html>

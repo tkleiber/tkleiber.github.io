@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>As Much As Possible As Code (AMAPAC)</title>
-    <link>https://www.amapac.io/</link>
-    <atom:link href="https://www.amapac.io//feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.amapac.io</link>
+    <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>Try to automate your IT!</description>
     <language>en-gb</language>
-    <pubDate>Thu, 13 Aug 2020 21:38:20 +0200</pubDate>
-    <lastBuildDate>Thu, 13 Aug 2020 21:38:20 +0200</lastBuildDate>
+    <pubDate>Fri, 14 Aug 2020 23:49:22 +0200</pubDate>
+    <lastBuildDate>Fri, 14 Aug 2020 23:49:22 +0200</lastBuildDate>
 
     <item>
       <title>Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I am a speaker at DOAG2019</title>
-      <link>https://www.amapac.io//blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html</link>
+      <link>https://www.amapac.io/blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html</link>
       <pubDate>Mon, 18 Nov 2019 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html</guid>
       <description><p>We try to be agile in developing and merging our features into branches when they are ready for use.</p></description>
     </item><item>
       <title>&quot;Regulatorics: Offside is when the referee whistles&quot; - I am a speaker at DOAG2018</title>
-      <link>https://www.amapac.io//blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html</link>
+      <link>https://www.amapac.io/blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html</link>
       <pubDate>Tue, 17 Jul 2018 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html</guid>
       <description><p>Today my presentation is confirmed: "Regulatorics: Offside is when the referee whistles". Maybe the German title will be better understood: "Regulatorik: Abseits ist, wenn der Schiedsrichter pfeift".</p></description>
     </item><item>
       <title>DOAG2017 wrap up</title>
-      <link>https://www.amapac.io//blog/2017/DOAG2017+wrap+up.html</link>
+      <link>https://www.amapac.io/blog/2017/DOAG2017+wrap+up.html</link>
       <pubDate>Fri, 1 Dec 2017 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2017/DOAG2017+wrap+up.html</guid>
       <description><p>Another DOAG is over and here is my summary.</p></description>
     </item><item>
       <title>Provide access to WebLogic DMS Spy Servlet for readonly users</title>
-      <link>https://www.amapac.io//blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html</link>
+      <link>https://www.amapac.io/blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html</link>
       <pubDate>Wed, 30 Aug 2017 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html</guid>
       <description><p>For security reasons and to prevent the configuration drift it is recommendable to use read only access of WebLogic configuration for analyzing problems.
 For read only access of configuration and logs WebLogic provides out of the box the group Monitors. Unfortunately you cannot access <a href="https://docs.oracle.com/middleware/12212/lcm/ASPER/GUID-F1201ECA-AF97-4C96-9926-53F6C25A58D3.htm#ASPER99002">DMS Spy Servlet</a> with this group, which is useful for analyse runtime values of the server. Only users which belongs to the Administrators group and therefore have full access can access DMS Spy Servlet and this is not configurable in WebLogic by default.</p></description>
     </item><item>
       <title>&quot;PL/SQL: Therefore, whoever binds forever: automate your tests&quot; - I am a speaker at DOAG2017</title>
-      <link>https://www.amapac.io//blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html</link>
+      <link>https://www.amapac.io/blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html</link>
       <pubDate>Tue, 18 Jul 2017 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html</guid>
       <description><p>Today my presentation is confirmed: "Therefore, whoever binds forever: automate your tests". Maybe the German title will be the better understood: "PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!"</p></description>
     </item><item>
       <title>Javaland 2017 wrap up</title>
-      <link>https://www.amapac.io//blog/2017/Javaland+2017+wrap+up.html</link>
+      <link>https://www.amapac.io/blog/2017/Javaland+2017+wrap+up.html</link>
       <pubDate>Sat, 1 Apr 2017 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2017/Javaland+2017+wrap+up.html</guid>
       <description><p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
 It was not easy this year to concentrate on the sessions because of the hottest march of the last 100 years. But the quality of the sessions beats the weather. Maybe again my invest in reading the abstracts and filter the sessions before the conference has payed off.</p></description>
     </item><item>
       <title>DEVCAMP17 wrap up</title>
-      <link>https://www.amapac.io//blog/2017/DEVCAMP17+wrap+up.html</link>
+      <link>https://www.amapac.io/blog/2017/DEVCAMP17+wrap+up.html</link>
       <pubDate>Thu, 9 Feb 2017 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2017/DEVCAMP17+wrap+up.html</guid>
       <description><p>Yesterday I attend the annual <a href="https://en.wikipedia.org/wiki/BarCamp">barcamp</a> <a href="https://devcamp.doag.org">DEVCAMP</a> of the <a href="http://www.doag.org">DOAG</a> development community. There are mostly developers with SQL, PL/SQL, Forms &amp; Reports, ADF, JET background and some Java, Javascript and APEX developers too. And not to forget: 1 dba and some managers. Here is my summary.</p></description>
     </item><item>
       <title>Virtual Development Server: Provide Docker images in docker registry for Oracle via Jenkins</title>
-      <link>https://www.amapac.io//blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html</link>
+      <link>https://www.amapac.io/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html</link>
       <pubDate>Wed, 7 Dec 2016 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html</guid>
       <description><p>This is a follow up to earlier <a href="Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</a> blog. We now try to automate the build of all needed images as soon as Oracle <a href="https://github.com/oracle/docker-images">GitHub</a> Sources changed or we need to build our Vagrant VirtualBox again from scratch.</p></description>
     </item><item>
       <title>Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</title>
-      <link>https://www.amapac.io//blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html</link>
+      <link>https://www.amapac.io/blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html</guid>
       <description><p>For automation of all of my processes I need Jenkins in my development server.
@@ -70,164 +70,164 @@ But with this architecture it was very complicated to create docker images and r
 So for simplification I have decided to install Jenkins with the provisioning of the Vagrant Virtualbox via a shell provider in my Vagrantfile.</p></description>
     </item><item>
       <title>Fix &quot;BEA-000394: Deadlock detected&quot; for Weblogic with ADF Applications 12.2.1.2</title>
-      <link>https://www.amapac.io//blog/2016/Fix+BEA-000394+Deadlock+detected+for+Weblogic+with+ADF+Applications+12.2.1.2.html</link>
+      <link>https://www.amapac.io/blog/2016/Fix+BEA-000394+Deadlock+detected+for+Weblogic+with+ADF+Applications+12.2.1.2.html</link>
       <pubDate>Thu, 24 Nov 2016 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2016/Fix+BEA-000394+Deadlock+detected+for+Weblogic+with+ADF+Applications+12.2.1.2.html</guid>
       <description><p>If you try the newest version 12.2.1.2 (or maybe earlier versions too) you see, that your managed server does not restart</p></description>
     </item><item>
       <title>DOAG2016 wrap up</title>
-      <link>https://www.amapac.io//blog/2016/DOAG2016+wrap+up.html</link>
+      <link>https://www.amapac.io/blog/2016/DOAG2016+wrap+up.html</link>
       <pubDate>Thu, 17 Nov 2016 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2016/DOAG2016+wrap+up.html</guid>
       <description><p>Another DOAG is over and here is my summary.</p></description>
     </item><item>
       <title>Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</title>
-      <link>https://www.amapac.io//blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html</link>
+      <link>https://www.amapac.io/blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html</link>
       <pubDate>Tue, 6 Sep 2016 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html</guid>
       <description><p>For later creation of containers as needed in the deployment process we have first to build docker images whenever we do not find suitable one in docker hub.</p></description>
     </item><item>
       <title>Set all WebLogic log levels to &quot;Inherit&quot; via WLST</title>
-      <link>https://www.amapac.io//blog/2016/Set+all+WebLogic+log+levels+to+Inherit+via+WLST.html</link>
+      <link>https://www.amapac.io/blog/2016/Set+all+WebLogic+log+levels+to+Inherit+via+WLST.html</link>
       <pubDate>Mon, 22 Aug 2016 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2016/Set+all+WebLogic+log+levels+to+Inherit+via+WLST.html</guid>
       <description><p>Logging is a very useful feature of WebLogic.
 Unfortunately the log levels, which are set after a clean install of WebLogic or some of the Fusion Middleware product creates a lot of noise and therefore it costs I/O performance.</p></description>
     </item><item>
       <title>Virtual Development Server: Add swapfile to VirtualBox as requirement for installing Oracle or build Oracle docker images</title>
-      <link>https://www.amapac.io//blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html</link>
+      <link>https://www.amapac.io/blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html</link>
       <pubDate>Fri, 19 Aug 2016 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html</guid>
       <description><p>As I want later build Oracle docker images, some of this need a swapfile.
 Per default my used <a href="http://www.vagrantbox.es">Vagrantbox</a> does not have one, so later steps will fail.</p></description>
     </item><item>
       <title>Virtual Development Server: Add enough ram and disk space to VirtualBox for further server components</title>
-      <link>https://www.amapac.io//blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html</link>
+      <link>https://www.amapac.io/blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html</link>
       <pubDate>Sat, 13 Aug 2016 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html</guid>
       <description><p>As I want later build docker images and run docker containers I have to provide enough ram and disk space for this.
 Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk disks, these have a static size and are to small for my purposes.</p></description>
     </item><item>
       <title>Virtual Development Server: Creating Virtualbox machine including docker containers with Vagrant</title>
-      <link>https://www.amapac.io//blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html</link>
+      <link>https://www.amapac.io/blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html</link>
       <pubDate>Fri, 12 Aug 2016 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html</guid>
       <description><p>As I want to decouple my development server from my computer as much as possible I want to create first a virtual machine with linux.</p></description>
     </item><item>
       <title>Virtual Development Server: The idea</title>
-      <link>https://www.amapac.io//blog/2016/Virtual+Development+Server+The+idea.html</link>
+      <link>https://www.amapac.io/blog/2016/Virtual+Development+Server+The+idea.html</link>
       <pubDate>Thu, 11 Aug 2016 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2016/Virtual+Development+Server+The+idea.html</guid>
       <description><p>For long time I had the idea to create a virtual development server for testing some ideas and play with some new and old technologies.</p></description>
     </item><item>
       <title>Oracle TranslationHub neither supported for 12c Database, 12c Forms/Reports or 64 bit!</title>
-      <link>https://www.amapac.io//blog/2016/Oracle+TranslationHub+neither+supported+for+12c+Database+12c+Forms+Reports+or+64+bit.html</link>
+      <link>https://www.amapac.io/blog/2016/Oracle+TranslationHub+neither+supported+for+12c+Database+12c+Forms+Reports+or+64+bit.html</link>
       <pubDate>Wed, 16 Mar 2016 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2016/Oracle+TranslationHub+neither+supported+for+12c+Database+12c+Forms+Reports+or+64+bit.html</guid>
       <description><p>If you need TranslationHub (Windows only) for your forms and reports development please immediately stop if you plan to move to one of the these</p></description>
     </item><item>
       <title>Javaland 2016 conference day 2</title>
-      <link>https://www.amapac.io//blog/2016/Javaland+2016+conference+day+2.html</link>
+      <link>https://www.amapac.io/blog/2016/Javaland+2016+conference+day+2.html</link>
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2016/Javaland+2016+conference+day+2.html</guid>
       <description><p>This was my second day on Javaland 2016.</p></description>
     </item><item>
       <title>Javaland 2016 conference day 1</title>
-      <link>https://www.amapac.io//blog/2016/Javaland+2016+conference+day+1.html</link>
+      <link>https://www.amapac.io/blog/2016/Javaland+2016+conference+day+1.html</link>
       <pubDate>Wed, 9 Mar 2016 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2016/Javaland+2016+conference+day+1.html</guid>
       <description><p>This year I have decided to give the <a href="https://twitter.com/hashtag/javaland2016?src=hash">Javaland</a> conference a try.
 I&#8217;m not a java professional, but in the program was listed a lot of interesting testing presentations, so my company booked for me.</p></description>
     </item><item>
       <title>SLES shell script to check required os packages according to documentation before starting oracle forms and reports installation</title>
-      <link>https://www.amapac.io//blog/2015/SLES+shell+script+to+check+required+os+packages+according+to+documentation+before+starting+oracle+forms+and+reports+installation.html</link>
+      <link>https://www.amapac.io/blog/2015/SLES+shell+script+to+check+required+os+packages+according+to+documentation+before+starting+oracle+forms+and+reports+installation.html</link>
       <pubDate>Wed, 9 Sep 2015 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2015/SLES+shell+script+to+check+required+os+packages+according+to+documentation+before+starting+oracle+forms+and+reports+installation.html</guid>
       <description><p>If you try to install Oracle Forms &amp; Reports 11.1.2.2 on SLES 11.3 than despite all installer checks are passed maybe you get a error message.</p></description>
     </item><item>
       <title>&quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; - I am a speaker at DOAG2015</title>
-      <link>https://www.amapac.io//blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html</link>
+      <link>https://www.amapac.io/blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html</link>
       <pubDate>Tue, 21 Jul 2015 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html</guid>
       <description><p>Today my presentation is confirmed: "Bob the Builder: Build/Deploy of ADF enterprise applications".</p></description>
     </item><item>
       <title>Fix code editor save actions in JDeveloper 12.1.3: keep the order of actions</title>
-      <link>https://www.amapac.io//blog/2015/Fix+code+editor+save+actions+in+JDeveloper+12.1.3+keep+the+order+of+actions.html</link>
+      <link>https://www.amapac.io/blog/2015/Fix+code+editor+save+actions+in+JDeveloper+12.1.3+keep+the+order+of+actions.html</link>
       <pubDate>Tue, 30 Jun 2015 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2015/Fix+code+editor+save+actions+in+JDeveloper+12.1.3+keep+the+order+of+actions.html</guid>
       <description><p>If you work with JDeveloper 12.1.3 and you work with code editor save actions the order of actions could be relevant for you.
 For an example you use lot of asterisk (*) imports and JDeveloper should edit the code to import only classes that you actually use in the code.</p></description>
     </item><item>
       <title>Fix completion insight in JDeveloper 12.1.3: show return type again</title>
-      <link>https://www.amapac.io//blog/2015/Fix+completion+insight+in+JDeveloper+12.1.3+show+return+type+again.html</link>
+      <link>https://www.amapac.io/blog/2015/Fix+completion+insight+in+JDeveloper+12.1.3+show+return+type+again.html</link>
       <pubDate>Mon, 29 Jun 2015 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2015/Fix+completion+insight+in+JDeveloper+12.1.3+show+return+type+again.html</guid>
       <description><p>If you work with JDeveloper 12.1.3 you may missing the return type of methods in completion insight.</p></description>
     </item><item>
       <title>Slides for my german presentation DOAG2014 &quot;The Dirty Dozen – ADF Migration to 12c in the IKB&quot; available</title>
-      <link>https://www.amapac.io//blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html</link>
+      <link>https://www.amapac.io/blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html</link>
       <pubDate>Mon, 24 Nov 2014 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html</guid>
       <description><p>I have presented last week on DOAG 2014 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="http://de.slideshare.net/tkleiber/das-dreckige-dutzend-adf-migration-nach-12c-in-der-ikb-doag-2014-prsentation">Slideshare</a> too.</p></description>
     </item><item>
       <title>ADF Architecture Practice - JDeveloper Silent Install of Extensions</title>
-      <link>https://www.amapac.io//blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html</link>
+      <link>https://www.amapac.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html</guid>
       <description><p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>. It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the installation with examples for windows.</p></description>
     </item><item>
       <title>See you at DOAG 2014 “The Dirty Dozen – ADF Migration to 12c in the IKB” room Kopenhagen on 11/19/2014 at 10:00 am</title>
-      <link>https://www.amapac.io//blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html</link>
+      <link>https://www.amapac.io/blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html</link>
       <pubDate>Mon, 17 Nov 2014 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html</guid>
       <description><p>The presentation is ready, time for travelling now.</p></description>
     </item><item>
       <title>ADF Architecture Practice - JDeveloper Silent Patch</title>
-      <link>https://www.amapac.io//blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html</link>
+      <link>https://www.amapac.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html</link>
       <pubDate>Wed, 22 Oct 2014 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html</guid>
       <description><p>This article describes how to standardize your JDeveloper Patching as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Getting Started - Team, Skills and Development Environments</a>.
 It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the patching with examples for windows.</p></description>
     </item><item>
       <title>ADF Architecture Practice - JDeveloper Silent Install</title>
-      <link>https://www.amapac.io//blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html</link>
+      <link>https://www.amapac.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html</link>
       <pubDate>Tue, 14 Oct 2014 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html</guid>
       <description><p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>. It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the installation with examples for windows.</p></description>
     </item><item>
       <title>ADF Architecture Practice Series</title>
-      <link>https://www.amapac.io//blog/2014/ADF+Architecture+Practice+Series.html</link>
+      <link>https://www.amapac.io/blog/2014/ADF+Architecture+Practice+Series.html</link>
       <pubDate>Mon, 13 Oct 2014 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2014/ADF+Architecture+Practice+Series.html</guid>
       <description><p>From now on I will create a series of lessons to implement the knowledge of the ADF Architecture Course from Oracle ADF product management. Here you can find the &lt;<a href="http://www.youtube.com/user/adfarchtv">videos</a> and the <a href="http://slideshare.net/chriscmuir/tag/add-architecture-tv">presentations</a>. This post will be the index of this lessons, so bookmark it for further use!</p></description>
     </item><item>
       <title>&quot;The Dirty Dozen - ADF Migration to 12c in the IKB&quot; - I am a speaker at DOAG2014</title>
-      <link>https://www.amapac.io//blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html</link>
+      <link>https://www.amapac.io/blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html</link>
       <pubDate>Fri, 1 Aug 2014 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html</guid>
       <description><p>Today the <a href="http://www.doag.org/konferenz/kprogramm.php?tag=2&amp;locS=0">official program</a> is online for <a href="http://www.doag.org/de/events/konferenzen/doag-2014.html">DOAG conference 2014</a> in Nuremberg. My presentation is confirmed  "The Dirty Dozen - ADF Migration to 12c in the IKB".</p></description>
     </item><item>
       <title>Find problems when you develop: using XRebel with Oracle ADF</title>
-      <link>https://www.amapac.io//blog/2014/Find+problems+when+you+develop+-+using+XRebel+with+Oracle+ADF.html</link>
+      <link>https://www.amapac.io/blog/2014/Find+problems+when+you+develop+-+using+XRebel+with+Oracle+ADF.html</link>
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2014/Find+problems+when+you+develop+-+using+XRebel+with+Oracle+ADF.html</guid>
       <description><p>Some days before <a href="http://zeroturnaround.com/">ZeroTurnaround</a> has released <a href="http://zeroturnaround.com/software/xrebel/">XRebel</a> , a new tool to recognized problems in your web applications, when you make your developer test.
 This was promising, so I give it a short try for Oracle ADF applications.</p></description>
     </item><item>
       <title>Slides for my german presentation &quot;Quality Assurance for ADF projects&quot; available</title>
-      <link>https://www.amapac.io//blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html</link>
+      <link>https://www.amapac.io/blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html</link>
       <pubDate>Wed, 4 Jun 2014 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html</guid>
       <description><p>I have presented today on DOAG Development 2014 in Dusseldorf. For all non DOAG members - you can find the german presentation on <a href="http://www.slideshare.net/tkleiber/qualittssicherung-in-adf-projekten-der-ikb-deutschen-industriebank">Slideshare</a> too.</p></description>
     </item><item>
       <title>Quality Assurance for ADF projects</title>
-      <link>https://www.amapac.io//blog/2014/Quality+Assurance+for+ADF+projects.html</link>
+      <link>https://www.amapac.io/blog/2014/Quality+Assurance+for+ADF+projects.html</link>
       <pubDate>Thu, 22 May 2014 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2014/Quality+Assurance+for+ADF+projects.html</guid>
       <description><p>If you speak german and you are interested in quality assurance for your ADF projects you should come and attend my presentation at <a href="http://www.doag.org/home/development.html">DOAG Development</a> on 06/04/2014 in Duesseldorf.</p></description>
     </item><item>
       <title>Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE</title>
-      <link>https://www.amapac.io//blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html</link>
+      <link>https://www.amapac.io/blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html</link>
       <pubDate>Fri, 20 Sep 2013 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html</guid>
       <description><p>If you tired from the android emulator speed you may have read Chris Muir&#8217;s article <a href="https://blogs.oracle.com/onesizedoesntfitall/entry/adf_mobile_avoiding_the_android">ADF Mobile: Avoiding the Android Emulator with AndroVM</a>.
@@ -235,39 +235,39 @@ In the meantime the successor AndroVM is <a href="https://cloud.genymotion.com/"
 Let&#8217;s integrate this instead now!</p></description>
     </item><item>
       <title>Have released PMD JDeveloper Extension 5.0.5</title>
-      <link>https://www.amapac.io//blog/2013/Have+released+PMD+Jdeveloper+Extension+5.0.5.html</link>
+      <link>https://www.amapac.io/blog/2013/Have+released+PMD+Jdeveloper+Extension+5.0.5.html</link>
       <pubDate>Fri, 30 Aug 2013 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2013/Have+released+PMD+Jdeveloper+Extension+5.0.5.html</guid>
       <description><p>I have finished now my work on integrating last <a href="http://pmd.sourceforge.net/">PMD</a> version 5.0.5 into JDeveloper.</p></description>
     </item><item>
       <title>Write ADF static code analysis rules with PMD and running these in JDeveloper</title>
-      <link>https://www.amapac.io//blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html</link>
+      <link>https://www.amapac.io/blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html</link>
       <pubDate>Tue, 2 Jul 2013 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html</guid>
       <description><p>Do you know, that PMD can analyse XML files since version 5? Many of ADF files are XML configuration files - wouldn&#8217;t it be a good idea to create some static code analysis rules for ADF too?</p></description>
     </item><item>
       <title>PMD Integration with JDeveloper through Ant External Tools</title>
-      <link>https://www.amapac.io//blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html</link>
+      <link>https://www.amapac.io/blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html</link>
       <pubDate>Wed, 26 Jun 2013 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html</guid>
       <description><p>After little code <a href="http://sourceforge.net/p/pmd/bugs/1055/">change</a> in pmd the integration like described in some blogs from Shay Shmeltzer is now possible.</p></description>
     </item><item>
       <title>Fasten your Oracle Forms and Reports 11g Server start on Unix derivates</title>
-      <link>https://www.amapac.io//blog/2012/Fasten+your+Oracle+Forms+and+Reports+11g+Server+start+on+Unix+derivates.html</link>
+      <link>https://www.amapac.io/blog/2012/Fasten+your+Oracle+Forms+and+Reports+11g+Server+start+on+Unix+derivates.html</link>
       <pubDate>Fri, 21 Dec 2012 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2012/Fasten+your+Oracle+Forms+and+Reports+11g+Server+start+on+Unix+derivates.html</guid>
       <description><p>Do you see a slow start of your WebLogic managed server for Forms &amp; Reports on Unix derivate?
 We had this problem too on SuSe SLES 11 and Forms and Reports 11.1.2.</p></description>
     </item><item>
       <title>Save JDeveloper application workings sets in the application workspace - please vote for this enhancement request</title>
-      <link>https://www.amapac.io//blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html</link>
+      <link>https://www.amapac.io/blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html</link>
       <pubDate>Tue, 4 Dec 2012 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html</guid>
       <description><p>If you create for an example a big adf application you may want to add all of your entities to one base application for reuse labels, validation and and so on. If you have a big database schema than in short time you have a problem to find your entity.
 In JDeveloper there is a neat feature to overcome this problem: working sets!</p></description>
     </item><item>
       <title>Oracle Reports Designer 11g 64bit on Windows7 64bit very buggy - Use Reports 32bit instead!</title>
-      <link>https://www.amapac.io//blog/2012/Oracle+Reports+Designer+11g+64bit+on+Windows7+64bit+very+buggy+-+Use+Reports+32bit+instead.html</link>
+      <link>https://www.amapac.io/blog/2012/Oracle+Reports+Designer+11g+64bit+on+Windows7+64bit+very+buggy+-+Use+Reports+32bit+instead.html</link>
       <pubDate>Fri, 6 Jul 2012 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2012/Oracle+Reports+Designer+11g+64bit+on+Windows7+64bit+very+buggy+-+Use+Reports+32bit+instead.html</guid>
       <description><p>As I have seen in Oracle certification matrix Forms &amp; Reports 11g 64bit is supported under Windows7 64bit.
@@ -275,7 +275,7 @@ So I tried to install it and to work with it.
 Unfortunately there are serious bugs in it, please read for more information <a href="https://support.oracle.com/epmos/faces/ui/km/DocContentDisplay.jspx?id=1395965.1">MOS Doc ID 1395965.1</a>.</p></description>
     </item><item>
       <title>TranslationHub 11g is only available as 32 bit - requires Forms and Reports 11g too in 32 bit for Development</title>
-      <link>https://www.amapac.io//blog/2012/TranslationHub+11g+is+only+available+as+32+bit+-+requires+Forms+and+Reports+11g+too+in+32+bit+for+Development.html</link>
+      <link>https://www.amapac.io/blog/2012/TranslationHub+11g+is+only+available+as+32+bit+-+requires+Forms+and+Reports+11g+too+in+32+bit+for+Development.html</link>
       <pubDate>Thu, 7 Jun 2012 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2012/TranslationHub+11g+is+only+available+as+32+bit+-+requires+Forms+and+Reports+11g+too+in+32+bit+for+Development.html</guid>
       <description><p>I have done the whole may scripting silent installs of several developer tools.
@@ -285,20 +285,20 @@ I want not speak about the many errors in silent installers here.
 But what if you want to use TranslationHub too?</p></description>
     </item><item>
       <title>Have released PMD JDeveloper Extension 4.3</title>
-      <link>https://www.amapac.io//blog/2012/Have+released+PMD+Jdeveloper+Extension+4.3.html</link>
+      <link>https://www.amapac.io/blog/2012/Have+released+PMD+Jdeveloper+Extension+4.3.html</link>
       <pubDate>Mon, 12 Mar 2012 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2012/Have+released+PMD+Jdeveloper+Extension+4.3.html</guid>
       <description><p>Sorry for a time without new post - but I have finished now my work on integrating last <a href="http://pmd.sourceforge.net">PMD</a> version 4.3 into JDeveloper.</p></description>
     </item><item>
       <title>Oracle Forms 11 running as application in Java Webstart</title>
-      <link>https://www.amapac.io//blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</link>
+      <link>https://www.amapac.io/blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</link>
       <pubDate>Sun, 22 Jan 2012 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2012/Oracle+Forms+11+running+as+application+in+Java+Webstart.html</guid>
       <description><p>According to my last post today I will show you the basic configuration for forms 11g.
 Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works too!</p></description>
     </item><item>
       <title>Oracle Forms 10 running as application in Java Webstart</title>
-      <link>https://www.amapac.io//blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</link>
+      <link>https://www.amapac.io/blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</link>
       <pubDate>Tue, 27 Dec 2011 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2011/Oracle+Forms+10+running+as+application+in+Java+Webstart.html</guid>
       <description><p>Many people miss in webforms the possibility to run forms as a separate application.
@@ -308,7 +308,7 @@ The bad news - it is not supported by Oracle.
 But we run this since four years now and is very stable.</p></description>
     </item><item>
       <title>Hello world!</title>
-      <link>https://www.amapac.io//blog/2011/Hello+world.html</link>
+      <link>https://www.amapac.io/blog/2011/Hello+world.html</link>
       <pubDate>Tue, 13 Dec 2011 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2011/Hello+world.html</guid>
       <description><p>Welcome to my new blog. After long time I have decided to create now my own blog at <a href="http://wordpress.com/">WordPress.com</a>. Be excitedly for future content round about software development.</p></description>
