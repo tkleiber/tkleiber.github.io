@@ -140,7 +140,10 @@
         <div class="col-lg-8 col-md-10 mx-auto"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>. It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the installation with examples for windows.</p>
+<p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>.</p>
+</div>
+<div class="paragraph">
+<p>It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the installation with examples for windows.</p>
 </div>
 </div>
 </div>
@@ -152,14 +155,14 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ojwebupdate /?</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ojwebupdate /?</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The easiest thing is to download your reqired extension from the update centers. The update centers can be updated too, so the best thing is to call "Check for updates" in a manual installation and then look in your JDveloper system directory for a file updatecenters.xml.</p>
+<p>The easiest thing is to download your reqired extension from the update centers. The update centers can be updated too, so the best thing is to call "Check for updates" in a manual installation and then look in your JDveloper system directory for a file updatecenters.xml.</p>
 </div>
 <div class="paragraph">
-<p>Eg. if you want to install the extension "JUnit Integration" for version 12.1.3 in Windows 7 you have to go to the url, which is listed under "Official Oracle Extensions and Updates" by default in file</p>
+<p>Eg. if you want to install the extension "JUnit Integration" for version 12.1.3 in Windows 7 you have to go to the url, which is listed under "Official Oracle Extensions and Updates" by default in file</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -167,7 +170,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>At the moment this is <a href="http://www.oracle.com/webfolder/technetwork/jdeveloper/downloads/1213center.xml" class="bare">http://www.oracle.com/webfolder/technetwork/jdeveloper/downloads/1213center.xml</a>. Open this link, follow the link to "JUnit Integration" and download the required version. The right version can be determined by checking the requirement against your JDeveloper version or other extensions, you can find this information in the Help - About dialog. Or easier - you look at version, which version the manual installation would be installed and download this.</p>
+<p>At the moment this is <a href="http://www.oracle.com/webfolder/technetwork/jdeveloper/downloads/1213center.xml" class="bare">http://www.oracle.com/webfolder/technetwork/jdeveloper/downloads/1213center.xml</a>. Open this link, follow the link to "JUnit Integration" and download the required version. The right version can be determined by checking the requirement against your JDeveloper version or other extensions, you can find this information in the Help - About dialog. Or easier - you look at version, which version the manual installation would be installed and download this.</p>
 </div>
 <div class="paragraph">
 <p>Then you can call installation with following batch file:</p>
@@ -179,7 +182,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>Extensions can be depending on another extension, you see this in the requirements section of the url or when you try to install a single extension in a fresh manual installation. In this case you have to install the extensions in the right order.</p>
+<p>Extensions can be depending on another extension, you see this in the requirements section of the url or when you try to install a single extension in a fresh manual installation. In this case you have to install the extensions in the right order.</p>
 </div>
 </div>
 </div>
@@ -193,13 +196,13 @@
 <p>You can simply unzip the extensions into your installation. The target depends from the extension itself. Therefore open the zip file and look into the META-INF\bundle.xml file. If there is a tag , then this is the target. If this tag does not exist, the default target is %oracle_home%\jdeveloper\jdev\extensions.</p>
 </div>
 <div class="paragraph">
-<p>The following batch will install "JUnit Integration" and "JUnit Integration for JDBC" extensions in the right order (as the second requires the first) in JDeveloper 11.1.1.7.:</p>
+<p>The following batch will install "JUnit Integration" and "JUnit Integration for JDBC" extensions in the right order (as the second requires the first) in JDeveloper 11.1.1.7.:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">set oracle_home=C:\Oracle\JDev111170
-unzip -o -q junit_bundle -d %oracle_home%\jdeveloper
-unzip -o -q junit-j2ee_bundle.zip -d %oracle_home%\jdeveloper\jdev\extensions
+unzip -o -q junit_bundle -d %oracle_home%\jdeveloper
+unzip -o -q junit-j2ee_bundle.zip -d %oracle_home%\jdeveloper\jdev\extensions
 rem housekeeping
 rmdir /S /Q %oracle_home%\jdeveloper\META-INF
 rmdir /S /Q %oracle_home%\jdeveloper\jdev\extensions\META-INF</code></pre>

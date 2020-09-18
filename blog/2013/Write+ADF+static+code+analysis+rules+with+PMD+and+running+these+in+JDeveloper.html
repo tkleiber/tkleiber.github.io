@@ -144,7 +144,7 @@
 <p>Unfortunatly oracle configuration files in most times create references to dtd&#8217;s, which are not exist anywhere in the path. Till PMD 5.0.1 such files results in errors, as PMD tries to validate this doctype. I have switched of this validation in PMD release <a href="http://sourceforge.net/p/pmd/bugs/1056">5.0.2</a></p>
 </div>
 <div class="paragraph">
-<p>Following article requires configuration of PMD as described in my blog <a href="PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">PMD Integration with JDeveloper through Ant External Tools</a>.</p>
+<p>Following article requires configuration of PMD as described in my blog <a href="PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">PMD Integration with JDeveloper through Ant External Tools</a>.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s start from the beginning.</p>
@@ -201,7 +201,7 @@ should not be mixed with the other option of this selection list</p>
 </div>
 </li>
 <li>
-<p>In PMD you can create two kind of rules: Java and XPath. For our xml Files XPath should be the efficient option. We have to put our configuraration e.g. in file my_pmd_rules.xml in the same directory as pmd.xml in the last <a href="PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">blog</a>. For the above rule the XPath query in line 14 find nodes, which does not contain the transaction node</p>
+<p>In PMD you can create two kind of rules: Java and XPath. For our xml Files XPath should be the efficient option. We have to put our configuraration e.g. in file my_pmd_rules.xml in the same directory as pmd.xml in the last <a href="PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">blog</a>. For the above rule the XPath query in line 14 find nodes, which does not contain the transaction node</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0"?&gt;
@@ -225,7 +225,7 @@ should not be mixed with the other option of this selection list</p>
 </div>
 </li>
 <li>
-<p>Now we have to change the configuration file pmd.xml from the last blog in the marked lines to call our new configuration and run this on files with defined Extensions</p>
+<p>Now we have to change the configuration file pmd.xml from the last blog in the marked lines to call our new configuration and run this on files with defined Extensions</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="windows-1252" ?&gt;
@@ -277,10 +277,10 @@ should not be mixed with the other option of this selection list</p>
 <p>That&#8217;s it.</p>
 </div>
 <div class="paragraph">
-<p>Maybe somebody has an idea, where we can build an extension exchange for ADF rules, e.g. for creating rules for <a href="http://www.oracle.com/technetwork/developer-tools/adf/learnmore/adf-code-guidelines-v1-00-1845659.pdf">ADF Code Guidelines v1.00</a> or <a href="http://www.oracle.com/technetwork/developer-tools/adf/learnmore/adf-naming-layout-guidelines-v2-00-1904828.pdf">ADF Naming and Project Layout Guidelines v2.00</a>.</p>
+<p>Maybe somebody has an idea, where we can build an extension exchange for ADF rules, e.g. for creating rules for <a href="http://www.oracle.com/technetwork/developer-tools/adf/learnmore/adf-code-guidelines-v1-00-1845659.pdf">ADF Code Guidelines v1.00</a> or <a href="http://www.oracle.com/technetwork/developer-tools/adf/learnmore/adf-naming-layout-guidelines-v2-00-1904828.pdf">ADF Naming and Project Layout Guidelines v2.00</a>.</p>
 </div>
 <div class="paragraph">
-<p>Remember: you are not restricted to ADF files, e.g. we do checks to for JDeveloper application (jws) and project files (jpr) as well, as this are xml files too. The configuration you see already in step 2.</p>
+<p>Remember: you are not restricted to ADF files, e.g. we do checks to for JDeveloper application (jws) and project files (jpr) as well, as this are xml files too. The configuration you see already in step 2.</p>
 </div></div>
       </div>
       <div class="row">

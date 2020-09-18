@@ -141,7 +141,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>This article describes how to standardize your JDeveloper Patching as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Getting Started - Team, Skills and Development Environments</a>.
-It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the patching with examples for windows.</p>
+It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the patching with examples for windows.</p>
 </div>
 </div>
 </div>
@@ -149,29 +149,29 @@ It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architectu
 <h2 id="version_12_1_x">Version 12.1.x</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this version  the <a href="http://docs.oracle.com/middleware/1213/core/OPATC/index.html">Oracle OPatch</a> is delivered with the <a href="ADF+Architecture+Practice+-+JDeveloper+Silent+Install">Silent Install</a> of JDeveloper.</p>
+<p>In this version  the <a href="http://docs.oracle.com/middleware/1213/core/OPATC/index.html">Oracle OPatch</a> is delivered with the <a href="ADF+Architecture+Practice+-+JDeveloper+Silent+Install">Silent Install</a> of JDeveloper.</p>
 </div>
 <div class="paragraph">
 <p>All what you need is the patch file for your platform (e.g. p19591087_121300_Generic.zip for JDEVADF SECURITY PATCH UPDATE 12.1.3.0.0 CPUOCT2014). Unzip this patch file.</p>
 </div>
 <div class="paragraph">
-<p>Then you call batch file similar to:</p>
+<p>Then you call batch file similar to:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">set oracle_home=C:\Oracle\JDev121300
-pushd [path]\19591087
+pushd [path]\19591087
 %oracle_home%\OPatch\opatch apply -silent</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Revert the patch is similar, the response should look like</p>
+<p>Revert the patch is similar, the response should look like</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">set oracle_home=C:\Oracle\JDev121300
-pushd [path]\19591087
-%oracle_home%\OPatch\opatch rollback -id 19591087 -silent</code></pre>
+pushd [path]\19591087
+%oracle_home%\OPatch\opatch rollback -id 19591087 -silent</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -183,10 +183,10 @@ pushd [path]\19591087
 <h2 id="version_11_1_1_x">Version 11.1.1.x</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In some of this versions Oracle OPatch is not delivered with the <a href="ADF+Architecture+Practice+-+JDeveloper+Silent+Install">Silent Install</a> of JDeveloper. Please check if %oracle_home%\oracle_common\OPatch does exist. If not - you can download the latest version of OPatch <a href="https://updates.oracle.com/download/6880880.html">here</a>. Please select your Platform and Release 11.1.0.0.0 as this correspond to your JDeveloper version. Unzip the downloaded file.</p>
+<p>In some of this versions Oracle OPatch is not delivered with the <a href="ADF+Architecture+Practice+-+JDeveloper+Silent+Install">Silent Install</a> of JDeveloper. Please check if %oracle_home%\oracle_common\OPatch does exist. If not - you can download the latest version of OPatch <a href="https://updates.oracle.com/download/6880880.html">here</a>. Please select your Platform and Release 11.1.0.0.0 as this correspond to your JDeveloper version. Unzip the downloaded file.</p>
 </div>
 <div class="paragraph">
-<p>In some versions (at least till 11.1.1.1.5) you need for the first patch a default product.xml file in the right place, as this cannot be created silently. Change the highlighted lines according to your environment:</p>
+<p>In some versions (at least till 11.1.1.1.5) you need for the first patch a default product.xml file in the right place, as this cannot be created silently. Change the highlighted lines according to your environment:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -198,10 +198,10 @@ pushd [path]\19591087
 </div>
 </div>
 <div class="paragraph">
-<p>For older versions of opatch maybe you have to add a response file for opatch, which you can create as described <a href="http://mayank-jani.blogspot.de/2012/09/how-to-apply-opatchpsu-patch-in-silent.html#!/2012/09/how-to-apply-opatchpsu-patch-in-silent.html">here</a>.</p>
+<p>For older versions of opatch maybe you have to add a response file for opatch, which you can create as described <a href="http://mayank-jani.blogspot.de/2012/09/how-to-apply-opatchpsu-patch-in-silent.html#!/2012/09/how-to-apply-opatchpsu-patch-in-silent.html">here</a>.</p>
 </div>
 <div class="paragraph">
-<p>Then you need the patch file for your platform (e.g. p19591065_111170_Generic.zip for JDEVADF SECURITY PATCH UPDATE 11.1.1.7.0 CPUOCT2014). Unzip this patch file.</p>
+<p>Then you need the patch file for your platform (e.g. p19591065_111170_Generic.zip for JDEVADF SECURITY PATCH UPDATE 11.1.1.7.0 CPUOCT2014). Unzip this patch file.</p>
 </div>
 <div class="paragraph">
 <p>Then you call batch file similar to:</p>
@@ -210,17 +210,17 @@ pushd [path]\19591087
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">set oracle_home=C:\Oracle\JDev111170
 set java_home=%oracle_home%\jdk160_24
-rem opatch_home=[your unzipped OPatch home]
+rem opatch_home=[your unzipped OPatch home]
 set opatch_home=%oracle_home%\oracle_common\OPatch
 rem workaround for BUG 9613778: OPATCH-STAND-ALONE: ERROR "OUI-67124:INVENTORY CHECK FAILED" ON GERMAN WINDOWS
 rem set _JAVA_OPTIONS="-Duser.language=en"
 rem workaround for silent creation of product.xml till at least version 11.1.1.5
 rem if not exist %oracle_home%\product.xml copy product.xml %oracle_home%\product.xml /V /Y
 rem if not exist %mw_home%\jdeveloper\product.xml copy product.xml %mw_home%\jdeveloper\product.xml /V /Y
-pushd [path]\19591087
+pushd [path]\19591087
 rem use switch -ocmrf, if you have an older opatch version, which  requires a response file
-rem use switch -jdk, if you have the downloaded opatch version
-rem cmd /c %opatch_home%\opatch apply -silent -ocmrf ocm.rsp -jdk %oracle_home%\jdk160_24
+rem use switch -jdk, if you have the downloaded opatch version
+rem cmd /c %opatch_home%\opatch apply -silent -ocmrf ocm.rsp -jdk %oracle_home%\jdk160_24
 %opatch_home%\opatch apply -silent
 rem Workaround for BUB 9613778: OPATCH-STAND-ALONE: ERROR "OUI-67124:INVENTORY CHECK FAILED" ON GERMAN WINDOWS
 rem set _JAVA_OPTIONS=</code></pre>
@@ -236,10 +236,10 @@ set java_home=%oracle_home%\jdk160_24
 rem opatch_home=[your unzipped OPatch home]
 set opatch_home=%oracle_home%\oracle_common\OPatch
 pushd [path]\19591087
-rem use switch -ocmrf, if you have an older opatch version, which  requires a response file
+rem use switch -ocmrf, if you have an older opatch version, which  requires a response file
 rem use switch -jdk, if you have the downloaded opatch version
 rem cmd /c %opatch_home%\opatch rollback -id 19591087 -silent -ocmrf ocm.rsp -jdk %oracle_home%\jdk160_24
-%opatch_home%\opatch rollback -id 19591087 -silent</code></pre>
+%opatch_home%\opatch rollback -id 19591087 -silent</code></pre>
 </div>
 </div>
 <div class="paragraph">

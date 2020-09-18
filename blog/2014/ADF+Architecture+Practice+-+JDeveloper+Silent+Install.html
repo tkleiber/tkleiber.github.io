@@ -140,7 +140,10 @@
         <div class="col-lg-8 col-md-10 mx-auto"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>. It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the installation with examples for windows.</p>
+<p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>.</p>
+</div>
+<div class="paragraph">
+<p>It is part of the <a href="ADF+Architecture+Practice+Series.html">ADF Architecture Practice Series</a> and describes the installation with examples for windows.</p>
 </div>
 </div>
 </div>
@@ -148,7 +151,7 @@
 <h2 id="version_12_1_x">Version 12.1.x</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this version  the Oracle Universal Installer allows the <a href="http://docs.oracle.com/middleware/1213/jdev/install/appendix_a.htm#sthref19">silent installation of JDeveloper</a>. All what you need is the installer file for your platform (e.g. jdev_suite_121300_win64.exe) and a response file. You can create your response file <a href="http://docs.oracle.com/middleware/1213/core/OUIRF/silent.htm#CIHEGJDG">as described in the documentation</a>:</p>
+<p>In this version  the Oracle Universal Installer allows the <a href="http://docs.oracle.com/middleware/1213/jdev/install/appendix_a.htm#sthref19">silent installation of JDeveloper</a>. All what you need is the installer file for your platform (e.g. jdev_suite_121300_win64.exe) and a response file. You can create your response file <a href="http://docs.oracle.com/middleware/1213/core/OUIRF/silent.htm#CIHEGJDG">as described in the documentation</a>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -184,7 +187,7 @@ ORACLE_HOME=C:\Oracle\JDev121300\</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jdev_suite_121300_win64.exe -silent -waitforcompletion -responseFile [complete path]\response.rsp</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jdev_suite_121300_win64.exe -silent -waitforcompletion -responseFile [complete path]\response.rsp</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -213,14 +216,14 @@ ORACLE_HOME=C:\Oracle\JDev121300\</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">set oracle_home=C:\Oracle\JDev121300
 rem %oracle_home%\oui\bin\deinstall.cmd -noconsole -silent <i class="conum" data-value="1"></i><b>(1)</b>
-"%oracle_home%\oui\bin\internal\ilaunch.exe" -noconsole -deinstall -silent ORACLE_HOME="%oracle_home%" <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+"%oracle_home%\oui\bin\internal\ilaunch.exe" -noconsole -deinstall -silent ORACLE_HOME="%oracle_home%" <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Pay attention that we did not use this line, as this exits your command shell on windows. But we want to have a return code and maybe doing some post deinstall work (Enhancement Request <a href="https://support.oracle.com/epmos/faces/BugDisplay?id=19464646">19464646</a> is created).</td>
+<td>Pay attention that we did not use this line, as this exits your command shell on windows. But we want to have a return code and maybe doing some post deinstall work (Enhancement Request <a href="https://support.oracle.com/epmos/faces/BugDisplay?id=19464646">19464646</a> is created).</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
@@ -234,18 +237,18 @@ rem %oracle_home%\oui\bin\deinstall.cmd -noconsole -silent <i class="conum" data
 <h2 id="version_11_1_1_x">Version 11.1.1.x</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For this version you need the generic installer (eg. jdevstudio11117install.jar) and the 32bit JDK 1.6.0_24 (this is the delivered version for the manual install, 64bit version is not supported but works for most cases but not all). First you have to extract the msi JDK Installer as described <a href="http://www.74k.org/extracting-java-msi-from-java-exe">here</a>. Then you have to <a href="http://docs.oracle.com/cd/E28280_01/install.1111/e13666/ojdig.htm#CHDCDFEA">create a file silent.xml</a> which is the equivalent of response.rsp in 12.1.x.</p>
+<p>For this version you need the generic installer (eg. jdevstudio11117install.jar) and the 32bit JDK 1.6.0_24 (this is the delivered version for the manual install, 64bit version is not supported but works for most cases but not all). First you have to extract the msi JDK Installer as described <a href="http://www.74k.org/extracting-java-msi-from-java-exe">here</a>. Then you have to <a href="http://docs.oracle.com/cd/E28280_01/install.1111/e13666/ojdig.htm#CHDCDFEA">create a file silent.xml</a> which is the equivalent of response.rsp in 12.1.x.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;bea-installer&gt;
-  &lt;input-fields&gt;
-    &lt;data-value name="BEAHOME" value="C:\Oracle\JDev111170" /&gt;
-    &lt;data-value name="COMPONENT_PATHS" value="JDeveloper and ADF/JDeveloper Studio|JDeveloper and ADF/Application Development Framework Runtime|WebLogic Server/Core Application Server|WebLogic Server/Administration Console|WebLogic Server/Configuration Wizard and Upgrade Framework|WebLogic Server/WebLogic JDBC Drivers|WebLogic Server/WebLogic Server Clients|WebLogic Server/WebLogic SCA|WebLogic Server/UDDI and Xquery Support"/&gt;
-    &lt;data-value name="INSTALL_SHORTCUT_IN_ALL_USERS_FOLDER" value="yes"/&gt;
-    &lt;data-value name="LOCAL_JVMS" value="C:\Oracle\JDev111170\jdk160_24\"/&gt;
-  &lt;/input-fields&gt;
+  &lt;input-fields&gt;
+    &lt;data-value name="BEAHOME" value="C:\Oracle\JDev111170" /&gt;
+    &lt;data-value name="COMPONENT_PATHS" value="JDeveloper and ADF/JDeveloper Studio|JDeveloper and ADF/Application Development Framework Runtime|WebLogic Server/Core Application Server|WebLogic Server/Administration Console|WebLogic Server/Configuration Wizard and Upgrade Framework|WebLogic Server/WebLogic JDBC Drivers|WebLogic Server/WebLogic Server Clients|WebLogic Server/WebLogic SCA|WebLogic Server/UDDI and Xquery Support"/&gt;
+    &lt;data-value name="INSTALL_SHORTCUT_IN_ALL_USERS_FOLDER" value="yes"/&gt;
+    &lt;data-value name="LOCAL_JVMS" value="C:\Oracle\JDev111170\jdk160_24\"/&gt;
+  &lt;/input-fields&gt;
 &lt;/bea-installer&gt;</code></pre>
 </div>
 </div>
@@ -257,7 +260,7 @@ rem %oracle_home%\oui\bin\deinstall.cmd -noconsole -silent <i class="conum" data
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">set mw_home=C:\Oracle\JDev111170
 set oracle_home==%mw_home%\oracle_common
 set java_home=%mw_home%\jdk160_24
-c:\windows\system32\msiexec.exe /i [complete path]\jdk1.6.0_24.msi /quiet ADDLOCAL="ToolsFeature,SourceFeature" INSTALLDIR="%java_home%" REBOOT=Suppress
+c:\windows\system32\msiexec.exe /i [complete path]\jdk1.6.0_24.msi /quiet ADDLOCAL="ToolsFeature,SourceFeature" INSTALLDIR="%java_home%" REBOOT=Suppress
 "%java_home%\bin\java" -jar jdevstudio11117install.jar -mode=silent -log=install.log -silent_xml=silent.xml</code></pre>
 </div>
 </div>

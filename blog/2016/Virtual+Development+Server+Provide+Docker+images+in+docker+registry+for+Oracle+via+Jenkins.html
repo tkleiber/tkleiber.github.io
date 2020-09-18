@@ -141,10 +141,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto"><div class="paragraph">
-<p>This is a follow up to earlier <a href="Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</a> blog. We now try to automate the build of all needed images as soon as Oracle <a href="https://github.com/oracle/docker-images">GitHub</a> Sources changed or we need to build our Vagrant VirtualBox again from scratch.</p>
+<p>We now try to automate the build of all needed images as soon as Oracle <a href="https://github.com/oracle/docker-images">GitHub</a> Sources changed or we need to build our Vagrant VirtualBox again from scratch.</p>
 </div>
 <div class="paragraph">
-<p>After we have already installed <a href="Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html">Jenkins</a> we now install first some needed plugins.</p>
+<p>This is a follow up to earlier <a href="Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</a> blog.</p>
+</div>
+<div class="paragraph">
+<p>After we have already installed <a href="Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html">Jenkins</a> we now install first some needed plugins.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -207,7 +210,7 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>After that we create our Jenkins pipeline via "New Item".</p>
+<p>After that we create our Jenkins pipeline via "New Item".</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -238,7 +241,7 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>Here is the script for the moment, later after we have it successfully tested and implemented all builds of images we need, we will put it in it&#8217;s own git repository and call it from there. The script is written in <a href="https://github.com/jenkinsci/pipeline-model-definition-plugin">Pipeline Model Definition</a>, a config-like syntax for defining Pipelines.</p>
+<p>Here is the script for the moment, later after we have it successfully tested and implemented all builds of images we need, we will put it in it&#8217;s own git repository and call it from there. The script is written in <a href="https://github.com/jenkinsci/pipeline-model-definition-plugin">Pipeline Model Definition</a>, a config-like syntax for defining Pipelines.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -350,7 +353,7 @@
 <p><a href="https://github.com/tkleiber/de.kleiber.devserver/tree/53a1136594393872f4ae7615db86757a9152f4e1">Here</a> you find the source code for this blog.</p>
 </div>
 <div class="paragraph">
-<p><a href="tags/Virtual-Development-Server.html">Here</a> you find more about the topic "Virtual Development Server".</p>
+<p><a href="../../tags/Virtual-Development-Server.html">Here</a> you find more about the topic "Virtual Development Server".</p>
 </div>
 <div class="paragraph">
 <p>That&#8217;s it.</p>

@@ -136,11 +136,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto"><div class="paragraph">
-<p>According to my last post today I will show you the basic configuration for forms 11g.
+<p>According to my last post today I will show you the basic configuration for forms 11g.
 Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works too!</p>
 </div>
 <div class="paragraph">
-<p>As first you need an additional unique identifier "ifsessid" in parameter "serverURL" for forms. This prevents the use of a static jnlp in this case. Maybe it is possible to branch out the build of this unique identifier from the jnlp. I have decided instead to create the the jnlp from a java server page. This helps me additional to use forms parameters, which I will describe in a later post. Sure there maybe exist other ways to build the jnlp.</p>
+<p>As first you need an additional unique identifier "ifsessid" in parameter "serverURL" for forms. This prevents the use of a static jnlp in this case. Maybe it is possible to branch out the build of this unique identifier from the jnlp. I have decided instead to create the the jnlp from a java server page. This helps me additional to use forms parameters, which I will describe in a later post. Sure there maybe exist other ways to build the jnlp.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s start:</p>
@@ -282,9 +282,6 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version = '1.0' encoding = 'windows-1252'?&gt;
 &lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"&gt;&lt;/web-app&gt;</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>Complete workspace you can found <a href="https://docs.google.com/open?id=0B52l1kNwgjwCNjIzN2Y1ZjktMzU1Ny00OGRjLTkyNzItNGIwMTViZmJiZDMz"&gt;webstart_11g.zip">here</a>.</p>
 </div>
 <div class="paragraph">
 <p>Now start java webstart with your jnlp url, here is an example in linux:</p>
