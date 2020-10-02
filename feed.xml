@@ -6,10 +6,16 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Sat, 26 Sep 2020 00:09:13 +0200</pubDate>
-    <lastBuildDate>Sat, 26 Sep 2020 00:09:13 +0200</lastBuildDate>
+    <pubDate>Fri, 2 Oct 2020 10:31:59 +0200</pubDate>
+    <lastBuildDate>Fri, 2 Oct 2020 10:31:59 +0200</lastBuildDate>
 
     <item>
+      <title>Show your Oracle Forms and Reports diffs from Git</title>
+      <link>https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html</link>
+      <pubDate>Fri, 4 Sep 2020 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">blog/2020/oracle_forms_git_difftool.html</guid>
+      <description><p>You have successfully versioned your Oracle Forms &amp; Reports module with git. What if you could see the diff for your module after changes from your working copy or between two commits? See my solution with the tools from ORCL Toolbox and a Git difftool wrapper.</p></description>
+    </item><item>
       <title>Goodbye Wordpress - Welcome JBake!</title>
       <link>https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html</link>
       <pubDate>Fri, 4 Sep 2020 00:00:00 +0200</pubDate>
