@@ -6,10 +6,16 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Sat, 17 Oct 2020 17:17:15 +0200</pubDate>
-    <lastBuildDate>Sat, 17 Oct 2020 17:17:15 +0200</lastBuildDate>
+    <pubDate>Sat, 17 Oct 2020 17:41:03 +0200</pubDate>
+    <lastBuildDate>Sat, 17 Oct 2020 17:41:03 +0200</lastBuildDate>
 
     <item>
+      <title>Citrix Workspace blocks PRNTSCR key</title>
+      <link>https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">blog/2020/citrix_workspace_blocks_print_sreen.html</guid>
+      <description><p>If you use Citrix Workspace it could be, that you cannot use Print Screen key on your keyboard anymore. See what it is the root cause and how you can workaround this.</p></description>
+    </item><item>
       <title>Show your Oracle Forms and Reports diffs from Git</title>
       <link>https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html</link>
       <pubDate>Fri, 4 Sep 2020 00:00:00 +0200</pubDate>
