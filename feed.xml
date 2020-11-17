@@ -6,10 +6,16 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Tue, 20 Oct 2020 22:01:07 +0200</pubDate>
-    <lastBuildDate>Tue, 20 Oct 2020 22:01:07 +0200</lastBuildDate>
+    <pubDate>Tue, 17 Nov 2020 13:15:21 +0100</pubDate>
+    <lastBuildDate>Tue, 17 Nov 2020 13:15:21 +0100</lastBuildDate>
 
     <item>
+      <title>Our way to 19c - I am a speaker at DOAG 2020</title>
+      <link>https://www.amapac.io/blog/2020/our_way_to_19c_I_am_a_speaker_at_DOAG_2020.html</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2020/our_way_to_19c_I_am_a_speaker_at_DOAG_2020.html</guid>
+      <description><p>Already 4 years we plan the upgrade from 11c to a new supported version. If you speak german and you are interested in some of our experiences, you should come and attend my presentation at DOAG 2020 Wednesday, Nov. 18, 15:00 <a href="https://programm.doag.org/doag/2020/#/scheduledEvent/603539">online</a>.</p></description>
+    </item><item>
       <title>Citrix Workspace blocks PRNTSCR key</title>
       <link>https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html</link>
       <pubDate>Sat, 17 Oct 2020 00:00:00 +0200</pubDate>
