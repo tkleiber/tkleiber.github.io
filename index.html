@@ -1,137 +1,127 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="As Much As Possible As Code">
-  <meta name="author" content="Torsten Kleiber">
+    <head>
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="As Much As Possible As Code"/>
+        <meta name="author" content="Torsten Kleiber"/>
 
-  <title>AMAPAC</title>
+        <title>AMAPAC</title>
 
-  <meta name='robots' content='index, follow'>
-  <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
-  <meta name="generator" content="JBake">
+        <meta name="robots" content="index, follow"/>
+        <meta name="generator" content="JBake"/>
 
-  <!--Facebook Card-->
-  <meta property="og:type" content="article"/>
-  <meta property="og:title" content="AMAPAC"/>
-  <meta property="og:description" content="As Much As Possible As Code"/>
-  <meta property="og:image"
+        <!--Facebook Card-->
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="AMAPAC"/>
+        <meta property="og:description" content="As Much As Possible As Code"/>
+        <meta property="og:image"
         content="https://www.amapac.io/img/amapac_share_card.png"/>
 
-  <!--Twitter card -->
-  
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AMAPAC">
-    <meta name="twitter:creator" content="@develishdevelop">
-    <meta name="twitter:description" content="As Much As Possible As Code">
-    <meta name="twitter:image"
-          content="https://www.amapac.io/img/amapac_share_card.png">
-  
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css"
-        rel="stylesheet">
-
-  <!-- highlightjs Code Formatter -->
-  <link href="vendor/highlightjs/styles/default.css"
-        rel="stylesheet" type="text/css">
-  <script src="vendor/highlightjs/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-
-  <!-- Custom Fonts -->
-  <link href="vendor/fontawesome-free/css/all.min.css"
-        rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
-        type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lato:300&amp;text=AMAPAC'
-        rel='stylesheet' type='text/css'>
-  <link
-      href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-      rel='stylesheet' type='text/css'>
-
-  <!-- Custom styles for this template -->
-  <link href="css/asciidoctor.css" rel="stylesheet">
-  <link href="css/clean-blog.min.css" rel="stylesheet">
-
-  <!-- Klaro Cookie Consent tool -->
-  <script defer type="text/javascript" src="vendor/klaro/config.js"></script>
-  <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-  <link rel="shortcut icon" href="favicon.png"/>
-</head>
-
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">AMAPAC</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-            aria-label="Toggle navigation">
-      Menu
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <!--ul class="navbar-nav ml-auto" th:remove="all-but-first"-->
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a href="about.html">About</a>
-        </li>
-        <!--li class="nav-item">
-            <a class="nav-link" href="tags.html">Tags</a>
-        </li-->
-        <li class="nav-item">
-            <a class="nav-link" href="archive.html">Archive</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url(&#39;img/index-cover.jpg&#39;) ; background-color:#101010">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>AMAPAC</h1>
-            <span class="subheading">As Much As Possible As Code</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+        <!--Twitter card -->
         
-          <div class="post-preview">
-            <a href="blog/2020/our_way_to_19c_I_am_a_speaker_at_DOAG_2020.html">
-              <h2 class="post-title">Our way to 19c - I am a speaker at DOAG 2020</h2>
-              <h3 class="post-subtitle">Project report about an Oracle Database Upgrade</h3>
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>November 17, 2020</span>
-              <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Database.html" class="" >Database</a></span><span> <a   href="tags/Migration.html" class="" >Migration</a></span><span> <a   href="tags/PLSQL.html" class="" >PLSQL</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/SOA.html" class="" >SOA</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Reports.html" class="" >Reports</a></span><span> <a   href="tags/Conferences.html" class="" >Conferences</a></span></span></p>
-            <p>Already 4 years we plan the upgrade from 11c to a new supported version. If you speak german and you are interested in some of our experiences, you should come and attend my presentation at DOAG 2020 Wednesday, Nov. 18, 15:00 <a href="https://programm.doag.org/doag/2020/#/scheduledEvent/603539">online</a>.</p>
-            
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="AMAPAC">
+        <meta name="twitter:creator" content="@develishdevelop">
+        <meta name="twitter:description" content="As Much As Possible As Code">
+        <meta name="twitter:image"
+          content="https://www.amapac.io/img/amapac_share_card.png">
+        
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- highlightjs Code Formatter -->
+        <link href="vendor/highlightjs/styles/default.css" rel="stylesheet" type="text/css">
+        <script src="vendor/highlightjs/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <!-- Custom Fonts -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=AMAPAC"
+        rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+        <!-- Custom styles for this template -->
+        <link href="css/asciidoctor.css" rel="stylesheet">
+        <link href="css/clean-blog.min.css" rel="stylesheet">
+
+        <!-- Klaro Cookie Consent tool -->
+        <script defer type="text/javascript" src="vendor/klaro/config.js"></script>
+        <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
+
+        <link rel="shortcut icon" href="favicon.png"/>
+    </head>
+    
+    <body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">AMAPAC</a>
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                      Menu
+                      <i class="fas fa-bars"></i>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tags/index.html">Tags</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="archive.html">Archive</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url(&#39;img/index-cover.jpg&#39;) ; background-color:#101010">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>AMAPAC</h1>
+                        <span class="subheading">As Much As Possible As Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                
+                    <div class="post-preview">
+                        <a href="blog/2020/our_way_to_19c_I_am_a_speaker_at_DOAG_2020.html">
+                            <h2 class="post-title">Our way to 19c - I am a speaker at DOAG 2020</h2>
+                            <h3 class="post-subtitle">Project report about an Oracle Database Upgrade</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>November 17, 2020</span>
+                            <span> Tags: <span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/Database.html" class="">Database</a></span><span> <a
+                                href="tags/Migration.html" class="">Migration</a></span><span> <a
+                                href="tags/PLSQL.html" class="">PLSQL</a></span><span> <a
+                                href="tags/ADF.html" class="">ADF</a></span><span> <a
+                                href="tags/SOA.html" class="">SOA</a></span><span> <a
+                                href="tags/Forms.html" class="">Forms</a></span><span> <a
+                                href="tags/Reports.html" class="">Reports</a></span><span> <a
+                                href="tags/Conferences.html" class="">Conferences</a></span></span></p>
+                        <p>Already 4 years we plan the upgrade from 11c to a new supported version. If you speak german and you are interested in some of our experiences, you should come and attend my presentation at DOAG 2020 Wednesday, Nov. 18, 15:00 <a href="https://programm.doag.org/doag/2020/#/scheduledEvent/603539">online</a>.</p>
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -224,20 +214,22 @@
           </ul>
 
         
-            <hr>
-          </div>
-        
-          <div class="post-preview">
-            <a href="blog/2020/citrix_workspace_blocks_print_sreen.html">
-              <h2 class="post-title">Citrix Workspace blocks PRNTSCR key</h2>
-              <h3 class="post-subtitle">Workaround to re-enable Print Screen key</h3>
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>October 17, 2020</span>
-              <span> Tags: <span> <a   href="tags/Citrix.html" class="" >Citrix</a></span><span> <a   href="tags/Windows.html" class="" >Windows</a></span></span></p>
-            <p>If you use Citrix Workspace it could be, that you cannot use Print Screen key on your keyboard anymore. See what it is the root cause and how you can workaround this.</p>
-            
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2020/citrix_workspace_blocks_print_sreen.html">
+                            <h2 class="post-title">Citrix Workspace blocks PRNTSCR key</h2>
+                            <h3 class="post-subtitle">Workaround to re-enable Print Screen key</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>October 17, 2020</span>
+                            <span> Tags: <span> <a
+                                href="tags/Citrix.html" class="">Citrix</a></span><span> <a
+                                href="tags/Windows.html" class="">Windows</a></span></span></p>
+                        <p>If you use Citrix Workspace it could be, that you cannot use Print Screen key on your keyboard anymore. See what it is the root cause and how you can workaround this.</p>
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -330,20 +322,27 @@
           </ul>
 
         
-            <hr>
-          </div>
-        
-          <div class="post-preview">
-            <a href="blog/2020/oracle_forms_git_difftool.html">
-              <h2 class="post-title">Show your Oracle Forms and Reports diffs from Git</h2>
-              <h3 class="post-subtitle">See diff for your Forms and Reports modules with tools from ORCL Toolbox and Git difftool wrapper</h3>
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>October 02, 2020</span>
-              <span> Tags: <span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Reports.html" class="" >Reports</a></span><span> <a   href="tags/Git.html" class="" >Git</a></span><span> <a   href="tags/ORCL-Toolbox.html" class="" >ORCL-Toolbox</a></span><span> <a   href="tags/FormsAPI-Master.html" class="" >FormsAPI-Master</a></span><span> <a   href="tags/FormsTool.html" class="" >FormsTool</a></span></span></p>
-            <p>You have successfully versioned your Oracle Forms &amp; Reports module with git. What if you could see the diff for your module after changes from your working copy or between two commits? See my solution with the tools from ORCL Toolbox and a Git difftool wrapper.</p>
-            
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2020/oracle_forms_git_difftool.html">
+                            <h2 class="post-title">Show your Oracle Forms and Reports diffs from Git</h2>
+                            <h3 class="post-subtitle">See diff for your Forms and Reports modules with tools from ORCL Toolbox and Git difftool wrapper</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>October 02, 2020</span>
+                            <span> Tags: <span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/Forms.html" class="">Forms</a></span><span> <a
+                                href="tags/Reports.html" class="">Reports</a></span><span> <a
+                                href="tags/Git.html" class="">Git</a></span><span> <a
+                                href="tags/ORCL-Toolbox.html" class="">ORCL-Toolbox</a></span><span> <a
+                                href="tags/FormsAPI-Master.html" class="">FormsAPI-Master</a></span><span> <a
+                                href="tags/FormsTool.html" class="">FormsTool</a></span></span></p>
+                        <p>You have successfully versioned your Oracle Forms &amp; Reports module with git. What if you could see the diff for your module after changes from your working copy or between two commits? See my solution with the tools from ORCL Toolbox and a Git difftool wrapper.</p>
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -436,20 +435,23 @@
           </ul>
 
         
-            <hr>
-          </div>
-        
-          <div class="post-preview">
-            <a href="blog/2020/Goodbye_Wordpress_Welcome_JBake.html">
-              <h2 class="post-title">Goodbye Wordpress - Welcome JBake!</h2>
-              
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>September 04, 2020</span>
-              <span> Tags: <span> <a   href="tags/Blogging.html" class="" >Blogging</a></span><span> <a   href="tags/Wordpress.html" class="" >Wordpress</a></span><span> <a   href="tags/JBake.html" class="" >JBake</a></span></span></p>
-            <p>Today I wrote my last post on Wordpress. See why I left Wordpress and why I choose JBake instead.</p>
-            
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2020/Goodbye_Wordpress_Welcome_JBake.html">
+                            <h2 class="post-title">Goodbye Wordpress - Welcome JBake!</h2>
+                            
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>September 04, 2020</span>
+                            <span> Tags: <span> <a
+                                href="tags/Blogging.html" class="">Blogging</a></span><span> <a
+                                href="tags/Wordpress.html" class="">Wordpress</a></span><span> <a
+                                href="tags/JBake.html" class="">JBake</a></span></span></p>
+                        <p>Today I wrote my last post on Wordpress. See why I left Wordpress and why I choose JBake instead.</p>
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -542,20 +544,29 @@
           </ul>
 
         
-            <hr>
-          </div>
-        
-          <div class="post-preview">
-            <a href="blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html">
-              <h2 class="post-title">Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I am a speaker at DOAG2019</h2>
-              
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>November 18, 2019</span>
-              <span> Tags: <span> <a   href="tags/Database.html" class="" >Database</a></span><span> <a   href="tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="tags/Git.html" class="" >Git</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Liquibase.html" class="" >Liquibase</a></span><span> <a   href="tags/Database-Modelling.html" class="" >Database-Modelling</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/PLSQL.html" class="" >PLSQL</a></span><span> <a   href="tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
-            <p>We try to be agile in developing and merging our features into branches when they are ready for use.</p>
-            
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html">
+                            <h2 class="post-title">Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I am a speaker at DOAG2019</h2>
+                            
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>November 18, 2019</span>
+                            <span> Tags: <span> <a
+                                href="tags/Database.html" class="">Database</a></span><span> <a
+                                href="tags/Deploy.html" class="">Deploy</a></span><span> <a
+                                href="tags/Git.html" class="">Git</a></span><span> <a
+                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
+                                href="tags/Liquibase.html" class="">Liquibase</a></span><span> <a
+                                href="tags/Database-Modelling.html" class="">Database-Modelling</a></span><span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/PLSQL.html" class="">PLSQL</a></span><span> <a
+                                href="tags/utPLSQL.html" class="">utPLSQL</a></span></span></p>
+                        <p>We try to be agile in developing and merging our features into branches when they are ready for use.</p>
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -648,20 +659,36 @@
           </ul>
 
         
-            <hr>
-          </div>
-        
-          <div class="post-preview">
-            <a href="blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html">
-              <h2 class="post-title">&quot;Regulatorics: Offside is when the referee whistles&quot; - I am a speaker at DOAG2018</h2>
-              
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>July 17, 2018</span>
-              <span> Tags: <span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/Atlassian.html" class="" >Atlassian</a></span><span> <a   href="tags/Bitbucket.html" class="" >Bitbucket</a></span><span> <a   href="tags/Branching.html" class="" >Branching</a></span><span> <a   href="tags/Build.html" class="" >Build</a></span><span> <a   href="tags/Commit-Test.html" class="" >Commit-Test</a></span><span> <a   href="tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="tags/Git.html" class="" >Git</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/JIRA.html" class="" >JIRA</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/Pipeline.html" class="" >Pipeline</a></span><span> <a   href="tags/SOA.html" class="" >SOA</a></span><span> <a   href="tags/Unit-Test.html" class="" >Unit-Test</a></span></span></p>
-            <p>Today my presentation is confirmed: "Regulatorics: Offside is when the referee whistles". Maybe the German title will be better understood: "Regulatorik: Abseits ist, wenn der Schiedsrichter pfeift".</p>
-            
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html">
+                            <h2 class="post-title">&quot;Regulatorics: Offside is when the referee whistles&quot; - I am a speaker at DOAG2018</h2>
+                            
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>July 17, 2018</span>
+                            <span> Tags: <span> <a
+                                href="tags/ADF.html" class="">ADF</a></span><span> <a
+                                href="tags/Atlassian.html" class="">Atlassian</a></span><span> <a
+                                href="tags/Bitbucket.html" class="">Bitbucket</a></span><span> <a
+                                href="tags/Branching.html" class="">Branching</a></span><span> <a
+                                href="tags/Build.html" class="">Build</a></span><span> <a
+                                href="tags/Commit-Test.html" class="">Commit-Test</a></span><span> <a
+                                href="tags/Conferences.html" class="">Conferences</a></span><span> <a
+                                href="tags/Continous-Integration.html" class="">Continous-Integration</a></span><span> <a
+                                href="tags/Deploy.html" class="">Deploy</a></span><span> <a
+                                href="tags/Git.html" class="">Git</a></span><span> <a
+                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
+                                href="tags/JIRA.html" class="">JIRA</a></span><span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/Pipeline.html" class="">Pipeline</a></span><span> <a
+                                href="tags/SOA.html" class="">SOA</a></span><span> <a
+                                href="tags/Unit-Test.html" class="">Unit-Test</a></span></span></p>
+                        <p>Today my presentation is confirmed: "Regulatorics: Offside is when the referee whistles". Maybe the German title will be better understood: "Regulatorik: Abseits ist, wenn der Schiedsrichter pfeift".</p>
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -754,20 +781,46 @@
           </ul>
 
         
-            <hr>
-          </div>
-        
-          <div class="post-preview">
-            <a href="blog/2017/DOAG2017+wrap+up.html">
-              <h2 class="post-title">DOAG2017 wrap up</h2>
-              
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>December 01, 2017</span>
-              <span> Tags: <span> <a   href="tags/ABCS.html" class="" >ABCS</a></span><span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/APEX.html" class="" >APEX</a></span><span> <a   href="tags/Bitcoin.html" class="" >Bitcoin</a></span><span> <a   href="tags/Blockchain.html" class="" >Blockchain</a></span><span> <a   href="tags/Cloud.html" class="" >Cloud</a></span><span> <a   href="tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/DBADev.html" class="" >DBADev</a></span><span> <a   href="tags/DevOps.html" class="" >DevOps</a></span><span> <a   href="tags/Disruption.html" class="" >Disruption</a></span><span> <a   href="tags/DOAG.html" class="" >DOAG</a></span><span> <a   href="tags/Docker.html" class="" >Docker</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Fusion-Middleware.html" class="" >Fusion-Middleware</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/JavaScript.html" class="" >JavaScript</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/JET.html" class="" >JET</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/PLSQL.html" class="" >PLSQL</a></span><span> <a   href="tags/Quality-Assurance.html" class="" >Quality-Assurance</a></span><span> <a   href="tags/Reports.html" class="" >Reports</a></span><span> <a   href="tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="tags/Virtualization.html" class="" >Virtualization</a></span><span> <a   href="tags/WebLogic.html" class="" >WebLogic</a></span></span></p>
-            <p>Another DOAG is over and here is my summary.</p>
-            
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2017/DOAG2017+wrap+up.html">
+                            <h2 class="post-title">DOAG2017 wrap up</h2>
+                            
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>December 01, 2017</span>
+                            <span> Tags: <span> <a
+                                href="tags/ABCS.html" class="">ABCS</a></span><span> <a
+                                href="tags/ADF.html" class="">ADF</a></span><span> <a
+                                href="tags/APEX.html" class="">APEX</a></span><span> <a
+                                href="tags/Bitcoin.html" class="">Bitcoin</a></span><span> <a
+                                href="tags/Blockchain.html" class="">Blockchain</a></span><span> <a
+                                href="tags/Cloud.html" class="">Cloud</a></span><span> <a
+                                href="tags/Code-Coverage.html" class="">Code-Coverage</a></span><span> <a
+                                href="tags/Continous-Integration.html" class="">Continous-Integration</a></span><span> <a
+                                href="tags/DBADev.html" class="">DBADev</a></span><span> <a
+                                href="tags/DevOps.html" class="">DevOps</a></span><span> <a
+                                href="tags/Disruption.html" class="">Disruption</a></span><span> <a
+                                href="tags/DOAG.html" class="">DOAG</a></span><span> <a
+                                href="tags/Docker.html" class="">Docker</a></span><span> <a
+                                href="tags/Forms.html" class="">Forms</a></span><span> <a
+                                href="tags/Fusion-Middleware.html" class="">Fusion-Middleware</a></span><span> <a
+                                href="tags/Java.html" class="">Java</a></span><span> <a
+                                href="tags/JavaScript.html" class="">JavaScript</a></span><span> <a
+                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
+                                href="tags/JET.html" class="">JET</a></span><span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/PLSQL.html" class="">PLSQL</a></span><span> <a
+                                href="tags/Quality-Assurance.html" class="">Quality-Assurance</a></span><span> <a
+                                href="tags/Reports.html" class="">Reports</a></span><span> <a
+                                href="tags/Static-Code-Analysis.html" class="">Static-Code-Analysis</a></span><span> <a
+                                href="tags/Virtualization.html" class="">Virtualization</a></span><span> <a
+                                href="tags/WebLogic.html" class="">WebLogic</a></span></span></p>
+                        <p>Another DOAG is over and here is my summary.</p>
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -860,21 +913,24 @@
           </ul>
 
         
-            <hr>
-          </div>
-        
-          <div class="post-preview">
-            <a href="blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html">
-              <h2 class="post-title">Provide access to WebLogic DMS Spy Servlet for readonly users</h2>
-              
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>August 30, 2017</span>
-              <span> Tags: <span> <a   href="tags/Linux.html" class="" >Linux</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/WebLogic.html" class="" >WebLogic</a></span></span></p>
-            <p>For security reasons and to prevent the configuration drift it is recommendable to use read only access of WebLogic configuration for analyzing problems.
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html">
+                            <h2 class="post-title">Provide access to WebLogic DMS Spy Servlet for readonly users</h2>
+                            
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>August 30, 2017</span>
+                            <span> Tags: <span> <a
+                                href="tags/Linux.html" class="">Linux</a></span><span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/WebLogic.html" class="">WebLogic</a></span></span></p>
+                        <p>For security reasons and to prevent the configuration drift it is recommendable to use read only access of WebLogic configuration for analyzing problems.
 For read only access of configuration and logs WebLogic provides out of the box the group Monitors. Unfortunately you cannot access <a href="https://docs.oracle.com/middleware/12212/lcm/ASPER/GUID-F1201ECA-AF97-4C96-9926-53F6C25A58D3.htm#ASPER99002">DMS Spy Servlet</a> with this group, which is useful for analyse runtime values of the server. Only users which belongs to the Administrators group and therefore have full access can access DMS Spy Servlet and this is not configurable in WebLogic by default.</p>
-            
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -967,20 +1023,33 @@ For read only access of configuration and logs WebLogic provides out of the box 
           </ul>
 
         
-            <hr>
-          </div>
-        
-          <div class="post-preview">
-            <a href="blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html">
-              <h2 class="post-title">&quot;PL/SQL: Therefore, whoever binds forever: automate your tests&quot; - I am a speaker at DOAG2017</h2>
-              
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>July 18, 2017</span>
-              <span> Tags: <span> <a   href="tags/Branching.html" class="" >Branching</a></span><span> <a   href="tags/Build.html" class="" >Build</a></span><span> <a   href="tags/Commit-Test.html" class="" >Commit-Test</a></span><span> <a   href="tags/Conferences.html" class="" >Conferences</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Database.html" class="" >Database</a></span><span> <a   href="tags/Deploy.html" class="" >Deploy</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/PLSQL.html" class="" >PLSQL</a></span><span> <a   href="tags/SQL-Developer.html" class="" >SQL-Developer</a></span><span> <a   href="tags/Unit-Test.html" class="" >Unit-Test</a></span><span> <a   href="tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
-            <p>Today my presentation is confirmed: "Therefore, whoever binds forever: automate your tests". Maybe the German title will be the better understood: "PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!"</p>
-            
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html">
+                            <h2 class="post-title">&quot;PL/SQL: Therefore, whoever binds forever: automate your tests&quot; - I am a speaker at DOAG2017</h2>
+                            
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>July 18, 2017</span>
+                            <span> Tags: <span> <a
+                                href="tags/Branching.html" class="">Branching</a></span><span> <a
+                                href="tags/Build.html" class="">Build</a></span><span> <a
+                                href="tags/Commit-Test.html" class="">Commit-Test</a></span><span> <a
+                                href="tags/Conferences.html" class="">Conferences</a></span><span> <a
+                                href="tags/Continous-Integration.html" class="">Continous-Integration</a></span><span> <a
+                                href="tags/Database.html" class="">Database</a></span><span> <a
+                                href="tags/Deploy.html" class="">Deploy</a></span><span> <a
+                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/PLSQL.html" class="">PLSQL</a></span><span> <a
+                                href="tags/SQL-Developer.html" class="">SQL-Developer</a></span><span> <a
+                                href="tags/Unit-Test.html" class="">Unit-Test</a></span><span> <a
+                                href="tags/utPLSQL.html" class="">utPLSQL</a></span></span></p>
+                        <p>Today my presentation is confirmed: "Therefore, whoever binds forever: automate your tests". Maybe the German title will be the better understood: "PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!"</p>
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1073,21 +1142,34 @@ For read only access of configuration and logs WebLogic provides out of the box 
           </ul>
 
         
-            <hr>
-          </div>
-        
-          <div class="post-preview">
-            <a href="blog/2017/Javaland+2017+wrap+up.html">
-              <h2 class="post-title">Javaland 2017 wrap up</h2>
-              
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>April 01, 2017</span>
-              <span> Tags: <span> <a   href="tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span> <a   href="tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Docker.html" class="" >Docker</a></span><span> <a   href="tags/Gui-Test.html" class="" >Gui-Test</a></span><span> <a   href="tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Linux.html" class="" >Linux</a></span><span> <a   href="tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span> <a   href="tags/Vagrant.html" class="" >Vagrant</a></span><span> <a   href="tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
-            <p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2017/Javaland+2017+wrap+up.html">
+                            <h2 class="post-title">Javaland 2017 wrap up</h2>
+                            
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>April 01, 2017</span>
+                            <span> Tags: <span> <a
+                                href="tags/ADF-Architecture.html" class="">ADF-Architecture</a></span><span> <a
+                                href="tags/Code-Coverage.html" class="">Code-Coverage</a></span><span> <a
+                                href="tags/Continous-Integration.html" class="">Continous-Integration</a></span><span> <a
+                                href="tags/Docker.html" class="">Docker</a></span><span> <a
+                                href="tags/Gui-Test.html" class="">Gui-Test</a></span><span> <a
+                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
+                                href="tags/Java.html" class="">Java</a></span><span> <a
+                                href="tags/JDeveloper.html" class="">JDeveloper</a></span><span> <a
+                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
+                                href="tags/Linux.html" class="">Linux</a></span><span> <a
+                                href="tags/Static-Code-Analysis.html" class="">Static-Code-Analysis</a></span><span> <a
+                                href="tags/Vagrant.html" class="">Vagrant</a></span><span> <a
+                                href="tags/VirtualBox.html" class="">VirtualBox</a></span></span></p>
+                        <p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
 It was not easy this year to concentrate on the sessions because of the hottest march of the last 100 years. But the quality of the sessions beats the weather. Maybe again my invest in reading the abstracts and filter the sessions before the conference has payed off.</p>
-            
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1180,20 +1262,30 @@ It was not easy this year to concentrate on the sessions because of the hottest 
           </ul>
 
         
-            <hr>
-          </div>
-        
-          <div class="post-preview">
-            <a href="blog/2017/DEVCAMP17+wrap+up.html">
-              <h2 class="post-title">DEVCAMP17 wrap up</h2>
-              
-            </a>
-            <p class="post-meta">Posted by
-              <b>Torsten Kleiber</b>
-              on <span>February 09, 2017</span>
-              <span> Tags: <span> <a   href="tags/ADF.html" class="" >ADF</a></span><span> <a   href="tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span> <a   href="tags/Forms.html" class="" >Forms</a></span><span> <a   href="tags/Java.html" class="" >Java</a></span><span> <a   href="tags/JDeveloper.html" class="" >JDeveloper</a></span><span> <a   href="tags/Jenkins.html" class="" >Jenkins</a></span><span> <a   href="tags/Oracle.html" class="" >Oracle</a></span><span> <a   href="tags/PLSQL.html" class="" >PLSQL</a></span><span> <a   href="tags/Report.html" class="" >Report</a></span><span> <a   href="tags/Unit-Test.html" class="" >Unit-Test</a></span></span></p>
-            <p>Yesterday I attend the annual <a href="https://en.wikipedia.org/wiki/BarCamp">barcamp</a> DEVCAMP of the <a href="http://www.doag.org">DOAG</a> development community. There are mostly developers with SQL, PL/SQL, Forms &amp; Reports, ADF, JET background and some Java, Javascript and APEX developers too. And not to forget: 1 dba and some managers. Here is my summary.</p>
-            
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2017/DEVCAMP17+wrap+up.html">
+                            <h2 class="post-title">DEVCAMP17 wrap up</h2>
+                            
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>February 09, 2017</span>
+                            <span> Tags: <span> <a
+                                href="tags/ADF.html" class="">ADF</a></span><span> <a
+                                href="tags/Continous-Integration.html" class="">Continous-Integration</a></span><span> <a
+                                href="tags/Forms.html" class="">Forms</a></span><span> <a
+                                href="tags/Java.html" class="">Java</a></span><span> <a
+                                href="tags/JDeveloper.html" class="">JDeveloper</a></span><span> <a
+                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/PLSQL.html" class="">PLSQL</a></span><span> <a
+                                href="tags/Report.html" class="">Report</a></span><span> <a
+                                href="tags/Unit-Test.html" class="">Unit-Test</a></span></span></p>
+                        <p>Yesterday I attend the annual <a href="https://en.wikipedia.org/wiki/BarCamp">barcamp</a> DEVCAMP of the <a href="http://www.doag.org">DOAG</a> development community. There are mostly developers with SQL, PL/SQL, Forms &amp; Reports, ADF, JET background and some Java, Javascript and APEX developers too. And not to forget: 1 dba and some managers. Here is my summary.</p>
+                        
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1286,170 +1378,170 @@ It was not easy this year to concentrate on the sessions because of the hottest 
           </ul>
 
         
-            <hr>
-          </div>
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="archive.html">Older Posts &rarr;</a>
+                        <hr>
+                    </div>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <div class="clearfix">
+                    <a class="btn btn-primary float-right" href="archive.html">Older Posts &rarr;</a>
+                </div>
+                
+                <!-- Pager -->
+                
+            </div>
         </div>
-        
-        <!-- Pager -->
-        
-      </div>
     </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <ul class="list-inline text-center">
-          <li class="list-inline-item">
-            <a href="feed.xml" title="Subscribe to RSS feed">
+    
+    <!-- Footer -->
+    <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="feed.xml" title="Subscribe to RSS feed">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
                                     </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://twitter.com/develishdevelop">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/develishdevelop">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
                                     </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://github.com/tkleiber">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/tkleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                                     </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://linkedin.com/in/kleiber/">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://linkedin.com/in/kleiber/">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                                     </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.xing.com/profile/Torsten_Kleiber/">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.xing.com/profile/Torsten_Kleiber/">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
                                     </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.slideshare.net/tkleiber/">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.slideshare.net/tkleiber/">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-slideshare fa-stack-1x fa-inverse"></i>
                                     </span>
-            </a>
-          </li>
-        </ul>
-        <p class="copyright text-muted">&copy; <span>Torsten Kleiber</span>
-          <span>2020</span> | <a
+                                </a>
+                            </li>
+                        </ul>
+                            <p class="copyright text-muted">&copy; <span>Torsten Kleiber</span>
+                                <span>2020</span> | <a
               href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a
               href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.4</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
       </div>
     </div>
   </div>
   </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" ></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/clean-blog.min.js"></script>
-
-  
-        
-</body>
-
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+    
+    
+    
+    </body>
+    
 </html>
