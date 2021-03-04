@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="How to do Mass Changes with in your Oracle Reports with FormsAPI Master"/>
+        <meta name="author" content="Torsten Kleiber"/>
+
+        <title>Add Code to Oracle Reports via Forms FormsAPI Master</title>
+
+        <meta name="robots" content="index, follow"/>
+        <meta name="generator" content="JBake"/>
+
+        <!--Facebook Card-->
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Add Code to Oracle Reports via Forms FormsAPI Master"/>
+        <meta property="og:description" content="How to do Mass Changes with in your Oracle Reports with FormsAPI Master"/>
+        <meta property="og:image"
+        content="https://www.amapac.io/images/add_code_to_reports_via_forsm_api_master_log.png"/>
+
+        <!--Twitter card -->
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Add Code to Oracle Reports via Forms FormsAPI Master">
+        <meta name="twitter:creator" content="@develishdevelop">
+        <meta name="twitter:description" content="How to do Mass Changes with in your Oracle Reports with FormsAPI Master">
+        <meta name="twitter:image"
+          content="https://www.amapac.io/images/add_code_to_reports_via_forsm_api_master_log.png">
+        
+
+        <!-- Bootstrap core CSS -->
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- highlightjs Code Formatter -->
+        <link href="../../vendor/highlightjs/styles/default.css" rel="stylesheet" type="text/css">
+        <script src="../../vendor/highlightjs/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <!-- Custom Fonts -->
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=AMAPAC"
+        rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+        <!-- Custom styles for this template -->
+        <link href="../../css/asciidoctor.css" rel="stylesheet">
+        <link href="../../css/clean-blog.min.css" rel="stylesheet">
+
+        <!-- Klaro Cookie Consent tool -->
+        <script defer type="text/javascript" src="../../vendor/klaro/config.js"></script>
+        <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
+
+        <link rel="shortcut icon" href="../../favicon.png"/>
+    </head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">AMAPAC</a>
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                      Menu
+                      <i class="fas fa-bars"></i>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="../../about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../tags/index.html">Tags</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../archive.html">Archive</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+  <!-- Page Header -->
+  <!-- Set your background image for this header on the line below. -->
+  <header class="masthead" style="background-image: url(&#39;../../images/cover_oracle_forms_and_reports.png&#39;) ; background-color:#101010">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Add Code to Oracle Reports via Forms FormsAPI Master</h1>
+            <h2 class="subheading">How to do Mass Changes with in your Oracle Reports with FormsAPI Master</h2>
+            <span class="meta">Posted by
+              <b>Torsten Kleiber</b>
+              on March 04, 2021
+              
+              </br>
+              <span> Tags:
+                <span>
+                  <a href="../../tags/Oracle.html" class="" >Oracle</a></span><span>
+                  <a href="../../tags/Reports.html" class="" >Reports</a></span><span>
+                  <a href="../../tags/FormsAPI-Master.html" class="" >FormsAPI-Master</a></span>
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto"><div class="paragraph">
+<p>For our migration to Oracle ADF we have to identify, which Forms and Reports modules are still really called. For Forms we already have implemented a call statistic. In this blog post I show you how you can automatically implement the same into over 200 reports.</p>
+</div>
+<div class="paragraph">
+<p>For this we use <a href="http://www.orcl-toolbox.com/formsapimaster">FormsAPI Master</a>  from <a href="http://www.orcl-toolbox.com/">ORCL Toolbox</a>, which brings us scripting for report changes.</p>
+</div>
+<div class="paragraph">
+<p>How do you start with sripting there?</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Look at <em>Scripts &#8594; Tutorial Scripts</em> in the program or on the <a href="https://www.orcl-toolbox.com/formsapimaster/scripts">Scripts</a> page on the website, if there are already a script, which do what you want or something similar. For my use case I found here <a href="https://www.orcl-toolbox.com/downloads/ReportsAPI_PLSQL.p2s">ReportsAPI_PLSQL.p2s</a>, which find and change a AfterParameterForm trigger.</p>
+</li>
+<li>
+<p>Search in the <a href="https://www.orcl-toolbox.com/forums/">Forums</a> on the website. For my use case I found here how I can <a href="https://www.orcl-toolbox.com/forums/forum_posts.asp?TID=98&amp;KW=D2RC%5FPGTY%5F&amp;PID=296&amp;title=creating-report-triggers#296">create reports trigger</a>, if it does not exist.</p>
+</li>
+<li>
+<p>Via <em>Scripts &#8594; Wizard</em> you can create basic structures.</p>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../../images/add_code_to_reports_via_forsm_api_master_wizard.png"><img src="../../images/add_code_to_reports_via_forsm_api_master_wizard.png" alt="add code to reports via forsm api master wizard" width="100%"></a>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Here I get how I can open a parameter dialog for selecting a directory and then iterating over it.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>If you not know how to find a specific object, open your module in <em>Explore</em>.</p>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../../images/add_code_to_reports_via_forsm_api_master_explorer.png"><img src="../../images/add_code_to_reports_via_forsm_api_master_explorer.png" alt="add code to reports via forsm api master explorer" width="100%"></a>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Then select your object.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Ensure, that <em>Diplay Options &#8594; Show Forms API Info</em> is selected.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Now you can copy the code to find the object.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>In the sript editor itself you have access to</p>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../../images/add_code_to_reports_via_forsm_api_master_libs.png"><img src="../../images/add_code_to_reports_via_forsm_api_master_libs.png" alt="add code to reports via forsm api master libs" width="100%"></a>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Script Builtin Functions,</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Code Snippets and</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Editor Quick Nodes</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now see my resulting code:</p>
+</div>
+<div class="listingblock">
+<div class="title">reports_call_statistic.p2s</div>
+<div class="content">
+<pre class="highlightjs highlight"><code>DECLARE
+  l_file, l_report, l_pu_aufstat, l_report_trigger, l_before_report_trigger, l_result: number;
+  l_file_path, l_source : varchar2;
+  l_param_screen        : TParamScreen;
+  l_param_board         : TParamBoard;
+  l_file_list           : tstringlist;
+
+BEGIN
+  l_param_screen := TParamScreen.create;
+  try
+     <i class="conum" data-value="1"></i><b>(1)</b>
+    l_param_board := l_param_screen.AddBoard('Options', picOptions);
+    l_param_board.addparam(parPathname,'MYDIR', 'Directory', 'C:\reports', '');
+    if l_param_screen.ShowParamScreen('Please select directory') then
+    begin
+      <i class="conum" data-value="2"></i><b>(2)</b>
+      l_file_list := GetFileList(l_param_screen.paramvalue('MYDIR'), '*.rdf', true);
+      for l_file in 0 .. l_file_list.count-1 do
+      begin
+        try
+          l_file_path := l_file_list.strings[l_file];
+          logadd('processing ['|| (l_file+1) ||'/' || l_file_list.count ||'] - '||l_file_path, logInfo);
+          l_report := RepAPI_LoadModule(l_file_path); <i class="conum" data-value="3"></i><b>(3)</b>
+          l_report_trigger := RepGeneric_GetObjProp(l_report, D2RP_REP_TRIGGER); <i class="conum" data-value="4"></i><b>(4)</b>
+          l_before_report_trigger := RepGeneric_GetObjProp(l_report_trigger, D2RP_REP_BREPORT_OBJ);
+          if l_before_report_trigger != 0 then
+
+          begin
+            logadd('BEFOREREPORT trigger found' + IntToStr(l_before_report_trigger), logInfo);
+          end else
+          begin
+            logadd('BEFOREREPORT trigger not found', logInfo);
+            l_before_report_trigger := RepGeneric_Create(l_report, 'BEFOREREPORT', D2RRO_PROG_UNIT); <i class="conum" data-value="5"></i><b>(5)</b>
+            RepGeneric_SetNumProp(l_before_report_trigger, D2RP_PGU_TYPE, D2RC_PGTY_BEFOREREPORT);
+            logadd('BEFOREREPORT trigger created: ' + IntToStr(l_before_report_trigger), logInfo);
+          end;
+
+          begin
+            l_source := RepAPI_GetPLSQL(l_before_report_trigger); <i class="conum" data-value="6"></i><b>(6)</b>
+            // call WRITE_STAT before return
+            l_result := Replace_PLSQL_word(
+              l_source,
+              'return (TRUE);',
+              'WRITE_STAT; return (TRUE);');
+            RepAPI_SetPLSQL(l_before_report_trigger, l_source);
+            if l_result &gt; 0 then
+            begin
+              logadd('WRITE_STAT ' + IntToStr(l_result) + '-time inserted into BEFOREREPORT trigger', logInfo);
+            end else
+            begin
+              logadd('WRITE_STAT not inserted into BEFOREREPORT trigger: ' +  IntToStr(l_result), logError);
+            end;
+          end;
+
+          l_file_path := 'C:\reports_new\' + extractfilename(l_file_path); <i class="conum" data-value="7"></i><b>(7)</b>
+          RepAPI_SaveModule(l_report, l_file_path);
+          RepAPI_FreeModule(l_report);
+          logadd('New File created: ' + l_file_path, logInfo);
+
+        except
+          logadd(SQLERRM, logError);
+        end;
+      end;
+      l_file_list.free;
+
+    end else
+    begin
+      --User must have canceled the parameter screen
+      logadd('Script run canceled by user on the parameter screen', logWarning);
+    end;
+  finally;
+    --free the parameter screen
+    l_param_screen.free;
+  end;
+
+END;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>First I define the parameter screen to select my source directory for my rdf files.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Then I loop over all found files in this directory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Here I load on reports file into memory and</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>search for an existent <em>Before Reports Trigger</em>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>If I don&#8217;t find one, then I create one.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Then I modify the code with the call to statistic.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now you can run your script directly from the tool or via CLI and this is the output:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../../images/add_code_to_reports_via_forsm_api_master_log.png"><img src="../../images/add_code_to_reports_via_forsm_api_master_log.png" alt="add code to reports via forsm api master log" width="100%"></a>
+</div>
+</div>
+<div class="paragraph">
+<p>It&#8217;s up to you, if you put your statistic procedure in a new program unit into the form, or attach a library with the code or put your code directly into the database.</p>
+</div>
+<div class="paragraph">
+<p>Depending what you need to record you should have a look into following or similar libraries</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>SRW.GET_REPORT_NAME</p>
+</li>
+<li>
+<p>SYS_CONTEXT('USERENV', 'AUTHENTICATED_IDENTITY')</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it!</p>
+</div></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;text=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;title=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;description=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;title=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master&amp;body=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;text=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master%20https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <div id="hyvor-talk-view"></div>
+          <script type="text/plain" data-type="text/javascript" data-name="hyvor">
+            var HYVOR_TALK_WEBSITE = "1445";
+            var HYVOR_TALK_CONFIG = {
+              url: false,
+              id: false
+            };
+          </script>
+          <script async type="text/plain" data-type="text/javascript" data-name="hyvor" src="//talk.hyvor.com/web-api/embed"></script>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="../../feed.xml" title="Subscribe to RSS feed">
+                                    <span class="fa-stack">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/develishdevelop">
+                                    <span class="fa-stack">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/tkleiber">
+                                    <span class="fa-stack">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://linkedin.com/in/kleiber/">
+                                    <span class="fa-stack">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.xing.com/profile/Torsten_Kleiber/">
+                                    <span class="fa-stack">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.slideshare.net/tkleiber/">
+                                    <span class="fa-stack">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-slideshare fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                            <p class="copyright text-muted">&copy; <span>Torsten Kleiber</span>
+                                <span>2021</span> | <a
+              href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a
+              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.4</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js" ></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../../js/clean-blog.min.js"></script>
+
+  
+
+</body>
+
+</html>

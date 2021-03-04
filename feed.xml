@@ -6,10 +6,16 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Tue, 22 Dec 2020 15:56:07 +0100</pubDate>
-    <lastBuildDate>Tue, 22 Dec 2020 15:56:07 +0100</lastBuildDate>
+    <pubDate>Thu, 4 Mar 2021 10:12:36 +0100</pubDate>
+    <lastBuildDate>Thu, 4 Mar 2021 10:12:36 +0100</lastBuildDate>
 
     <item>
+      <title>Add Code to Oracle Reports via Forms FormsAPI Master</title>
+      <link>https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html</link>
+      <pubDate>Thu, 4 Mar 2021 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2021/add_code_to_reports_via_forsm_api_master.html</guid>
+      <description><p>For our migration to Oracle ADF we have to identify, which Forms and Reports modules are still really called. For Forms we already have implemented a call statistic. In this blog post I show you how you can automatically implement the same into over 200 reports.</p></description>
+    </item><item>
       <title>Our way to 19c - I am a speaker at DOAG 2020</title>
       <link>https://www.amapac.io/blog/2020/our_way_to_19c_I_am_a_speaker_at_DOAG_2020.html</link>
       <pubDate>Tue, 17 Nov 2020 00:00:00 +0100</pubDate>
