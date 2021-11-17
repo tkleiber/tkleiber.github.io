@@ -6,15 +6,27 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Fri, 10 Sep 2021 14:29:47 +0200</pubDate>
-    <lastBuildDate>Fri, 10 Sep 2021 14:29:47 +0200</lastBuildDate>
+    <pubDate>Wed, 17 Nov 2021 21:47:53 +0100</pubDate>
+    <lastBuildDate>Wed, 17 Nov 2021 21:47:53 +0100</lastBuildDate>
 
     <item>
+      <title>Forms and Reports 12c - Processes and Automation in Development and Operations - I am a speaker at DOAG 2021</title>
+      <link>https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2021/forms_and_reports_12c_automatision.html</guid>
+      <description><p>The current target architecture of IKB&#8217;s credit and loan management is based on Oracle ADF and SOA and of course the database. But how can you protect in this time your Oracle Forms &amp; Reports longtime investments, can you support their Development Lifecycle by Automation?</p></description>
+    </item><item>
       <title>Add Code to Oracle Reports via Forms FormsAPI Master</title>
       <link>https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html</link>
       <pubDate>Thu, 4 Mar 2021 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2021/add_code_to_reports_via_forsm_api_master.html</guid>
       <description><p>For our migration to Oracle ADF we have to identify, which Forms and Reports modules are still really called. For Forms we already have implemented a call statistic. In this blog post I show you how you can automatically implement the same into over 200 reports.</p></description>
+    </item><item>
+      <title>Slides and Video for my german presentation DOAG2020 &quot;Our way to 19c&quot; available</title>
+      <link>https://www.amapac.io/blog/2020/Slides+and+Video+for+my+german+presentation+DOAG2018+-+Our+way+to+19c+available.html</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2020/Slides+and+Video+for+my+german+presentation+DOAG2018+-+Our+way+to+19c+available.html</guid>
+      <description><p>I have presented last week on DOAG 2020. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/our-way-to-19c-doag-2020">Slideshare</a> too:</p></description>
     </item><item>
       <title>Our way to 19c - I am a speaker at DOAG 2020</title>
       <link>https://www.amapac.io/blog/2020/our_way_to_19c_I_am_a_speaker_at_DOAG_2020.html</link>
@@ -40,16 +52,34 @@
       <guid isPermaLink="false">blog/2020/Goodbye_Wordpress_Welcome_JBake.html</guid>
       <description><p>Today I wrote my last post on Wordpress. See why I left Wordpress and why I choose JBake instead.</p></description>
     </item><item>
+      <title>Slides and Video for my german presentation APEXCONN20 &quot;Agile Oracle Database Modeling and Development (AgileOracleDatabase)&quot; available</title>
+      <link>https://www.amapac.io/blog/2020/Slides+for+my+german+presentation+APEXCONN20+-+Agile+Oracle+Database+Modeling+and+Development+available.html</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2020/Slides+for+my+german+presentation+APEXCONN20+-+Agile+Oracle+Database+Modeling+and+Development+available.html</guid>
+      <description><p>I have presented last week on APEX Connect 2020 again. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/agile-oracle-database-modeling-and-development-apex-connect-2020">Slideshare</a> too:</p></description>
+    </item><item>
+      <title>Slides for my german presentation DOAG2019 &quot;Agile Oracle Database Modeling and Development (AgileOracleDatabase)&quot; available</title>
+      <link>https://www.amapac.io/blog/2019/Slides+and+Video+for+my+german+presentation+DOAG2019+-+Agile+Oracle+Database+Modeling+and+Development+available.html</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2019/Slides+and+Video+for+my+german+presentation+DOAG2019+-+Agile+Oracle+Database+Modeling+and+Development+available.html</guid>
+      <description><p>I have presented last week on DOAG 2019. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/agile-oracle-database-modeling-and-development">Slideshare</a> too:</p></description>
+    </item><item>
       <title>Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I am a speaker at DOAG2019</title>
       <link>https://www.amapac.io/blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html</link>
       <pubDate>Mon, 18 Nov 2019 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html</guid>
+      <guid isPermaLink="false">blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.htmlNovember 17, 2021</guid>
       <description><p>We try to be agile in developing and merging our features into branches when they are ready for use.</p></description>
+    </item><item>
+      <title>Slides for my german presentation DOAG2018 &quot;Regulatorics - Offside is when the referee whistles&quot; available</title>
+      <link>https://www.amapac.io/blog/2018/Slides+for+my+german+presentation+DOAG2018+-+Regulatorics+-+Offside+is+when+the+referee+whistles+available.html</link>
+      <pubDate>Sat, 24 Nov 2018 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2018/Slides+for+my+german+presentation+DOAG2018+-+Regulatorics+-+Offside+is+when+the+referee+whistles+available.html</guid>
+      <description><p>I have presented last week on DOAG 2018 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/regulatorics-offside-is-when-the-referee-whistles-doag-2018">Slideshare</a> too:</p></description>
     </item><item>
       <title>&quot;Regulatorics: Offside is when the referee whistles&quot; - I am a speaker at DOAG2018</title>
       <link>https://www.amapac.io/blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html</link>
       <pubDate>Tue, 17 Jul 2018 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html</guid>
+      <guid isPermaLink="false">blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.htmlNovember 17, 2021</guid>
       <description><p>Today my presentation is confirmed: "Regulatorics: Offside is when the referee whistles". Maybe the German title will be better understood: "Regulatorik: Abseits ist, wenn der Schiedsrichter pfeift".</p></description>
     </item><item>
       <title>DOAG2017 wrap up</title>
@@ -57,6 +87,12 @@
       <pubDate>Fri, 1 Dec 2017 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2017/DOAG2017+wrap+up.html</guid>
       <description><p>Another DOAG is over and here is my summary.</p></description>
+    </item><item>
+      <title>Slides for my german presentation DOAG2017 &quot;PLSQL - Therefore, whoever binds forever - automate your tests&quot; available</title>
+      <link>https://www.amapac.io/blog/2017/Slides+for+my+german+presentation+DOAG2017+-+PL+SQL+Therefore+whoever+binds+forever+-+automate+your+tests+available.html</link>
+      <pubDate>Fri, 24 Nov 2017 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2017/Slides+for+my+german+presentation+DOAG2017+-+PL+SQL+Therefore+whoever+binds+forever+-+automate+your+tests+available.html</guid>
+      <description><p>I have presented last week on DOAG 2017 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/plsql-drum-test-automatisiere-wer-sich-sich-ewig-bindet-doag-2017">Slideshare</a> too:</p></description>
     </item><item>
       <title>Provide access to WebLogic DMS Spy Servlet for readonly users</title>
       <link>https://www.amapac.io/blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html</link>
@@ -68,7 +104,7 @@ For read only access of configuration and logs WebLogic provides out of the box 
       <title>&quot;PL/SQL: Therefore, whoever binds forever: automate your tests&quot; - I am a speaker at DOAG2017</title>
       <link>https://www.amapac.io/blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html</link>
       <pubDate>Tue, 18 Jul 2017 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html</guid>
+      <guid isPermaLink="false">blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.htmlNovember 17, 2021</guid>
       <description><p>Today my presentation is confirmed: "Therefore, whoever binds forever: automate your tests". Maybe the German title will be the better understood: "PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!"</p></description>
     </item><item>
       <title>Javaland 2017 wrap up</title>
@@ -169,6 +205,12 @@ Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk di
       <description><p>This year I have decided to give the <a href="https://twitter.com/hashtag/javaland2016?src=hash">Javaland</a> conference a try.
 I&#8217;m not a java professional, but in the program was listed a lot of interesting testing presentations, so my company booked for me.</p></description>
     </item><item>
+      <title>Slides for my german presentation DOAG2015 &quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; available</title>
+      <link>https://www.amapac.io/blog/2015/Slides+for+my+german+presentation+DOAG2015+Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+available.html</link>
+      <pubDate>Tue, 24 Nov 2015 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2015/Slides+for+my+german+presentation+DOAG2015+Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+available.html</guid>
+      <description><p>I have presented last week on DOAG 2015 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/bob-the-builder-build-deploy-von-adf-enterprise-anwendungen">Slideshare</a> too:</p></description>
+    </item><item>
       <title>SLES shell script to check required os packages according to documentation before starting oracle forms and reports installation</title>
       <link>https://www.amapac.io/blog/2015/SLES+shell+script+to+check+required+os+packages+according+to+documentation+before+starting+oracle+forms+and+reports+installation.html</link>
       <pubDate>Wed, 9 Sep 2015 00:00:00 +0200</pubDate>
@@ -178,7 +220,7 @@ I&#8217;m not a java professional, but in the program was listed a lot of intere
       <title>&quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; - I am a speaker at DOAG2015</title>
       <link>https://www.amapac.io/blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html</link>
       <pubDate>Tue, 21 Jul 2015 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html</guid>
+      <guid isPermaLink="false">blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.htmlNovember 17, 2021</guid>
       <description><p>Today my presentation is confirmed: "Bob the Builder: Build/Deploy of ADF enterprise applications".</p></description>
     </item><item>
       <title>Fix code editor save actions in JDeveloper 12.1.3: keep the order of actions</title>
@@ -198,7 +240,7 @@ For an example you use lot of asterisk (*) imports and JDeveloper should edit th
       <link>https://www.amapac.io/blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html</link>
       <pubDate>Mon, 24 Nov 2014 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html</guid>
-      <description><p>I have presented last week on DOAG 2014 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="http://de.slideshare.net/tkleiber/das-dreckige-dutzend-adf-migration-nach-12c-in-der-ikb-doag-2014-prsentation">Slideshare</a> too.</p></description>
+      <description><p>I have presented last week on DOAG 2014 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/das-dreckige-dutzend-adf-migration-nach-12c-in-der-ikb-doag-2014-prsentation">Slideshare</a> too:</p></description>
     </item><item>
       <title>ADF Architecture Practice - JDeveloper Silent Install of Extensions</title>
       <link>https://www.amapac.io/blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html</link>
@@ -233,7 +275,7 @@ For an example you use lot of asterisk (*) imports and JDeveloper should edit th
       <title>&quot;The Dirty Dozen - ADF Migration to 12c in the IKB&quot; - I am a speaker at DOAG2014</title>
       <link>https://www.amapac.io/blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html</link>
       <pubDate>Fri, 1 Aug 2014 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html</guid>
+      <guid isPermaLink="false">blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.htmlNovember 17, 2021</guid>
       <description><p>Today the <a href="http://www.doag.org/konferenz/kprogramm.php?tag=2&amp;locS=0">official program</a> is online for DOAG conference 2014 in Nuremberg. My presentation is confirmed  "The Dirty Dozen - ADF Migration to 12c in the IKB".</p></description>
     </item><item>
       <title>Find problems when you develop: using XRebel with Oracle ADF</title>
@@ -247,12 +289,12 @@ This was promising, so I give it a short try for Oracle ADF applications.</p></d
       <link>https://www.amapac.io/blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html</link>
       <pubDate>Wed, 4 Jun 2014 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html</guid>
-      <description><p>I have presented today on DOAG Development 2014 in Dusseldorf. For all non DOAG members - you can find the german presentation on <a href="http://www.slideshare.net/tkleiber/qualittssicherung-in-adf-projekten-der-ikb-deutschen-industriebank">Slideshare</a> too.</p></description>
+      <description><p>I have presented today on DOAG Development 2014 in Dusseldorf. For all non DOAG members - you can find the german presentation on <a href="http://www.slideshare.net/tkleiber/qualittssicherung-in-adf-projekten-der-ikb-deutschen-industriebank">Slideshare</a> too:</p></description>
     </item><item>
       <title>Quality Assurance for ADF projects</title>
       <link>https://www.amapac.io/blog/2014/Quality+Assurance+for+ADF+projects.html</link>
       <pubDate>Thu, 22 May 2014 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2014/Quality+Assurance+for+ADF+projects.html</guid>
+      <guid isPermaLink="false">blog/2014/Quality+Assurance+for+ADF+projects.htmlNovember 17, 2021</guid>
       <description><p>If you speak german and you are interested in quality assurance for your ADF projects you should come and attend my presentation at DOAG Development on 06/04/2014 in Duesseldorf.</p></description>
     </item><item>
       <title>Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE</title>
