@@ -6,8 +6,8 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Wed, 17 Nov 2021 22:09:44 +0100</pubDate>
-    <lastBuildDate>Wed, 17 Nov 2021 22:09:44 +0100</lastBuildDate>
+    <pubDate>Fri, 19 Nov 2021 08:41:59 +0100</pubDate>
+    <lastBuildDate>Fri, 19 Nov 2021 08:41:59 +0100</lastBuildDate>
 
     <item>
       <title>Forms and Reports 12c - Processes and Automation in Development and Operations - I am a speaker at DOAG 2021</title>
@@ -22,7 +22,7 @@
       <guid isPermaLink="false">blog/2021/add_code_to_reports_via_forsm_api_master.html</guid>
       <description><p>For our migration to Oracle ADF we have to identify, which Forms and Reports modules are still really called. For Forms we already have implemented a call statistic. In this blog post I show you how you can automatically implement the same into over 200 reports.</p></description>
     </item><item>
-      <title>Slides and Video for my german presentation DOAG2020 &quot;Our way to 19c&quot; available</title>
+      <title>Slides for my german presentation DOAG2020 &quot;Our way to 19c&quot; available</title>
       <link>https://www.amapac.io/blog/2020/Slides+and+Video+for+my+german+presentation+DOAG2018+-+Our+way+to+19c+available.html</link>
       <pubDate>Tue, 24 Nov 2020 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2020/Slides+and+Video+for+my+german+presentation+DOAG2018+-+Our+way+to+19c+available.html</guid>
@@ -52,7 +52,7 @@
       <guid isPermaLink="false">blog/2020/Goodbye_Wordpress_Welcome_JBake.html</guid>
       <description><p>Today I wrote my last post on Wordpress. See why I left Wordpress and why I choose JBake instead.</p></description>
     </item><item>
-      <title>Slides and Video for my german presentation APEXCONN20 &quot;Agile Oracle Database Modeling and Development (AgileOracleDatabase)&quot; available</title>
+      <title>Slides and for my german presentation APEXCONN20 &quot;Agile Oracle Database Modeling and Development (AgileOracleDatabase)&quot; available</title>
       <link>https://www.amapac.io/blog/2020/Slides+for+my+german+presentation+APEXCONN20+-+Agile+Oracle+Database+Modeling+and+Development+available.html</link>
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2020/Slides+for+my+german+presentation+APEXCONN20+-+Agile+Oracle+Database+Modeling+and+Development+available.html</guid>
