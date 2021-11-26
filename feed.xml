@@ -6,10 +6,16 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Fri, 19 Nov 2021 08:41:59 +0100</pubDate>
-    <lastBuildDate>Fri, 19 Nov 2021 08:41:59 +0100</lastBuildDate>
+    <pubDate>Fri, 26 Nov 2021 15:34:21 +0100</pubDate>
+    <lastBuildDate>Fri, 26 Nov 2021 15:34:21 +0100</lastBuildDate>
 
     <item>
+      <title>Slides for my german presentation DOAG2020 &quot;Forms and Reports 12c - Processes and Automation in Development and Operations&quot; available</title>
+      <link>https://www.amapac.io/blog/2021/Slides_for_my_german_presentation+DOAG2021_forms_and_reports_12c_automatision.html</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2021/Slides_for_my_german_presentation+DOAG2021_forms_and_reports_12c_automatision.html</guid>
+      <description><p>I have presented last week on DOAG 2021. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/forms-and-reports-12c-processes-and-automation-in-development-and-operations">Slideshare</a> too:</p></description>
+    </item><item>
       <title>Forms and Reports 12c - Processes and Automation in Development and Operations - I am a speaker at DOAG 2021</title>
       <link>https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html</link>
       <pubDate>Wed, 17 Nov 2021 00:00:00 +0100</pubDate>
@@ -23,9 +29,9 @@
       <description><p>For our migration to Oracle ADF we have to identify, which Forms and Reports modules are still really called. For Forms we already have implemented a call statistic. In this blog post I show you how you can automatically implement the same into over 200 reports.</p></description>
     </item><item>
       <title>Slides for my german presentation DOAG2020 &quot;Our way to 19c&quot; available</title>
-      <link>https://www.amapac.io/blog/2020/Slides+and+Video+for+my+german+presentation+DOAG2018+-+Our+way+to+19c+available.html</link>
+      <link>https://www.amapac.io/blog/2020/Slides+for+my+german+presentation+DOAG2020+-+Our+way+to+19c+available.html</link>
       <pubDate>Tue, 24 Nov 2020 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2020/Slides+and+Video+for+my+german+presentation+DOAG2018+-+Our+way+to+19c+available.html</guid>
+      <guid isPermaLink="false">blog/2020/Slides+for+my+german+presentation+DOAG2020+-+Our+way+to+19c+available.html</guid>
       <description><p>I have presented last week on DOAG 2020. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/our-way-to-19c-doag-2020">Slideshare</a> too:</p></description>
     </item><item>
       <title>Our way to 19c - I am a speaker at DOAG 2020</title>
