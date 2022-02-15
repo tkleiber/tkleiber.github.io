@@ -1,60 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="As Much As Possible As Code"/>
+        <meta name="description" content="Use Custom Template for Architecture Decision Records"/>
         <meta name="author" content="Torsten Kleiber"/>
 
-        <title>AMAPAC</title>
+        <title>Use adr-tools for AsciiDoc</title>
 
         <meta name="robots" content="index, follow"/>
         <meta name="generator" content="JBake"/>
 
         <!--Facebook Card-->
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="AMAPAC"/>
-        <meta property="og:description" content="As Much As Possible As Code"/>
+        <meta property="og:title" content="Use adr-tools for AsciiDoc"/>
+        <meta property="og:description" content="Use Custom Template for Architecture Decision Records"/>
         <meta property="og:image"
-        content="https://www.amapac.io/img/amapac_share_card.png"/>
+        content="https://www.amapac.io/images/adr_tool_with_custom_template_for_asciidoc.png"/>
 
         <!--Twitter card -->
         
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="AMAPAC">
+        <meta name="twitter:title" content="Use adr-tools for AsciiDoc">
         <meta name="twitter:creator" content="@develishdevelop">
-        <meta name="twitter:description" content="As Much As Possible As Code">
+        <meta name="twitter:description" content="Use Custom Template for Architecture Decision Records">
         <meta name="twitter:image"
-          content="https://www.amapac.io/img/amapac_share_card.png">
+          content="https://www.amapac.io/images/adr_tool_with_custom_template_for_asciidoc.png">
         
 
         <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 
         <!-- highlightjs Code Formatter -->
-        <link href="../vendor/highlightjs/styles/default.css" rel="stylesheet" type="text/css">
-        <script src="../vendor/highlightjs/highlight.pack.js"></script>
+        <link href="../../vendor/highlightjs/styles/default.css" rel="stylesheet" type="text/css">
+        <script src="../../vendor/highlightjs/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
         <!-- Custom Fonts -->
-        <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=AsciiDoc"
+        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=AMAPAC"
         rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
 
         <!-- Custom styles for this template -->
-        <link href="../css/asciidoctor.css" rel="stylesheet">
-        <link href="../css/clean-blog.min.css" rel="stylesheet">
+        <link href="../../css/asciidoctor.css" rel="stylesheet">
+        <link href="../../css/clean-blog.min.css" rel="stylesheet">
 
         <!-- Klaro Cookie Consent tool -->
-        <script defer type="text/javascript" src="../vendor/klaro/config.js"></script>
+        <script defer type="text/javascript" src="../../vendor/klaro/config.js"></script>
         <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
 
-        <link rel="shortcut icon" href="../favicon.png"/>
+        <link rel="shortcut icon" href="../../favicon.png"/>
     </head>
 
 <body>
@@ -62,7 +61,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="../index.html">AMAPAC</a>
+                <a class="navbar-brand" href="../../index.html">AMAPAC</a>
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                       Menu
                       <i class="fas fa-bars"></i>
@@ -70,13 +69,13 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="../about.html">About</a>
+                            <a href="../../about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../tags/index.html">Tags</a>
+                            <a class="nav-link" href="../../tags/index.html">Tags</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../archive.html">Archive</a>
+                            <a class="nav-link" href="../../archive.html">Archive</a>
                         </li>
                     </ul>
                 </div>
@@ -84,41 +83,112 @@
         </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
+  <!-- Set your background image for this header on the line below. -->
+  <header class="masthead" style="background-image: url(&#39;../../images/cover_architecture.jpg&#39;) ; background-color:#101010">
+    <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>AsciiDoc</h1>
-            <span class="subheading">tagged posts</span>
+          <div class="post-heading">
+            <h1>Use adr-tools for AsciiDoc</h1>
+            <h2 class="subheading">Use Custom Template for Architecture Decision Records</h2>
+            <span class="meta">Posted by
+              <b>Torsten Kleiber</b>
+              on February 15, 2022
+              
+              </br>
+              <span> Tags:
+                <span>
+                  <a href="../../tags/Architecture.html" class="" >Architecture</a></span><span>
+                  <a href="../../tags/AsciiDoc.html" class="" >AsciiDoc</a></span><span>
+                  <a href="../../tags/Documentation.html" class="" >Documentation</a></span>
+                </span>
+              </span>
+            </span>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        
-          <div class="post-preview"  >
-            <a href="../blog/2022/adr_tool_with_custom_template_for_asciidoc.html">
-              <h2 class="post-title">Use adr-tools for AsciiDoc</h2>
-              <h3 class="post-subtitle">Use Custom Template for Architecture Decision Records</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>February 15, 2022</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Architecture.html" class="" >Architecture</a></span><span>
-                  <a   href="../tags/AsciiDoc.html" class="" >AsciiDoc</a></span><span>
-                  <a   href="../tags/Documentation.html" class="" >Documentation</a></span></span></p>
-            <p>I looked for a tool to create Architecture Decision Records in AsciiDoc and does not find any. So first I thought, I would have to (re)implement one. But look, how easy it really was.</p>
-            
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto"><div class="paragraph">
+<p>I looked for a tool to create Architecture Decision Records in AsciiDoc and does not find any. So first I thought, I would have to (re)implement one. But look, how easy it really was.</p>
+</div>
+<div class="paragraph">
+<p>I saw this <a href="https://github.com/npryce/adr-tools/issues/120">Issue</a> for <a href="https://github.com/npryce/adr-tools">adr-tools</a>, which describes how to use a custom template.</p>
+</div>
+<div class="paragraph">
+<p>Usually adr-tools create Markdown format, but my idea was to write an Asciidoc template instead.</p>
+</div>
+<div class="paragraph">
+<p>So first you have to <a href="https://github.com/npryce/adr-tools/blob/master/INSTALL.md">install</a> adr-tools. I use the variant "Git for Windows: git bash".</p>
+</div>
+<div class="paragraph">
+<p>In the target directory of the adr-tools do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>rename both *.md files to *.adoc</p>
+</li>
+<li>
+<p>change the content of these both files to AsciiDoc, which simple means replace all occurrences of "#" with "="</p>
+</li>
+<li>
+<p>change other content according to your needs</p>
+</li>
+<li>
+<p>replace all occurrences of ".md" with ".adoc"</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Then you can test this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ adr init doc/adr
+doc/adr/0001-record-architecture-decisions.adoc
+
+$ adr new Change File Format of Architecture Decision Records to AsciiDoc
+doc/adr/0002-change-file-format-of-architecture-decision-records-to-asciidoc.adoc
+
+$ cat doc/adr/0002-change-file-format-of-architecture-decision-records-to-asciidoc.adoc
+= 2. Change File Format of Architecture Decision Records to AsciiDoc
+
+Date: 2022-02-15
+
+== Status
+
+Accepted
+
+== Context
+
+The issue motivating this decision, and any context that influences or constrains the decision.
+
+== Decision
+
+The change that were proposing or have agreed to implement.
+
+== Consequences
+
+What becomes easier or more difficult to do and any risks introduced by the change that will need to be mitigated.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After that you have to fill the new file with relevant content for your Architecture Decision.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s all.</p>
+</div></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -211,9 +281,33 @@
           </ul>
 
         
-          </div>
-          <hr>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
         
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <div id="hyvor-talk-view"></div>
+          <script type="text/plain" data-type="text/javascript" data-name="hyvor">
+            var HYVOR_TALK_WEBSITE = "1445";
+            var HYVOR_TALK_CONFIG = {
+              url: false,
+              id: false
+            };
+          </script>
+          <script async type="text/plain" data-type="text/javascript" data-name="hyvor" src="//talk.hyvor.com/web-api/embed"></script>
         
       </div>
     </div>
@@ -226,7 +320,7 @@
                     <div class="col-lg-8 col-md-10 mx-auto">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
-                                <a href="../feed.xml" title="Subscribe to RSS feed">
+                                <a href="../../feed.xml" title="Subscribe to RSS feed">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
@@ -284,11 +378,11 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" ></script>
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js" ></script>
 
   <!-- Custom scripts for this template -->
-  <script src="../js/clean-blog.min.js"></script>
+  <script src="../../js/clean-blog.min.js"></script>
 
   
 
