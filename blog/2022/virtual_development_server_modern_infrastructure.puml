@@ -1,0 +1,44 @@
+@startuml
+skinparam defaultTextAlignment center
+
+' Icons from https://github.com/plantuml/plantuml-stdlib
+!include <cloudogu/tools/docker.puml>
+!include <cloudogu/tools/terraform.puml>
+!include <tupadr3/common>
+!include <tupadr3/devicons2/docker.puml>
+!include <tupadr3/devicons2/oracle_original.puml>
+!include <tupadr3/devicons2/ubuntu.puml>
+!include <tupadr3/devicons2/vagrant_wordmark.puml>
+!include <tupadr3/font-awesome/windows.puml>
+
+package  "Infrastructure" as i {
+  TOOL_DOCKER(dc, Docker Compose)
+
+  FA_WINDOWS(idw, Windows) {
+    TOOL_DOCKER(wdd, Docker Desktop) {
+    }
+  }
+
+  DEV2_VAGRANT_WORDMARK(ivb) {
+    DEV2_ORACLE_ORIGINAL(vbox, Virtual Box) {
+      DEV2_UBUNTU(vboxubuntu, Ubuntu Server) {
+        TOOL_DOCKER(vboxdockerce, Docker CE) {
+        }
+      }
+    }
+  }
+  TOOL_TERRAFORM(ioci,Terraform) {
+    DEV2_ORACLE_ORIGINAL(oci, Compute Instance, cloud) {
+      DEV2_UBUNTU(ociubuntu, Ubuntu Server) {
+        TOOL_DOCKER(ocidockerce, Docker CE) {
+        }
+      }
+    }
+  }
+
+  dc ..down.> ocidockerce
+  dc ..down.> wdd
+  dc ..down.> vboxdockerce
+}
+
+@enduml
