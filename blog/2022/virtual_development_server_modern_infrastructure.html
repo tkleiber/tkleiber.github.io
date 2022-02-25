@@ -5,29 +5,29 @@
 
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="As Much As Possible As Code"/>
+        <meta name="description" content="Create the Foundation for easy Development"/>
         <meta name="author" content="Torsten Kleiber"/>
 
-        <title>Oracle Forms 11 running as application in Java Webstart</title>
+        <title>Virtual Development Server: Modern Infrastructure</title>
 
         <meta name="robots" content="index, follow"/>
         <meta name="generator" content="JBake"/>
 
         <!--Facebook Card-->
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Oracle Forms 11 running as application in Java Webstart"/>
-        <meta property="og:description" content="As Much As Possible As Code"/>
+        <meta property="og:title" content="Virtual Development Server: Modern Infrastructure"/>
+        <meta property="og:description" content="Create the Foundation for easy Development"/>
         <meta property="og:image"
-        content="https://www.amapac.io/img/amapac_share_card.png"/>
+        content="https://www.amapac.io/images/virtual_development_server_modern_infrastructure.png"/>
 
         <!--Twitter card -->
         
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Oracle Forms 11 running as application in Java Webstart">
+        <meta name="twitter:title" content="Virtual Development Server: Modern Infrastructure">
         <meta name="twitter:creator" content="@develishdevelop">
-        <meta name="twitter:description" content="As Much As Possible As Code">
+        <meta name="twitter:description" content="Create the Foundation for easy Development">
         <meta name="twitter:image"
-          content="https://www.amapac.io/img/amapac_share_card.png">
+          content="https://www.amapac.io/images/virtual_development_server_modern_infrastructure.png">
         
 
         <!-- Bootstrap core CSS -->
@@ -84,25 +84,34 @@
 
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
-  <header class="masthead" style="background-image: url(&#39;../../img/index-cover.jpg&#39;) ; background-color:#101010">
+  <header class="masthead" style="background-image: url(&#39;../../images/cover_development_server.jpg&#39;) ; background-color:#101010">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Oracle Forms 11 running as application in Java Webstart</h1>
-            
+            <h1>Virtual Development Server: Modern Infrastructure</h1>
+            <h2 class="subheading">Create the Foundation for easy Development</h2>
             <span class="meta">Posted by
               <b>Torsten Kleiber</b>
-              on January 22, 2012
+              on February 25, 2022
               
               </br>
               <span> Tags:
                 <span>
+                  <a href="../../tags/Docker.html" class="" >Docker</a></span><span>
+                  <a href="../../tags/Docker-Desktop.html" class="" >Docker-Desktop</a></span><span>
+                  <a href="../../tags/Docker-CE.html" class="" >Docker-CE</a></span><span>
+                  <a href="../../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
+                  <a href="../../tags/Linux.html" class="" >Linux</a></span><span>
+                  <a href="../../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
                   <a href="../../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a href="../../tags/Forms.html" class="" >Forms</a></span><span>
-                  <a href="../../tags/Java.html" class="" >Java</a></span><span>
-                  <a href="../../tags/Webstart.html" class="" >Webstart</a></span>
+                  <a href="../../tags/Orcle-Cloud.html" class="" >Orcle-Cloud</a></span><span>
+                  <a href="../../tags/Oracle-Compute-Instance.html" class="" >Oracle-Compute-Instance</a></span><span>
+                  <a href="../../tags/Ubuntu.html" class="" >Ubuntu</a></span><span>
+                  <a href="../../tags/Vagrant.html" class="" >Vagrant</a></span><span>
+                  <a href="../../tags/VirtualBox.html" class="" >VirtualBox</a></span><span>
+                  <a href="../../tags/Windows.html" class="" >Windows</a></span>
                 </span>
               </span>
             </span>
@@ -117,167 +126,77 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto"><div class="paragraph">
-<p>According to my last post today I will show you the basic configuration for forms 11g.
-Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works too!</p>
+<p>After my 2016 series about my Virtual Development Server I have learned a lot. It&#8217;s time for a major overhaul with new technologies. It should be a lot more flexible and usable for development and course environments. See how I will restart!</p>
 </div>
 <div class="paragraph">
-<p>As first you need an additional unique identifier "ifsessid" in parameter "serverURL" for forms. This prevents the use of a static jnlp in this case. Maybe it is possible to branch out the build of this unique identifier from the jnlp. I have decided instead to create the the jnlp from a java server page. This helps me additional to use forms parameters, which I will describe in a later post. Sure there maybe exist other ways to build the jnlp.</p>
+<p>There a lot of container technologies, but because of the stability of Docker I select this as the central part of my infrastructure.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s start:</p>
+<p>I want not discuss here for the moment about orchestration of big container environments, so kubernetes and it&#8217;s friends will not an issue here.</p>
 </div>
 <div class="paragraph">
-<p>Again I assume you have an running unix or linux application server with forms 11g.</p>
+<p>I will do here the balancing act between following requirements:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>simplify the base for my infrastructure</p>
+</li>
+<li>
+<p>variable development environments without restrictions to host os</p>
+</li>
+<li>
+<p>reproducibility via Infrastructure as Code.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>As first you need the <em>webstart_11g.jsp</em> in folder <em>public_html</em> under a JDeveloper project. The marked lines provides the identifier:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;%@ page contentType="application/x-java-jnlp-file" language="java" import="java.sql.*"%&gt;
-&lt;%@ page session="true"%&gt;
-&lt;%response.setDateHeader ("Expires", 0); //prevents caching at the proxy server%&gt;
-&lt;%
-  long time = System.currentTimeMillis();
-  String sessid = String.valueOf(time);
-%&gt;
-&lt;jnlp codebase="http://localhost.localdomain:9001/forms/java/"&gt;
-  &lt;information&gt;
-    &lt;title&gt;Webstart Test Oracle Forms 11g&lt;/title&gt;
-    &lt;vendor&gt;develishdevelopment.wordpress.com&lt;/vendor&gt;
-    &lt;description&gt;Webstart Test Oracle Forms 11g&lt;/description&gt;
-  &lt;/information&gt;
-  &lt;security&gt;
-    &lt;all-permissions/&gt;
-  &lt;/security&gt;
-  &lt;update check="timeout" policy="always"/&gt;
-  &lt;resources&gt;
-    &lt;j2se version="1.6.0"/&gt;
-    &lt;jar href="frmall.jar" download="eager" main="true"/&gt;
-  &lt;/resources&gt;
-  &lt;applet-desc name="Webstart Test Oracle Forms 11g" main-class="oracle.forms.engine.Main" width="990" height="640"&gt;
-    &lt;param name="background" value="no"/&gt;
-    &lt;param name="logo" value="no"/&gt;
-    &lt;param name="serverApp" value="default"/&gt;
-    &lt;param name="lookAndFeel" value="oracle"/&gt;
-    &lt;param name="allow_debug" value="true"/&gt;
-    &lt;param name="separateFrame" value="false"/&gt;
-    &lt;param name="em_mode" value="1"/&gt;
-    &lt;param name="latencyCheck" value="true"/&gt;
-    &lt;param name="networkRetries" value="240"/&gt;
-    &lt;param name="serverArgs" value="module=test.fmx useSDI=yes"/&gt;
-    &lt;param name="serverURL" value="http://localhost.localdomain:9001/forms/lservlet?ifcfs=http://localhost.localdomain:9001/forms/frmservlet?config=jpi&amp;ifsessid=formsapp.&lt;%=sessid%&gt;"/&gt;
-    &lt;param name="colorScheme" value="teal"/&gt;
-    &lt;param name="splashScreen" value="no"/&gt;
-    &lt;param name="dontTruncateTabs" value="true"/&gt;
-  &lt;/applet-desc&gt;
-&lt;/jnlp&gt;</code></pre>
-</div>
+<p>So the basic idea is to use for all of my different development environments a Docker Compose file, which start one to several containers with an internal network. Into this combination the changing parts like source code or persistence stores should be injected via Docker Bind Mounts or Volumes.</p>
 </div>
 <div class="paragraph">
-<p>Now you need to deploy this jsp. First create a application server connection in JDeveloper version corresponding to your forms weblogic server. I have forms 11.1.1.2.0, which runs on weblogic 10.3.2. So I have to use JDeveloper 11.1.1.2.0. See oracle support information for supported JDeveloper version for your environment. Right click on you JDeveloper project with the jsp an select deploy. Following are the steps in the deploy wizard:</p>
+<p>Docker can be provided in different ways. In future blogs I will show you at least following 3 examples.</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Deployment Action</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Deploy to application server</p>
-</li>
-</ul>
-</div>
+<p>As I&#8217;m working on Windows first I will use Docker Desktop here. Docker Desktop is very stable in the meantime.</p>
 </li>
 <li>
-<p>Select Servers</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Application Servers: your application server</p>
+<p>Sometimes you cannot use Docker Desktop. For an example till last year my old laptop hardware and Windows License doesn&#8217;t support the virtualization layer required by Docker Desktop. So if you look at some older blog post of me I had already built my Development Server via Vagrant as Virtual Box and installed Docker there.</p>
 </li>
 <li>
-<p>Overwrite modules of the same name: select</p>
+<p>As last example I will show you how to build an Always Free Compute Instance with Docker via Terraform in Oracle Cloud Infrastructure.</p>
 </li>
-<li>
-<p>Deploy to all server instances in the domain: unselect</p>
-</li>
-<li>
-<p>Deploy as a standalone Application: select</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Server instances</p>
-<div class="ulist">
-<ul>
-<li>
-<p>List Standalone Servers and Cluster: select your forms cluster or your forms server (WLS_FORMS)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Summary: finish</p>
-</li>
-</ul>
+</ol>
 </div>
 <div class="paragraph">
-<p>In the project properties change the deployment properties to set your context root, which will be later part of your url:</p>
+<p>Any other way you can provide Docker will be fine too.</p>
+</div>
+<div class="paragraph">
+<p>Maybe you will ask, why I use Ubuntu Server inside Virtual Box and Oracle Compute Instance?</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sometimes in the past Docker changed the way where it allows Docker Community Edition (CE). On Ubuntu Server it is.</p>
+</li>
+<li>
+<p>I want to use the same OS for Virtual Box and Oracle Compute Instance to reduce my learning effort.</p>
+</li>
+<li>
+<p>Bento delivers regularly vagrant box builds with Ubuntu Server, which I can use.</p>
+</li>
+<li>
+<p>Oracle Compute Instance delivers current templates with Ubuntu Server.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Here you see the architecture overview about what I will show you in the next weeks.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<a class="image" href="../../images/webstart_11g_deployment_profile.png"><img src="../../images/webstart_11g_deployment_profile.png" alt="set context root" width="100%"></a>
-</div>
-</div>
-<div class="paragraph">
-<p>If you redeploy this jsp, you may wonder that your change is not immediatly shown. You can solve this by dropping the former deployment before redeploying or you add following files to your JDeveloper Project under folder <em>public_html\WEB-INF</em>:</p>
-</div>
-<div class="paragraph">
-<p>weblogic.xml:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;weblogic-web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bea.com/ns/weblogic/weblogic-web-app http://www.bea.com/ns/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd" xmlns="http://www.bea.com/ns/weblogic/weblogic-web-app"&gt;
-  &lt;jsp-descriptor&gt;
-    &lt;page-check-seconds&gt;0&lt;/page-check-seconds&gt;
-  &lt;/jsp-descriptor&gt;
-  &lt;container-descriptor&gt;
-    &lt;servlet-reload-check-secs&gt;0&lt;/servlet-reload-check-secs&gt;
-    &lt;resource-reload-check-secs&gt;0&lt;/resource-reload-check-secs&gt;
-  &lt;/container-descriptor&gt;
-  &lt;context-root&gt;webstart_11g&lt;/context-root&gt;
-    &lt;fast-swap&gt;
-    &lt;enabled&gt;true&lt;/enabled&gt;
-    &lt;refresh-interval&gt;1&lt;/refresh-interval&gt;
-  &lt;/fast-swap&gt;
-&lt;/weblogic-web-app&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>web.xml:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version = '1.0' encoding = 'windows-1252'?&gt;
-&lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"&gt;&lt;/web-app&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now start java webstart with your jnlp url, here is an example in linux:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./javaws http://localhost.localdomain:9001/webstart_11g/webstart_11g.jsp</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Java webstart comes up with the standard <em>test.fmx</em> from the forms services installation:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="../../images/webstart_11g_succesful.png"><img src="../../images/webstart_11g_succesful.png" alt="Webstart 11g succesful" width="100%"></a>
+<a class="image" href="../../images/virtual_development_server_modern_infrastructure.png"><img src="../../images/virtual_development_server_modern_infrastructure.png" alt="virtual development server modern infrastructure" width="100%"></a>
 </div>
 </div>
 <div class="paragraph">
@@ -290,7 +209,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html&amp;text=Oracle%20Forms%2011%20running%20as%20application%20in%20Java%20Webstart&amp;via=develishdevelop"
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;text=Virtual%20Development%20Server:%20Modern%20Infrastructure&amp;via=develishdevelop"
                  target="_blank" rel="noreferrer" class="share-btn twitter">
                 <i class="fab fa-twitter"></i>
               </a>
@@ -298,7 +217,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 
             <!-- Facebook -->
             <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html"
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html"
                  target="_blank" rel="noreferrer" class="share-btn facebook">
                 <i class="fab fa-facebook"></i>
               </a>
@@ -306,7 +225,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 
             <!-- LinkedIn -->
             <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html"
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html"
                  target="_blank" rel="noreferrer" class="share-btn linkedin">
                 <i class="fab fa-linkedin"></i>
               </a>
@@ -314,7 +233,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 
             <!-- Xing -->
             <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html"
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html"
                  target="_blank" rel="noreferrer" class="share-btn xing">
                 <i class="fab fa-xing"></i>
               </a>
@@ -322,7 +241,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 
             <!-- Tumblr -->
             <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html&amp;title=Oracle%20Forms%2011%20running%20as%20application%20in%20Java%20Webstart"
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;title=Virtual%20Development%20Server:%20Modern%20Infrastructure"
                  target="_blank" rel="noreferrer" class="share-btn tumblr">
                 <i class="fab fa-tumblr"></i>
               </a>
@@ -330,7 +249,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 
             <!-- Pinterest -->
             <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html&amp;description=Oracle%20Forms%2011%20running%20as%20application%20in%20Java%20Webstart"
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;description=Virtual%20Development%20Server:%20Modern%20Infrastructure"
                  target="_blank" rel="noreferrer" class="share-btn pinterest">
                 <i class="fab fa-pinterest"></i>
               </a>
@@ -338,7 +257,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 
             <!-- Reddit -->
             <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html&amp;title=Oracle%20Forms%2011%20running%20as%20application%20in%20Java%20Webstart"
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;title=Virtual%20Development%20Server:%20Modern%20Infrastructure"
                  target="_blank" rel="noreferrer" class="share-btn reddit">
                 <i class="fab fa-reddit-alien"></i>
               </a>
@@ -346,7 +265,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 
             <!-- Email -->
             <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Oracle%20Forms%2011%20running%20as%20application%20in%20Java%20Webstart&amp;body=https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html"
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Virtual%20Development%20Server:%20Modern%20Infrastructure&amp;body=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html"
                  target="_blank" rel="noreferrer" class="share-btn email">
                 <i class="fas fa-envelope"></i>
               </a>
@@ -354,7 +273,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 
             <!-- Telegram -->
             <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html&amp;text=Oracle%20Forms%2011%20running%20as%20application%20in%20Java%20Webstart"
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;text=Virtual%20Development%20Server:%20Modern%20Infrastructure"
                  target="_blank" rel="noreferrer" class="share-btn telegram">
                 <i class="fab fa-telegram"></i>
               </a>
@@ -362,7 +281,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 
             <!-- Whatsapp -->
             <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=Oracle%20Forms%2011%20running%20as%20application%20in%20Java%20Webstart%20https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html"
+              <a href="https://api.whatsapp.com/send?text=Virtual%20Development%20Server:%20Modern%20Infrastructure%20https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html"
                  target="_blank" rel="noreferrer" class="share-btn whatsapp">
                 <i class="fab fa-whatsapp"></i>
               </a>
@@ -370,7 +289,7 @@ Unfortunately webstart in forms 11g it is not as easy as in 10g, but it works to
 
             <!-- Skype -->
             <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2012/Oracle%2BForms%2B11%2Brunning%2Bas%2Bapplication%2Bin%2BJava%2BWebstart.html&amp;lang=en-US&amp;source=jetpack"
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;lang=en-US&amp;source=jetpack"
                  target="_blank" rel="noreferrer" class="share-btn skype">
                 <i class="fab fa-skype"></i>
               </a>
