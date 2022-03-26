@@ -103,6 +103,123 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         
           <div class="post-preview"  >
+            <a href="../blog/2022/virtual_development_server_test_with_testcontainers.html">
+              <h2 class="post-title">Test Jenkins Container with TestContainers Framework</h2>
+              <h3 class="post-subtitle">Automate the Testing of your Infrastructure</h3>
+            </a>
+            <p class="post-meta">
+              Posted by <b>Torsten Kleiber</b>
+              on <span>March 26, 2022</span>
+              
+              </br>
+              <span> Tags:
+                <span>
+                  <a   href="../tags/Docker.html" class="" >Docker</a></span><span>
+                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
+                  <a   href="../tags/Integration-Test.html" class="" >Integration-Test</a></span><span>
+                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
+                  <a   href="../tags/JUnit.html" class="" >JUnit</a></span><span>
+                  <a   href="../tags/Maven.html" class="" >Maven</a></span><span>
+                  <a   href="../tags/TestContainers.html" class="" >TestContainers</a></span><span>
+                  <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span></span></p>
+            <p>As I create my Virtual Development Servers I asked myself how can I easily test, that it is working? As I put now my servers into containers via docker-compose I searched for a test framework, which supports this out of the box. I heard a lot about <a href="https://www.testcontainers.org/">TestContainers</a> in the past and again at Javaland 2022 conference last week, so I want to test now, if this will help me.</p>
+            
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;title=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;description=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;title=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Test%20Jenkins%20Container%20with%20TestContainers%20Framework&amp;body=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework%20https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+          </div>
+          <hr>
+        
+          <div class="post-preview"  >
             <a href="../blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html">
               <h2 class="post-title">Slides for my german presentation &quot;Quality Assurance for ADF projects&quot; available</h2>
               <h3 class="post-subtitle">How to check the quality in ADF Development Life Cycle - Slides</h3>

@@ -6,11 +6,17 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Wed, 23 Mar 2022 19:12:33 +0100</pubDate>
-    <lastBuildDate>Wed, 23 Mar 2022 19:12:33 +0100</lastBuildDate>
+    <pubDate>Sat, 26 Mar 2022 13:11:46 +0100</pubDate>
+    <lastBuildDate>Sat, 26 Mar 2022 13:11:46 +0100</lastBuildDate>
 
     <item>
-      <title>Virtual Development Server: Run your Server on Docker Desktop on Windows</title>
+      <title>Test Jenkins Container with TestContainers Framework</title>
+      <link>https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html</link>
+      <pubDate>Sat, 26 Mar 2022 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2022/virtual_development_server_test_with_testcontainers.html</guid>
+      <description><p>As I create my Virtual Development Servers I asked myself how can I easily test, that it is working? As I put now my servers into containers via docker-compose I searched for a test framework, which supports this out of the box. I heard a lot about <a href="https://www.testcontainers.org/">TestContainers</a> in the past and again at Javaland 2022 conference last week, so I want to test now, if this will help me.</p></description>
+    </item><item>
+      <title>Run your Development Server on Docker Desktop on Windows</title>
       <link>https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html</link>
       <pubDate>Tue, 22 Mar 2022 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2022/virtual_development_server_docker_desktop_on_windows.html</guid>

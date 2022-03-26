@@ -5,29 +5,29 @@
 
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="Start with the easiest case"/>
+        <meta name="description" content="Automate the Testing of your Infrastructure"/>
         <meta name="author" content="Torsten Kleiber"/>
 
-        <title>Run your Development Server on Docker Desktop on Windows</title>
+        <title>Test Jenkins Container with TestContainers Framework</title>
 
         <meta name="robots" content="index, follow"/>
         <meta name="generator" content="JBake"/>
 
         <!--Facebook Card-->
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Run your Development Server on Docker Desktop on Windows"/>
-        <meta property="og:description" content="Start with the easiest case"/>
+        <meta property="og:title" content="Test Jenkins Container with TestContainers Framework"/>
+        <meta property="og:description" content="Automate the Testing of your Infrastructure"/>
         <meta property="og:image"
-        content="https://www.amapac.io/images/virtual_development_server_docker_desktop_on_windows.png"/>
+        content="https://www.amapac.io/images/virtual_development_server_test_with_testcontainers_shareimage.png"/>
 
         <!--Twitter card -->
         
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Run your Development Server on Docker Desktop on Windows">
+        <meta name="twitter:title" content="Test Jenkins Container with TestContainers Framework">
         <meta name="twitter:creator" content="@develishdevelop">
-        <meta name="twitter:description" content="Start with the easiest case">
+        <meta name="twitter:description" content="Automate the Testing of your Infrastructure">
         <meta name="twitter:image"
-          content="https://www.amapac.io/images/virtual_development_server_docker_desktop_on_windows.png">
+          content="https://www.amapac.io/images/virtual_development_server_test_with_testcontainers_shareimage.png">
         
 
         <!-- Bootstrap core CSS -->
@@ -90,20 +90,23 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Run your Development Server on Docker Desktop on Windows</h1>
-            <h2 class="subheading">Start with the easiest case</h2>
+            <h1>Test Jenkins Container with TestContainers Framework</h1>
+            <h2 class="subheading">Automate the Testing of your Infrastructure</h2>
             <span class="meta">Posted by
               <b>Torsten Kleiber</b>
-              on March 22, 2022
+              on March 26, 2022
               
               </br>
               <span> Tags:
                 <span>
                   <a href="../../tags/Docker.html" class="" >Docker</a></span><span>
-                  <a href="../../tags/Docker-Desktop.html" class="" >Docker-Desktop</a></span><span>
                   <a href="../../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a href="../../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
-                  <a href="../../tags/Windows.html" class="" >Windows</a></span>
+                  <a href="../../tags/Integration-Test.html" class="" >Integration-Test</a></span><span>
+                  <a href="../../tags/Jenkins.html" class="" >Jenkins</a></span><span>
+                  <a href="../../tags/JUnit.html" class="" >JUnit</a></span><span>
+                  <a href="../../tags/Maven.html" class="" >Maven</a></span><span>
+                  <a href="../../tags/TestContainers.html" class="" >TestContainers</a></span><span>
+                  <a href="../../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span>
                 </span>
               </span>
             </span>
@@ -118,125 +121,190 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto"><div class="paragraph">
-<p>In my series about Modern Infrastructure for your Virtual Development Server I will now start with the easiest case for me. I will run a Server on a Docker Desktop on Windows. As I need CI for all of my projects I will use Jenkins as example for this. See how this works.</p>
+<p>As I create my Virtual Development Servers I asked myself how can I easily test, that it is working? As I put now my servers into containers via docker-compose I searched for a test framework, which supports this out of the box. I heard a lot about <a href="https://www.testcontainers.org/">TestContainers</a> in the past and again at Javaland 2022 conference last week, so I want to test now, if this will help me.</p>
 </div>
 <div class="paragraph">
-<p>Here you see the architecture overview:</p>
+<p>In the last blog <a href="virtual_development_server_docker_desktop_on_windows.html">Run your Development Server on Docker Desktop on Windows</a> I created a Docker Desktop Container, which is running on Windows. Now I want to test this Container with automated tests.</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="../../images/virtual_development_server_docker_desktop_on_windows.png"><img src="../../images/virtual_development_server_docker_desktop_on_windows.png" alt="virtual development server docker desktop on windows" width="100%"></a>
-</div>
-</div>
-<div class="paragraph">
-<p>At first you need to <a href="https://docs.docker.com/desktop/windows/install/">install Docker Desktop Windows</a>.</p>
-</div>
-<div class="paragraph">
-<p>Docker Compose is then already <a href="https://docs.docker.com/get-started/08_using_compose/">installed</a> with Docker Desktop.</p>
-</div>
-<div class="paragraph">
-<p>Next I create a Docker Compose file for my Jenkins server. To make it easy for this blog I will start only a standard Jenkins server, for this I use the most parameters from <a href="https://www.jenkins.io/doc/book/installing/docker/#on-windows">Jenkins documentation</a>.</p>
-</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>As I want to use JUnit 5 as Wrapper I start with <a href="https://www.testcontainers.org/quickstart/junit_5_quickstart/">TestContainers JUnit 5 Quickstart</a> Documentation.</p>
+</li>
+<li>
+<p>So I create a fresh pom.xml and added the <a href="https://www.testcontainers.org/quickstart/junit_5_quickstart/#1-add-testcontainers-as-a-test-scoped-dependency">required dependencies</a>.</p>
 <div class="listingblock">
-<div class="title">docker-compose.yml</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">version: '3.8' <i class="conum" data-value="1"></i><b>(1)</b>
-services:
-  jenkins: <i class="conum" data-value="2"></i><b>(2)</b>
-    environment:
-      - DOCKER_CERT_PATH=/certs/client
-      - DOCKER_HOST=tcp://docker:2376
-      - DOCKER_TLS_VERIFY=1
-    image: jenkins/jenkins:lts-jdk11 <i class="conum" data-value="3"></i><b>(3)</b>
-    ports:
-      - "8080:8080"
-      - "50000:50000"
-    restart: unless-stopped <i class="conum" data-value="4"></i><b>(4)</b>
-    volumes:
-      - jenkins_data:/var/jenkins_home
-      - jenkins_docker_certs:/certs/client:ro
-volumes:
-  jenkins_data:
-  jenkins_docker_certs:</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">    &lt;dependency&gt;
+      &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+      &lt;artifactId&gt;junit-jupiter&lt;/artifactId&gt;
+      &lt;version&gt;5.8.2&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.testcontainers&lt;/groupId&gt;
+      &lt;artifactId&gt;testcontainers&lt;/artifactId&gt;
+      &lt;version&gt;1.16.3&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.testcontainers&lt;/groupId&gt;
+      &lt;artifactId&gt;junit-jupiter&lt;/artifactId&gt;
+      &lt;version&gt;1.16.3&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Then I create my test class.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Testcontainers
+@DisplayName("Jenkins")
+class TestJenkins {
+
+  public static final int JENKINS_PORT = 8080;
+
+  @Container <i class="conum" data-value="1"></i><b>(1)</b>
+  public static DockerComposeContainer jenkinsServer =
+      new DockerComposeContainer(new File("docker-compose.yml"))
+          .withExposedService("jenkins", JENKINS_PORT)
+          .waitingFor("jenkins", Wait.forLogMessage(".*Jenkins is fully up and running*\\n", 1)); <i class="conum" data-value="2"></i><b>(2)</b>
+
+  @Test
+  @DisplayName("first request to fresh container should return \"Authentication required\"")
+  void firstRequestShouldReturnsAuthenticationRequiredTest()
+      throws Exception {
+    String jenkinsUrl = "http://"
+        + jenkinsServer.getServiceHost("jenkins", JENKINS_PORT)
+        + ":" +
+        jenkinsServer.getServicePort("jenkins", JENKINS_PORT);
+
+    MatcherAssert.assertThat("first request to fresh container should return \"Authentication required\"",
+        callHttpEndpoint(jenkinsUrl),
+        containsString("Authentication required")<i class="conum" data-value="3"></i><b>(3)</b>
+    );
+  }
+
+  private static String callHttpEndpoint(String url) throws IOException, InterruptedException { <i class="conum" data-value="4"></i><b>(4)</b>
+    HttpClient httpClient = HttpClient.newBuilder().build();
+    HttpRequest mainRequest = HttpRequest.newBuilder()
+        .uri(URI.create(url))
+        .build();
+
+    HttpResponse&lt;String&gt; response = httpClient.send(mainRequest, HttpResponse.BodyHandlers.ofString());
+    return response.body();
+  }
+
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Compose file format should match to the <a href="https://docs.docker.com/compose/compose-file/compose-versioning/">Compatibility matrix</a>.</td>
+<td>I use the TestContainers <a href="https://www.testcontainers.org/modules/docker_compose/">Docker Compose Module</a> here.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Jenkins is the single service for our example.</td>
+<td>As most applications Jenkins is not fully started, when the conainer is started. So I wait until the suitable Jenkins message <a href="https://www.testcontainers.org/features/startup_and_waits/#log-output-wait-strategy">shows up in the Docker container logs</a>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>I use the long term support Jenkins image with JDK 11 runtime.</td>
+<td>In my test I call the Jenkins URL end the response should show for this container, that Authentication is required.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>The service should be started with Docker Desktop and in case of an error.</td>
+<td>Here you see the helper method for calling an HTTP URL and return the response.</td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>To give your Development Server component a unique name you can set the <a href="https://docs.docker.com/compose/reference/envvars/#compose_project_name">project name environment variable</a> via the <a href="https://docs.docker.com/compose/environment-variables/#the-env-file">.env</a> file.</p>
+</li>
+<li>
+<p>If you run the test in your IDE, you will see a successful test, but following warning and miss maybe some logging for the call.</p>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../../images/virtual_development_server_test_with_testcontainers_slf4j_warning.png"><img src="../../images/virtual_development_server_test_with_testcontainers_slf4j_warning.png" alt="virtual development server test with testcontainers slf4j warning" width="100%"></a>
 </div>
+</div>
+</li>
+<li>
+<p>To solve this you have to add the following dependency to your pom.xml.</p>
 <div class="listingblock">
-<div class="title">.env</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">COMPOSE_PROJECT_NAME=project</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">    &lt;dependency&gt;
+      &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+      &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
+      &lt;version&gt;1.7.36&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+      &lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;
+      &lt;version&gt;1.7.36&lt;/version&gt;
+    &lt;/dependency&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>From the directory of your files you can now use following commands to control your Development Server:</p>
-</div>
+</li>
+<li>
+<p>If you run your test via Maven maybe you see now, that no test are executed.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker compose up --detach
-docker compose stop
-docker compose down</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>If you start your server you should see the following in the Docker Desktop Console:</p>
-</div>
-<div class="imageblock">
+</li>
+<li>
+<p>For running Unit 5 tests you have to change the maven-surefire-plugin in your pom.xml at least to 2.22.0.</p>
+<div class="listingblock">
 <div class="content">
-<a class="image" href="../../images/virtual_development_server_docker_desktop_on_windows_docker_desktop.png"><img src="../../images/virtual_development_server_docker_desktop_on_windows_docker_desktop.png" alt="virtual development server docker desktop on windows docker desktop" width="100%"></a>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">      &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+        &lt;version&gt;2.22.2&lt;/version&gt;
+      &lt;/plugin&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>As your server is running you can now access it via <a href="http://localhost:8080/">localhost:8080</a>:</p>
-</div>
-<div class="imageblock">
+</li>
+<li>
+<p>If you run your test now via Maven you should see an output similar like the following.</p>
+<div class="listingblock">
 <div class="content">
-<a class="image" href="../../images/virtual_development_server_docker_desktop_on_windows_unlock_jenkins.png"><img src="../../images/virtual_development_server_docker_desktop_on_windows_unlock_jenkins.png" alt="virtual development server docker desktop on windows unlock jenkins" width="100%"></a>
+<pre class="highlightjs highlight"><code class="language-none hljs">[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestJenkins
+...
+[main] INFO docker[docker/compose:1.29.2] - Creating container for image: docker/compose:1.29.2
+[main] INFO docker[docker/compose:1.29.2] - Container docker/compose:1.29.2 is starting: 56fee4602485802e21ef5292d14e6fadeccefb676286fb691ac0af04f7e209f3
+[main] INFO docker[docker/compose:1.29.2] - Container docker/compose:1.29.2 started in PT7.4233676S
+[main] INFO docker[docker/compose:1.29.2] - Docker Compose container is running for command: up -d
+...
+[main] INFO docker[docker/compose:1.29.2] - Docker Compose has finished running
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38.101 s - in TestJenkins
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------</code></pre>
 </div>
+</div>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>You can go now to Docker Desktop,</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="../../images/virtual_development_server_docker_desktop_on_windows_jenkins_password.png"><img src="../../images/virtual_development_server_docker_desktop_on_windows_jenkins_password.png" alt="virtual development server docker desktop on windows jenkins password" width="100%"></a>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>open the container console</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>and get the password to further configure Jenkins from the browser.</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>In a later blog I will show you a ready configured Jenkins server via Infrastructure as Code.</p>
+<p>You can add a lot of other tests here, but for testing the TestContainers framework this should be enough here.</p>
 </div>
 <div class="paragraph">
 <p>You find all sources on <a href="https://github.com/amapac-io/vds_jenkins_with_docker_desktop_simple">GitHub</a>.</p>
@@ -251,7 +319,7 @@ docker compose down</code></pre>
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;text=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows&amp;via=develishdevelop"
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework&amp;via=develishdevelop"
                  target="_blank" rel="noreferrer" class="share-btn twitter">
                 <i class="fab fa-twitter"></i>
               </a>
@@ -259,7 +327,7 @@ docker compose down</code></pre>
 
             <!-- Facebook -->
             <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html"
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
                  target="_blank" rel="noreferrer" class="share-btn facebook">
                 <i class="fab fa-facebook"></i>
               </a>
@@ -267,7 +335,7 @@ docker compose down</code></pre>
 
             <!-- LinkedIn -->
             <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html"
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
                  target="_blank" rel="noreferrer" class="share-btn linkedin">
                 <i class="fab fa-linkedin"></i>
               </a>
@@ -275,7 +343,7 @@ docker compose down</code></pre>
 
             <!-- Xing -->
             <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html"
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
                  target="_blank" rel="noreferrer" class="share-btn xing">
                 <i class="fab fa-xing"></i>
               </a>
@@ -283,7 +351,7 @@ docker compose down</code></pre>
 
             <!-- Tumblr -->
             <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;title=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows"
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;title=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
                  target="_blank" rel="noreferrer" class="share-btn tumblr">
                 <i class="fab fa-tumblr"></i>
               </a>
@@ -291,7 +359,7 @@ docker compose down</code></pre>
 
             <!-- Pinterest -->
             <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;description=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows"
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;description=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
                  target="_blank" rel="noreferrer" class="share-btn pinterest">
                 <i class="fab fa-pinterest"></i>
               </a>
@@ -299,7 +367,7 @@ docker compose down</code></pre>
 
             <!-- Reddit -->
             <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;title=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows"
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;title=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
                  target="_blank" rel="noreferrer" class="share-btn reddit">
                 <i class="fab fa-reddit-alien"></i>
               </a>
@@ -307,7 +375,7 @@ docker compose down</code></pre>
 
             <!-- Email -->
             <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows&amp;body=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html"
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Test%20Jenkins%20Container%20with%20TestContainers%20Framework&amp;body=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
                  target="_blank" rel="noreferrer" class="share-btn email">
                 <i class="fas fa-envelope"></i>
               </a>
@@ -315,7 +383,7 @@ docker compose down</code></pre>
 
             <!-- Telegram -->
             <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;text=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows"
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
                  target="_blank" rel="noreferrer" class="share-btn telegram">
                 <i class="fab fa-telegram"></i>
               </a>
@@ -323,7 +391,7 @@ docker compose down</code></pre>
 
             <!-- Whatsapp -->
             <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows%20https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html"
+              <a href="https://api.whatsapp.com/send?text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework%20https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
                  target="_blank" rel="noreferrer" class="share-btn whatsapp">
                 <i class="fab fa-whatsapp"></i>
               </a>
@@ -331,7 +399,7 @@ docker compose down</code></pre>
 
             <!-- Skype -->
             <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;lang=en-US&amp;source=jetpack"
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;lang=en-US&amp;source=jetpack"
                  target="_blank" rel="noreferrer" class="share-btn skype">
                 <i class="fab fa-skype"></i>
               </a>
