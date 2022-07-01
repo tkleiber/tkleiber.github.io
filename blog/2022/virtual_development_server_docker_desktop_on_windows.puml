@@ -16,7 +16,7 @@ package  "Infrastructure" as i {
     }
   }
 
-  dc ..down.> wdd
+  dc ..right.> wdd
 }
 
 @enduml

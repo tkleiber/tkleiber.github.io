@@ -1,0 +1,29 @@
+@startuml
+skinparam defaultTextAlignment center
+
+' Icons from https://github.com/plantuml/plantuml-stdlib
+!include <tupadr3/common>
+!include <tupadr3/devicons2/oracle_original.puml>
+!include <tupadr3/devicons2/vagrant_wordmark.puml>
+!include <tupadr3/font-awesome-5/docker.puml>
+!include <tupadr3/font-awesome-5/jenkins.puml>
+!include <tupadr3/font-awesome-5/ubuntu.puml>
+
+
+package  "Infrastructure" as i {
+  FA5_DOCKER(dc, Docker Compose)
+
+  DEV2_VAGRANT_WORDMARK(ivb) {
+    DEV2_ORACLE_ORIGINAL(vbox, Virtual Box) {
+      FA5_UBUNTU(vboxubuntu, Ubuntu Server) {
+        FA5_DOCKER(vboxdockerce, Docker CE) {
+          FA5_JENKINS(jk, Jenkins)
+        }
+      }
+    }
+  }
+
+  dc ..right.> vboxdockerce
+}
+
+@enduml

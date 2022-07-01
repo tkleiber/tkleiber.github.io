@@ -5,29 +5,29 @@
 
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="Create AsciiDoc Templates for ADR&#39;s and use them in your Project on all Platforms"/>
+        <meta name="description" content="Start with the easiest case"/>
         <meta name="author" content="Torsten Kleiber"/>
 
-        <title>Use AsciiDoc Templates for your Architecture Decisions with Java Based ADR-J Tool</title>
+        <title>Run your Development Server with Vagrant on VirtualBox on Windows</title>
 
         <meta name="robots" content="index, follow"/>
         <meta name="generator" content="JBake"/>
 
         <!--Facebook Card-->
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Use AsciiDoc Templates for your Architecture Decisions with Java Based ADR-J Tool"/>
-        <meta property="og:description" content="Create AsciiDoc Templates for ADR&#39;s and use them in your Project on all Platforms"/>
+        <meta property="og:title" content="Run your Development Server with Vagrant on VirtualBox on Windows"/>
+        <meta property="og:description" content="Start with the easiest case"/>
         <meta property="og:image"
-        content="https://www.amapac.io/images/adr_j_tool_with_madr_template_for_asciidoc_shareimage.png"/>
+        content="https://www.amapac.io/images/virtual_development_server_vagrant_and_virtualbox_on_windows.png"/>
 
         <!--Twitter card -->
         
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Use AsciiDoc Templates for your Architecture Decisions with Java Based ADR-J Tool">
+        <meta name="twitter:title" content="Run your Development Server with Vagrant on VirtualBox on Windows">
         <meta name="twitter:creator" content="@develishdevelop">
-        <meta name="twitter:description" content="Create AsciiDoc Templates for ADR&#39;s and use them in your Project on all Platforms">
+        <meta name="twitter:description" content="Start with the easiest case">
         <meta name="twitter:image"
-          content="https://www.amapac.io/images/adr_j_tool_with_madr_template_for_asciidoc_shareimage.png">
+          content="https://www.amapac.io/images/virtual_development_server_vagrant_and_virtualbox_on_windows.png">
         
 
         <!-- Bootstrap core CSS -->
@@ -84,25 +84,27 @@
 
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
-  <header class="masthead" style="background-image: url(&#39;../../images/cover_architecture.jpg&#39;) ; background-color:#101010">
+  <header class="masthead" style="background-image: url(&#39;../../images/cover_development_server.jpg&#39;) ; background-color:#101010">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Use AsciiDoc Templates for your Architecture Decisions with Java Based ADR-J Tool</h1>
-            <h2 class="subheading">Create AsciiDoc Templates for ADR&#39;s and use them in your Project on all Platforms</h2>
+            <h1>Run your Development Server with Vagrant on VirtualBox on Windows</h1>
+            <h2 class="subheading">Start with the easiest case</h2>
             <span class="meta">Posted by
               <b>Torsten Kleiber</b>
-              on March 31, 2022
+              on May 31, 2022
               
               </br>
               <span> Tags:
                 <span>
-                  <a href="../../tags/Architecture.html" class="" >Architecture</a></span><span>
-                  <a href="../../tags/ADR.html" class="" >ADR</a></span><span>
-                  <a href="../../tags/AsciiDoc.html" class="" >AsciiDoc</a></span><span>
-                  <a href="../../tags/Documentation.html" class="" >Documentation</a></span>
+                  <a href="../../tags/Docker.html" class="" >Docker</a></span><span>
+                  <a href="../../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
+                  <a href="../../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
+                  <a href="../../tags/Vagrant.html" class="" >Vagrant</a></span><span>
+                  <a href="../../tags/VirtualBox.html" class="" >VirtualBox</a></span><span>
+                  <a href="../../tags/Windows.html" class="" >Windows</a></span>
                 </span>
               </span>
             </span>
@@ -117,106 +119,134 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto"><div class="paragraph">
-<p>In my blog <a href="adr_tool_with_custom_template_for_asciidoc.html">Use adr-tools for AsciiDoc</a> I have described, how to change the tool to write my Architecture Decision Records in AsciiDoc. But there are a lot of drawbacks with this approach, e.g. some of the features like linking and superceding decisions does not work. ADR Tool is based on shell scripts, so you have to provide and know a *nix emulation on windows. In the meantime I found Java base <a href="https://github.com/adoble/adr-j"> ADR-J Tool</a> and will show you here if this works better for my purposes.</p>
+<p>In my series about Modern Infrastructure for your Virtual Development Server I will now start my Server with Vagrant in VirtualBox on Windows. Again I will use Jenkins as example for this. See how this works.</p>
 </div>
 <div class="paragraph">
-<p>According to its own <a href="https://github.com/adoble/adr-j/blob/main/doc/adr/0004-markdown-format.md">architecture decision records</a> it support only markdown as <a href="https://github.com/npryce/adr-tools">ADR-Tool</a> does. And again I found nothing clear here in the documentation about AsciiDoc too.</p>
-</div>
-<div class="paragraph">
-<p>But similar as in ADR-tools I found here the closed Issue <a href="https://github.com/adoble/adr-j/issues/12">Extend to use Asciidoc as well as markdown</a> and the related <a href="https://github.com/adoble/adr-j/pull/15">pull request</a> describes, what I have to prepare one time on my Windows 11 machine:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>First I clone the repository <a href="https://github.com/adoble/adr-j" class="bare">https://github.com/adoble/adr-j</a>.</p>
-</li>
-<li>
-<p>Then I build and install the tool as decribed in <a href="https://github.com/adoble/adr-j/blob/main/doc/usage/INSTALL.md">INSTALL.md</a></p>
-</li>
-<li>
-<p>When testing the tool I get following error:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">C:&gt;adr
-Error: A JNI error has occurred, please check your installation and try again
-Exception in thread "main" java.lang.UnsupportedClassVersionError: org/doble/adr/ADR has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>As I have installed Oracle JRE 8 on my Windows 11 machine I have to change these both parameters to 8</p>
-<div class="listingblock">
-<div class="title">build.gradle</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">description = "adr-j"
-sourceCompatibility = 17</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>After building again now my fist call works.</p>
-</li>
-<li>
-<p>Next step is to create asciidoc templates.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>As I want to use MADR format for Architecture Decision Records too I copy the markdown templates files <a href="https://github.com/adoble/adr-j/blob/main/doc/example_templates/madr.md">madr.md</a> and <a href="https://github.com/adoble/adr-j/blob/main/doc/example_templates/madr_initial.md">madr_initial.md</a> from the project now with the extension .adoc.</p>
-</li>
-<li>
-<p>Then I convert all the Markdown specific syntax to AsciiDoc syntax.</p>
-</li>
-<li>
-<p>If you use IntelliJ IDEA with the AsciiDoc plugin you can do both steps in one go via right click on the file and choose <em>Convert to AsciiDoc</em>. This is how it looks like:</p>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="../../images/adr_j_tool_with_madr_template_for_asciidoc_template.png"><img src="../../images/adr_j_tool_with_madr_template_for_asciidoc_template.png" alt="adr j tool with madr template for asciidoc template" width="100%"></a>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>I would recommend to copy the AsciiDoc templates to your project first. Then you can test this:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">C:&gt;adr init -i &lt;path&gt;\madr_initial.adoc -t &lt;path&gt;\madr.adoc
-Creating ADR directory at &lt;path&gt;\doc\adr
-
-C:&gt;more doc\adr\0001-record-architecture-decisions.adoc
-= Record Architecture Decisions
-...
-
-C:&gt;adr new Save ADR Templates for Projects
-Creating ADR
-Created ADR at C:\Users\torst\doc\adr\0002-save-adr-templates-in-projects.adoc
-Opening Editor on C:\Users\torst\doc\adr\0002-save-adr-templates-in-projects.adoc ...
-C:\Users\torst\doc\adr\0002-save-adr-templates-in-projects.adoc
-
-C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
-= Save ADR Templates in Projects
-
-* Status: Proposed
-...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>After that you have to fill the new file with relevant content for your Architecture Decision.</p>
+<p>Here you see the architecture overview:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<a class="image" href="../../images/adr_j_tool_with_madr_template_for_asciidoc_generated.png"><img src="../../images/adr_j_tool_with_madr_template_for_asciidoc_generated.png" alt="adr j tool with madr template for asciidoc generated" width="100%"></a>
+<a class="image" href="../../images/virtual_development_server_vagrant_and_virtualbox_on_windows.png"><img src="../../images/virtual_development_server_vagrant_and_virtualbox_on_windows.png" alt="virtual development server vagrant and virtualbox on windows" width="100%"></a>
 </div>
 </div>
 <div class="paragraph">
-<p>If you try to work with links in ADR via <em>adr new -link</em> you will see, that at the moment the file reference will not be created at the moment. Similar happens, when you try to use <em>adr edit 1</em> to open ADR 1 in your configured editor. This is related to some existing hard references to Markdown '.md extension in the code. I have created a <a href="https://github.com/adoble/adr-j/pull/40">pull request</a>, which should solve this.</p>
+<p>I use this architecture here in windows, but it should work similar on all environments, where Vagrant and VirtualBox is available for.</p>
 </div>
 <div class="paragraph">
-<p>You find the change already in my fork on <a href="https://github.com/tkleiber/adr-j">GitHub</a>.</p>
+<p>At first you need to <a href="https://www.vagrantup.com/downloads">install Vagrant</a>.</p>
+</div>
+<div class="paragraph">
+<p>Then you need to <a href="https://www.virtualbox.org/wiki/Downloads">install VirtualBox</a> with Oracle VM VirtualBox Extension Pack.</p>
+</div>
+<div class="paragraph">
+<p>Docker Compose is then already <a href="https://docs.docker.com/get-started/08_using_compose/">installed</a> with Docker Desktop.</p>
+</div>
+<div class="paragraph">
+<p>Next I create a Docker Compose file for my Jenkins server. To make it easy for this blog I will start only a standard Jenkins server, for this I use the most parameters from <a href="https://www.jenkins.io/doc/book/installing/docker/#on-windows">Jenkins documentation</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">docker-compose.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">version: '3.8' <i class="conum" data-value="1"></i><b>(1)</b>
+services:
+  jenkins: <i class="conum" data-value="2"></i><b>(2)</b>
+    environment:
+      - DOCKER_CERT_PATH=/certs/client
+      - DOCKER_HOST=tcp://docker:2376
+      - DOCKER_TLS_VERIFY=1
+    image: jenkins/jenkins:lts-jdk11 <i class="conum" data-value="3"></i><b>(3)</b>
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    restart: unless-stopped <i class="conum" data-value="4"></i><b>(4)</b>
+    volumes:
+      - jenkins_data:/var/jenkins_home
+      - jenkins_docker_certs:/certs/client:ro
+volumes:
+  jenkins_data:
+  jenkins_docker_certs:</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Compose file format should match to the <a href="https://docs.docker.com/compose/compose-file/compose-versioning/">Compatibility matrix</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Jenkins is the single service for our example.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>I use the long term support Jenkins image with JDK 11 runtime.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The service should be started with Docker Desktop and in case of an error.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To give your Development Server component a unique name you can set the <a href="https://docs.docker.com/compose/reference/envvars/#compose_project_name">project name environment variable</a> via the <a href="https://docs.docker.com/compose/environment-variables/#the-env-file">.env</a> file.</p>
+</div>
+<div class="listingblock">
+<div class="title">.env</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">COMPOSE_PROJECT_NAME=project</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the directory of your files you can now use following commands to control your Development Server:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker compose up --detach
+docker compose stop
+docker compose down</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you start your server you should see the following in the Docker Desktop Console:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../../images/virtual_development_server_docker_desktop_on_windows_docker_desktop.png"><img src="../../images/virtual_development_server_docker_desktop_on_windows_docker_desktop.png" alt="virtual development server docker desktop on windows docker desktop" width="100%"></a>
+</div>
+</div>
+<div class="paragraph">
+<p>As your server is running you can now access it via <a href="http://localhost:8080/">localhost:8080</a>:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../../images/virtual_development_server_docker_desktop_on_windows_unlock_jenkins.png"><img src="../../images/virtual_development_server_docker_desktop_on_windows_unlock_jenkins.png" alt="virtual development server docker desktop on windows unlock jenkins" width="100%"></a>
+</div>
+</div>
+<div class="paragraph">
+<p>You can go now to Docker Desktop,</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../../images/virtual_development_server_docker_desktop_on_windows_jenkins_password.png"><img src="../../images/virtual_development_server_docker_desktop_on_windows_jenkins_password.png" alt="virtual development server docker desktop on windows jenkins password" width="100%"></a>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>open the container console</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>and get the password to further configure Jenkins from the browser.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In a later blog I will show you a ready configured Jenkins server via Infrastructure as Code.</p>
+</div>
+<div class="paragraph">
+<p>You find all sources on <a href="https://github.com/amapac-io/vds_jenkins_with_docker_desktop_simple">GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p>That&#8217;s it!</p>
@@ -228,7 +258,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;text=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool&amp;via=develishdevelop"
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;text=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows&amp;via=develishdevelop"
                  target="_blank" rel="noreferrer" class="share-btn twitter">
                 <i class="fab fa-twitter"></i>
               </a>
@@ -236,7 +266,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
 
             <!-- Facebook -->
             <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html"
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html"
                  target="_blank" rel="noreferrer" class="share-btn facebook">
                 <i class="fab fa-facebook"></i>
               </a>
@@ -244,7 +274,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
 
             <!-- LinkedIn -->
             <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html"
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html"
                  target="_blank" rel="noreferrer" class="share-btn linkedin">
                 <i class="fab fa-linkedin"></i>
               </a>
@@ -252,7 +282,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
 
             <!-- Xing -->
             <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html"
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html"
                  target="_blank" rel="noreferrer" class="share-btn xing">
                 <i class="fab fa-xing"></i>
               </a>
@@ -260,7 +290,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
 
             <!-- Tumblr -->
             <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;title=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool"
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;title=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows"
                  target="_blank" rel="noreferrer" class="share-btn tumblr">
                 <i class="fab fa-tumblr"></i>
               </a>
@@ -268,7 +298,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
 
             <!-- Pinterest -->
             <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;description=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool"
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;description=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows"
                  target="_blank" rel="noreferrer" class="share-btn pinterest">
                 <i class="fab fa-pinterest"></i>
               </a>
@@ -276,7 +306,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
 
             <!-- Reddit -->
             <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;title=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool"
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;title=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows"
                  target="_blank" rel="noreferrer" class="share-btn reddit">
                 <i class="fab fa-reddit-alien"></i>
               </a>
@@ -284,7 +314,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
 
             <!-- Email -->
             <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool&amp;body=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html"
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows&amp;body=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html"
                  target="_blank" rel="noreferrer" class="share-btn email">
                 <i class="fas fa-envelope"></i>
               </a>
@@ -292,7 +322,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
 
             <!-- Telegram -->
             <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;text=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool"
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;text=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows"
                  target="_blank" rel="noreferrer" class="share-btn telegram">
                 <i class="fab fa-telegram"></i>
               </a>
@@ -300,7 +330,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
 
             <!-- Whatsapp -->
             <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool%20https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html"
+              <a href="https://api.whatsapp.com/send?text=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows%20https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html"
                  target="_blank" rel="noreferrer" class="share-btn whatsapp">
                 <i class="fab fa-whatsapp"></i>
               </a>
@@ -308,7 +338,7 @@ C:\Users\torst&gt;more doc\adr\0002-save-adr-templates-in-projects.adoc
 
             <!-- Skype -->
             <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;lang=en-US&amp;source=jetpack"
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;lang=en-US&amp;source=jetpack"
                  target="_blank" rel="noreferrer" class="share-btn skype">
                 <i class="fab fa-skype"></i>
               </a>
