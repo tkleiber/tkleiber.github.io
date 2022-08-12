@@ -6,8 +6,8 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Fri, 1 Jul 2022 21:49:15 +0200</pubDate>
-    <lastBuildDate>Fri, 1 Jul 2022 21:49:15 +0200</lastBuildDate>
+    <pubDate>Fri, 12 Aug 2022 22:00:00 +0200</pubDate>
+    <lastBuildDate>Fri, 12 Aug 2022 22:00:00 +0200</lastBuildDate>
 
     <item>
       <title>Use AsciiDoc Templates for your Architecture Decisions with Java Based ADR-J Tool</title>
