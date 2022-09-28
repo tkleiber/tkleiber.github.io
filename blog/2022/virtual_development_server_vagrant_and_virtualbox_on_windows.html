@@ -5,7 +5,7 @@
 
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="Start with the easiest case"/>
+        <meta name="description" content="Use this, when you have no native Docker installation"/>
         <meta name="author" content="Torsten Kleiber"/>
 
         <title>Run your Development Server with Vagrant on VirtualBox on Windows</title>
@@ -16,7 +16,7 @@
         <!--Facebook Card-->
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Run your Development Server with Vagrant on VirtualBox on Windows"/>
-        <meta property="og:description" content="Start with the easiest case"/>
+        <meta property="og:description" content="Use this, when you have no native Docker installation"/>
         <meta property="og:image"
         content="https://www.amapac.io/images/virtual_development_server_vagrant_and_virtualbox_on_windows.png"/>
 
@@ -25,7 +25,7 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Run your Development Server with Vagrant on VirtualBox on Windows">
         <meta name="twitter:creator" content="@develishdevelop">
-        <meta name="twitter:description" content="Start with the easiest case">
+        <meta name="twitter:description" content="Use this, when you have no native Docker installation">
         <meta name="twitter:image"
           content="https://www.amapac.io/images/virtual_development_server_vagrant_and_virtualbox_on_windows.png">
         
@@ -91,10 +91,10 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
             <h1>Run your Development Server with Vagrant on VirtualBox on Windows</h1>
-            <h2 class="subheading">Start with the easiest case</h2>
+            <h2 class="subheading">Use this, when you have no native Docker installation</h2>
             <span class="meta">Posted by
               <b>Torsten Kleiber</b>
-              on May 31, 2022
+              on September 28, 2022
               
               </br>
               <span> Tags:
@@ -133,86 +133,101 @@
 <p>I use this architecture here in windows, but it should work similar on all environments, where Vagrant and VirtualBox is available for.</p>
 </div>
 <div class="paragraph">
-<p>At first you need to <a href="https://www.vagrantup.com/downloads">install Vagrant</a>.</p>
+<p>At first I install <a href="https://www.vagrantup.com/downloads">Vagrant</a> and <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> with Oracle VM VirtualBox Extension Pack.</p>
 </div>
 <div class="paragraph">
-<p>Then you need to <a href="https://www.virtualbox.org/wiki/Downloads">install VirtualBox</a> with Oracle VM VirtualBox Extension Pack.</p>
-</div>
-<div class="paragraph">
-<p>Docker Compose is then already <a href="https://docs.docker.com/get-started/08_using_compose/">installed</a> with Docker Desktop.</p>
-</div>
-<div class="paragraph">
-<p>Next I create a Docker Compose file for my Jenkins server. To make it easy for this blog I will start only a standard Jenkins server, for this I use the most parameters from <a href="https://www.jenkins.io/doc/book/installing/docker/#on-windows">Jenkins documentation</a>.</p>
+<p>Via this Vagrantfile I create my infrastructure:</p>
 </div>
 <div class="listingblock">
-<div class="title">docker-compose.yml</div>
+<div class="title">Vagrantfile</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">version: '3.8' <i class="conum" data-value="1"></i><b>(1)</b>
-services:
-  jenkins: <i class="conum" data-value="2"></i><b>(2)</b>
-    environment:
-      - DOCKER_CERT_PATH=/certs/client
-      - DOCKER_HOST=tcp://docker:2376
-      - DOCKER_TLS_VERIFY=1
-    image: jenkins/jenkins:lts-jdk11 <i class="conum" data-value="3"></i><b>(3)</b>
-    ports:
-      - "8080:8080"
-      - "50000:50000"
-    restart: unless-stopped <i class="conum" data-value="4"></i><b>(4)</b>
-    volumes:
-      - jenkins_data:/var/jenkins_home
-      - jenkins_docker_certs:/certs/client:ro
-volumes:
-  jenkins_data:
-  jenkins_docker_certs:</code></pre>
+<pre class="highlightjs highlight"><code class="language-numlines hljs" data-lang="numlines">Vagrant.configure(2) do |config|
+  config.vm.box = "bento/ubuntu-22.04" <i class="conum" data-value="1"></i><b>(1)</b>
+  config.vm.network "forwarded_port", guest: 8080, host: 8080 <i class="conum" data-value="2"></i><b>(2)</b>
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "DevelopmentServer"
+    vb.customize ["modifyvm", :id, "--cpus", "2"] <i class="conum" data-value="3"></i><b>(3)</b>
+  end
+  config.vm.provision "shell"  do |s|
+    s.path = "bootstrap.sh" <i class="conum" data-value="4"></i><b>(4)</b>
+  end
+end</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Compose file format should match to the <a href="https://docs.docker.com/compose/compose-file/compose-versioning/">Compatibility matrix</a>.</td>
+<td>Use a Ubuntu box with vagrant user preinstalled as <a href="https://app.vagrantup.com/ubuntu">official boxes</a> does not have vagrant user and some other operating systems require Docker EE.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Jenkins is the single service for our example.</td>
+<td>Forward the port from Jenkins Docker container to my local host.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>I use the long term support Jenkins image with JDK 11 runtime.</td>
+<td>Workaround "kernel panic" issue with current VirtualBox version by configuring at least 2 CPU&#8217;s.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>The service should be started with Docker Desktop and in case of an error.</td>
+<td>Call provisioning script for installing Docker itself and the Jenkins Container.</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>To give your Development Server component a unique name you can set the <a href="https://docs.docker.com/compose/reference/envvars/#compose_project_name">project name environment variable</a> via the <a href="https://docs.docker.com/compose/environment-variables/#the-env-file">.env</a> file.</p>
+<p>Sure I could create the whole server here, but instead I install only Docker und run then the same Dockerfile as in my blog <a href="../2022/virtual_development_server_docker_desktop_on_windows.html">Run your Development Server on Docker Desktop on Windows</a>.</p>
 </div>
 <div class="listingblock">
-<div class="title">.env</div>
+<div class="title">Vagrantfile</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">COMPOSE_PROJECT_NAME=project</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+<i class="conum" data-value="1"></i><b>(1)</b>
+sudo apt-get update -y
+sudo apt-get install -y \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update -y
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo service docker start
+
+<i class="conum" data-value="2"></i><b>(2)</b>
+pushd /vagrant || exit
+sudo docker compose up --detach</code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Install Docker Engine on Ubuntu as described <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">here</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Change to automatically mapped source directory and start the Docker Compose file.</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>From the directory of your files you can now use following commands to control your Development Server:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker compose up --detach
-docker compose stop
-docker compose down</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">vagrant up
+vagrant halt</code></pre>
 </div>
 </div>
 <div class="paragraph">
+<p>The first start needs some time, as the provisioning takes place one time.</p>
+</div>
+<div class="paragraph">
 <p>If you start your server you should see the following in the Docker Desktop Console:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="../../images/virtual_development_server_docker_desktop_on_windows_docker_desktop.png"><img src="../../images/virtual_development_server_docker_desktop_on_windows_docker_desktop.png" alt="virtual development server docker desktop on windows docker desktop" width="100%"></a>
-</div>
 </div>
 <div class="paragraph">
 <p>As your server is running you can now access it via <a href="http://localhost:8080/">localhost:8080</a>:</p>
@@ -223,30 +238,33 @@ docker compose down</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can go now to Docker Desktop,</p>
+<p>How do you get now the initial password?</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<a class="image" href="../../images/virtual_development_server_docker_desktop_on_windows_jenkins_password.png"><img src="../../images/virtual_development_server_docker_desktop_on_windows_jenkins_password.png" alt="virtual development server docker desktop on windows jenkins password" width="100%"></a>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">vagrant ssh <i class="conum" data-value="1"></i><b>(1)</b>
+sudo docker ps <i class="conum" data-value="2"></i><b>(2)</b>
+sudo docker exec -it vagrant-jenkins-1 more var/jenkins_home/secrets/initialAdminPassword <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>open the container console</td>
+<td>open console to your VirtualBox guest</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>and get the password to further configure Jenkins from the browser.</td>
+<td>list the runnung docker Container, in my case <em>vagrant-jenkins-1</em> is the name listed for my container under the <em>names</em> columns there</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>show the initial password from the mentioned path in the screenshot</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>In a later blog I will show you a ready configured Jenkins server via Infrastructure as Code.</p>
-</div>
-<div class="paragraph">
-<p>You find all sources on <a href="https://github.com/amapac-io/vds_jenkins_with_docker_desktop_simple">GitHub</a>.</p>
+<p>You find all sources on <a href="https://github.com/amapac-io/vds_jenkins_with_vagrant_and_virtualbox_simple">GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p>That&#8217;s it!</p>
@@ -437,7 +455,7 @@ docker compose down</code></pre>
                             <p class="copyright text-muted">&copy; <span>Torsten Kleiber</span>
                                 <span>2022</span> | <a
               href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a
-              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.7.0-rc.2</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
+              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.7.0-rc.6</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
       </div>
     </div>
   </div>
