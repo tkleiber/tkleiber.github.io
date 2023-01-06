@@ -4,36 +4,6 @@
         <loc>https://www.amapac.io/about.html</loc>
         <lastmod>2011-12-13</lastmod>
     </url><url>
-        <loc>https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html</loc>
-        <lastmod>2022-09-28</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html</loc>
-        <lastmod>2022-03-31</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html</loc>
-        <lastmod>2022-03-26</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html</loc>
-        <lastmod>2022-03-22</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html</loc>
-        <lastmod>2022-02-25</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html</loc>
-        <lastmod>2022-02-15</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2021/Slides_for_my_german_presentation+DOAG2021_forms_and_reports_12c_automatision.html</loc>
-        <lastmod>2021-11-26</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html</loc>
-        <lastmod>2021-11-17</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html</loc>
-        <lastmod>2021-03-04</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2020/Slides+for+my+german+presentation+DOAG2020+-+Our+way+to+19c+available.html</loc>
-        <lastmod>2020-11-24</lastmod>
-    </url><url>
         <loc>https://www.amapac.io/blog/2020/our_way_to_19c_I_am_a_speaker_at_DOAG_2020.html</loc>
         <lastmod>2020-11-17</lastmod>
     </url><url>
@@ -46,26 +16,14 @@
         <loc>https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html</loc>
         <lastmod>2020-09-04</lastmod>
     </url><url>
-        <loc>https://www.amapac.io/blog/2020/Slides+for+my+german+presentation+APEXCONN20+-+Agile+Oracle+Database+Modeling+and+Development+available.html</loc>
-        <lastmod>2019-11-24</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2019/Slides+and+Video+for+my+german+presentation+DOAG2019+-+Agile+Oracle+Database+Modeling+and+Development+available.html</loc>
-        <lastmod>2019-11-24</lastmod>
-    </url><url>
         <loc>https://www.amapac.io/blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html</loc>
         <lastmod>2019-11-18</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2018/Slides+for+my+german+presentation+DOAG2018+-+Regulatorics+-+Offside+is+when+the+referee+whistles+available.html</loc>
-        <lastmod>2018-11-24</lastmod>
     </url><url>
         <loc>https://www.amapac.io/blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html</loc>
         <lastmod>2018-07-17</lastmod>
     </url><url>
         <loc>https://www.amapac.io/blog/2017/DOAG2017+wrap+up.html</loc>
         <lastmod>2017-12-01</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2017/Slides+for+my+german+presentation+DOAG2017+-+PL+SQL+Therefore+whoever+binds+forever+-+automate+your+tests+available.html</loc>
-        <lastmod>2017-11-24</lastmod>
     </url><url>
         <loc>https://www.amapac.io/blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html</loc>
         <lastmod>2017-08-30</lastmod>
@@ -117,9 +75,6 @@
     </url><url>
         <loc>https://www.amapac.io/blog/2016/Javaland+2016+conference+day+1.html</loc>
         <lastmod>2016-03-09</lastmod>
-    </url><url>
-        <loc>https://www.amapac.io/blog/2015/Slides+for+my+german+presentation+DOAG2015+Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+available.html</loc>
-        <lastmod>2015-11-24</lastmod>
     </url><url>
         <loc>https://www.amapac.io/blog/2015/SLES+shell+script+to+check+required+os+packages+according+to+documentation+before+starting+oracle+forms+and+reports+installation.html</loc>
         <lastmod>2015-09-09</lastmod>
