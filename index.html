@@ -103,6 +103,1151 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 
                     <div class="post-preview">
+                        <a href="blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html">
+                            <h2 class="post-title">Run your Development Server with Vagrant on VirtualBox on Windows</h2>
+                            <h3 class="post-subtitle">Use this, when you have no native Docker installation</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>September 28, 2022</span>
+                            
+                            </br>
+                            <span> Tags: <span> <a
+                                href="tags/Docker.html" class="">Docker</a></span><span> <a
+                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
+                                href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a></span><span> <a
+                                href="tags/Vagrant.html" class="">Vagrant</a></span><span> <a
+                                href="tags/VirtualBox.html" class="">VirtualBox</a></span><span> <a
+                                href="tags/Windows.html" class="">Windows</a></span></span></p>
+                        <p>In my series about Modern Infrastructure for your Virtual Development Server I will now start my Server with Vagrant in VirtualBox on Windows. Again I will use Jenkins as example for this. See how this works.</p>
+                        
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;text=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;title=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;description=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;title=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows&amp;body=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;text=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Run%20your%20Development%20Server%20with%20Vagrant%20on%20VirtualBox%20on%20Windows%20https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html">
+                            <h2 class="post-title">Use AsciiDoc Templates for your Architecture Decisions with Java Based ADR-J Tool</h2>
+                            <h3 class="post-subtitle">Create AsciiDoc Templates for ADR&#39;s and use them in your Project on all Platforms</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>March 31, 2022</span>
+                            
+                            </br>
+                            <span> Tags: <span> <a
+                                href="tags/Architecture.html" class="">Architecture</a></span><span> <a
+                                href="tags/ADR.html" class="">ADR</a></span><span> <a
+                                href="tags/AsciiDoc.html" class="">AsciiDoc</a></span><span> <a
+                                href="tags/Documentation.html" class="">Documentation</a></span></span></p>
+                        <p>In my blog <a href="../2022/adr_tool_with_custom_template_for_asciidoc.html">Use adr-tools for AsciiDoc</a> I have described, how to change the tool to write my Architecture Decision Records in AsciiDoc. But there are a lot of drawbacks with this approach, e.g. some of the features like linking and superceding decisions does not work. ADR Tool is based on shell scripts, so you have to provide and know a *nix emulation on windows. In the meantime I found Java base <a href="https://github.com/adoble/adr-j"> ADR-J Tool</a> and will show you here if this works better for my purposes.</p>
+                        
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;text=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;title=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;description=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;title=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool&amp;body=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;text=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Use%20AsciiDoc%20Templates%20for%20your%20Architecture%20Decisions%20with%20Java%20Based%20ADR-J%20Tool%20https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2022/virtual_development_server_test_with_testcontainers.html">
+                            <h2 class="post-title">Test Jenkins Container with TestContainers Framework</h2>
+                            <h3 class="post-subtitle">Automate the Testing of your Infrastructure</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>March 26, 2022</span>
+                            
+                            </br>
+                            <span> Tags: <span> <a
+                                href="tags/Docker.html" class="">Docker</a></span><span> <a
+                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
+                                href="tags/Integration-Test.html" class="">Integration-Test</a></span><span> <a
+                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
+                                href="tags/JUnit.html" class="">JUnit</a></span><span> <a
+                                href="tags/Maven.html" class="">Maven</a></span><span> <a
+                                href="tags/TestContainers.html" class="">TestContainers</a></span><span> <a
+                                href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a></span></span></p>
+                        <p>As I create my Virtual Development Servers I asked myself how can I easily test, that it is working? As I put now my servers into containers via docker-compose I searched for a test framework, which supports this out of the box. I heard a lot about <a href="https://www.testcontainers.org/">TestContainers</a> in the past and again at Javaland 2022 conference last week, so I want to test now, if this will help me.</p>
+                        
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;title=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;description=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;title=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Test%20Jenkins%20Container%20with%20TestContainers%20Framework&amp;body=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework%20https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2022/virtual_development_server_docker_desktop_on_windows.html">
+                            <h2 class="post-title">Run your Development Server on Docker Desktop on Windows</h2>
+                            <h3 class="post-subtitle">Start with the easiest case</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>March 22, 2022</span>
+                            
+                            </br>
+                            <span> Tags: <span> <a
+                                href="tags/Docker.html" class="">Docker</a></span><span> <a
+                                href="tags/Docker-Desktop.html" class="">Docker-Desktop</a></span><span> <a
+                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
+                                href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a></span><span> <a
+                                href="tags/Windows.html" class="">Windows</a></span></span></p>
+                        <p>In my series about Modern Infrastructure for your Virtual Development Server I will now start with the easiest case for me. I will run a Server on a Docker Desktop on Windows. As I need CI for all of my projects I will use Jenkins as example for this. See how this works.</p>
+                        
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;text=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;title=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;description=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;title=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows&amp;body=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;text=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Run%20your%20Development%20Server%20on%20Docker%20Desktop%20on%20Windows%20https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_docker_desktop_on_windows.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2022/virtual_development_server_modern_infrastructure.html">
+                            <h2 class="post-title">Virtual Development Server: Modern Infrastructure</h2>
+                            <h3 class="post-subtitle">Create the Foundation for easy Development</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>February 25, 2022</span>
+                            
+                            </br>
+                            <span> Tags: <span> <a
+                                href="tags/Docker.html" class="">Docker</a></span><span> <a
+                                href="tags/Docker-Desktop.html" class="">Docker-Desktop</a></span><span> <a
+                                href="tags/Docker-CE.html" class="">Docker-CE</a></span><span> <a
+                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
+                                href="tags/Linux.html" class="">Linux</a></span><span> <a
+                                href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a></span><span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/Orcle-Cloud.html" class="">Orcle-Cloud</a></span><span> <a
+                                href="tags/Oracle-Compute-Instance.html" class="">Oracle-Compute-Instance</a></span><span> <a
+                                href="tags/Ubuntu.html" class="">Ubuntu</a></span><span> <a
+                                href="tags/Vagrant.html" class="">Vagrant</a></span><span> <a
+                                href="tags/VirtualBox.html" class="">VirtualBox</a></span><span> <a
+                                href="tags/Windows.html" class="">Windows</a></span></span></p>
+                        <p>After my 2016 series about my Virtual Development Server I have learned a lot. It&#8217;s time for a major overhaul with new technologies. It should be a lot more flexible and usable for development and course environments. See how I will restart!</p>
+                        
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;text=Virtual%20Development%20Server:%20Modern%20Infrastructure&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;title=Virtual%20Development%20Server:%20Modern%20Infrastructure"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;description=Virtual%20Development%20Server:%20Modern%20Infrastructure"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;title=Virtual%20Development%20Server:%20Modern%20Infrastructure"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Virtual%20Development%20Server:%20Modern%20Infrastructure&amp;body=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;text=Virtual%20Development%20Server:%20Modern%20Infrastructure"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Virtual%20Development%20Server:%20Modern%20Infrastructure%20https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_modern_infrastructure.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2022/adr_tool_with_custom_template_for_asciidoc.html">
+                            <h2 class="post-title">Use adr-tools for AsciiDoc</h2>
+                            <h3 class="post-subtitle">Use Custom Template for Architecture Decision Records</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>February 15, 2022</span>
+                            
+                            </br>
+                            <span> Tags: <span> <a
+                                href="tags/Architecture.html" class="">Architecture</a></span><span> <a
+                                href="tags/ADR.html" class="">ADR</a></span><span> <a
+                                href="tags/AsciiDoc.html" class="">AsciiDoc</a></span><span> <a
+                                href="tags/Documentation.html" class="">Documentation</a></span></span></p>
+                        <p>I looked for a tool to create Architecture Decision Records in AsciiDoc and does not find any. So first I thought, I would have to (re)implement one. But look, how easy it really was.</p>
+                        
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html&amp;text=Use%20adr-tools%20for%20AsciiDoc&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html&amp;title=Use%20adr-tools%20for%20AsciiDoc"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html&amp;description=Use%20adr-tools%20for%20AsciiDoc"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html&amp;title=Use%20adr-tools%20for%20AsciiDoc"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Use%20adr-tools%20for%20AsciiDoc&amp;body=https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html&amp;text=Use%20adr-tools%20for%20AsciiDoc"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Use%20adr-tools%20for%20AsciiDoc%20https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2021/Slides_for_my_german_presentation+DOAG2021_forms_and_reports_12c_automatision.html">
+                            <h2 class="post-title">Slides for my german presentation DOAG2021 &quot;Forms and Reports 12c - Processes and Automation in Development and Operations&quot; available</h2>
+                            <h3 class="post-subtitle">Project report about an Oracle Forms and Reports 12c Automation</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>November 26, 2021</span>
+                            
+                            </br>
+                            <span> Tags: <span> <a
+                                href="tags/Conferences.html" class="">Conferences</a></span><span> <a
+                                href="tags/DOAG.html" class="">DOAG</a></span><span> <a
+                                href="tags/Forms.html" class="">Forms</a></span><span> <a
+                                href="tags/Migration.html" class="">Migration</a></span><span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/Reports.html" class="">Reports</a></span></span></p>
+                        <p>I have presented last week on DOAG 2021. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/forms-and-reports-12c-processes-and-automation-in-development-and-operations">Slideshare</a> too:</p>
+                        
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html&amp;text=Slides%20for%20my%20german%20presentation%20DOAG2021%20%22Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%22%20available&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html&amp;title=Slides%20for%20my%20german%20presentation%20DOAG2021%20%22Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%22%20available"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html&amp;description=Slides%20for%20my%20german%20presentation%20DOAG2021%20%22Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%22%20available"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html&amp;title=Slides%20for%20my%20german%20presentation%20DOAG2021%20%22Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%22%20available"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Slides%20for%20my%20german%20presentation%20DOAG2021%20%22Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%22%20available&amp;body=https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html&amp;text=Slides%20for%20my%20german%20presentation%20DOAG2021%20%22Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%22%20available"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Slides%20for%20my%20german%20presentation%20DOAG2021%20%22Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%22%20available%20https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2021/Slides_for_my_german_presentation%2BDOAG2021_forms_and_reports_12c_automatision.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2021/forms_and_reports_12c_automatision.html">
+                            <h2 class="post-title">Forms and Reports 12c - Processes and Automation in Development and Operations - I am a speaker at DOAG 2021</h2>
+                            <h3 class="post-subtitle">Project report about an Oracle Forms and Reports 12c Automation</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>November 17, 2021</span>
+                            
+                            </br>
+                            <span> Tags: <span> <a
+                                href="tags/Conferences.html" class="">Conferences</a></span><span> <a
+                                href="tags/DOAG.html" class="">DOAG</a></span><span> <a
+                                href="tags/Forms.html" class="">Forms</a></span><span> <a
+                                href="tags/Migration.html" class="">Migration</a></span><span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/Reports.html" class="">Reports</a></span></span></p>
+                        <p>The current target architecture of IKB&#8217;s credit and loan management is based on Oracle ADF and SOA and of course the database. But how can you protect in this time your Oracle Forms &amp; Reports longtime investments, can you support their Development Lifecycle by Automation?</p>
+                        
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html&amp;text=Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%20-%20I%20am%20a%20speaker%20at%20DOAG%202021&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html&amp;title=Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%20-%20I%20am%20a%20speaker%20at%20DOAG%202021"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html&amp;description=Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%20-%20I%20am%20a%20speaker%20at%20DOAG%202021"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html&amp;title=Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%20-%20I%20am%20a%20speaker%20at%20DOAG%202021"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%20-%20I%20am%20a%20speaker%20at%20DOAG%202021&amp;body=https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html&amp;text=Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%20-%20I%20am%20a%20speaker%20at%20DOAG%202021"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Forms%20and%20Reports%2012c%20-%20Processes%20and%20Automation%20in%20Development%20and%20Operations%20-%20I%20am%20a%20speaker%20at%20DOAG%202021%20https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2021/forms_and_reports_12c_automatision.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2021/add_code_to_reports_via_forsm_api_master.html">
+                            <h2 class="post-title">Add Code to Oracle Reports via Forms FormsAPI Master</h2>
+                            <h3 class="post-subtitle">How to do Mass Changes with in your Oracle Reports with FormsAPI Master</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>March 04, 2021</span>
+                            
+                            </br>
+                            <span> Tags: <span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/Reports.html" class="">Reports</a></span><span> <a
+                                href="tags/FormsAPI-Master.html" class="">FormsAPI-Master</a></span></span></p>
+                        <p>For our migration to Oracle ADF we have to identify, which Forms and Reports modules are still really called. For Forms we already have implemented a call statistic. In this blog post I show you how you can automatically implement the same into over 200 reports.</p>
+                        
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;text=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;title=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;description=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;title=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master&amp;body=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;text=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Add%20Code%20to%20Oracle%20Reports%20via%20Forms%20FormsAPI%20Master%20https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2021/add_code_to_reports_via_forsm_api_master.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
+                        <a href="blog/2020/Slides+for+my+german+presentation+DOAG2020+-+Our+way+to+19c+available.html">
+                            <h2 class="post-title">Slides for my german presentation DOAG2020 &quot;Our way to 19c&quot; available</h2>
+                            <h3 class="post-subtitle">Project report about an Oracle Database Upgrade - Slides</h3>
+                        </a>
+                        <p class="post-meta">Posted by
+                            <b>Torsten Kleiber</b>
+                            on <span>November 24, 2020</span>
+                            
+                            </br>
+                            <span> Tags: <span> <a
+                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
+                                href="tags/Database.html" class="">Database</a></span><span> <a
+                                href="tags/Migration.html" class="">Migration</a></span><span> <a
+                                href="tags/PLSQL.html" class="">PLSQL</a></span><span> <a
+                                href="tags/ADF.html" class="">ADF</a></span><span> <a
+                                href="tags/SOA.html" class="">SOA</a></span><span> <a
+                                href="tags/Forms.html" class="">Forms</a></span><span> <a
+                                href="tags/Reports.html" class="">Reports</a></span><span> <a
+                                href="tags/Conferences.html" class="">Conferences</a></span><span> <a
+                                href="tags/DOAG.html" class="">DOAG</a></span></span></p>
+                        <p>I have presented last week on DOAG 2020. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/our-way-to-19c-doag-2020">Slideshare</a> too:</p>
+                        
+          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
+            <!-- Twitter -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html&amp;text=Slides%20for%20my%20german%20presentation%20DOAG2020%20%22Our%20way%20to%2019c%22%20available&amp;via=develishdevelop"
+                 target="_blank" rel="noreferrer" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html"
+                 target="_blank" rel="noreferrer" class="share-btn facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <!-- LinkedIn -->
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html"
+                 target="_blank" rel="noreferrer" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+
+            <!-- Xing -->
+            <li class="list-inline-item">
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html"
+                 target="_blank" rel="noreferrer" class="share-btn xing">
+                <i class="fab fa-xing"></i>
+              </a>
+            </li>
+
+            <!-- Tumblr -->
+            <li class="list-inline-item">
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html&amp;title=Slides%20for%20my%20german%20presentation%20DOAG2020%20%22Our%20way%20to%2019c%22%20available"
+                 target="_blank" rel="noreferrer" class="share-btn tumblr">
+                <i class="fab fa-tumblr"></i>
+              </a>
+            </li>
+
+            <!-- Pinterest -->
+            <li class="list-inline-item">
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html&amp;description=Slides%20for%20my%20german%20presentation%20DOAG2020%20%22Our%20way%20to%2019c%22%20available"
+                 target="_blank" rel="noreferrer" class="share-btn pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+
+            <!-- Reddit -->
+            <li class="list-inline-item">
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html&amp;title=Slides%20for%20my%20german%20presentation%20DOAG2020%20%22Our%20way%20to%2019c%22%20available"
+                 target="_blank" rel="noreferrer" class="share-btn reddit">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="list-inline-item">
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Slides%20for%20my%20german%20presentation%20DOAG2020%20%22Our%20way%20to%2019c%22%20available&amp;body=https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html"
+                 target="_blank" rel="noreferrer" class="share-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Telegram -->
+            <li class="list-inline-item">
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html&amp;text=Slides%20for%20my%20german%20presentation%20DOAG2020%20%22Our%20way%20to%2019c%22%20available"
+                 target="_blank" rel="noreferrer" class="share-btn telegram">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+
+            <!-- Whatsapp -->
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?text=Slides%20for%20my%20german%20presentation%20DOAG2020%20%22Our%20way%20to%2019c%22%20available%20https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html"
+                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+
+            <!-- Skype -->
+            <li class="list-inline-item">
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2020/Slides%2Bfor%2Bmy%2Bgerman%2Bpresentation%2BDOAG2020%2B-%2BOur%2Bway%2Bto%2B19c%2Bavailable.html&amp;lang=en-US&amp;source=jetpack"
+                 target="_blank" rel="noreferrer" class="share-btn skype">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        
+                        <hr>
+                    </div>
+                
+                    <div class="post-preview">
                         <a href="blog/2020/our_way_to_19c_I_am_a_speaker_at_DOAG_2020.html">
                             <h2 class="post-title">Our way to 19c - I am a speaker at DOAG 2020</h2>
                             <h3 class="post-subtitle">Project report about an Oracle Database Upgrade</h3>
@@ -121,7 +1266,8 @@
                                 href="tags/SOA.html" class="">SOA</a></span><span> <a
                                 href="tags/Forms.html" class="">Forms</a></span><span> <a
                                 href="tags/Reports.html" class="">Reports</a></span><span> <a
-                                href="tags/Conferences.html" class="">Conferences</a></span></span></p>
+                                href="tags/Conferences.html" class="">Conferences</a></span><span> <a
+                                href="tags/DOAG.html" class="">DOAG</a></span></span></p>
                         <p>Already 4 years we plan the upgrade from 11c to a new supported version. If you speak german and you are interested in some of our experiences, you should come and attend my presentation at DOAG 2020 Wednesday, Nov. 18, 15:00 <a href="https://programm.doag.org/doag/2020/#/scheduledEvent/603539">online</a>.</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -219,1189 +1365,35 @@
                         <hr>
                     </div>
                 
-                    <div class="post-preview">
-                        <a href="blog/2020/citrix_workspace_blocks_print_sreen.html">
-                            <h2 class="post-title">Citrix Workspace blocks PRNTSCR key</h2>
-                            <h3 class="post-subtitle">Workaround to re-enable Print Screen key</h3>
-                        </a>
-                        <p class="post-meta">Posted by
-                            <b>Torsten Kleiber</b>
-                            on <span>October 17, 2020</span>
-                            
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Citrix.html" class="">Citrix</a></span><span> <a
-                                href="tags/Windows.html" class="">Windows</a></span></span></p>
-                        <p>If you use Citrix Workspace it could be, that you cannot use Print Screen key on your keyboard anymore. See what it is the root cause and how you can workaround this.</p>
-                        
-          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
-            <!-- Twitter -->
-            <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html&amp;text=Citrix%20Workspace%20blocks%20PRNTSCR%20key&amp;via=develishdevelop"
-                 target="_blank" rel="noreferrer" class="share-btn twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-
-            <!-- Facebook -->
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html"
-                 target="_blank" rel="noreferrer" class="share-btn facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html"
-                 target="_blank" rel="noreferrer" class="share-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-
-            <!-- Xing -->
-            <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html"
-                 target="_blank" rel="noreferrer" class="share-btn xing">
-                <i class="fab fa-xing"></i>
-              </a>
-            </li>
-
-            <!-- Tumblr -->
-            <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html&amp;title=Citrix%20Workspace%20blocks%20PRNTSCR%20key"
-                 target="_blank" rel="noreferrer" class="share-btn tumblr">
-                <i class="fab fa-tumblr"></i>
-              </a>
-            </li>
-
-            <!-- Pinterest -->
-            <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html&amp;description=Citrix%20Workspace%20blocks%20PRNTSCR%20key"
-                 target="_blank" rel="noreferrer" class="share-btn pinterest">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-
-            <!-- Reddit -->
-            <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html&amp;title=Citrix%20Workspace%20blocks%20PRNTSCR%20key"
-                 target="_blank" rel="noreferrer" class="share-btn reddit">
-                <i class="fab fa-reddit-alien"></i>
-              </a>
-            </li>
-
-            <!-- Email -->
-            <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Citrix%20Workspace%20blocks%20PRNTSCR%20key&amp;body=https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html"
-                 target="_blank" rel="noreferrer" class="share-btn email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-
-            <!-- Telegram -->
-            <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html&amp;text=Citrix%20Workspace%20blocks%20PRNTSCR%20key"
-                 target="_blank" rel="noreferrer" class="share-btn telegram">
-                <i class="fab fa-telegram"></i>
-              </a>
-            </li>
-
-            <!-- Whatsapp -->
-            <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=Citrix%20Workspace%20blocks%20PRNTSCR%20key%20https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html"
-                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
-
-            <!-- Skype -->
-            <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2020/citrix_workspace_blocks_print_sreen.html&amp;lang=en-US&amp;source=jetpack"
-                 target="_blank" rel="noreferrer" class="share-btn skype">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        
-                        <hr>
-                    </div>
+                    
                 
-                    <div class="post-preview">
-                        <a href="blog/2020/oracle_forms_git_difftool.html">
-                            <h2 class="post-title">Show your Oracle Forms and Reports diffs from Git</h2>
-                            <h3 class="post-subtitle">See diff for your Forms and Reports modules with tools from ORCL Toolbox and Git difftool wrapper</h3>
-                        </a>
-                        <p class="post-meta">Posted by
-                            <b>Torsten Kleiber</b>
-                            on <span>October 02, 2020</span>
-                            
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/Forms.html" class="">Forms</a></span><span> <a
-                                href="tags/Reports.html" class="">Reports</a></span><span> <a
-                                href="tags/Git.html" class="">Git</a></span><span> <a
-                                href="tags/ORCL-Toolbox.html" class="">ORCL-Toolbox</a></span><span> <a
-                                href="tags/FormsAPI-Master.html" class="">FormsAPI-Master</a></span><span> <a
-                                href="tags/FormsTool.html" class="">FormsTool</a></span></span></p>
-                        <p>You have successfully versioned your Oracle Forms &amp; Reports module with git. What if you could see the diff for your module after changes from your working copy or between two commits? See my solution with the tools from ORCL Toolbox and a Git difftool wrapper.</p>
-                        
-          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
-            <!-- Twitter -->
-            <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html&amp;text=Show%20your%20Oracle%20Forms%20and%20Reports%20diffs%20from%20Git&amp;via=develishdevelop"
-                 target="_blank" rel="noreferrer" class="share-btn twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-
-            <!-- Facebook -->
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html"
-                 target="_blank" rel="noreferrer" class="share-btn facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html"
-                 target="_blank" rel="noreferrer" class="share-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-
-            <!-- Xing -->
-            <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html"
-                 target="_blank" rel="noreferrer" class="share-btn xing">
-                <i class="fab fa-xing"></i>
-              </a>
-            </li>
-
-            <!-- Tumblr -->
-            <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html&amp;title=Show%20your%20Oracle%20Forms%20and%20Reports%20diffs%20from%20Git"
-                 target="_blank" rel="noreferrer" class="share-btn tumblr">
-                <i class="fab fa-tumblr"></i>
-              </a>
-            </li>
-
-            <!-- Pinterest -->
-            <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html&amp;description=Show%20your%20Oracle%20Forms%20and%20Reports%20diffs%20from%20Git"
-                 target="_blank" rel="noreferrer" class="share-btn pinterest">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-
-            <!-- Reddit -->
-            <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html&amp;title=Show%20your%20Oracle%20Forms%20and%20Reports%20diffs%20from%20Git"
-                 target="_blank" rel="noreferrer" class="share-btn reddit">
-                <i class="fab fa-reddit-alien"></i>
-              </a>
-            </li>
-
-            <!-- Email -->
-            <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Show%20your%20Oracle%20Forms%20and%20Reports%20diffs%20from%20Git&amp;body=https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html"
-                 target="_blank" rel="noreferrer" class="share-btn email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-
-            <!-- Telegram -->
-            <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html&amp;text=Show%20your%20Oracle%20Forms%20and%20Reports%20diffs%20from%20Git"
-                 target="_blank" rel="noreferrer" class="share-btn telegram">
-                <i class="fab fa-telegram"></i>
-              </a>
-            </li>
-
-            <!-- Whatsapp -->
-            <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=Show%20your%20Oracle%20Forms%20and%20Reports%20diffs%20from%20Git%20https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html"
-                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
-
-            <!-- Skype -->
-            <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2020/oracle_forms_git_difftool.html&amp;lang=en-US&amp;source=jetpack"
-                 target="_blank" rel="noreferrer" class="share-btn skype">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        
-                        <hr>
-                    </div>
+                    
                 
-                    <div class="post-preview">
-                        <a href="blog/2020/Goodbye_Wordpress_Welcome_JBake.html">
-                            <h2 class="post-title">Goodbye Wordpress - Welcome JBake!</h2>
-                            
-                        </a>
-                        <p class="post-meta">Posted by
-                            <b>Torsten Kleiber</b>
-                            on <span>September 04, 2020</span>
-                            
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Blogging.html" class="">Blogging</a></span><span> <a
-                                href="tags/Wordpress.html" class="">Wordpress</a></span><span> <a
-                                href="tags/JBake.html" class="">JBake</a></span></span></p>
-                        <p>Today I wrote my last post on Wordpress. See why I left Wordpress and why I choose JBake instead.</p>
-                        
-          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
-            <!-- Twitter -->
-            <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html&amp;text=Goodbye%20Wordpress%20-%20Welcome%20JBake!&amp;via=develishdevelop"
-                 target="_blank" rel="noreferrer" class="share-btn twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-
-            <!-- Facebook -->
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html"
-                 target="_blank" rel="noreferrer" class="share-btn facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html"
-                 target="_blank" rel="noreferrer" class="share-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-
-            <!-- Xing -->
-            <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html"
-                 target="_blank" rel="noreferrer" class="share-btn xing">
-                <i class="fab fa-xing"></i>
-              </a>
-            </li>
-
-            <!-- Tumblr -->
-            <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html&amp;title=Goodbye%20Wordpress%20-%20Welcome%20JBake!"
-                 target="_blank" rel="noreferrer" class="share-btn tumblr">
-                <i class="fab fa-tumblr"></i>
-              </a>
-            </li>
-
-            <!-- Pinterest -->
-            <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html&amp;description=Goodbye%20Wordpress%20-%20Welcome%20JBake!"
-                 target="_blank" rel="noreferrer" class="share-btn pinterest">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-
-            <!-- Reddit -->
-            <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html&amp;title=Goodbye%20Wordpress%20-%20Welcome%20JBake!"
-                 target="_blank" rel="noreferrer" class="share-btn reddit">
-                <i class="fab fa-reddit-alien"></i>
-              </a>
-            </li>
-
-            <!-- Email -->
-            <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Goodbye%20Wordpress%20-%20Welcome%20JBake!&amp;body=https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html"
-                 target="_blank" rel="noreferrer" class="share-btn email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-
-            <!-- Telegram -->
-            <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html&amp;text=Goodbye%20Wordpress%20-%20Welcome%20JBake!"
-                 target="_blank" rel="noreferrer" class="share-btn telegram">
-                <i class="fab fa-telegram"></i>
-              </a>
-            </li>
-
-            <!-- Whatsapp -->
-            <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=Goodbye%20Wordpress%20-%20Welcome%20JBake!%20https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html"
-                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
-
-            <!-- Skype -->
-            <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2020/Goodbye_Wordpress_Welcome_JBake.html&amp;lang=en-US&amp;source=jetpack"
-                 target="_blank" rel="noreferrer" class="share-btn skype">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        
-                        <hr>
-                    </div>
+                    
                 
-                    <div class="post-preview">
-                        <a href="blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html">
-                            <h2 class="post-title">Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I am a speaker at DOAG2019</h2>
-                            
-                        </a>
-                        <p class="post-meta">Posted by
-                            <b>Torsten Kleiber</b>
-                            on <span>November 18, 2019</span>
-                            
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Database.html" class="">Database</a></span><span> <a
-                                href="tags/Deploy.html" class="">Deploy</a></span><span> <a
-                                href="tags/Git.html" class="">Git</a></span><span> <a
-                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
-                                href="tags/Liquibase.html" class="">Liquibase</a></span><span> <a
-                                href="tags/Database-Modelling.html" class="">Database-Modelling</a></span><span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/PLSQL.html" class="">PLSQL</a></span><span> <a
-                                href="tags/utPLSQL.html" class="">utPLSQL</a></span></span></p>
-                        <p>We try to be agile in developing and merging our features into branches when they are ready for use.</p>
-                        
-          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
-            <!-- Twitter -->
-            <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html&amp;text=Agile%20Oracle%20Database%20Modeling%20and%20Development%20(AgileOracleDatabase)%20-%20I%20am%20a%20speaker%20at%20DOAG2019&amp;via=develishdevelop"
-                 target="_blank" rel="noreferrer" class="share-btn twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-
-            <!-- Facebook -->
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html"
-                 target="_blank" rel="noreferrer" class="share-btn facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html"
-                 target="_blank" rel="noreferrer" class="share-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-
-            <!-- Xing -->
-            <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html"
-                 target="_blank" rel="noreferrer" class="share-btn xing">
-                <i class="fab fa-xing"></i>
-              </a>
-            </li>
-
-            <!-- Tumblr -->
-            <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html&amp;title=Agile%20Oracle%20Database%20Modeling%20and%20Development%20(AgileOracleDatabase)%20-%20I%20am%20a%20speaker%20at%20DOAG2019"
-                 target="_blank" rel="noreferrer" class="share-btn tumblr">
-                <i class="fab fa-tumblr"></i>
-              </a>
-            </li>
-
-            <!-- Pinterest -->
-            <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html&amp;description=Agile%20Oracle%20Database%20Modeling%20and%20Development%20(AgileOracleDatabase)%20-%20I%20am%20a%20speaker%20at%20DOAG2019"
-                 target="_blank" rel="noreferrer" class="share-btn pinterest">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-
-            <!-- Reddit -->
-            <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html&amp;title=Agile%20Oracle%20Database%20Modeling%20and%20Development%20(AgileOracleDatabase)%20-%20I%20am%20a%20speaker%20at%20DOAG2019"
-                 target="_blank" rel="noreferrer" class="share-btn reddit">
-                <i class="fab fa-reddit-alien"></i>
-              </a>
-            </li>
-
-            <!-- Email -->
-            <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Agile%20Oracle%20Database%20Modeling%20and%20Development%20(AgileOracleDatabase)%20-%20I%20am%20a%20speaker%20at%20DOAG2019&amp;body=https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html"
-                 target="_blank" rel="noreferrer" class="share-btn email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-
-            <!-- Telegram -->
-            <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html&amp;text=Agile%20Oracle%20Database%20Modeling%20and%20Development%20(AgileOracleDatabase)%20-%20I%20am%20a%20speaker%20at%20DOAG2019"
-                 target="_blank" rel="noreferrer" class="share-btn telegram">
-                <i class="fab fa-telegram"></i>
-              </a>
-            </li>
-
-            <!-- Whatsapp -->
-            <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=Agile%20Oracle%20Database%20Modeling%20and%20Development%20(AgileOracleDatabase)%20-%20I%20am%20a%20speaker%20at%20DOAG2019%20https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html"
-                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
-
-            <!-- Skype -->
-            <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2019/Agile%2BOracle%2BDatabase%2BModeling%2Band%2BDevelopment%2B-%2BAgileOracleDatabase%2B-%2BI%2Bam%2Ba%2Bspeaker%2Bat%2BDOAG2019.html&amp;lang=en-US&amp;source=jetpack"
-                 target="_blank" rel="noreferrer" class="share-btn skype">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        
-                        <hr>
-                    </div>
+                    
                 
-                    <div class="post-preview">
-                        <a href="blog/2018/Regulatorics+Offside+is+when+the+referee+whistles+-+I+m+a+speaker+at+DOAG2018.html">
-                            <h2 class="post-title">&quot;Regulatorics: Offside is when the referee whistles&quot; - I am a speaker at DOAG2018</h2>
-                            
-                        </a>
-                        <p class="post-meta">Posted by
-                            <b>Torsten Kleiber</b>
-                            on <span>July 17, 2018</span>
-                            
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/ADF.html" class="">ADF</a></span><span> <a
-                                href="tags/Atlassian.html" class="">Atlassian</a></span><span> <a
-                                href="tags/Bitbucket.html" class="">Bitbucket</a></span><span> <a
-                                href="tags/Branching.html" class="">Branching</a></span><span> <a
-                                href="tags/Build.html" class="">Build</a></span><span> <a
-                                href="tags/Commit-Test.html" class="">Commit-Test</a></span><span> <a
-                                href="tags/Conferences.html" class="">Conferences</a></span><span> <a
-                                href="tags/Continous-Integration.html" class="">Continous-Integration</a></span><span> <a
-                                href="tags/Deploy.html" class="">Deploy</a></span><span> <a
-                                href="tags/Git.html" class="">Git</a></span><span> <a
-                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
-                                href="tags/JIRA.html" class="">JIRA</a></span><span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/Pipeline.html" class="">Pipeline</a></span><span> <a
-                                href="tags/SOA.html" class="">SOA</a></span><span> <a
-                                href="tags/Unit-Test.html" class="">Unit-Test</a></span></span></p>
-                        <p>Today my presentation is confirmed: "Regulatorics: Offside is when the referee whistles". Maybe the German title will be better understood: "Regulatorik: Abseits ist, wenn der Schiedsrichter pfeift".</p>
-                        
-          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
-            <!-- Twitter -->
-            <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html&amp;text=%22Regulatorics:%20Offside%20is%20when%20the%20referee%20whistles%22%20-%20I%20am%20a%20speaker%20at%20DOAG2018&amp;via=develishdevelop"
-                 target="_blank" rel="noreferrer" class="share-btn twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-
-            <!-- Facebook -->
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html"
-                 target="_blank" rel="noreferrer" class="share-btn facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html"
-                 target="_blank" rel="noreferrer" class="share-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-
-            <!-- Xing -->
-            <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html"
-                 target="_blank" rel="noreferrer" class="share-btn xing">
-                <i class="fab fa-xing"></i>
-              </a>
-            </li>
-
-            <!-- Tumblr -->
-            <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html&amp;title=%22Regulatorics:%20Offside%20is%20when%20the%20referee%20whistles%22%20-%20I%20am%20a%20speaker%20at%20DOAG2018"
-                 target="_blank" rel="noreferrer" class="share-btn tumblr">
-                <i class="fab fa-tumblr"></i>
-              </a>
-            </li>
-
-            <!-- Pinterest -->
-            <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html&amp;description=%22Regulatorics:%20Offside%20is%20when%20the%20referee%20whistles%22%20-%20I%20am%20a%20speaker%20at%20DOAG2018"
-                 target="_blank" rel="noreferrer" class="share-btn pinterest">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-
-            <!-- Reddit -->
-            <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html&amp;title=%22Regulatorics:%20Offside%20is%20when%20the%20referee%20whistles%22%20-%20I%20am%20a%20speaker%20at%20DOAG2018"
-                 target="_blank" rel="noreferrer" class="share-btn reddit">
-                <i class="fab fa-reddit-alien"></i>
-              </a>
-            </li>
-
-            <!-- Email -->
-            <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20%22Regulatorics:%20Offside%20is%20when%20the%20referee%20whistles%22%20-%20I%20am%20a%20speaker%20at%20DOAG2018&amp;body=https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html"
-                 target="_blank" rel="noreferrer" class="share-btn email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-
-            <!-- Telegram -->
-            <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html&amp;text=%22Regulatorics:%20Offside%20is%20when%20the%20referee%20whistles%22%20-%20I%20am%20a%20speaker%20at%20DOAG2018"
-                 target="_blank" rel="noreferrer" class="share-btn telegram">
-                <i class="fab fa-telegram"></i>
-              </a>
-            </li>
-
-            <!-- Whatsapp -->
-            <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=%22Regulatorics:%20Offside%20is%20when%20the%20referee%20whistles%22%20-%20I%20am%20a%20speaker%20at%20DOAG2018%20https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html"
-                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
-
-            <!-- Skype -->
-            <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2018/Regulatorics%2BOffside%2Bis%2Bwhen%2Bthe%2Breferee%2Bwhistles%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2018.html&amp;lang=en-US&amp;source=jetpack"
-                 target="_blank" rel="noreferrer" class="share-btn skype">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        
-                        <hr>
-                    </div>
+                    
                 
-                    <div class="post-preview">
-                        <a href="blog/2017/DOAG2017+wrap+up.html">
-                            <h2 class="post-title">DOAG2017 wrap up</h2>
-                            
-                        </a>
-                        <p class="post-meta">Posted by
-                            <b>Torsten Kleiber</b>
-                            on <span>December 01, 2017</span>
-                            
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/ABCS.html" class="">ABCS</a></span><span> <a
-                                href="tags/ADF.html" class="">ADF</a></span><span> <a
-                                href="tags/APEX.html" class="">APEX</a></span><span> <a
-                                href="tags/Bitcoin.html" class="">Bitcoin</a></span><span> <a
-                                href="tags/Blockchain.html" class="">Blockchain</a></span><span> <a
-                                href="tags/Cloud.html" class="">Cloud</a></span><span> <a
-                                href="tags/Code-Coverage.html" class="">Code-Coverage</a></span><span> <a
-                                href="tags/Continous-Integration.html" class="">Continous-Integration</a></span><span> <a
-                                href="tags/DBADev.html" class="">DBADev</a></span><span> <a
-                                href="tags/DevOps.html" class="">DevOps</a></span><span> <a
-                                href="tags/Disruption.html" class="">Disruption</a></span><span> <a
-                                href="tags/DOAG.html" class="">DOAG</a></span><span> <a
-                                href="tags/Docker.html" class="">Docker</a></span><span> <a
-                                href="tags/Forms.html" class="">Forms</a></span><span> <a
-                                href="tags/Fusion-Middleware.html" class="">Fusion-Middleware</a></span><span> <a
-                                href="tags/Java.html" class="">Java</a></span><span> <a
-                                href="tags/JavaScript.html" class="">JavaScript</a></span><span> <a
-                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
-                                href="tags/JET.html" class="">JET</a></span><span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/PLSQL.html" class="">PLSQL</a></span><span> <a
-                                href="tags/Quality-Assurance.html" class="">Quality-Assurance</a></span><span> <a
-                                href="tags/Reports.html" class="">Reports</a></span><span> <a
-                                href="tags/Static-Code-Analysis.html" class="">Static-Code-Analysis</a></span><span> <a
-                                href="tags/Virtualization.html" class="">Virtualization</a></span><span> <a
-                                href="tags/WebLogic.html" class="">WebLogic</a></span></span></p>
-                        <p>Another DOAG is over and here is my summary.</p>
-                        
-          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
-            <!-- Twitter -->
-            <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html&amp;text=DOAG2017%20wrap%20up&amp;via=develishdevelop"
-                 target="_blank" rel="noreferrer" class="share-btn twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-
-            <!-- Facebook -->
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-
-            <!-- Xing -->
-            <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn xing">
-                <i class="fab fa-xing"></i>
-              </a>
-            </li>
-
-            <!-- Tumblr -->
-            <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html&amp;title=DOAG2017%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn tumblr">
-                <i class="fab fa-tumblr"></i>
-              </a>
-            </li>
-
-            <!-- Pinterest -->
-            <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html&amp;description=DOAG2017%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn pinterest">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-
-            <!-- Reddit -->
-            <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html&amp;title=DOAG2017%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn reddit">
-                <i class="fab fa-reddit-alien"></i>
-              </a>
-            </li>
-
-            <!-- Email -->
-            <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20DOAG2017%20wrap%20up&amp;body=https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-
-            <!-- Telegram -->
-            <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html&amp;text=DOAG2017%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn telegram">
-                <i class="fab fa-telegram"></i>
-              </a>
-            </li>
-
-            <!-- Whatsapp -->
-            <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=DOAG2017%20wrap%20up%20https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
-
-            <!-- Skype -->
-            <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2017/DOAG2017%2Bwrap%2Bup.html&amp;lang=en-US&amp;source=jetpack"
-                 target="_blank" rel="noreferrer" class="share-btn skype">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        
-                        <hr>
-                    </div>
+                    
                 
-                    <div class="post-preview">
-                        <a href="blog/2017/Provide+access+to+WebLogic+DMS+Spy+Servlet+for+readonly+users.html">
-                            <h2 class="post-title">Provide access to WebLogic DMS Spy Servlet for readonly users</h2>
-                            
-                        </a>
-                        <p class="post-meta">Posted by
-                            <b>Torsten Kleiber</b>
-                            on <span>August 30, 2017</span>
-                            
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Linux.html" class="">Linux</a></span><span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/WebLogic.html" class="">WebLogic</a></span></span></p>
-                        <p>For security reasons and to prevent the configuration drift it is recommendable to use read only access of WebLogic configuration for analyzing problems.
-For read only access of configuration and logs WebLogic provides out of the box the group Monitors. Unfortunately you cannot access <a href="https://docs.oracle.com/middleware/12212/lcm/ASPER/GUID-F1201ECA-AF97-4C96-9926-53F6C25A58D3.htm#ASPER99002">DMS Spy Servlet</a> with this group, which is useful for analyse runtime values of the server. Only users which belongs to the Administrators group and therefore have full access can access DMS Spy Servlet and this is not configurable in WebLogic by default.</p>
-                        
-          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
-            <!-- Twitter -->
-            <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html&amp;text=Provide%20access%20to%20WebLogic%20DMS%20Spy%20Servlet%20for%20readonly%20users&amp;via=develishdevelop"
-                 target="_blank" rel="noreferrer" class="share-btn twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-
-            <!-- Facebook -->
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html"
-                 target="_blank" rel="noreferrer" class="share-btn facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html"
-                 target="_blank" rel="noreferrer" class="share-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-
-            <!-- Xing -->
-            <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html"
-                 target="_blank" rel="noreferrer" class="share-btn xing">
-                <i class="fab fa-xing"></i>
-              </a>
-            </li>
-
-            <!-- Tumblr -->
-            <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html&amp;title=Provide%20access%20to%20WebLogic%20DMS%20Spy%20Servlet%20for%20readonly%20users"
-                 target="_blank" rel="noreferrer" class="share-btn tumblr">
-                <i class="fab fa-tumblr"></i>
-              </a>
-            </li>
-
-            <!-- Pinterest -->
-            <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html&amp;description=Provide%20access%20to%20WebLogic%20DMS%20Spy%20Servlet%20for%20readonly%20users"
-                 target="_blank" rel="noreferrer" class="share-btn pinterest">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-
-            <!-- Reddit -->
-            <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html&amp;title=Provide%20access%20to%20WebLogic%20DMS%20Spy%20Servlet%20for%20readonly%20users"
-                 target="_blank" rel="noreferrer" class="share-btn reddit">
-                <i class="fab fa-reddit-alien"></i>
-              </a>
-            </li>
-
-            <!-- Email -->
-            <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Provide%20access%20to%20WebLogic%20DMS%20Spy%20Servlet%20for%20readonly%20users&amp;body=https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html"
-                 target="_blank" rel="noreferrer" class="share-btn email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-
-            <!-- Telegram -->
-            <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html&amp;text=Provide%20access%20to%20WebLogic%20DMS%20Spy%20Servlet%20for%20readonly%20users"
-                 target="_blank" rel="noreferrer" class="share-btn telegram">
-                <i class="fab fa-telegram"></i>
-              </a>
-            </li>
-
-            <!-- Whatsapp -->
-            <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=Provide%20access%20to%20WebLogic%20DMS%20Spy%20Servlet%20for%20readonly%20users%20https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html"
-                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
-
-            <!-- Skype -->
-            <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2017/Provide%2Baccess%2Bto%2BWebLogic%2BDMS%2BSpy%2BServlet%2Bfor%2Breadonly%2Busers.html&amp;lang=en-US&amp;source=jetpack"
-                 target="_blank" rel="noreferrer" class="share-btn skype">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        
-                        <hr>
-                    </div>
+                    
                 
-                    <div class="post-preview">
-                        <a href="blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html">
-                            <h2 class="post-title">&quot;PL/SQL: Therefore, whoever binds forever: automate your tests&quot; - I am a speaker at DOAG2017</h2>
-                            
-                        </a>
-                        <p class="post-meta">Posted by
-                            <b>Torsten Kleiber</b>
-                            on <span>July 18, 2017</span>
-                            
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Branching.html" class="">Branching</a></span><span> <a
-                                href="tags/Build.html" class="">Build</a></span><span> <a
-                                href="tags/Commit-Test.html" class="">Commit-Test</a></span><span> <a
-                                href="tags/Conferences.html" class="">Conferences</a></span><span> <a
-                                href="tags/Continous-Integration.html" class="">Continous-Integration</a></span><span> <a
-                                href="tags/Database.html" class="">Database</a></span><span> <a
-                                href="tags/Deploy.html" class="">Deploy</a></span><span> <a
-                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/PLSQL.html" class="">PLSQL</a></span><span> <a
-                                href="tags/SQL-Developer.html" class="">SQL-Developer</a></span><span> <a
-                                href="tags/Unit-Test.html" class="">Unit-Test</a></span><span> <a
-                                href="tags/utPLSQL.html" class="">utPLSQL</a></span></span></p>
-                        <p>Today my presentation is confirmed: "Therefore, whoever binds forever: automate your tests". Maybe the German title will be the better understood: "PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!"</p>
-                        
-          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
-            <!-- Twitter -->
-            <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html&amp;text=%22PL/SQL:%20Therefore,%20whoever%20binds%20forever:%20automate%20your%20tests%22%20-%20I%20am%20a%20speaker%20at%20DOAG2017&amp;via=develishdevelop"
-                 target="_blank" rel="noreferrer" class="share-btn twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-
-            <!-- Facebook -->
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html"
-                 target="_blank" rel="noreferrer" class="share-btn facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html"
-                 target="_blank" rel="noreferrer" class="share-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-
-            <!-- Xing -->
-            <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html"
-                 target="_blank" rel="noreferrer" class="share-btn xing">
-                <i class="fab fa-xing"></i>
-              </a>
-            </li>
-
-            <!-- Tumblr -->
-            <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html&amp;title=%22PL/SQL:%20Therefore,%20whoever%20binds%20forever:%20automate%20your%20tests%22%20-%20I%20am%20a%20speaker%20at%20DOAG2017"
-                 target="_blank" rel="noreferrer" class="share-btn tumblr">
-                <i class="fab fa-tumblr"></i>
-              </a>
-            </li>
-
-            <!-- Pinterest -->
-            <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html&amp;description=%22PL/SQL:%20Therefore,%20whoever%20binds%20forever:%20automate%20your%20tests%22%20-%20I%20am%20a%20speaker%20at%20DOAG2017"
-                 target="_blank" rel="noreferrer" class="share-btn pinterest">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-
-            <!-- Reddit -->
-            <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html&amp;title=%22PL/SQL:%20Therefore,%20whoever%20binds%20forever:%20automate%20your%20tests%22%20-%20I%20am%20a%20speaker%20at%20DOAG2017"
-                 target="_blank" rel="noreferrer" class="share-btn reddit">
-                <i class="fab fa-reddit-alien"></i>
-              </a>
-            </li>
-
-            <!-- Email -->
-            <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20%22PL/SQL:%20Therefore,%20whoever%20binds%20forever:%20automate%20your%20tests%22%20-%20I%20am%20a%20speaker%20at%20DOAG2017&amp;body=https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html"
-                 target="_blank" rel="noreferrer" class="share-btn email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-
-            <!-- Telegram -->
-            <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html&amp;text=%22PL/SQL:%20Therefore,%20whoever%20binds%20forever:%20automate%20your%20tests%22%20-%20I%20am%20a%20speaker%20at%20DOAG2017"
-                 target="_blank" rel="noreferrer" class="share-btn telegram">
-                <i class="fab fa-telegram"></i>
-              </a>
-            </li>
-
-            <!-- Whatsapp -->
-            <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=%22PL/SQL:%20Therefore,%20whoever%20binds%20forever:%20automate%20your%20tests%22%20-%20I%20am%20a%20speaker%20at%20DOAG2017%20https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html"
-                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
-
-            <!-- Skype -->
-            <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2017/PLSQL%2BTherefore%2Bwhoever%2Bbinds%2Bforever%2Bautomate%2Byour%2Btests%2B-%2BI%2Bm%2Ba%2Bspeaker%2Bat%2BDOAG2017.html&amp;lang=en-US&amp;source=jetpack"
-                 target="_blank" rel="noreferrer" class="share-btn skype">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        
-                        <hr>
-                    </div>
+                    
                 
-                    <div class="post-preview">
-                        <a href="blog/2017/Javaland+2017+wrap+up.html">
-                            <h2 class="post-title">Javaland 2017 wrap up</h2>
-                            
-                        </a>
-                        <p class="post-meta">Posted by
-                            <b>Torsten Kleiber</b>
-                            on <span>April 01, 2017</span>
-                            
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/ADF-Architecture.html" class="">ADF-Architecture</a></span><span> <a
-                                href="tags/Code-Coverage.html" class="">Code-Coverage</a></span><span> <a
-                                href="tags/Continous-Integration.html" class="">Continous-Integration</a></span><span> <a
-                                href="tags/Docker.html" class="">Docker</a></span><span> <a
-                                href="tags/Gui-Test.html" class="">Gui-Test</a></span><span> <a
-                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
-                                href="tags/Java.html" class="">Java</a></span><span> <a
-                                href="tags/JDeveloper.html" class="">JDeveloper</a></span><span> <a
-                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
-                                href="tags/Linux.html" class="">Linux</a></span><span> <a
-                                href="tags/Static-Code-Analysis.html" class="">Static-Code-Analysis</a></span><span> <a
-                                href="tags/Vagrant.html" class="">Vagrant</a></span><span> <a
-                                href="tags/VirtualBox.html" class="">VirtualBox</a></span></span></p>
-                        <p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
-It was not easy this year to concentrate on the sessions because of the hottest march of the last 100 years. But the quality of the sessions beats the weather. Maybe again my invest in reading the abstracts and filter the sessions before the conference has payed off.</p>
-                        
-          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
-            <!-- Twitter -->
-            <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html&amp;text=Javaland%202017%20wrap%20up&amp;via=develishdevelop"
-                 target="_blank" rel="noreferrer" class="share-btn twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-
-            <!-- Facebook -->
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-
-            <!-- Xing -->
-            <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn xing">
-                <i class="fab fa-xing"></i>
-              </a>
-            </li>
-
-            <!-- Tumblr -->
-            <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html&amp;title=Javaland%202017%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn tumblr">
-                <i class="fab fa-tumblr"></i>
-              </a>
-            </li>
-
-            <!-- Pinterest -->
-            <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html&amp;description=Javaland%202017%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn pinterest">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-
-            <!-- Reddit -->
-            <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html&amp;title=Javaland%202017%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn reddit">
-                <i class="fab fa-reddit-alien"></i>
-              </a>
-            </li>
-
-            <!-- Email -->
-            <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Javaland%202017%20wrap%20up&amp;body=https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-
-            <!-- Telegram -->
-            <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html&amp;text=Javaland%202017%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn telegram">
-                <i class="fab fa-telegram"></i>
-              </a>
-            </li>
-
-            <!-- Whatsapp -->
-            <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=Javaland%202017%20wrap%20up%20https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
-
-            <!-- Skype -->
-            <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2017/Javaland%2B2017%2Bwrap%2Bup.html&amp;lang=en-US&amp;source=jetpack"
-                 target="_blank" rel="noreferrer" class="share-btn skype">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        
-                        <hr>
-                    </div>
+                    
                 
-                    <div class="post-preview">
-                        <a href="blog/2017/DEVCAMP17+wrap+up.html">
-                            <h2 class="post-title">DEVCAMP17 wrap up</h2>
-                            
-                        </a>
-                        <p class="post-meta">Posted by
-                            <b>Torsten Kleiber</b>
-                            on <span>February 09, 2017</span>
-                            
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/ADF.html" class="">ADF</a></span><span> <a
-                                href="tags/Continous-Integration.html" class="">Continous-Integration</a></span><span> <a
-                                href="tags/Forms.html" class="">Forms</a></span><span> <a
-                                href="tags/Java.html" class="">Java</a></span><span> <a
-                                href="tags/JDeveloper.html" class="">JDeveloper</a></span><span> <a
-                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/PLSQL.html" class="">PLSQL</a></span><span> <a
-                                href="tags/Report.html" class="">Report</a></span><span> <a
-                                href="tags/Unit-Test.html" class="">Unit-Test</a></span></span></p>
-                        <p>Yesterday I attend the annual <a href="https://en.wikipedia.org/wiki/BarCamp">barcamp</a> DEVCAMP of the <a href="http://www.doag.org">DOAG</a> development community. There are mostly developers with SQL, PL/SQL, Forms &amp; Reports, ADF, JET background and some Java, Javascript and APEX developers too. And not to forget: 1 dba and some managers. Here is my summary.</p>
-                        
-          <ul class="list-inline text-center"><!-- Social Share Button HTML -->
-            <!-- Twitter -->
-            <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html&amp;text=DEVCAMP17%20wrap%20up&amp;via=develishdevelop"
-                 target="_blank" rel="noreferrer" class="share-btn twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-
-            <!-- Facebook -->
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-
-            <!-- Xing -->
-            <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn xing">
-                <i class="fab fa-xing"></i>
-              </a>
-            </li>
-
-            <!-- Tumblr -->
-            <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html&amp;title=DEVCAMP17%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn tumblr">
-                <i class="fab fa-tumblr"></i>
-              </a>
-            </li>
-
-            <!-- Pinterest -->
-            <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html&amp;description=DEVCAMP17%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn pinterest">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-
-            <!-- Reddit -->
-            <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html&amp;title=DEVCAMP17%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn reddit">
-                <i class="fab fa-reddit-alien"></i>
-              </a>
-            </li>
-
-            <!-- Email -->
-            <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20DEVCAMP17%20wrap%20up&amp;body=https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-
-            <!-- Telegram -->
-            <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html&amp;text=DEVCAMP17%20wrap%20up"
-                 target="_blank" rel="noreferrer" class="share-btn telegram">
-                <i class="fab fa-telegram"></i>
-              </a>
-            </li>
-
-            <!-- Whatsapp -->
-            <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=DEVCAMP17%20wrap%20up%20https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html"
-                 target="_blank" rel="noreferrer" class="share-btn whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
-
-            <!-- Skype -->
-            <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2017/DEVCAMP17%2Bwrap%2Bup.html&amp;lang=en-US&amp;source=jetpack"
-                 target="_blank" rel="noreferrer" class="share-btn skype">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        
-                        <hr>
-                    </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -1549,7 +1541,7 @@ It was not easy this year to concentrate on the sessions because of the hottest 
                             <p class="copyright text-muted">&copy; <span>Torsten Kleiber</span>
                                 <span>2023</span> | <a
               href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a
-              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.4</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
+              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.7.0-rc.6</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
       </div>
     </div>
   </div>

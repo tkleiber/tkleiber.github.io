@@ -95,7 +95,7 @@
             <span class="meta">Posted by
               <b>Torsten Kleiber</b>
               on September 09, 2015
-              
+              / updated on December 1, 2022
               </br>
               <span> Tags:
                 <span>
@@ -199,29 +199,27 @@ sysstat-8.1.5-7.8
 
 len=${#array[*]}
 i=0
-line='-------------------------------------------------------------------'
+
 while [[ $i -lt $len ]]; do
 
-  package_name_temp_1="${array[$i]%%.*}"
-  required_package_name="${package_name_temp_1%-*}"
-  required_package_version="${array[$i]/$required_package_name-/}"
+  required_package_name=$(echo "${array[$i]}" | sed -E 's/(-[0-9]{1,}[-.].*)//')
+  required_package_version="${array[$i]/"${required_package_name}"-/}"
 
-  installed_package_version="`rpm -q ${required_package_name} --queryformat %{version}-%{release}`"
+  installed_package_version=$(rpm -q "${required_package_name}" --queryformat "%{version}-%{release}-%{arch}")
+
   RETCODE=$?
   if [ $RETCODE -eq 0 ]; then
-    compare="`zypper --terse versioncmp ${required_package_version} ${installed_package_version}`"
-    if [ $compare -eq 1 ]; then
-      result1=fail;
-      echo [$result1] $required_package_name Reqired : $required_package_version Installed: $installed_package_version
+    compare=$(zypper --terse versioncmp "${required_package_version}" "${installed_package_version}")
+    if [ "${compare}" -eq 1 ]; then
+      echo "[fail] ${required_package_name} Required : ${required_package_version} Installed: ${installed_package_version}"
     else
-      result1=pass;
-      echo [$result1] $required_package_name Reqired : $required_package_version Installed: $installed_package_version
+      echo "[pass] ${required_package_name} Required : ${required_package_version} Installed: ${installed_package_version}"
     fi
   else
-    echo [fail] $installed_package_version
+    echo "[fail]" "${installed_package_version}"
   fi
 
-  let i++;
+  ((i++));
 done</code></pre>
 </div>
 </div>
@@ -279,7 +277,7 @@ done</code></pre>
 <p>Maybe you can use this script with little modification in other environments.</p>
 </div>
 <div class="paragraph">
-<p>That&#8217;s it.</p>
+<p>That&#8217;s it!</p>
 </div></div>
       </div>
       <div class="row">
@@ -467,7 +465,7 @@ done</code></pre>
                             <p class="copyright text-muted">&copy; <span>Torsten Kleiber</span>
                                 <span>2023</span> | <a
               href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a
-              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.4</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
+              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.7.0-rc.6</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
       </div>
     </div>
   </div>
