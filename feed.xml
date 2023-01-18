@@ -6,8 +6,8 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Wed, 18 Jan 2023 22:15:23 +0100</pubDate>
-    <lastBuildDate>Wed, 18 Jan 2023 22:15:23 +0100</lastBuildDate>
+    <pubDate>Wed, 18 Jan 2023 22:20:09 +0100</pubDate>
+    <lastBuildDate>Wed, 18 Jan 2023 22:20:09 +0100</lastBuildDate>
 
     <item>
       <title>Test Environment for Migration with Liquibase against Oracle XE</title>
