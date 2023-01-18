@@ -1,0 +1,28 @@
+@startuml
+skinparam defaultTextAlignment center
+
+' Icons from https://github.com/plantuml/plantuml-stdlib
+!include <tupadr3/common>
+!include <tupadr3/devicons2/oracle_original.puml>
+!include <tupadr3/font-awesome-5/windows.puml>
+!include <tupadr3/font-awesome-5/docker.puml>
+!include <tupadr3/font-awesome-5/jenkins.puml>
+
+package  "Infrastructure" as i {
+  FA5_DOCKER(dc, Docker Compose)
+
+  FA5_WINDOWS(idw, Windows) {
+    FA5_DOCKER(wdd, Docker Desktop) {
+      DEV2_ORACLE_ORIGINAL(slqcl, SQLcl)
+      DEV2_ORACLE_ORIGINAL(xe, XE)
+      ' FA5_JENKINS(jk, Jenkins)
+
+      slqcl ..right.> xe
+      ' jk ..right.> slqcl
+    }
+  }
+
+  dc ..right.> wdd
+}
+
+@enduml
