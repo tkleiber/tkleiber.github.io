@@ -6,8 +6,8 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Mon, 27 Feb 2023 20:36:32 +0100</pubDate>
-    <lastBuildDate>Mon, 27 Feb 2023 20:36:32 +0100</lastBuildDate>
+    <pubDate>Mon, 27 Feb 2023 20:39:05 +0100</pubDate>
+    <lastBuildDate>Mon, 27 Feb 2023 20:39:05 +0100</lastBuildDate>
 
     <item>
       <title>Jenkins Configuration as Code (JCasC)</title>
@@ -15,12 +15,6 @@
       <pubDate>Thu, 2 Feb 2023 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2022/vds_jenkins_with_docker_desktop_jcasc.html</guid>
       <description><p>In most of my environments I reach in short time the requirement to have some kind of automation server. How cool would it be, to start this server as part of my local Virtual Development Server? And what if the result will be usable for a lot of other use cases too?</p></description>
-    </item><item>
-      <title>Jenkins Configuration as Code (JCasC)</title>
-      <link>https://www.amapac.io/blog/2022/vds_db_development.html</link>
-      <pubDate>Thu, 2 Feb 2023 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2022/vds_db_development.html</guid>
-      <description><p>Here you see the architecture overview:</p></description>
     </item><item>
       <title>Test Environment for Migration with Liquibase against Oracle XE</title>
       <link>https://www.amapac.io/blog/2022/vds_docker_desktop_on_windows_with_xe_and_liquibase.html</link>
