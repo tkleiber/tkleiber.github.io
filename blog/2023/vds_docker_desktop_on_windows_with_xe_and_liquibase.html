@@ -5,29 +5,29 @@
 
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="Automate the Testing of your Infrastructure"/>
+        <meta name="description" content="Virtual Environment based on Docker Compose, running in Windows Docker Desktop"/>
         <meta name="author" content="Torsten Kleiber"/>
 
-        <title>Test Jenkins Container with TestContainers Framework</title>
+        <title>Test Environment for Migration with Liquibase against Oracle XE</title>
 
         <meta name="robots" content="index, follow"/>
         <meta name="generator" content="JBake"/>
 
         <!--Facebook Card-->
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Test Jenkins Container with TestContainers Framework"/>
-        <meta property="og:description" content="Automate the Testing of your Infrastructure"/>
+        <meta property="og:title" content="Test Environment for Migration with Liquibase against Oracle XE"/>
+        <meta property="og:description" content="Virtual Environment based on Docker Compose, running in Windows Docker Desktop"/>
         <meta property="og:image"
-        content="https://www.amapac.io/images/virtual_development_server_test_with_testcontainers_shareimage.png"/>
+        content="https://www.amapac.io/images/vds_docker_desktop_on_windows_with_xe_and_liquibase_resized.png"/>
 
         <!--Twitter card -->
         
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Test Jenkins Container with TestContainers Framework">
+        <meta name="twitter:title" content="Test Environment for Migration with Liquibase against Oracle XE">
         <meta name="twitter:creator" content="@develishdevelop">
-        <meta name="twitter:description" content="Automate the Testing of your Infrastructure">
+        <meta name="twitter:description" content="Virtual Environment based on Docker Compose, running in Windows Docker Desktop">
         <meta name="twitter:image"
-          content="https://www.amapac.io/images/virtual_development_server_test_with_testcontainers_shareimage.png">
+          content="https://www.amapac.io/images/vds_docker_desktop_on_windows_with_xe_and_liquibase_resized.png">
         
 
         <!-- Bootstrap core CSS -->
@@ -90,23 +90,22 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Test Jenkins Container with TestContainers Framework</h1>
-            <h2 class="subheading">Automate the Testing of your Infrastructure</h2>
+            <h1>Test Environment for Migration with Liquibase against Oracle XE</h1>
+            <h2 class="subheading">Virtual Environment based on Docker Compose, running in Windows Docker Desktop</h2>
             <span class="meta">Posted by
               <b>Torsten Kleiber</b>
-              on March 26, 2022
+              on January 18, 2023
               
               </br>
               <span> Tags:
                 <span>
                   <a href="../../tags/Docker.html" class="" >Docker</a></span><span>
+                  <a href="../../tags/Docker-Desktop.html" class="" >Docker-Desktop</a></span><span>
                   <a href="../../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a href="../../tags/Integration-Test.html" class="" >Integration-Test</a></span><span>
-                  <a href="../../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a href="../../tags/JUnit.html" class="" >JUnit</a></span><span>
-                  <a href="../../tags/Maven.html" class="" >Maven</a></span><span>
-                  <a href="../../tags/TestContainers.html" class="" >TestContainers</a></span><span>
-                  <a href="../../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span>
+                  <a href="../../tags/Liquibase.html" class="" >Liquibase</a></span><span>
+                  <a href="../../tags/Oracle-XE.html" class="" >Oracle-XE</a></span><span>
+                  <a href="../../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
+                  <a href="../../tags/Windows.html" class="" >Windows</a></span>
                 </span>
               </span>
             </span>
@@ -121,195 +120,255 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto"><div class="paragraph">
-<p>As I create my Virtual Development Servers I asked myself how can I easily test, that it is working? As I put now my servers into containers via docker-compose I searched for a test framework, which supports this out of the box. I heard a lot about <a href="https://www.testcontainers.org/">TestContainers</a> in the past and again at Javaland 2022 conference last week, so I want to test now, if this will help me.</p>
+<p>For extensive testing of Database Migration I need an environment with Liquibase and an Oracle Database. So I have built this Virtual Development Environment which can be started, stopped, removed and rebuilt in seconds.</p>
 </div>
 <div class="paragraph">
-<p>In the last blog <a href="virtual_development_server_docker_desktop_on_windows.html">Run your Development Server on Docker Desktop on Windows</a> I created a Docker Desktop Container, which is running on Windows. Now I want to test this Container with automated tests.</p>
+<p>The architecture is based on this <a href="../2022/virtual_development_server_docker_desktop_on_windows.html">blog</a>, here you see the updated overview:</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../../images/vds_docker_desktop_on_windows_with_xe_and_liquibase.png"><img src="../../images/vds_docker_desktop_on_windows_with_xe_and_liquibase.png" alt="vds docker desktop on windows with xe and liquibase" width="100%"></a>
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p>As I want to use JUnit 5 as Wrapper I start with <a href="https://www.testcontainers.org/quickstart/junit_5_quickstart/">TestContainers JUnit 5 Quickstart</a> Documentation.</p>
+<p>SQLcl is used for creating and importing the database scripts.</p>
 </li>
 <li>
-<p>So I create a fresh pom.xml and added the <a href="https://www.testcontainers.org/quickstart/junit_5_quickstart/#1-add-testcontainers-as-a-test-scoped-dependency">required dependencies</a>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">    &lt;dependency&gt;
-      &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
-      &lt;artifactId&gt;junit-jupiter&lt;/artifactId&gt;
-      &lt;version&gt;5.9.2&lt;/version&gt;
-      &lt;scope&gt;test&lt;/scope&gt;
-    &lt;/dependency&gt;
-    &lt;dependency&gt;
-      &lt;groupId&gt;org.testcontainers&lt;/groupId&gt;
-      &lt;artifactId&gt;testcontainers&lt;/artifactId&gt;
-      &lt;version&gt;1.18.0&lt;/version&gt;
-      &lt;scope&gt;test&lt;/scope&gt;
-    &lt;/dependency&gt;
-    &lt;dependency&gt;
-      &lt;groupId&gt;org.testcontainers&lt;/groupId&gt;
-      &lt;artifactId&gt;junit-jupiter&lt;/artifactId&gt;
-      &lt;version&gt;1.18.0&lt;/version&gt;
-      &lt;scope&gt;test&lt;/scope&gt;
-    &lt;/dependency&gt;</code></pre>
-</div>
-</div>
+<p>The development happens against the Oracle XE Database.</p>
 </li>
-<li>
-<p>Then I create my test class.</p>
+</ul>
+</div>
+<div class="paragraph">
+<p>I want to test the latest version of SQLcl. When you look at <a href="https://container-registry.oracle.com/">Oracle Container Registry</a> and search for sqlcl hopefully you find the same version for your architecture as on the <a href="https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/download/">download site</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you find not the latest SQLcl as Docker image you can build you own Docker Image.</p>
+</div>
+<div class="paragraph">
+<p>The following file describes all required components for development:</p>
+</div>
 <div class="listingblock">
+<div class="title">docker-compose.yml</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Testcontainers
-@DisplayName("Jenkins")
-@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class TestJenkins {
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">version: '3.8'
+services:
+  oracle-xe: <i class="conum" data-value="1"></i><b>(1)</b>
+    environment:
+      - ORACLE_PASSWORD=oracle
+    image: gvenzl/oracle-xe:slim-faststart <i class="conum" data-value="2"></i><b>(2)</b>
+    ports:
+      - "1521:1521"
+    restart: unless-stopped
+    volumes:
+      - oracle-volume:/opt/oracle/oradata <i class="conum" data-value="3"></i><b>(3)</b>
 
-  public static final int JENKINS_PORT = 8080;
-
-  @Container <i class="conum" data-value="1"></i><b>(1)</b>
-  public static DockerComposeContainer jenkinsServer =
-      new DockerComposeContainer(new File("docker-compose.yml"))
-          .withExposedService("jenkins", JENKINS_PORT)
-          .waitingFor("jenkins", Wait.forLogMessage(".*Jenkins is fully up and running*\\n", 1)); <i class="conum" data-value="2"></i><b>(2)</b>
-
-  @Test
-  void first_request_to_fresh_container_should_return_authentication_required()
-      throws Exception {
-    String jenkinsUrl = "http://"
-        + jenkinsServer.getServiceHost("jenkins", JENKINS_PORT)
-        + ":" +
-        jenkinsServer.getServicePort("jenkins", JENKINS_PORT);
-
-    MatcherAssert.assertThat("first request to fresh container should return \"Authentication required\"",
-        callHttpEndpoint(jenkinsUrl),
-        containsString("Authentication required")<i class="conum" data-value="3"></i><b>(3)</b>
-    );
-  }
-
-  private static String callHttpEndpoint(String url) throws IOException, InterruptedException { <i class="conum" data-value="4"></i><b>(4)</b>
-    HttpClient httpClient = HttpClient.newBuilder().build();
-    HttpRequest mainRequest = HttpRequest.newBuilder()
-        .uri(URI.create(url))
-        .build();
-
-    HttpResponse&lt;String&gt; response = httpClient.send(mainRequest, HttpResponse.BodyHandlers.ofString());
-    return response.body();
-  }
-
-}</code></pre>
+  oracle-sqlcl: <i class="conum" data-value="4"></i><b>(4)</b>
+    image: container-registry.oracle.com/database/sqlcl:latest <i class="conum" data-value="5"></i><b>(5)</b>
+    volumes:
+      - ./sql_scripts:/opt/oracle/sql_scripts/
+    stdin_open: true
+    tty: true
+    links:
+      - oracle-xe:oracle-xe <i class="conum" data-value="6"></i><b>(6)</b>
+volumes:
+  oracle-volume:</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>I use the TestContainers <a href="https://www.testcontainers.org/modules/docker_compose/">Docker Compose Module</a> here.</td>
+<td>The first service</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>As most applications Jenkins is not fully started, when the conainer is started. So I wait until the suitable Jenkins message <a href="https://www.testcontainers.org/features/startup_and_waits/#log-output-wait-strategy">shows up in the Docker container logs</a>.</td>
+<td>is started from Gerald Venzl&#8217;s latest Oracle XE image, which is optimized for a fast start.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>In my test I call the Jenkins URL end the response should show for this container, that Authentication is required.</td>
+<td>The volume persist the database state after the first start.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>Here you see the helper method for calling an HTTP URL and return the response.</td>
+<td>The second service</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>is started from Oracle&#8217;s official latest SQLcl image. If you have built your own image, you have to change this here.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>The SQLcl service contains a link to the Oracle XE service, to allow a connection to this database with this name as the host in the connection string.</td>
 </tr>
 </table>
 </div>
-</li>
-<li>
-<p>If you run the test in your IDE, you will see a successful test, but following warning and miss maybe some logging for the call.</p>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="../../images/virtual_development_server_test_with_testcontainers_slf4j_warning.png"><img src="../../images/virtual_development_server_test_with_testcontainers_slf4j_warning.png" alt="virtual development server test with testcontainers slf4j warning" width="100%"></a>
+<div class="paragraph">
+<p>Start your virtual development server:</p>
 </div>
-</div>
-</li>
-<li>
-<p>To solve this you have to add the following dependency to your pom.xml.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">    &lt;dependency&gt;
-      &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
-      &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
-      &lt;version&gt;2.0.7&lt;/version&gt;
-      &lt;scope&gt;test&lt;/scope&gt;
-    &lt;/dependency&gt;
-    &lt;dependency&gt;
-      &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
-      &lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;
-      &lt;version&gt;2.0.7&lt;/version&gt;
-      &lt;scope&gt;test&lt;/scope&gt;
-    &lt;/dependency&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">docker compose up --detach</code></pre>
 </div>
-</div>
-</li>
-<li>
-<p>If you run your test via Maven maybe you see now, that no test are executed.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">-------------------------------------------------------
- T E S T S
--------------------------------------------------------
-
-Results :
-
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>For running Unit 5 tests you have to change the maven-surefire-plugin in your pom.xml at least to 2.22.0.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">      &lt;plugin&gt;
-        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
-        &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
-        &lt;version&gt;3.0.0&lt;/version&gt;
-      &lt;/plugin&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>If you run your test now via Maven you should see an output similar like the following.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running TestJenkins
-...
-[main] INFO docker[docker/compose:1.29.2] - Creating container for image: docker/compose:1.29.2
-[main] INFO docker[docker/compose:1.29.2] - Container docker/compose:1.29.2 is starting: 56fee4602485802e21ef5292d14e6fadeccefb676286fb691ac0af04f7e209f3
-[main] INFO docker[docker/compose:1.29.2] - Container docker/compose:1.29.2 started in PT7.4233676S
-[main] INFO docker[docker/compose:1.29.2] - Docker Compose container is running for command: up -d
-...
-[main] INFO docker[docker/compose:1.29.2] - Docker Compose has finished running
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38.101 s - in TestJenkins
-[INFO]
-[INFO] Results:
-[INFO]
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-[INFO]
-[INFO]
-...
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------</code></pre>
-</div>
-</div>
-</li>
-</ol>
 </div>
 <div class="paragraph">
-<p>You can add a lot of other tests here, but for testing the TestContainers framework this should be enough here.</p>
+<p>Start your SQLcl session in the container:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">docker exec -it project-oracle-sqlcl-1 /opt/oracle/sqlcl/bin/sql /nolog</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>You find all sources on <a href="https://github.com/amapac-io/vds_jenkins_with_docker_desktop_simple">GitHub</a>.</p>
+<p>At least after first start you have to connect as SYS and create all required users with required grants:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">connect sys/oracle@oracle-xe:1521/xepdb1 as sysdba
+@users_roles_grants.sql</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The sript is restartable:</p>
+</div>
+<div class="listingblock">
+<div class="title">users_roles_grants.sql</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">declare
+   type t_list is
+      table of varchar2(30);
+   l_list t_list := t_list(
+                          'development',
+                          'staging',
+                          'production'
+                    );
+   e_user_already_exists exception;
+   pragma EXCEPTION_INIT ( e_user_already_exists, -1920 );
+begin
+   for l_iterator in 1..l_list.COUNT loop
+      DBMS_OUTPUT.PUT('Creating user '
+                      || l_list(l_iterator)
+                      || ': ');
+      begin
+         execute immediate 'CREATE USER '
+                           || l_list(l_iterator)
+                           || ' QUOTA UNLIMITED ON users PROFILE DEFAULT IDENTIFIED BY oracle ACCOUNT UNLOCK';
+         DBMS_OUTPUT.PUT_LINE('User '
+                              || l_list(l_iterator)
+                              || ' created');
+      exception
+         when e_user_already_exists then
+            execute immediate 'ALTER USER '
+                              || l_list(l_iterator)
+                              || ' QUOTA UNLIMITED ON users PROFILE DEFAULT IDENTIFIED BY oracle ACCOUNT UNLOCK';
+            DBMS_OUTPUT.PUT_LINE('User '
+                                 || l_list(l_iterator)
+                                 || ' exists, altered');
+      end;
+      execute immediate 'GRANT CONNECT, RESOURCE, CREATE VIEW to ' || l_list(l_iterator); <i class="conum" data-value="1"></i><b>(1)</b>
+   end loop;
+end;
+/</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Wenn creating or updating users at least the grants according to <a href="https://docs.oracle.com/en/database/oracle/sql-developer-command-line/22.3/sqcug/using-liquibase.html#GUID-D4B11199-D4FB-460A-B9C7-71E498B921A8">documentation example</a> are required for liquibase. These are independent of further rights for objects to create.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now you connect to the development schema and run an initialisation script, which simulates development and create some objects.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">connect development/oracle@oracle-xe:1521/xepdb1
+@init.sql</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We create a subdirectory via the shortcut for host command for our application schema and capture the schema objects:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">! mkdir development
+cd development
+liquibase generate-schema -split
+! ls -R
+.:
+controller.xml  function  sequence  table
+
+./function:
+get_tab1_count_function.xml
+
+./sequence:
+tab1_seq_sequence.xml
+
+./table:
+tab1_table.xml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After the generation we can list the generated files from SQLcl too:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">! ls -R
+.:
+controller.xml  function  sequence  table
+
+./function:
+get_tab1_count_function.xml
+
+./sequence:
+tab1_seq_sequence.xml
+
+./table:
+tab1_table.xml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As last test of the environment apply the changes to our staging schema:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">connect staging/oracle@oracle-xe:1521/xepdb1
+
+select object_name, object_type from user_objects;
+
+no rows selected
+
+liquibase update -changelog-file controller.xml
+...
+
+select object_name, object_type from user_objects;
+
+OBJECT_NAME                     OBJECT_TYPE
+_______________________________ ______________
+DATABASECHANGELOGLOCK           TABLE
+PK_DATABASECHANGELOGLOCK        INDEX
+DATABASECHANGELOG_ACTIONS       TABLE
+SYS_IL0000075993C00004$$        INDEX
+SYS_LOB0000075993C00004$$       LOB
+SYS_IL0000075993C00003$$        INDEX
+SYS_LOB0000075993C00003$$       LOB
+DATABASECHANGELOG_ACTIONS_PK    INDEX
+DATABASECHANGELOG_ACTIONS_TRG    TRIGGER
+DATABASECHANGELOG_DETAILS        VIEW
+DATABASECHANGELOG                TABLE
+TAB1_SEQ                         SEQUENCE
+TAB1                             TABLE
+TAB1_PK                          INDEX
+GET_TAB1_COUNT                   FUNCTION
+
+15 rows selected.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You find all sources on <a href="https://github.com/amapac-io/vds_oracle_xe_and_liquibase_with_docker_desktop">GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p>That&#8217;s it!</p>
@@ -321,7 +380,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
-              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework&amp;via=develishdevelop"
+              <a href="https://twitter.com/share?url=https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html&amp;text=Test%20Environment%20for%20Migration%20with%20Liquibase%20against%20Oracle%20XE&amp;via=develishdevelop"
                  target="_blank" rel="noreferrer" class="share-btn twitter">
                 <i class="fab fa-twitter"></i>
               </a>
@@ -329,7 +388,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 
             <!-- Facebook -->
             <li class="list-inline-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html"
                  target="_blank" rel="noreferrer" class="share-btn facebook">
                 <i class="fab fa-facebook"></i>
               </a>
@@ -337,7 +396,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 
             <!-- LinkedIn -->
             <li class="list-inline-item">
-              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+              <a href="https://www.linkedin.com/sharing/share-offsite?url=https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html"
                  target="_blank" rel="noreferrer" class="share-btn linkedin">
                 <i class="fab fa-linkedin"></i>
               </a>
@@ -345,7 +404,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 
             <!-- Xing -->
             <li class="list-inline-item">
-              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+              <a href="https://www.xing.com/spi/shares/new?url=https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html"
                  target="_blank" rel="noreferrer" class="share-btn xing">
                 <i class="fab fa-xing"></i>
               </a>
@@ -353,7 +412,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 
             <!-- Tumblr -->
             <li class="list-inline-item">
-              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;title=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+              <a href="https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&amp;url=https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html&amp;title=Test%20Environment%20for%20Migration%20with%20Liquibase%20against%20Oracle%20XE"
                  target="_blank" rel="noreferrer" class="share-btn tumblr">
                 <i class="fab fa-tumblr"></i>
               </a>
@@ -361,7 +420,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 
             <!-- Pinterest -->
             <li class="list-inline-item">
-              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;description=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+              <a href="https://www.pinterest.de/pin/create/button?url=https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html&amp;description=Test%20Environment%20for%20Migration%20with%20Liquibase%20against%20Oracle%20XE"
                  target="_blank" rel="noreferrer" class="share-btn pinterest">
                 <i class="fab fa-pinterest"></i>
               </a>
@@ -369,7 +428,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 
             <!-- Reddit -->
             <li class="list-inline-item">
-              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;title=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+              <a href="https://www.reddit.com/submit?url=https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html&amp;title=Test%20Environment%20for%20Migration%20with%20Liquibase%20against%20Oracle%20XE"
                  target="_blank" rel="noreferrer" class="share-btn reddit">
                 <i class="fab fa-reddit-alien"></i>
               </a>
@@ -377,7 +436,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 
             <!-- Email -->
             <li class="list-inline-item">
-              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Test%20Jenkins%20Container%20with%20TestContainers%20Framework&amp;body=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+              <a href="mailto:?subject=Check%20out%20this%20post%20by%20Torsten%20Kleiber%20-%20Test%20Environment%20for%20Migration%20with%20Liquibase%20against%20Oracle%20XE&amp;body=https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html"
                  target="_blank" rel="noreferrer" class="share-btn email">
                 <i class="fas fa-envelope"></i>
               </a>
@@ -385,7 +444,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 
             <!-- Telegram -->
             <li class="list-inline-item">
-              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework"
+              <a href="https://telegram.me/share/url?url=https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html&amp;text=Test%20Environment%20for%20Migration%20with%20Liquibase%20against%20Oracle%20XE"
                  target="_blank" rel="noreferrer" class="share-btn telegram">
                 <i class="fab fa-telegram"></i>
               </a>
@@ -393,7 +452,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 
             <!-- Whatsapp -->
             <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?text=Test%20Jenkins%20Container%20with%20TestContainers%20Framework%20https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html"
+              <a href="https://api.whatsapp.com/send?text=Test%20Environment%20for%20Migration%20with%20Liquibase%20against%20Oracle%20XE%20https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html"
                  target="_blank" rel="noreferrer" class="share-btn whatsapp">
                 <i class="fab fa-whatsapp"></i>
               </a>
@@ -401,7 +460,7 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 
             <!-- Skype -->
             <li class="list-inline-item">
-              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2022/virtual_development_server_test_with_testcontainers.html&amp;lang=en-US&amp;source=jetpack"
+              <a href="https://web.skype.com/share?url=https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html&amp;lang=en-US&amp;source=jetpack"
                  target="_blank" rel="noreferrer" class="share-btn skype">
                 <i class="fab fa-skype"></i>
               </a>

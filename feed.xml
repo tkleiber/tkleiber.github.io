@@ -6,20 +6,20 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Mon, 27 Feb 2023 20:39:05 +0100</pubDate>
-    <lastBuildDate>Mon, 27 Feb 2023 20:39:05 +0100</lastBuildDate>
+    <pubDate>Mon, 17 Apr 2023 22:09:14 +0200</pubDate>
+    <lastBuildDate>Mon, 17 Apr 2023 22:09:14 +0200</lastBuildDate>
 
     <item>
       <title>Jenkins Configuration as Code (JCasC)</title>
-      <link>https://www.amapac.io/blog/2022/vds_jenkins_with_docker_desktop_jcasc.html</link>
+      <link>https://www.amapac.io/blog/2023/vds_jenkins_with_docker_desktop_jcasc.html</link>
       <pubDate>Thu, 2 Feb 2023 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2022/vds_jenkins_with_docker_desktop_jcasc.html</guid>
+      <guid isPermaLink="false">blog/2023/vds_jenkins_with_docker_desktop_jcasc.html</guid>
       <description><p>In most of my environments I reach in short time the requirement to have some kind of automation server. How cool would it be, to start this server as part of my local Virtual Development Server? And what if the result will be usable for a lot of other use cases too?</p></description>
     </item><item>
       <title>Test Environment for Migration with Liquibase against Oracle XE</title>
-      <link>https://www.amapac.io/blog/2022/vds_docker_desktop_on_windows_with_xe_and_liquibase.html</link>
+      <link>https://www.amapac.io/blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2022/vds_docker_desktop_on_windows_with_xe_and_liquibase.html</guid>
+      <guid isPermaLink="false">blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html</guid>
       <description><p>For extensive testing of Database Migration I need an environment with Liquibase and an Oracle Database. So I have built this Virtual Development Environment which can be started, stopped, removed and rebuilt in seconds.</p></description>
     </item><item>
       <title>Run your Development Server with Vagrant on VirtualBox on Windows</title>
@@ -53,9 +53,9 @@
       <description><p>After my 2016 series about my Virtual Development Server I have learned a lot. It&#8217;s time for a major overhaul with new technologies. It should be a lot more flexible and usable for development and course environments. See how I will restart!</p></description>
     </item><item>
       <title>Use adr-tools for AsciiDoc</title>
-      <link>https://www.amapac.io/blog/2022/adr_tool_with_custom_template_for_asciidoc.html</link>
+      <link>https://www.amapac.io/blog/2023/adr_tool_with_custom_template_for_asciidoc.html</link>
       <pubDate>Tue, 15 Feb 2022 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2022/adr_tool_with_custom_template_for_asciidoc.html</guid>
+      <guid isPermaLink="false">blog/2023/adr_tool_with_custom_template_for_asciidoc.html</guid>
       <description><p>I looked for a tool to create Architecture Decision Records in AsciiDoc and does not find any. So first I thought, I would have to (re)implement one. But look, how easy it really was.</p></description>
     </item><item>
       <title>Slides for my german presentation DOAG2021 &quot;Forms and Reports 12c - Processes and Automation in Development and Operations&quot; available</title>
