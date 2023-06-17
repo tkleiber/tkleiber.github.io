@@ -1,19 +1,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="As Much As Possible As Code"/>
-        <meta name="author" content="Torsten Kleiber"/>
-
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="As Much As Possible As Code" />
+        <meta name="author" content="Torsten Kleiber" />
         <title>AMAPAC</title>
+        <link rel="icon" type="image/x-icon" href="../favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=JDeveloper"
+              rel="stylesheet" type="text/css"/>
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../vendor/clean-blog/css/styles.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="../css/asciidoctor.css" rel="stylesheet"/>
+        <!-- link href="https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css" rel="stylesheet"/-->
+
+        <!-- highlightjs Code Formatter -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" rel="stylesheet" type="text/css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
+
+        <!-- Klaro Cookie Consent tool -->
+        <script defer type="text/javascript" src="../vendor/klaro/config.js"></script>
+        <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
 
         <meta name="robots" content="index, follow"/>
         <meta name="generator" content="JBake"/>
-
         <!--Facebook Card-->
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="AMAPAC"/>
@@ -31,105 +51,86 @@
           content="https://www.amapac.io/img/amapac_share_card.png">
         
 
-        <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-
-        <!-- highlightjs Code Formatter -->
-        <link href="../vendor/highlightjs/styles/default.css" rel="stylesheet" type="text/css">
-        <script src="../vendor/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <!-- Custom Fonts -->
-        <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=JDeveloper"
-        rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-
-        <!-- Custom styles for this template -->
-        <link href="../css/asciidoctor.css" rel="stylesheet">
-        <link href="../css/clean-blog.min.css" rel="stylesheet">
-
-        <!-- Klaro Cookie Consent tool -->
-        <script defer type="text/javascript" src="../vendor/klaro/config.js"></script>
-        <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
-
-        <link rel="shortcut icon" href="../favicon.png"/>
     </head>
-
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="../index.html">AMAPAC</a>
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                      Menu
-                      <i class="fas fa-bars"></i>
-                    </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="../about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../tags/index.html">Tags</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../archive.html">Archive</a>
-                        </li>
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../tags/index.html">Tags</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../archive.html">Archive</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>JDeveloper</h1>
-            <span class="subheading">tagged posts</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        
-          <div class="post-preview"  >
-            <a href="../blog/2017/Javaland+2017+wrap+up.html">
-              <h2 class="post-title">Javaland 2017 wrap up</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>April 01, 2017</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span>
-                  <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Docker.html" class="" >Docker</a></span><span>
-                  <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span>
-                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a   href="../tags/Java.html" class="" >Java</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Linux.html" class="" >Linux</a></span><span>
-                  <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span>
-                  <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span>
-                  <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
-            <p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>JDeveloper</h1>
+                            <span class="subheading">tagged posts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2017/Javaland+2017+wrap+up.html">
+                                <h2 class="post-title">Javaland 2017 wrap up</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>April 01, 2017</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a>
+                                    </span><span>
+                                        <a href="../tags/Code-Coverage.html" class="" >Code-Coverage</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Docker.html" class="" >Docker</a>
+                                    </span><span>
+                                        <a href="../tags/Gui-Test.html" class="" >Gui-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a>
+                                    </span><span>
+                                        <a href="../tags/Java.html" class="" >Java</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Linux.html" class="" >Linux</a>
+                                    </span><span>
+                                        <a href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a>
+                                    </span><span>
+                                        <a href="../tags/Vagrant.html" class="" >Vagrant</a>
+                                    </span><span>
+                                        <a href="../tags/VirtualBox.html" class="" >VirtualBox</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
 It was not easy this year to concentrate on the sessions because of the hottest march of the last 100 years. But the quality of the sessions beats the weather. Maybe again my invest in reading the abstracts and filter the sessions before the conference has payed off.</p>
-            
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -222,35 +223,48 @@ It was not easy this year to concentrate on the sessions because of the hottest 
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2017/DEVCAMP17+wrap+up.html">
-              <h2 class="post-title">DEVCAMP17 wrap up</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>February 09, 2017</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/Forms.html" class="" >Forms</a></span><span>
-                  <a   href="../tags/Java.html" class="" >Java</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/PLSQL.html" class="" >PLSQL</a></span><span>
-                  <a   href="../tags/Report.html" class="" >Report</a></span><span>
-                  <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span></span></p>
-            <p>Yesterday I attend the annual <a href="https://en.wikipedia.org/wiki/BarCamp">barcamp</a> DEVCAMP of the <a href="http://www.doag.org">DOAG</a> development community. There are mostly developers with SQL, PL/SQL, Forms &amp; Reports, ADF, JET background and some Java, Javascript and APEX developers too. And not to forget: 1 dba and some managers. Here is my summary.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2017/DEVCAMP17+wrap+up.html">
+                                <h2 class="post-title">DEVCAMP17 wrap up</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>February 09, 2017</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/Forms.html" class="" >Forms</a>
+                                    </span><span>
+                                        <a href="../tags/Java.html" class="" >Java</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/PLSQL.html" class="" >PLSQL</a>
+                                    </span><span>
+                                        <a href="../tags/Report.html" class="" >Report</a>
+                                    </span><span>
+                                        <a href="../tags/Unit-Test.html" class="" >Unit-Test</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>Yesterday I attend the annual <a href="https://en.wikipedia.org/wiki/BarCamp">barcamp</a> DEVCAMP of the <a href="http://www.doag.org">DOAG</a> development community. There are mostly developers with SQL, PL/SQL, Forms &amp; Reports, ADF, JET background and some Java, Javascript and APEX developers too. And not to forget: 1 dba and some managers. Here is my summary.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -343,39 +357,55 @@ It was not easy this year to concentrate on the sessions because of the hottest 
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2016/Javaland+2016+conference+day+1.html">
-              <h2 class="post-title">Javaland 2016 conference day 1</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>March 09, 2016</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Javaland.html" class="" >Javaland</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/Java.html" class="" >Java</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/XRebel.html" class="" >XRebel</a></span><span>
-                  <a   href="../tags/Behaviour-Test.html" class="" >Behaviour-Test</a></span><span>
-                  <a   href="../tags/Load-Test.html" class="" >Load-Test</a></span><span>
-                  <a   href="../tags/Mutation-Test.html" class="" >Mutation-Test</a></span><span>
-                  <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span>
-                  <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span>
-                  <a   href="../tags/Documentation.html" class="" >Documentation</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Pipeline.html" class="" >Pipeline</a></span></span></p>
-            <p>This year I have decided to give the <a href="https://twitter.com/hashtag/javaland2016?src=hash">Javaland</a> conference a try.
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2016/Javaland+2016+conference+day+1.html">
+                                <h2 class="post-title">Javaland 2016 conference day 1</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>March 09, 2016</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Javaland.html" class="" >Javaland</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/Java.html" class="" >Java</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/XRebel.html" class="" >XRebel</a>
+                                    </span><span>
+                                        <a href="../tags/Behaviour-Test.html" class="" >Behaviour-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Load-Test.html" class="" >Load-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Mutation-Test.html" class="" >Mutation-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Unit-Test.html" class="" >Unit-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Code-Coverage.html" class="" >Code-Coverage</a>
+                                    </span><span>
+                                        <a href="../tags/Documentation.html" class="" >Documentation</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Pipeline.html" class="" >Pipeline</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>This year I have decided to give the <a href="https://twitter.com/hashtag/javaland2016?src=hash">Javaland</a> conference a try.
 I&#8217;m not a java professional, but in the program was listed a lot of interesting testing presentations, so my company booked for me.</p>
-            
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -468,34 +498,46 @@ I&#8217;m not a java professional, but in the program was listed a lot of intere
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2015/Slides+for+my+german+presentation+DOAG2015+Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+available.html">
-              <h2 class="post-title">Slides for my german presentation DOAG2015 &quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; available</h2>
-              <h3 class="post-subtitle">Faster Build and Deployment of ADF Projects - Slides</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 24, 2015</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span>
-                  <a   href="../tags/Build.html" class="" >Build</a></span><span>
-                  <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span>
-                  <a   href="../tags/Branching.html" class="" >Branching</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/Versioning.html" class="" >Versioning</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span></span></p>
-            <p>I have presented last week on DOAG 2015 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/bob-the-builder-build-deploy-von-adf-enterprise-anwendungen">Slideshare</a> too:</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2015/Slides+for+my+german+presentation+DOAG2015+Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+available.html">
+                                <h2 class="post-title">Slides for my german presentation DOAG2015 &quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; available</h2>
+                                <h3 class="post-subtitle">Faster Build and Deployment of ADF Projects - Slides</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 24, 2015</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a>
+                                    </span><span>
+                                        <a href="../tags/Build.html" class="" >Build</a>
+                                    </span><span>
+                                        <a href="../tags/Deploy.html" class="" >Deploy</a>
+                                    </span><span>
+                                        <a href="../tags/Branching.html" class="" >Branching</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/Versioning.html" class="" >Versioning</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>I have presented last week on DOAG 2015 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/bob-the-builder-build-deploy-von-adf-enterprise-anwendungen">Slideshare</a> too:</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -588,34 +630,46 @@ I&#8217;m not a java professional, but in the program was listed a lot of intere
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html">
-              <h2 class="post-title">&quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; - I am a speaker at DOAG2015</h2>
-              <h3 class="post-subtitle">Faster Build and Deployment of ADF Projects</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>July 21, 2015</span>
-              / updated on November 17, 2021
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span>
-                  <a   href="../tags/Build.html" class="" >Build</a></span><span>
-                  <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span>
-                  <a   href="../tags/Branching.html" class="" >Branching</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/Versioning.html" class="" >Versioning</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span></span></p>
-            <p>Today my presentation is confirmed: "Bob the Builder: Build/Deploy of ADF enterprise applications".</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2015/Bob+the+Builder+Build+Deploy+of+ADF+enterprise+applications+-+I+m+a+speaker+at+DOAG2015.html">
+                                <h2 class="post-title">&quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; - I am a speaker at DOAG2015</h2>
+                                <h3 class="post-subtitle">Faster Build and Deployment of ADF Projects</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>July 21, 2015</span>
+                                / updated on November 17, 2021
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a>
+                                    </span><span>
+                                        <a href="../tags/Build.html" class="" >Build</a>
+                                    </span><span>
+                                        <a href="../tags/Deploy.html" class="" >Deploy</a>
+                                    </span><span>
+                                        <a href="../tags/Branching.html" class="" >Branching</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/Versioning.html" class="" >Versioning</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>Today my presentation is confirmed: "Bob the Builder: Build/Deploy of ADF enterprise applications".</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -708,28 +762,33 @@ I&#8217;m not a java professional, but in the program was listed a lot of intere
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2015/Fix+code+editor+save+actions+in+JDeveloper+12.1.3+keep+the+order+of+actions.html">
-              <h2 class="post-title">Fix code editor save actions in JDeveloper 12.1.3: keep the order of actions</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>June 30, 2015</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/Bug.html" class="" >Bug</a></span><span>
-                  <a   href="../tags/Patch.html" class="" >Patch</a></span></span></p>
-            <p>If you work with JDeveloper 12.1.3 and you work with code editor save actions the order of actions could be relevant for you.
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2015/Fix+code+editor+save+actions+in+JDeveloper+12.1.3+keep+the+order+of+actions.html">
+                                <h2 class="post-title">Fix code editor save actions in JDeveloper 12.1.3: keep the order of actions</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 30, 2015</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/Bug.html" class="" >Bug</a>
+                                    </span><span>
+                                        <a href="../tags/Patch.html" class="" >Patch</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>If you work with JDeveloper 12.1.3 and you work with code editor save actions the order of actions could be relevant for you.
 For an example you use lot of asterisk (*) imports and JDeveloper should edit the code to import only classes that you actually use in the code.</p>
-            
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -822,27 +881,32 @@ For an example you use lot of asterisk (*) imports and JDeveloper should edit th
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2015/Fix+completion+insight+in+JDeveloper+12.1.3+show+return+type+again.html">
-              <h2 class="post-title">Fix completion insight in JDeveloper 12.1.3: show return type again</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>June 29, 2015</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/Bug.html" class="" >Bug</a></span><span>
-                  <a   href="../tags/Patch.html" class="" >Patch</a></span></span></p>
-            <p>If you work with JDeveloper 12.1.3 you may missing the return type of methods in completion insight.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2015/Fix+completion+insight+in+JDeveloper+12.1.3+show+return+type+again.html">
+                                <h2 class="post-title">Fix completion insight in JDeveloper 12.1.3: show return type again</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 29, 2015</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/Bug.html" class="" >Bug</a>
+                                    </span><span>
+                                        <a href="../tags/Patch.html" class="" >Patch</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>If you work with JDeveloper 12.1.3 you may missing the return type of methods in completion insight.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -935,30 +999,38 @@ For an example you use lot of asterisk (*) imports and JDeveloper should edit th
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html">
-              <h2 class="post-title">Slides for my german presentation DOAG2014 &quot;The Dirty Dozen – ADF Migration to 12c in the IKB&quot; available</h2>
-              <h3 class="post-subtitle">Report about 12c ADF Migration Projekt</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 24, 2014</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span>
-                  <a   href="../tags/Migration.html" class="" >Migration</a></span></span></p>
-            <p>I have presented last week on DOAG 2014 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/das-dreckige-dutzend-adf-migration-nach-12c-in-der-ikb-doag-2014-prsentation">Slideshare</a> too:</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2014/Slides+for+my+german+presentation+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+available.html">
+                                <h2 class="post-title">Slides for my german presentation DOAG2014 &quot;The Dirty Dozen – ADF Migration to 12c in the IKB&quot; available</h2>
+                                <h3 class="post-subtitle">Report about 12c ADF Migration Projekt</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 24, 2014</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a>
+                                    </span><span>
+                                        <a href="../tags/Migration.html" class="" >Migration</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>I have presented last week on DOAG 2014 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/das-dreckige-dutzend-adf-migration-nach-12c-in-der-ikb-doag-2014-prsentation">Slideshare</a> too:</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1051,29 +1123,36 @@ For an example you use lot of asterisk (*) imports and JDeveloper should edit th
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html">
-              <h2 class="post-title">ADF Architecture Practice - JDeveloper Silent Install of Extensions</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 19, 2014</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span>
-                  <a   href="../tags/Silent-Install.html" class="" >Silent-Install</a></span><span>
-                  <a   href="../tags/Extension.html" class="" >Extension</a></span></span></p>
-            <p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install+of+Extensions.html">
+                                <h2 class="post-title">ADF Architecture Practice - JDeveloper Silent Install of Extensions</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 19, 2014</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a>
+                                    </span><span>
+                                        <a href="../tags/Silent-Install.html" class="" >Silent-Install</a>
+                                    </span><span>
+                                        <a href="../tags/Extension.html" class="" >Extension</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1166,30 +1245,38 @@ For an example you use lot of asterisk (*) imports and JDeveloper should edit th
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html">
-              <h2 class="post-title">See you at DOAG 2014 “The Dirty Dozen – ADF Migration to 12c in the IKB” room Kopenhagen on 11/19/2014 at 10:00 am</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 17, 2014</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span>
-                  <a   href="../tags/Migration.html" class="" >Migration</a></span></span></p>
-            <p>The presentation is ready, time for travelling now.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2014/See+you+at+DOAG2014+The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+room+Kopenhagen+on+11+19+2014+at+10+00+am.html">
+                                <h2 class="post-title">See you at DOAG 2014 “The Dirty Dozen – ADF Migration to 12c in the IKB” room Kopenhagen on 11/19/2014 at 10:00 am</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 17, 2014</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a>
+                                    </span><span>
+                                        <a href="../tags/Migration.html" class="" >Migration</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>The presentation is ready, time for travelling now.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1282,29 +1369,36 @@ For an example you use lot of asterisk (*) imports and JDeveloper should edit th
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html">
-              <h2 class="post-title">ADF Architecture Practice - JDeveloper Silent Patch</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>October 22, 2014</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span>
-                  <a   href="../tags/Silent-Install.html" class="" >Silent-Install</a></span><span>
-                  <a   href="../tags/Silent-Patch.html" class="" >Silent-Patch</a></span></span></p>
-            <p>This article describes how to standardize your JDeveloper Patching as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Getting Started - Team, Skills and Development Environments</a>.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Patch.html">
+                                <h2 class="post-title">ADF Architecture Practice - JDeveloper Silent Patch</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>October 22, 2014</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a>
+                                    </span><span>
+                                        <a href="../tags/Silent-Install.html" class="" >Silent-Install</a>
+                                    </span><span>
+                                        <a href="../tags/Silent-Patch.html" class="" >Silent-Patch</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>This article describes how to standardize your JDeveloper Patching as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Getting Started - Team, Skills and Development Environments</a>.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1397,29 +1491,36 @@ For an example you use lot of asterisk (*) imports and JDeveloper should edit th
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html">
-              <h2 class="post-title">ADF Architecture Practice - JDeveloper Silent Install</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>October 14, 2014</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span>
-                  <a   href="../tags/Silent-Install.html" class="" >Silent-Install</a></span><span>
-                  <a   href="../tags/Silent-Deinstall.html" class="" >Silent-Deinstall</a></span></span></p>
-            <p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2014/ADF+Architecture+Practice+-+JDeveloper+Silent+Install.html">
+                                <h2 class="post-title">ADF Architecture Practice - JDeveloper Silent Install</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>October 14, 2014</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a>
+                                    </span><span>
+                                        <a href="../tags/Silent-Install.html" class="" >Silent-Install</a>
+                                    </span><span>
+                                        <a href="../tags/Silent-Deinstall.html" class="" >Silent-Deinstall</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>This article describes how to standardize your JDeveloper Installation as requested in <a href="http://de.slideshare.net/chriscmuir/adf-architecture-planning-getting-started-team-skills-and-development-environments">Planning &amp; Getting Started - Team, Skills and Development Environments</a>.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1512,30 +1613,38 @@ For an example you use lot of asterisk (*) imports and JDeveloper should edit th
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html">
-              <h2 class="post-title">&quot;The Dirty Dozen - ADF Migration to 12c in the IKB&quot; - I am a speaker at DOAG2014</h2>
-              <h3 class="post-subtitle">Report about 12c ADF Migration Projekt</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>August 01, 2014</span>
-              / updated on November 17, 2021
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span>
-                  <a   href="../tags/Migration.html" class="" >Migration</a></span></span></p>
-            <p>Today the <a href="http://www.doag.org/konferenz/kprogramm.php?tag=2&amp;locS=0">official program</a> is online for DOAG conference 2014 in Nuremberg. My presentation is confirmed  "The Dirty Dozen - ADF Migration to 12c in the IKB".</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2014/The+Dirty+Dozen+-+ADF+Migration+to+12c+in+the+IKB+I+m+a+speaker+at+DOAG2014.html">
+                                <h2 class="post-title">&quot;The Dirty Dozen - ADF Migration to 12c in the IKB&quot; - I am a speaker at DOAG2014</h2>
+                                <h3 class="post-subtitle">Report about 12c ADF Migration Projekt</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 01, 2014</span>
+                                / updated on November 17, 2021
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a>
+                                    </span><span>
+                                        <a href="../tags/Migration.html" class="" >Migration</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>Today the <a href="http://www.doag.org/konferenz/kprogramm.php?tag=2&amp;locS=0">official program</a> is online for DOAG conference 2014 in Nuremberg. My presentation is confirmed  "The Dirty Dozen - ADF Migration to 12c in the IKB".</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1628,29 +1737,35 @@ For an example you use lot of asterisk (*) imports and JDeveloper should edit th
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2014/Find+problems+when+you+develop+-+using+XRebel+with+Oracle+ADF.html">
-              <h2 class="post-title">Find problems when you develop: using XRebel with Oracle ADF</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>June 30, 2014</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span>
-                  <a   href="../tags/XRebel.html" class="" >XRebel</a></span></span></p>
-            <p>Some days before <a href="http://zeroturnaround.com/">ZeroTurnaround</a> has released <a href="http://zeroturnaround.com/software/xrebel/">XRebel</a> , a new tool to recognized problems in your web applications, when you make your developer test.
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2014/Find+problems+when+you+develop+-+using+XRebel+with+Oracle+ADF.html">
+                                <h2 class="post-title">Find problems when you develop: using XRebel with Oracle ADF</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 30, 2014</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/Gui-Test.html" class="" >Gui-Test</a>
+                                    </span><span>
+                                        <a href="../tags/XRebel.html" class="" >XRebel</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>Some days before <a href="http://zeroturnaround.com/">ZeroTurnaround</a> has released <a href="http://zeroturnaround.com/software/xrebel/">XRebel</a> , a new tool to recognized problems in your web applications, when you make your developer test.
 This was promising, so I give it a short try for Oracle ADF applications.</p>
-            
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1743,42 +1858,62 @@ This was promising, so I give it a short try for Oracle ADF applications.</p>
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html">
-              <h2 class="post-title">Slides for my german presentation &quot;Quality Assurance for ADF projects&quot; available</h2>
-              <h3 class="post-subtitle">How to check the quality in ADF Development Life Cycle - Slides</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>June 04, 2014</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/Checkstyle.html" class="" >Checkstyle</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/FindBugs.html" class="" >FindBugs</a></span><span>
-                  <a   href="../tags/PMD.html" class="" >PMD</a></span><span>
-                  <a   href="../tags/JUnit.html" class="" >JUnit</a></span><span>
-                  <a   href="../tags/Mockito.html" class="" >Mockito</a></span><span>
-                  <a   href="../tags/PowerMock.html" class="" >PowerMock</a></span><span>
-                  <a   href="../tags/JaCoCo.html" class="" >JaCoCo</a></span><span>
-                  <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span>
-                  <a   href="../tags/Acceptance-Test.html" class="" >Acceptance-Test</a></span><span>
-                  <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span>
-                  <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span>
-                  <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span></span></p>
-            <p>I have presented today on DOAG Development 2014 in Dusseldorf. For all non DOAG members - you can find the german presentation on <a href="http://www.slideshare.net/tkleiber/qualittssicherung-in-adf-projekten-der-ikb-deutschen-industriebank">Slideshare</a> too:</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2014/Slides+for+my+german+presentation+Quality+Assurance+for+ADF+projects+available.html">
+                                <h2 class="post-title">Slides for my german presentation &quot;Quality Assurance for ADF projects&quot; available</h2>
+                                <h3 class="post-subtitle">How to check the quality in ADF Development Life Cycle - Slides</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 04, 2014</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/Checkstyle.html" class="" >Checkstyle</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/FindBugs.html" class="" >FindBugs</a>
+                                    </span><span>
+                                        <a href="../tags/PMD.html" class="" >PMD</a>
+                                    </span><span>
+                                        <a href="../tags/JUnit.html" class="" >JUnit</a>
+                                    </span><span>
+                                        <a href="../tags/Mockito.html" class="" >Mockito</a>
+                                    </span><span>
+                                        <a href="../tags/PowerMock.html" class="" >PowerMock</a>
+                                    </span><span>
+                                        <a href="../tags/JaCoCo.html" class="" >JaCoCo</a>
+                                    </span><span>
+                                        <a href="../tags/Unit-Test.html" class="" >Unit-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Acceptance-Test.html" class="" >Acceptance-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Gui-Test.html" class="" >Gui-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Code-Coverage.html" class="" >Code-Coverage</a>
+                                    </span><span>
+                                        <a href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>I have presented today on DOAG Development 2014 in Dusseldorf. For all non DOAG members - you can find the german presentation on <a href="http://www.slideshare.net/tkleiber/qualittssicherung-in-adf-projekten-der-ikb-deutschen-industriebank">Slideshare</a> too:</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1871,42 +2006,62 @@ This was promising, so I give it a short try for Oracle ADF applications.</p>
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2014/Quality+Assurance+for+ADF+projects.html">
-              <h2 class="post-title">Quality Assurance for ADF projects</h2>
-              <h3 class="post-subtitle">How to check the quality in ADF Development Life Cycle - Slides</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>May 22, 2014</span>
-              / updated on November 17, 2021
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/Checkstyle.html" class="" >Checkstyle</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/FindBugs.html" class="" >FindBugs</a></span><span>
-                  <a   href="../tags/PMD.html" class="" >PMD</a></span><span>
-                  <a   href="../tags/JUnit.html" class="" >JUnit</a></span><span>
-                  <a   href="../tags/Mockito.html" class="" >Mockito</a></span><span>
-                  <a   href="../tags/PowerMock.html" class="" >PowerMock</a></span><span>
-                  <a   href="../tags/JaCoCo.html" class="" >JaCoCo</a></span><span>
-                  <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span>
-                  <a   href="../tags/Acceptance-Test.html" class="" >Acceptance-Test</a></span><span>
-                  <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span>
-                  <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span>
-                  <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span></span></p>
-            <p>If you speak german and you are interested in quality assurance for your ADF projects you should come and attend my presentation at DOAG Development on 06/04/2014 in Duesseldorf.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2014/Quality+Assurance+for+ADF+projects.html">
+                                <h2 class="post-title">Quality Assurance for ADF projects</h2>
+                                <h3 class="post-subtitle">How to check the quality in ADF Development Life Cycle - Slides</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>May 22, 2014</span>
+                                / updated on November 17, 2021
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/Checkstyle.html" class="" >Checkstyle</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/FindBugs.html" class="" >FindBugs</a>
+                                    </span><span>
+                                        <a href="../tags/PMD.html" class="" >PMD</a>
+                                    </span><span>
+                                        <a href="../tags/JUnit.html" class="" >JUnit</a>
+                                    </span><span>
+                                        <a href="../tags/Mockito.html" class="" >Mockito</a>
+                                    </span><span>
+                                        <a href="../tags/PowerMock.html" class="" >PowerMock</a>
+                                    </span><span>
+                                        <a href="../tags/JaCoCo.html" class="" >JaCoCo</a>
+                                    </span><span>
+                                        <a href="../tags/Unit-Test.html" class="" >Unit-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Acceptance-Test.html" class="" >Acceptance-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Gui-Test.html" class="" >Gui-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Code-Coverage.html" class="" >Code-Coverage</a>
+                                    </span><span>
+                                        <a href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>If you speak german and you are interested in quality assurance for your ADF projects you should come and attend my presentation at DOAG Development on 06/04/2014 in Duesseldorf.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1999,30 +2154,36 @@ This was promising, so I give it a short try for Oracle ADF applications.</p>
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html">
-              <h2 class="post-title">Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>September 20, 2013</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF-Mobile.html" class="" >ADF-Mobile</a></span><span>
-                  <a   href="../tags/Android.html" class="" >Android</a></span><span>
-                  <a   href="../tags/External-Tools.html" class="" >External-Tools</a></span></span></p>
-            <p>If you tired from the android emulator speed you may have read Chris Muir&#8217;s article <a href="https://blogs.oracle.com/onesizedoesntfitall/adf-mobile:-avoiding-the-android-emulator-with-androvm">ADF Mobile: Avoiding the Android Emulator with AndroVM</a>.
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2013/Deploy+your+ADF+Mobile+App+to+a+virtual+Android+device+from+JDeveloper+IDE.html">
+                                <h2 class="post-title">Deploy your ADF Mobile App to a virtual Android device from JDeveloper IDE</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>September 20, 2013</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF-Mobile.html" class="" >ADF-Mobile</a>
+                                    </span><span>
+                                        <a href="../tags/Android.html" class="" >Android</a>
+                                    </span><span>
+                                        <a href="../tags/External-Tools.html" class="" >External-Tools</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>If you tired from the android emulator speed you may have read Chris Muir&#8217;s article <a href="https://blogs.oracle.com/onesizedoesntfitall/adf-mobile:-avoiding-the-android-emulator-with-androvm">ADF Mobile: Avoiding the Android Emulator with AndroVM</a>.
 In the meantime the successor AndroVM is <a href="https://cloud.genymotion.com/">GENYMOTION</a>.
 Let&#8217;s integrate this instead now!</p>
-            
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -2115,27 +2276,32 @@ Let&#8217;s integrate this instead now!</p>
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2013/Have+released+PMD+Jdeveloper+Extension+5.0.5.html">
-              <h2 class="post-title">Have released PMD JDeveloper Extension 5.0.5</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>August 30, 2013</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/PMD.html" class="" >PMD</a></span><span>
-                  <a   href="../tags/Extension.html" class="" >Extension</a></span></span></p>
-            <p>I have finished now my work on integrating last <a href="http://pmd.sourceforge.net/">PMD</a> version 5.0.5 into JDeveloper.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2013/Have+released+PMD+Jdeveloper+Extension+5.0.5.html">
+                                <h2 class="post-title">Have released PMD JDeveloper Extension 5.0.5</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 30, 2013</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/PMD.html" class="" >PMD</a>
+                                    </span><span>
+                                        <a href="../tags/Extension.html" class="" >Extension</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>I have finished now my work on integrating last <a href="http://pmd.sourceforge.net/">PMD</a> version 5.0.5 into JDeveloper.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -2228,29 +2394,36 @@ Let&#8217;s integrate this instead now!</p>
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html">
-              <h2 class="post-title">Write ADF static code analysis rules with PMD and running these in JDeveloper</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>July 02, 2013</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/PMD.html" class="" >PMD</a></span><span>
-                  <a   href="../tags/External-Tools.html" class="" >External-Tools</a></span><span>
-                  <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
-            <p>Do you know, that PMD can analyse XML files since version 5? Many of ADF files are XML configuration files - wouldn&#8217;t it be a good idea to create some static code analysis rules for ADF too?</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2013/Write+ADF+static+code+analysis+rules+with+PMD+and+running+these+in+JDeveloper.html">
+                                <h2 class="post-title">Write ADF static code analysis rules with PMD and running these in JDeveloper</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>July 02, 2013</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/PMD.html" class="" >PMD</a>
+                                    </span><span>
+                                        <a href="../tags/External-Tools.html" class="" >External-Tools</a>
+                                    </span><span>
+                                        <a href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>Do you know, that PMD can analyse XML files since version 5? Many of ADF files are XML configuration files - wouldn&#8217;t it be a good idea to create some static code analysis rules for ADF too?</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -2343,28 +2516,34 @@ Let&#8217;s integrate this instead now!</p>
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">
-              <h2 class="post-title">PMD Integration with JDeveloper through Ant External Tools</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>June 26, 2013</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/PMD.html" class="" >PMD</a></span><span>
-                  <a   href="../tags/External-Tools.html" class="" >External-Tools</a></span><span>
-                  <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span></span></p>
-            <p>After little code <a href="http://sourceforge.net/p/pmd/bugs/1055/">change</a> in pmd the integration like described in some blogs from Shay Shmeltzer is now possible.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2013/PMD+Integration+with+JDeveloper+through+Ant+External+Tools.html">
+                                <h2 class="post-title">PMD Integration with JDeveloper through Ant External Tools</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>June 26, 2013</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/PMD.html" class="" >PMD</a>
+                                    </span><span>
+                                        <a href="../tags/External-Tools.html" class="" >External-Tools</a>
+                                    </span><span>
+                                        <a href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>After little code <a href="http://sourceforge.net/p/pmd/bugs/1055/">change</a> in pmd the integration like described in some blogs from Shay Shmeltzer is now possible.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -2457,28 +2636,33 @@ Let&#8217;s integrate this instead now!</p>
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html">
-              <h2 class="post-title">Save JDeveloper application workings sets in the application workspace - please vote for this enhancement request</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>December 04, 2012</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/Working-Sets.html" class="" >Working-Sets</a></span></span></p>
-            <p>If you create for an example a big adf application you may want to add all of your entities to one base application for reuse labels, validation and and so on. If you have a big database schema than in short time you have a problem to find your entity.
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2012/Save+JDeveloper+application+workings+sets+in+the+application+workspace+-+please+vote+for+this+enhancement+request.html">
+                                <h2 class="post-title">Save JDeveloper application workings sets in the application workspace - please vote for this enhancement request</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>December 04, 2012</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/Working-Sets.html" class="" >Working-Sets</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>If you create for an example a big adf application you may want to add all of your entities to one base application for reuse labels, validation and and so on. If you have a big database schema than in short time you have a problem to find your entity.
 In JDeveloper there is a neat feature to overcome this problem: working sets!</p>
-            
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -2571,27 +2755,32 @@ In JDeveloper there is a neat feature to overcome this problem: working sets!</p
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2012/Have+released+PMD+Jdeveloper+Extension+4.3.html">
-              <h2 class="post-title">Have released PMD JDeveloper Extension 4.3</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>March 12, 2012</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/PMD.html" class="" >PMD</a></span><span>
-                  <a   href="../tags/Extension.html" class="" >Extension</a></span></span></p>
-            <p>Sorry for a time without new post - but I have finished now my work on integrating last <a href="http://pmd.sourceforge.net">PMD</a> version 4.3 into JDeveloper.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2012/Have+released+PMD+Jdeveloper+Extension+4.3.html">
+                                <h2 class="post-title">Have released PMD JDeveloper Extension 4.3</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>March 12, 2012</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/PMD.html" class="" >PMD</a>
+                                    </span><span>
+                                        <a href="../tags/Extension.html" class="" >Extension</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>Sorry for a time without new post - but I have finished now my work on integrating last <a href="http://pmd.sourceforge.net">PMD</a> version 4.3 into JDeveloper.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -2684,19 +2873,20 @@ In JDeveloper there is a neat feature to overcome this problem: working sets!</p
           </ul>
 
         
-          </div>
-          <hr>
-        
-        
-      </div>
-    </div>
-  </div>
+                        </div>
+                        <hr>
+                        
+                        
+                   </div>
+               </div>
+           </div>
+        </article>
 
-  <!-- Footer -->
-  <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10 mx-auto">
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
                                 <a href="../feed.xml" title="Subscribe to RSS feed">
@@ -2723,7 +2913,7 @@ In JDeveloper there is a neat feature to overcome this problem: working sets!</p
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://linkedin.com/in/kleiber/">
+                                <a href="https://linkedin.com/in/kleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -2731,7 +2921,7 @@ In JDeveloper there is a neat feature to overcome this problem: working sets!</p
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.xing.com/profile/Torsten_Kleiber/">
+                                <a href="https://www.xing.com/profile/Torsten_Kleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
@@ -2739,7 +2929,7 @@ In JDeveloper there is a neat feature to overcome this problem: working sets!</p
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.slideshare.net/tkleiber/">
+                                <a href="https://www.slideshare.net/tkleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-slideshare fa-stack-1x fa-inverse"></i>
@@ -2747,24 +2937,24 @@ In JDeveloper there is a neat feature to overcome this problem: working sets!</p
                                 </a>
                             </li>
                         </ul>
-                            <p class="copyright text-muted">&copy; <span>Torsten Kleiber</span>
-                                <span>2023</span> | <a
-              href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a
-              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.7.0-rc.6</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
-      </div>
-    </div>
-  </div>
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" ></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="../js/clean-blog.min.js"></script>
-
-  
-
-</body>
-
+                            <p class="small text-center text-muted fst-italic">
+                                &copy;
+                                <span>Torsten Kleiber</span>
+                                <span>2023</span>
+                                | <a href="https://startbootstrap.com/theme/clean-blog">Clean Blog theme</a>
+                                by <a href="https://startbootstrap.com/">Start Bootstrap</a>
+                                | Baked with <a href="https://jbake.org">JBake
+                                <span>v2.7.0-rc.6</span></a>
+                                | <a href="#" onclick="klaro.show();">Change cookie settings</a>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../vendor/clean-blog/js/scripts.js"></script>
+        
+    </body>
 </html>

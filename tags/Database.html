@@ -1,19 +1,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="As Much As Possible As Code"/>
-        <meta name="author" content="Torsten Kleiber"/>
-
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="As Much As Possible As Code" />
+        <meta name="author" content="Torsten Kleiber" />
         <title>AMAPAC</title>
+        <link rel="icon" type="image/x-icon" href="../favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=Database"
+              rel="stylesheet" type="text/css"/>
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../vendor/clean-blog/css/styles.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="../css/asciidoctor.css" rel="stylesheet"/>
+        <!-- link href="https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css" rel="stylesheet"/-->
+
+        <!-- highlightjs Code Formatter -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" rel="stylesheet" type="text/css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
+
+        <!-- Klaro Cookie Consent tool -->
+        <script defer type="text/javascript" src="../vendor/klaro/config.js"></script>
+        <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
 
         <meta name="robots" content="index, follow"/>
         <meta name="generator" content="JBake"/>
-
         <!--Facebook Card-->
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="AMAPAC"/>
@@ -31,101 +51,79 @@
           content="https://www.amapac.io/img/amapac_share_card.png">
         
 
-        <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-
-        <!-- highlightjs Code Formatter -->
-        <link href="../vendor/highlightjs/styles/default.css" rel="stylesheet" type="text/css">
-        <script src="../vendor/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <!-- Custom Fonts -->
-        <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=Database"
-        rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-
-        <!-- Custom styles for this template -->
-        <link href="../css/asciidoctor.css" rel="stylesheet">
-        <link href="../css/clean-blog.min.css" rel="stylesheet">
-
-        <!-- Klaro Cookie Consent tool -->
-        <script defer type="text/javascript" src="../vendor/klaro/config.js"></script>
-        <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
-
-        <link rel="shortcut icon" href="../favicon.png"/>
     </head>
-
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="../index.html">AMAPAC</a>
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                      Menu
-                      <i class="fas fa-bars"></i>
-                    </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="../about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../tags/index.html">Tags</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../archive.html">Archive</a>
-                        </li>
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../tags/index.html">Tags</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../archive.html">Archive</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>Database</h1>
-            <span class="subheading">tagged posts</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        
-          <div class="post-preview"  >
-            <a href="../blog/2020/Slides+for+my+german+presentation+DOAG2020+-+Our+way+to+19c+available.html">
-              <h2 class="post-title">Slides for my german presentation DOAG2020 &quot;Our way to 19c&quot; available</h2>
-              <h3 class="post-subtitle">Project report about an Oracle Database Upgrade - Slides</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 24, 2020</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/Database.html" class="" >Database</a></span><span>
-                  <a   href="../tags/Migration.html" class="" >Migration</a></span><span>
-                  <a   href="../tags/PLSQL.html" class="" >PLSQL</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/SOA.html" class="" >SOA</a></span><span>
-                  <a   href="../tags/Forms.html" class="" >Forms</a></span><span>
-                  <a   href="../tags/Reports.html" class="" >Reports</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span></span></p>
-            <p>I have presented last week on DOAG 2020. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/our-way-to-19c-doag-2020">Slideshare</a> too:</p>
-            
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>Database</h1>
+                            <span class="subheading">tagged posts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2020/Slides+for+my+german+presentation+DOAG2020+-+Our+way+to+19c+available.html">
+                                <h2 class="post-title">Slides for my german presentation DOAG2020 &quot;Our way to 19c&quot; available</h2>
+                                <h3 class="post-subtitle">Project report about an Oracle Database Upgrade - Slides</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 24, 2020</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/Database.html" class="" >Database</a>
+                                    </span><span>
+                                        <a href="../tags/Migration.html" class="" >Migration</a>
+                                    </span><span>
+                                        <a href="../tags/PLSQL.html" class="" >PLSQL</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/SOA.html" class="" >SOA</a>
+                                    </span><span>
+                                        <a href="../tags/Forms.html" class="" >Forms</a>
+                                    </span><span>
+                                        <a href="../tags/Reports.html" class="" >Reports</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>I have presented last week on DOAG 2020. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/our-way-to-19c-doag-2020">Slideshare</a> too:</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -218,33 +216,44 @@
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2020/our_way_to_19c_I_am_a_speaker_at_DOAG_2020.html">
-              <h2 class="post-title">Our way to 19c - I am a speaker at DOAG 2020</h2>
-              <h3 class="post-subtitle">Project report about an Oracle Database Upgrade</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 17, 2020</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/Database.html" class="" >Database</a></span><span>
-                  <a   href="../tags/Migration.html" class="" >Migration</a></span><span>
-                  <a   href="../tags/PLSQL.html" class="" >PLSQL</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/SOA.html" class="" >SOA</a></span><span>
-                  <a   href="../tags/Forms.html" class="" >Forms</a></span><span>
-                  <a   href="../tags/Reports.html" class="" >Reports</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span></span></p>
-            <p>Already 4 years we plan the upgrade from 11c to a new supported version. If you speak german and you are interested in some of our experiences, you should come and attend my presentation at DOAG 2020 Wednesday, Nov. 18, 15:00 <a href="https://programm.doag.org/doag/2020/#/scheduledEvent/603539">online</a>.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2020/our_way_to_19c_I_am_a_speaker_at_DOAG_2020.html">
+                                <h2 class="post-title">Our way to 19c - I am a speaker at DOAG 2020</h2>
+                                <h3 class="post-subtitle">Project report about an Oracle Database Upgrade</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 17, 2020</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/Database.html" class="" >Database</a>
+                                    </span><span>
+                                        <a href="../tags/Migration.html" class="" >Migration</a>
+                                    </span><span>
+                                        <a href="../tags/PLSQL.html" class="" >PLSQL</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/SOA.html" class="" >SOA</a>
+                                    </span><span>
+                                        <a href="../tags/Forms.html" class="" >Forms</a>
+                                    </span><span>
+                                        <a href="../tags/Reports.html" class="" >Reports</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>Already 4 years we plan the upgrade from 11c to a new supported version. If you speak german and you are interested in some of our experiences, you should come and attend my presentation at DOAG 2020 Wednesday, Nov. 18, 15:00 <a href="https://programm.doag.org/doag/2020/#/scheduledEvent/603539">online</a>.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -337,34 +346,46 @@
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2020/Slides+for+my+german+presentation+APEXCONN20+-+Agile+Oracle+Database+Modeling+and+Development+available.html">
-              <h2 class="post-title">Slides and for my german presentation APEXCONN20 &quot;Agile Oracle Database Modeling and Development (AgileOracleDatabase)&quot; available</h2>
-              <h3 class="post-subtitle">How to do Agile Oracle Database Modeling and Development - Slides and Video</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 24, 2019</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/Database.html" class="" >Database</a></span><span>
-                  <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/Git.html" class="" >Git</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Liquibase.html" class="" >Liquibase</a></span><span>
-                  <a   href="../tags/Database-Modelling.html" class="" >Database-Modelling</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/PLSQL.html" class="" >PLSQL</a></span><span>
-                  <a   href="../tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
-            <p>I have presented last week on APEX Connect 2020 again. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/agile-oracle-database-modeling-and-development-apex-connect-2020">Slideshare</a> too:</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2020/Slides+for+my+german+presentation+APEXCONN20+-+Agile+Oracle+Database+Modeling+and+Development+available.html">
+                                <h2 class="post-title">Slides and for my german presentation APEXCONN20 &quot;Agile Oracle Database Modeling and Development (AgileOracleDatabase)&quot; available</h2>
+                                <h3 class="post-subtitle">How to do Agile Oracle Database Modeling and Development - Slides and Video</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 24, 2019</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/Database.html" class="" >Database</a>
+                                    </span><span>
+                                        <a href="../tags/Deploy.html" class="" >Deploy</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/Git.html" class="" >Git</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Liquibase.html" class="" >Liquibase</a>
+                                    </span><span>
+                                        <a href="../tags/Database-Modelling.html" class="" >Database-Modelling</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/PLSQL.html" class="" >PLSQL</a>
+                                    </span><span>
+                                        <a href="../tags/utPLSQL.html" class="" >utPLSQL</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>I have presented last week on APEX Connect 2020 again. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/agile-oracle-database-modeling-and-development-apex-connect-2020">Slideshare</a> too:</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -457,34 +478,46 @@
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2019/Slides+and+Video+for+my+german+presentation+DOAG2019+-+Agile+Oracle+Database+Modeling+and+Development+available.html">
-              <h2 class="post-title">Slides for my german presentation DOAG2019 &quot;Agile Oracle Database Modeling and Development (AgileOracleDatabase)&quot; available</h2>
-              <h3 class="post-subtitle">How to do Agile Oracle Database Modeling and Development - Slides</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 24, 2019</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/Database.html" class="" >Database</a></span><span>
-                  <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/Git.html" class="" >Git</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Liquibase.html" class="" >Liquibase</a></span><span>
-                  <a   href="../tags/Database-Modelling.html" class="" >Database-Modelling</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/PLSQL.html" class="" >PLSQL</a></span><span>
-                  <a   href="../tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
-            <p>I have presented last week on DOAG 2019. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/agile-oracle-database-modeling-and-development">Slideshare</a> too:</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2019/Slides+and+Video+for+my+german+presentation+DOAG2019+-+Agile+Oracle+Database+Modeling+and+Development+available.html">
+                                <h2 class="post-title">Slides for my german presentation DOAG2019 &quot;Agile Oracle Database Modeling and Development (AgileOracleDatabase)&quot; available</h2>
+                                <h3 class="post-subtitle">How to do Agile Oracle Database Modeling and Development - Slides</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 24, 2019</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/Database.html" class="" >Database</a>
+                                    </span><span>
+                                        <a href="../tags/Deploy.html" class="" >Deploy</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/Git.html" class="" >Git</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Liquibase.html" class="" >Liquibase</a>
+                                    </span><span>
+                                        <a href="../tags/Database-Modelling.html" class="" >Database-Modelling</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/PLSQL.html" class="" >PLSQL</a>
+                                    </span><span>
+                                        <a href="../tags/utPLSQL.html" class="" >utPLSQL</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>I have presented last week on DOAG 2019. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/agile-oracle-database-modeling-and-development">Slideshare</a> too:</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -577,34 +610,46 @@
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html">
-              <h2 class="post-title">Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I am a speaker at DOAG2019</h2>
-              <h3 class="post-subtitle">How to do Agile Oracle Database Modeling and Development</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 18, 2019</span>
-              / updated on November 17, 2021
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/Database.html" class="" >Database</a></span><span>
-                  <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/Git.html" class="" >Git</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Liquibase.html" class="" >Liquibase</a></span><span>
-                  <a   href="../tags/Database-Modelling.html" class="" >Database-Modelling</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/PLSQL.html" class="" >PLSQL</a></span><span>
-                  <a   href="../tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
-            <p>We try to be agile in developing and merging our features into branches when they are ready for use.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2019/Agile+Oracle+Database+Modeling+and+Development+-+AgileOracleDatabase+-+I+am+a+speaker+at+DOAG2019.html">
+                                <h2 class="post-title">Agile Oracle Database Modeling and Development (AgileOracleDatabase) - I am a speaker at DOAG2019</h2>
+                                <h3 class="post-subtitle">How to do Agile Oracle Database Modeling and Development</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 18, 2019</span>
+                                / updated on November 17, 2021
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/Database.html" class="" >Database</a>
+                                    </span><span>
+                                        <a href="../tags/Deploy.html" class="" >Deploy</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/Git.html" class="" >Git</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Liquibase.html" class="" >Liquibase</a>
+                                    </span><span>
+                                        <a href="../tags/Database-Modelling.html" class="" >Database-Modelling</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/PLSQL.html" class="" >PLSQL</a>
+                                    </span><span>
+                                        <a href="../tags/utPLSQL.html" class="" >utPLSQL</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>We try to be agile in developing and merging our features into branches when they are ready for use.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -697,37 +742,52 @@
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2017/Slides+for+my+german+presentation+DOAG2017+-+PL+SQL+Therefore+whoever+binds+forever+-+automate+your+tests+available.html">
-              <h2 class="post-title">Slides for my german presentation DOAG2017 &quot;PLSQL - Therefore, whoever binds forever - automate your tests&quot; available</h2>
-              <h3 class="post-subtitle">How to Test Automation into Database Development - Slides</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 24, 2017</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Branching.html" class="" >Branching</a></span><span>
-                  <a   href="../tags/Build.html" class="" >Build</a></span><span>
-                  <a   href="../tags/Commit-Test.html" class="" >Commit-Test</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Database.html" class="" >Database</a></span><span>
-                  <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/PLSQL.html" class="" >PLSQL</a></span><span>
-                  <a   href="../tags/SQL-Developer.html" class="" >SQL-Developer</a></span><span>
-                  <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span>
-                  <a   href="../tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
-            <p>I have presented last week on DOAG 2017 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/plsql-drum-test-automatisiere-wer-sich-sich-ewig-bindet-doag-2017">Slideshare</a> too:</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2017/Slides+for+my+german+presentation+DOAG2017+-+PL+SQL+Therefore+whoever+binds+forever+-+automate+your+tests+available.html">
+                                <h2 class="post-title">Slides for my german presentation DOAG2017 &quot;PLSQL - Therefore, whoever binds forever - automate your tests&quot; available</h2>
+                                <h3 class="post-subtitle">How to Test Automation into Database Development - Slides</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 24, 2017</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Branching.html" class="" >Branching</a>
+                                    </span><span>
+                                        <a href="../tags/Build.html" class="" >Build</a>
+                                    </span><span>
+                                        <a href="../tags/Commit-Test.html" class="" >Commit-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Database.html" class="" >Database</a>
+                                    </span><span>
+                                        <a href="../tags/Deploy.html" class="" >Deploy</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/PLSQL.html" class="" >PLSQL</a>
+                                    </span><span>
+                                        <a href="../tags/SQL-Developer.html" class="" >SQL-Developer</a>
+                                    </span><span>
+                                        <a href="../tags/Unit-Test.html" class="" >Unit-Test</a>
+                                    </span><span>
+                                        <a href="../tags/utPLSQL.html" class="" >utPLSQL</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>I have presented last week on DOAG 2017 in Nuremberg. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/plsql-drum-test-automatisiere-wer-sich-sich-ewig-bindet-doag-2017">Slideshare</a> too:</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -820,37 +880,52 @@
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html">
-              <h2 class="post-title">&quot;PL/SQL: Therefore, whoever binds forever: automate your tests&quot; - I am a speaker at DOAG2017</h2>
-              <h3 class="post-subtitle">How to Test Automation into Database Development - Slides</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>July 18, 2017</span>
-              / updated on November 17, 2021
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Branching.html" class="" >Branching</a></span><span>
-                  <a   href="../tags/Build.html" class="" >Build</a></span><span>
-                  <a   href="../tags/Commit-Test.html" class="" >Commit-Test</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Database.html" class="" >Database</a></span><span>
-                  <a   href="../tags/Deploy.html" class="" >Deploy</a></span><span>
-                  <a   href="../tags/DOAG.html" class="" >DOAG</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/PLSQL.html" class="" >PLSQL</a></span><span>
-                  <a   href="../tags/SQL-Developer.html" class="" >SQL-Developer</a></span><span>
-                  <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span>
-                  <a   href="../tags/utPLSQL.html" class="" >utPLSQL</a></span></span></p>
-            <p>Today my presentation is confirmed: "Therefore, whoever binds forever: automate your tests". Maybe the German title will be the better understood: "PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!"</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2017/PLSQL+Therefore+whoever+binds+forever+automate+your+tests+-+I+m+a+speaker+at+DOAG2017.html">
+                                <h2 class="post-title">&quot;PL/SQL: Therefore, whoever binds forever: automate your tests&quot; - I am a speaker at DOAG2017</h2>
+                                <h3 class="post-subtitle">How to Test Automation into Database Development - Slides</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>July 18, 2017</span>
+                                / updated on November 17, 2021
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Branching.html" class="" >Branching</a>
+                                    </span><span>
+                                        <a href="../tags/Build.html" class="" >Build</a>
+                                    </span><span>
+                                        <a href="../tags/Commit-Test.html" class="" >Commit-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Database.html" class="" >Database</a>
+                                    </span><span>
+                                        <a href="../tags/Deploy.html" class="" >Deploy</a>
+                                    </span><span>
+                                        <a href="../tags/DOAG.html" class="" >DOAG</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/PLSQL.html" class="" >PLSQL</a>
+                                    </span><span>
+                                        <a href="../tags/SQL-Developer.html" class="" >SQL-Developer</a>
+                                    </span><span>
+                                        <a href="../tags/Unit-Test.html" class="" >Unit-Test</a>
+                                    </span><span>
+                                        <a href="../tags/utPLSQL.html" class="" >utPLSQL</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>Today my presentation is confirmed: "Therefore, whoever binds forever: automate your tests". Maybe the German title will be the better understood: "PL/SQL: Drum test-automatisiere, wer sich sich ewig bindet!"</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -943,38 +1018,54 @@
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2016/Javaland+2016+conference+day+2.html">
-              <h2 class="post-title">Javaland 2016 conference day 2</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>March 10, 2016</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Javaland.html" class="" >Javaland</a></span><span>
-                  <a   href="../tags/Conferences.html" class="" >Conferences</a></span><span>
-                  <a   href="../tags/Java.html" class="" >Java</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/ADF.html" class="" >ADF</a></span><span>
-                  <a   href="../tags/Unit-Test.html" class="" >Unit-Test</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Database.html" class="" >Database</a></span><span>
-                  <a   href="../tags/Database-Migration.html" class="" >Database-Migration</a></span><span>
-                  <a   href="../tags/Flyway.html" class="" >Flyway</a></span><span>
-                  <a   href="../tags/Liquibase.html" class="" >Liquibase</a></span><span>
-                  <a   href="../tags/Feature-Toggles.html" class="" >Feature-Toggles</a></span><span>
-                  <a   href="../tags/Security.html" class="" >Security</a></span><span>
-                  <a   href="../tags/User-Experience.html" class="" >User-Experience</a></span><span>
-                  <a   href="../tags/UX.html" class="" >UX</a></span></span></p>
-            <p>This was my second day on Javaland 2016.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2016/Javaland+2016+conference+day+2.html">
+                                <h2 class="post-title">Javaland 2016 conference day 2</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>March 10, 2016</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Javaland.html" class="" >Javaland</a>
+                                    </span><span>
+                                        <a href="../tags/Conferences.html" class="" >Conferences</a>
+                                    </span><span>
+                                        <a href="../tags/Java.html" class="" >Java</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/ADF.html" class="" >ADF</a>
+                                    </span><span>
+                                        <a href="../tags/Unit-Test.html" class="" >Unit-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Database.html" class="" >Database</a>
+                                    </span><span>
+                                        <a href="../tags/Database-Migration.html" class="" >Database-Migration</a>
+                                    </span><span>
+                                        <a href="../tags/Flyway.html" class="" >Flyway</a>
+                                    </span><span>
+                                        <a href="../tags/Liquibase.html" class="" >Liquibase</a>
+                                    </span><span>
+                                        <a href="../tags/Feature-Toggles.html" class="" >Feature-Toggles</a>
+                                    </span><span>
+                                        <a href="../tags/Security.html" class="" >Security</a>
+                                    </span><span>
+                                        <a href="../tags/User-Experience.html" class="" >User-Experience</a>
+                                    </span><span>
+                                        <a href="../tags/UX.html" class="" >UX</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>This was my second day on Javaland 2016.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1067,19 +1158,20 @@
           </ul>
 
         
-          </div>
-          <hr>
-        
-        
-      </div>
-    </div>
-  </div>
+                        </div>
+                        <hr>
+                        
+                        
+                   </div>
+               </div>
+           </div>
+        </article>
 
-  <!-- Footer -->
-  <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10 mx-auto">
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
                                 <a href="../feed.xml" title="Subscribe to RSS feed">
@@ -1106,7 +1198,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://linkedin.com/in/kleiber/">
+                                <a href="https://linkedin.com/in/kleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -1114,7 +1206,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.xing.com/profile/Torsten_Kleiber/">
+                                <a href="https://www.xing.com/profile/Torsten_Kleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
@@ -1122,7 +1214,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.slideshare.net/tkleiber/">
+                                <a href="https://www.slideshare.net/tkleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-slideshare fa-stack-1x fa-inverse"></i>
@@ -1130,24 +1222,24 @@
                                 </a>
                             </li>
                         </ul>
-                            <p class="copyright text-muted">&copy; <span>Torsten Kleiber</span>
-                                <span>2023</span> | <a
-              href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a
-              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.7.0-rc.6</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
-      </div>
-    </div>
-  </div>
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" ></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="../js/clean-blog.min.js"></script>
-
-  
-
-</body>
-
+                            <p class="small text-center text-muted fst-italic">
+                                &copy;
+                                <span>Torsten Kleiber</span>
+                                <span>2023</span>
+                                | <a href="https://startbootstrap.com/theme/clean-blog">Clean Blog theme</a>
+                                by <a href="https://startbootstrap.com/">Start Bootstrap</a>
+                                | Baked with <a href="https://jbake.org">JBake
+                                <span>v2.7.0-rc.6</span></a>
+                                | <a href="#" onclick="klaro.show();">Change cookie settings</a>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../vendor/clean-blog/js/scripts.js"></script>
+        
+    </body>
 </html>

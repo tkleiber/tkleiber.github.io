@@ -25,7 +25,7 @@ translations: {
       },
     },
   },
-  apps: [
+  services: [
     {
       name: 'hyvor',
       title: 'Hyvor Talk',

@@ -1,19 +1,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-
     <head>
-
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="As Much As Possible As Code"/>
-        <meta name="author" content="Torsten Kleiber"/>
-
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="As Much As Possible As Code" />
+        <meta name="author" content="Torsten Kleiber" />
         <title>AMAPAC</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=AMAPAC"
+              rel="stylesheet" type="text/css"/>
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="vendor/clean-blog/css/styles.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/asciidoctor.css" rel="stylesheet"/>
+        <!-- link href="https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css" rel="stylesheet"/-->
+
+        <!-- highlightjs Code Formatter -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" rel="stylesheet" type="text/css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
+
+        <!-- Klaro Cookie Consent tool -->
+        <script defer type="text/javascript" src="vendor/klaro/config.js"></script>
+        <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
 
         <meta name="robots" content="index, follow"/>
         <meta name="generator" content="JBake"/>
-
         <!--Facebook Card-->
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="AMAPAC"/>
@@ -31,96 +51,74 @@
           content="https://www.amapac.io/img/amapac_share_card.png">
         
 
-        <!-- Bootstrap core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-
-        <!-- highlightjs Code Formatter -->
-        <link href="vendor/highlightjs/styles/default.css" rel="stylesheet" type="text/css">
-        <script src="vendor/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <!-- Custom Fonts -->
-        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=AMAPAC"
-        rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-
-        <!-- Custom styles for this template -->
-        <link href="css/asciidoctor.css" rel="stylesheet">
-        <link href="css/clean-blog.min.css" rel="stylesheet">
-
-        <!-- Klaro Cookie Consent tool -->
-        <script defer type="text/javascript" src="vendor/klaro/config.js"></script>
-        <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
-
-        <link rel="shortcut icon" href="favicon.png"/>
     </head>
-    
     <body>
-    
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="index.html">AMAPAC</a>
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                      Menu
-                      <i class="fas fa-bars"></i>
-                    </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="tags/index.html">Tags</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="archive.html">Archive</a>
-                        </li>
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="tags/index.html">Tags</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="archive.html">Archive</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-    
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url(&#39;img/index-cover.jpg&#39;) ; background-color:#101010">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <h1>AMAPAC</h1>
-                        <span class="subheading">As Much As Possible As Code</span>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url(&#39;img/index-cover.jpg&#39;) ; background-color:#101010">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>AMAPAC</h1>
+                            <span class="subheading">As Much As Possible As Code</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    
                     <div class="post-preview">
                         <a href="blog/2023/vds_jenkins_with_docker_desktop_jcasc.html">
                             <h2 class="post-title">Jenkins Configuration as Code (JCasC)</h2>
                             <h3 class="post-subtitle">Build your reproducable local Jenkins Instance</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>February 02, 2023</span>
                             
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Docker.html" class="">Docker</a></span><span> <a
-                                href="tags/Docker-Desktop.html" class="">Docker-Desktop</a></span><span> <a
-                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
-                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
-                                href="tags/Jenkins-Configuration-as-Code.html" class="">Jenkins-Configuration-as-Code</a></span><span> <a
-                                href="tags/JCasC.html" class="">JCasC</a></span><span> <a
-                                href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a></span><span> <a
-                                href="tags/Windows.html" class="">Windows</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Docker.html" class="">Docker</a>
+                                </span><span>
+                                    <a href="tags/Docker-Desktop.html" class="">Docker-Desktop</a>
+                                </span><span>
+                                    <a href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a>
+                                </span><span>
+                                    <a href="tags/Jenkins.html" class="">Jenkins</a>
+                                </span><span>
+                                    <a href="tags/Jenkins-Configuration-as-Code.html" class="">Jenkins-Configuration-as-Code</a>
+                                </span><span>
+                                    <a href="tags/JCasC.html" class="">JCasC</a>
+                                </span><span>
+                                    <a href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a>
+                                </span><span>
+                                    <a href="tags/Windows.html" class="">Windows</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>In most of my environments I reach in short time the requirement to have some kind of automation server. How cool would it be, to start this server as part of my local Virtual Development Server? And what if the result will be usable for a lot of other use cases too?</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -215,27 +213,38 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
+                    
                     <div class="post-preview">
                         <a href="blog/2023/vds_docker_desktop_on_windows_with_xe_and_liquibase.html">
                             <h2 class="post-title">Test Environment for Migration with Liquibase against Oracle XE</h2>
                             <h3 class="post-subtitle">Virtual Environment based on Docker Compose, running in Windows Docker Desktop</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>January 18, 2023</span>
                             
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Docker.html" class="">Docker</a></span><span> <a
-                                href="tags/Docker-Desktop.html" class="">Docker-Desktop</a></span><span> <a
-                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
-                                href="tags/Liquibase.html" class="">Liquibase</a></span><span> <a
-                                href="tags/Oracle-XE.html" class="">Oracle-XE</a></span><span> <a
-                                href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a></span><span> <a
-                                href="tags/Windows.html" class="">Windows</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Docker.html" class="">Docker</a>
+                                </span><span>
+                                    <a href="tags/Docker-Desktop.html" class="">Docker-Desktop</a>
+                                </span><span>
+                                    <a href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a>
+                                </span><span>
+                                    <a href="tags/Liquibase.html" class="">Liquibase</a>
+                                </span><span>
+                                    <a href="tags/Oracle-XE.html" class="">Oracle-XE</a>
+                                </span><span>
+                                    <a href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a>
+                                </span><span>
+                                    <a href="tags/Windows.html" class="">Windows</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>For extensive testing of Database Migration I need an environment with Liquibase and an Oracle Database. So I have built this Virtual Development Environment which can be started, stopped, removed and rebuilt in seconds.</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -330,26 +339,36 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
+                    
                     <div class="post-preview">
                         <a href="blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html">
                             <h2 class="post-title">Run your Development Server with Vagrant on VirtualBox on Windows</h2>
                             <h3 class="post-subtitle">Use this, when you have no native Docker installation</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>September 28, 2022</span>
                             
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Docker.html" class="">Docker</a></span><span> <a
-                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
-                                href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a></span><span> <a
-                                href="tags/Vagrant.html" class="">Vagrant</a></span><span> <a
-                                href="tags/VirtualBox.html" class="">VirtualBox</a></span><span> <a
-                                href="tags/Windows.html" class="">Windows</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Docker.html" class="">Docker</a>
+                                </span><span>
+                                    <a href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a>
+                                </span><span>
+                                    <a href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a>
+                                </span><span>
+                                    <a href="tags/Vagrant.html" class="">Vagrant</a>
+                                </span><span>
+                                    <a href="tags/VirtualBox.html" class="">VirtualBox</a>
+                                </span><span>
+                                    <a href="tags/Windows.html" class="">Windows</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>In my series about Modern Infrastructure for your Virtual Development Server I will now start my Server with Vagrant in VirtualBox on Windows. Again I will use Jenkins as example for this. See how this works.</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -444,24 +463,32 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
+                    
                     <div class="post-preview">
                         <a href="blog/2022/adr_j_tool_with_madr_template_for_asciidoc.html">
                             <h2 class="post-title">Use AsciiDoc Templates for your Architecture Decisions with Java Based ADR-J Tool</h2>
                             <h3 class="post-subtitle">Create AsciiDoc Templates for ADR&#39;s and use them in your Project on all Platforms</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>March 31, 2022</span>
                             
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Architecture.html" class="">Architecture</a></span><span> <a
-                                href="tags/ADR.html" class="">ADR</a></span><span> <a
-                                href="tags/AsciiDoc.html" class="">AsciiDoc</a></span><span> <a
-                                href="tags/Documentation.html" class="">Documentation</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Architecture.html" class="">Architecture</a>
+                                </span><span>
+                                    <a href="tags/ADR.html" class="">ADR</a>
+                                </span><span>
+                                    <a href="tags/AsciiDoc.html" class="">AsciiDoc</a>
+                                </span><span>
+                                    <a href="tags/Documentation.html" class="">Documentation</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>In my blog <a href="../2022/adr_tool_with_custom_template_for_asciidoc.html">Use adr-tools for AsciiDoc</a> I have described, how to change the tool to write my Architecture Decision Records in AsciiDoc. But there are a lot of drawbacks with this approach, e.g. some of the features like linking and superceding decisions does not work. ADR Tool is based on shell scripts, so you have to provide and know a *nix emulation on windows. In the meantime I found Java base <a href="https://github.com/adoble/adr-j"> ADR-J Tool</a> and will show you here if this works better for my purposes.</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -556,28 +583,40 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
+                    
                     <div class="post-preview">
                         <a href="blog/2022/virtual_development_server_test_with_testcontainers.html">
                             <h2 class="post-title">Test Jenkins Container with TestContainers Framework</h2>
                             <h3 class="post-subtitle">Automate the Testing of your Infrastructure</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>March 26, 2022</span>
                             
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Docker.html" class="">Docker</a></span><span> <a
-                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
-                                href="tags/Integration-Test.html" class="">Integration-Test</a></span><span> <a
-                                href="tags/Jenkins.html" class="">Jenkins</a></span><span> <a
-                                href="tags/JUnit.html" class="">JUnit</a></span><span> <a
-                                href="tags/Maven.html" class="">Maven</a></span><span> <a
-                                href="tags/TestContainers.html" class="">TestContainers</a></span><span> <a
-                                href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Docker.html" class="">Docker</a>
+                                </span><span>
+                                    <a href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a>
+                                </span><span>
+                                    <a href="tags/Integration-Test.html" class="">Integration-Test</a>
+                                </span><span>
+                                    <a href="tags/Jenkins.html" class="">Jenkins</a>
+                                </span><span>
+                                    <a href="tags/JUnit.html" class="">JUnit</a>
+                                </span><span>
+                                    <a href="tags/Maven.html" class="">Maven</a>
+                                </span><span>
+                                    <a href="tags/TestContainers.html" class="">TestContainers</a>
+                                </span><span>
+                                    <a href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>As I create my Virtual Development Servers I asked myself how can I easily test, that it is working? As I put now my servers into containers via docker-compose I searched for a test framework, which supports this out of the box. I heard a lot about <a href="https://www.testcontainers.org/">TestContainers</a> in the past and again at Javaland 2022 conference last week, so I want to test now, if this will help me.</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -672,25 +711,34 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
+                    
                     <div class="post-preview">
                         <a href="blog/2022/virtual_development_server_docker_desktop_on_windows.html">
                             <h2 class="post-title">Run your Development Server on Docker Desktop on Windows</h2>
                             <h3 class="post-subtitle">Start with the easiest case</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>March 22, 2022</span>
                             / updated on January 18, 2023
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Docker.html" class="">Docker</a></span><span> <a
-                                href="tags/Docker-Desktop.html" class="">Docker-Desktop</a></span><span> <a
-                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
-                                href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a></span><span> <a
-                                href="tags/Windows.html" class="">Windows</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Docker.html" class="">Docker</a>
+                                </span><span>
+                                    <a href="tags/Docker-Desktop.html" class="">Docker-Desktop</a>
+                                </span><span>
+                                    <a href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a>
+                                </span><span>
+                                    <a href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a>
+                                </span><span>
+                                    <a href="tags/Windows.html" class="">Windows</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>In my series about Modern Infrastructure for your Virtual Development Server I will now start with the easiest case for me. I will run a Server on a Docker Desktop on Windows. As I need CI for all of my projects I will use Jenkins as example for this. See how this works.</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -785,33 +833,50 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
+                    
                     <div class="post-preview">
                         <a href="blog/2022/virtual_development_server_modern_infrastructure.html">
                             <h2 class="post-title">Virtual Development Server: Modern Infrastructure</h2>
                             <h3 class="post-subtitle">Create the Foundation for easy Development</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>February 25, 2022</span>
                             
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Docker.html" class="">Docker</a></span><span> <a
-                                href="tags/Docker-Desktop.html" class="">Docker-Desktop</a></span><span> <a
-                                href="tags/Docker-CE.html" class="">Docker-CE</a></span><span> <a
-                                href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a></span><span> <a
-                                href="tags/Linux.html" class="">Linux</a></span><span> <a
-                                href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a></span><span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/Orcle-Cloud.html" class="">Orcle-Cloud</a></span><span> <a
-                                href="tags/Oracle-Compute-Instance.html" class="">Oracle-Compute-Instance</a></span><span> <a
-                                href="tags/Ubuntu.html" class="">Ubuntu</a></span><span> <a
-                                href="tags/Vagrant.html" class="">Vagrant</a></span><span> <a
-                                href="tags/VirtualBox.html" class="">VirtualBox</a></span><span> <a
-                                href="tags/Windows.html" class="">Windows</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Docker.html" class="">Docker</a>
+                                </span><span>
+                                    <a href="tags/Docker-Desktop.html" class="">Docker-Desktop</a>
+                                </span><span>
+                                    <a href="tags/Docker-CE.html" class="">Docker-CE</a>
+                                </span><span>
+                                    <a href="tags/Infrastructure-as-Code.html" class="">Infrastructure-as-Code</a>
+                                </span><span>
+                                    <a href="tags/Linux.html" class="">Linux</a>
+                                </span><span>
+                                    <a href="tags/Virtual-Development-Server.html" class="">Virtual-Development-Server</a>
+                                </span><span>
+                                    <a href="tags/Oracle.html" class="">Oracle</a>
+                                </span><span>
+                                    <a href="tags/Orcle-Cloud.html" class="">Orcle-Cloud</a>
+                                </span><span>
+                                    <a href="tags/Oracle-Compute-Instance.html" class="">Oracle-Compute-Instance</a>
+                                </span><span>
+                                    <a href="tags/Ubuntu.html" class="">Ubuntu</a>
+                                </span><span>
+                                    <a href="tags/Vagrant.html" class="">Vagrant</a>
+                                </span><span>
+                                    <a href="tags/VirtualBox.html" class="">VirtualBox</a>
+                                </span><span>
+                                    <a href="tags/Windows.html" class="">Windows</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>After my 2016 series about my Virtual Development Server I have learned a lot. It&#8217;s time for a major overhaul with new technologies. It should be a lot more flexible and usable for development and course environments. See how I will restart!</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -906,24 +971,32 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
+                    
                     <div class="post-preview">
                         <a href="blog/2023/adr_tool_with_custom_template_for_asciidoc.html">
                             <h2 class="post-title">Use adr-tools for AsciiDoc</h2>
                             <h3 class="post-subtitle">Use Custom Template for Architecture Decision Records</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>February 15, 2022</span>
                             
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Architecture.html" class="">Architecture</a></span><span> <a
-                                href="tags/ADR.html" class="">ADR</a></span><span> <a
-                                href="tags/AsciiDoc.html" class="">AsciiDoc</a></span><span> <a
-                                href="tags/Documentation.html" class="">Documentation</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Architecture.html" class="">Architecture</a>
+                                </span><span>
+                                    <a href="tags/ADR.html" class="">ADR</a>
+                                </span><span>
+                                    <a href="tags/AsciiDoc.html" class="">AsciiDoc</a>
+                                </span><span>
+                                    <a href="tags/Documentation.html" class="">Documentation</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>I looked for a tool to create Architecture Decision Records in AsciiDoc and does not find any. So first I thought, I would have to (re)implement one. But look, how easy it really was.</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -1018,26 +1091,36 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
+                    
                     <div class="post-preview">
                         <a href="blog/2021/Slides_for_my_german_presentation+DOAG2021_forms_and_reports_12c_automatision.html">
                             <h2 class="post-title">Slides for my german presentation DOAG2021 &quot;Forms and Reports 12c - Processes and Automation in Development and Operations&quot; available</h2>
                             <h3 class="post-subtitle">Project report about an Oracle Forms and Reports 12c Automation</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>November 26, 2021</span>
                             
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Conferences.html" class="">Conferences</a></span><span> <a
-                                href="tags/DOAG.html" class="">DOAG</a></span><span> <a
-                                href="tags/Forms.html" class="">Forms</a></span><span> <a
-                                href="tags/Migration.html" class="">Migration</a></span><span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/Reports.html" class="">Reports</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Conferences.html" class="">Conferences</a>
+                                </span><span>
+                                    <a href="tags/DOAG.html" class="">DOAG</a>
+                                </span><span>
+                                    <a href="tags/Forms.html" class="">Forms</a>
+                                </span><span>
+                                    <a href="tags/Migration.html" class="">Migration</a>
+                                </span><span>
+                                    <a href="tags/Oracle.html" class="">Oracle</a>
+                                </span><span>
+                                    <a href="tags/Reports.html" class="">Reports</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>I have presented last week on DOAG 2021. For all non DOAG members - you can find the german presentation on <a href="https://de.slideshare.net/tkleiber/forms-and-reports-12c-processes-and-automation-in-development-and-operations">Slideshare</a> too:</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -1132,26 +1215,36 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
+                    
                     <div class="post-preview">
                         <a href="blog/2021/forms_and_reports_12c_automatision.html">
                             <h2 class="post-title">Forms and Reports 12c - Processes and Automation in Development and Operations - I am a speaker at DOAG 2021</h2>
                             <h3 class="post-subtitle">Project report about an Oracle Forms and Reports 12c Automation</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>November 17, 2021</span>
                             
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Conferences.html" class="">Conferences</a></span><span> <a
-                                href="tags/DOAG.html" class="">DOAG</a></span><span> <a
-                                href="tags/Forms.html" class="">Forms</a></span><span> <a
-                                href="tags/Migration.html" class="">Migration</a></span><span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/Reports.html" class="">Reports</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Conferences.html" class="">Conferences</a>
+                                </span><span>
+                                    <a href="tags/DOAG.html" class="">DOAG</a>
+                                </span><span>
+                                    <a href="tags/Forms.html" class="">Forms</a>
+                                </span><span>
+                                    <a href="tags/Migration.html" class="">Migration</a>
+                                </span><span>
+                                    <a href="tags/Oracle.html" class="">Oracle</a>
+                                </span><span>
+                                    <a href="tags/Reports.html" class="">Reports</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>The current target architecture of IKB&#8217;s credit and loan management is based on Oracle ADF and SOA and of course the database. But how can you protect in this time your Oracle Forms &amp; Reports longtime investments, can you support their Development Lifecycle by Automation?</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -1246,23 +1339,30 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
+                    
                     <div class="post-preview">
                         <a href="blog/2021/add_code_to_reports_via_forsm_api_master.html">
                             <h2 class="post-title">Add Code to Oracle Reports via Forms FormsAPI Master</h2>
                             <h3 class="post-subtitle">How to do Mass Changes with in your Oracle Reports with FormsAPI Master</h3>
                         </a>
-                        <p class="post-meta">Posted by
+                        <p class="post-meta">
+                            Posted by
                             <b>Torsten Kleiber</b>
                             on <span>March 04, 2021</span>
                             
-                            </br>
-                            <span> Tags: <span> <a
-                                href="tags/Oracle.html" class="">Oracle</a></span><span> <a
-                                href="tags/Reports.html" class="">Reports</a></span><span> <a
-                                href="tags/FormsAPI-Master.html" class="">FormsAPI-Master</a></span></span></p>
+                            <span> Tags:
+                                <span>
+                                    <a href="tags/Oracle.html" class="">Oracle</a>
+                                </span><span>
+                                    <a href="tags/Reports.html" class="">Reports</a>
+                                </span><span>
+                                    <a href="tags/FormsAPI-Master.html" class="">FormsAPI-Master</a>
+                                </span>
+                            </span>
+                        </p>
                         <p>For our migration to Oracle ADF we have to identify, which Forms and Reports modules are still really called. For Forms we already have implemented a call statistic. In this blog post I show you how you can automatically implement the same into over 200 reports.</p>
                         
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
@@ -1357,136 +1457,133 @@
           </ul>
 
         
-                        <hr>
+                        <!-- Divider-->
+                        <hr class="my-4" />
                     </div>
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
                     
-                
-                <div class="clearfix">
-                    <a class="btn btn-primary float-right" href="archive.html">Older Posts &rarr;</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!-- Pager-->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="archive.html">Older Posts →</a></div>
+                    
                 </div>
-                
-                <!-- Pager -->
-                
             </div>
         </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10 mx-auto">
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
                                 <a href="feed.xml" title="Subscribe to RSS feed">
@@ -1513,7 +1610,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://linkedin.com/in/kleiber/">
+                                <a href="https://linkedin.com/in/kleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -1521,7 +1618,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.xing.com/profile/Torsten_Kleiber/">
+                                <a href="https://www.xing.com/profile/Torsten_Kleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
@@ -1529,7 +1626,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.slideshare.net/tkleiber/">
+                                <a href="https://www.slideshare.net/tkleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-slideshare fa-stack-1x fa-inverse"></i>
@@ -1537,24 +1634,24 @@
                                 </a>
                             </li>
                         </ul>
-                            <p class="copyright text-muted">&copy; <span>Torsten Kleiber</span>
-                                <span>2023</span> | <a
-              href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a
-              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.7.0-rc.6</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
-      </div>
-    </div>
-  </div>
-  </footer>
-    
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.min.js"></script>
-    
-    
-    
+                            <p class="small text-center text-muted fst-italic">
+                                &copy;
+                                <span>Torsten Kleiber</span>
+                                <span>2023</span>
+                                | <a href="https://startbootstrap.com/theme/clean-blog">Clean Blog theme</a>
+                                by <a href="https://startbootstrap.com/">Start Bootstrap</a>
+                                | Baked with <a href="https://jbake.org">JBake
+                                <span>v2.7.0-rc.6</span></a>
+                                | <a href="#" onclick="klaro.show();">Change cookie settings</a>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="vendor/clean-blog/js/scripts.js"></script>
+        
     </body>
-    
 </html>

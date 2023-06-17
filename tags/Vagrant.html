@@ -1,19 +1,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="As Much As Possible As Code"/>
-        <meta name="author" content="Torsten Kleiber"/>
-
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="As Much As Possible As Code" />
+        <meta name="author" content="Torsten Kleiber" />
         <title>AMAPAC</title>
+        <link rel="icon" type="image/x-icon" href="../favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=Vagrant"
+              rel="stylesheet" type="text/css"/>
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../vendor/clean-blog/css/styles.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="../css/asciidoctor.css" rel="stylesheet"/>
+        <!-- link href="https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css" rel="stylesheet"/-->
+
+        <!-- highlightjs Code Formatter -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" rel="stylesheet" type="text/css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
+
+        <!-- Klaro Cookie Consent tool -->
+        <script defer type="text/javascript" src="../vendor/klaro/config.js"></script>
+        <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
 
         <meta name="robots" content="index, follow"/>
         <meta name="generator" content="JBake"/>
-
         <!--Facebook Card-->
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="AMAPAC"/>
@@ -31,97 +51,71 @@
           content="https://www.amapac.io/img/amapac_share_card.png">
         
 
-        <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-
-        <!-- highlightjs Code Formatter -->
-        <link href="../vendor/highlightjs/styles/default.css" rel="stylesheet" type="text/css">
-        <script src="../vendor/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <!-- Custom Fonts -->
-        <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300&amp;text=Vagrant"
-        rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-
-        <!-- Custom styles for this template -->
-        <link href="../css/asciidoctor.css" rel="stylesheet">
-        <link href="../css/clean-blog.min.css" rel="stylesheet">
-
-        <!-- Klaro Cookie Consent tool -->
-        <script defer type="text/javascript" src="../vendor/klaro/config.js"></script>
-        <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js"></script>
-
-        <link rel="shortcut icon" href="../favicon.png"/>
     </head>
-
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="../index.html">AMAPAC</a>
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                      Menu
-                      <i class="fas fa-bars"></i>
-                    </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="../about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../tags/index.html">Tags</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../archive.html">Archive</a>
-                        </li>
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../tags/index.html">Tags</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../archive.html">Archive</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>Vagrant</h1>
-            <span class="subheading">tagged posts</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        
-          <div class="post-preview"  >
-            <a href="../blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html">
-              <h2 class="post-title">Run your Development Server with Vagrant on VirtualBox on Windows</h2>
-              <h3 class="post-subtitle">Use this, when you have no native Docker installation</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>September 28, 2022</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Docker.html" class="" >Docker</a></span><span>
-                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
-                  <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span>
-                  <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span>
-                  <a   href="../tags/Windows.html" class="" >Windows</a></span></span></p>
-            <p>In my series about Modern Infrastructure for your Virtual Development Server I will now start my Server with Vagrant in VirtualBox on Windows. Again I will use Jenkins as example for this. See how this works.</p>
-            
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url(&#39;../img/tags-cover.jpg&#39;) ; background-color:#101010">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>Vagrant</h1>
+                            <span class="subheading">tagged posts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2022/virtual_development_server_vagrant_and_virtualbox_on_windows.html">
+                                <h2 class="post-title">Run your Development Server with Vagrant on VirtualBox on Windows</h2>
+                                <h3 class="post-subtitle">Use this, when you have no native Docker installation</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>September 28, 2022</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Docker.html" class="" >Docker</a>
+                                    </span><span>
+                                        <a href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a>
+                                    </span><span>
+                                        <a href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a>
+                                    </span><span>
+                                        <a href="../tags/Vagrant.html" class="" >Vagrant</a>
+                                    </span><span>
+                                        <a href="../tags/VirtualBox.html" class="" >VirtualBox</a>
+                                    </span><span>
+                                        <a href="../tags/Windows.html" class="" >Windows</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>In my series about Modern Infrastructure for your Virtual Development Server I will now start my Server with Vagrant in VirtualBox on Windows. Again I will use Jenkins as example for this. See how this works.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -214,36 +208,50 @@
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2022/virtual_development_server_modern_infrastructure.html">
-              <h2 class="post-title">Virtual Development Server: Modern Infrastructure</h2>
-              <h3 class="post-subtitle">Create the Foundation for easy Development</h3>
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>February 25, 2022</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Docker.html" class="" >Docker</a></span><span>
-                  <a   href="../tags/Docker-Desktop.html" class="" >Docker-Desktop</a></span><span>
-                  <a   href="../tags/Docker-CE.html" class="" >Docker-CE</a></span><span>
-                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a   href="../tags/Linux.html" class="" >Linux</a></span><span>
-                  <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/Orcle-Cloud.html" class="" >Orcle-Cloud</a></span><span>
-                  <a   href="../tags/Oracle-Compute-Instance.html" class="" >Oracle-Compute-Instance</a></span><span>
-                  <a   href="../tags/Ubuntu.html" class="" >Ubuntu</a></span><span>
-                  <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span>
-                  <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span>
-                  <a   href="../tags/Windows.html" class="" >Windows</a></span></span></p>
-            <p>After my 2016 series about my Virtual Development Server I have learned a lot. It&#8217;s time for a major overhaul with new technologies. It should be a lot more flexible and usable for development and course environments. See how I will restart!</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2022/virtual_development_server_modern_infrastructure.html">
+                                <h2 class="post-title">Virtual Development Server: Modern Infrastructure</h2>
+                                <h3 class="post-subtitle">Create the Foundation for easy Development</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>February 25, 2022</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Docker.html" class="" >Docker</a>
+                                    </span><span>
+                                        <a href="../tags/Docker-Desktop.html" class="" >Docker-Desktop</a>
+                                    </span><span>
+                                        <a href="../tags/Docker-CE.html" class="" >Docker-CE</a>
+                                    </span><span>
+                                        <a href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a>
+                                    </span><span>
+                                        <a href="../tags/Linux.html" class="" >Linux</a>
+                                    </span><span>
+                                        <a href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/Orcle-Cloud.html" class="" >Orcle-Cloud</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle-Compute-Instance.html" class="" >Oracle-Compute-Instance</a>
+                                    </span><span>
+                                        <a href="../tags/Ubuntu.html" class="" >Ubuntu</a>
+                                    </span><span>
+                                        <a href="../tags/Vagrant.html" class="" >Vagrant</a>
+                                    </span><span>
+                                        <a href="../tags/VirtualBox.html" class="" >VirtualBox</a>
+                                    </span><span>
+                                        <a href="../tags/Windows.html" class="" >Windows</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>After my 2016 series about my Virtual Development Server I have learned a lot. It&#8217;s time for a major overhaul with new technologies. It should be a lot more flexible and usable for development and course environments. See how I will restart!</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -336,37 +344,51 @@
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2017/Javaland+2017+wrap+up.html">
-              <h2 class="post-title">Javaland 2017 wrap up</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>April 01, 2017</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a></span><span>
-                  <a   href="../tags/Code-Coverage.html" class="" >Code-Coverage</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Docker.html" class="" >Docker</a></span><span>
-                  <a   href="../tags/Gui-Test.html" class="" >Gui-Test</a></span><span>
-                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a   href="../tags/Java.html" class="" >Java</a></span><span>
-                  <a   href="../tags/JDeveloper.html" class="" >JDeveloper</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Linux.html" class="" >Linux</a></span><span>
-                  <a   href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a></span><span>
-                  <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span>
-                  <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
-            <p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2017/Javaland+2017+wrap+up.html">
+                                <h2 class="post-title">Javaland 2017 wrap up</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>April 01, 2017</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/ADF-Architecture.html" class="" >ADF-Architecture</a>
+                                    </span><span>
+                                        <a href="../tags/Code-Coverage.html" class="" >Code-Coverage</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Docker.html" class="" >Docker</a>
+                                    </span><span>
+                                        <a href="../tags/Gui-Test.html" class="" >Gui-Test</a>
+                                    </span><span>
+                                        <a href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a>
+                                    </span><span>
+                                        <a href="../tags/Java.html" class="" >Java</a>
+                                    </span><span>
+                                        <a href="../tags/JDeveloper.html" class="" >JDeveloper</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Linux.html" class="" >Linux</a>
+                                    </span><span>
+                                        <a href="../tags/Static-Code-Analysis.html" class="" >Static-Code-Analysis</a>
+                                    </span><span>
+                                        <a href="../tags/Vagrant.html" class="" >Vagrant</a>
+                                    </span><span>
+                                        <a href="../tags/VirtualBox.html" class="" >VirtualBox</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
 It was not easy this year to concentrate on the sessions because of the hottest march of the last 100 years. But the quality of the sessions beats the weather. Maybe again my invest in reading the abstracts and filter the sessions before the conference has payed off.</p>
-            
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -459,32 +481,42 @@ It was not easy this year to concentrate on the sessions because of the hottest 
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html">
-              <h2 class="post-title">Virtual Development Server: Provide Docker images in docker registry for Oracle via Jenkins</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>December 07, 2016</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Blue-Ocean.html" class="" >Blue-Ocean</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Docker.html" class="" >Docker</a></span><span>
-                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Pipeline.html" class="" >Pipeline</a></span><span>
-                  <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span>
-                  <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
-                  <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
-            <p>We now try to automate the build of all needed images as soon as Oracle <a href="https://github.com/oracle/docker-images">GitHub</a> Sources changed or we need to build our Vagrant VirtualBox again from scratch.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+via+Jenkins.html">
+                                <h2 class="post-title">Virtual Development Server: Provide Docker images in docker registry for Oracle via Jenkins</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>December 07, 2016</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Blue-Ocean.html" class="" >Blue-Ocean</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Docker.html" class="" >Docker</a>
+                                    </span><span>
+                                        <a href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Pipeline.html" class="" >Pipeline</a>
+                                    </span><span>
+                                        <a href="../tags/Vagrant.html" class="" >Vagrant</a>
+                                    </span><span>
+                                        <a href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a>
+                                    </span><span>
+                                        <a href="../tags/VirtualBox.html" class="" >VirtualBox</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>We now try to automate the build of all needed images as soon as Oracle <a href="https://github.com/oracle/docker-images">GitHub</a> Sources changed or we need to build our Vagrant VirtualBox again from scratch.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -577,34 +609,43 @@ It was not easy this year to concentrate on the sessions because of the hottest 
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html">
-              <h2 class="post-title">Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>November 25, 2016</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Docker.html" class="" >Docker</a></span><span>
-                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a   href="../tags/Jenkins.html" class="" >Jenkins</a></span><span>
-                  <a   href="../tags/Linux.html" class="" >Linux</a></span><span>
-                  <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span>
-                  <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
-                  <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
-            <p>For automation of all of my processes I need Jenkins in my development server.
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2016/Virtual+Development+Server+Install+Jenkins+for+Continuos+Integration+Delivery+Deployment.html">
+                                <h2 class="post-title">Virtual Development Server: Install Jenkins for Continuos Integration / Delivery / Deployment</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>November 25, 2016</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Docker.html" class="" >Docker</a>
+                                    </span><span>
+                                        <a href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a>
+                                    </span><span>
+                                        <a href="../tags/Jenkins.html" class="" >Jenkins</a>
+                                    </span><span>
+                                        <a href="../tags/Linux.html" class="" >Linux</a>
+                                    </span><span>
+                                        <a href="../tags/Vagrant.html" class="" >Vagrant</a>
+                                    </span><span>
+                                        <a href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a>
+                                    </span><span>
+                                        <a href="../tags/VirtualBox.html" class="" >VirtualBox</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>For automation of all of my processes I need Jenkins in my development server.
 First I had installed Jenkins as Docker container via Vagrant Docker provider.
 But with this architecture it was very complicated to create docker images and run Docker containers on the Docker host, in this case my Vagrant Virtualbox.
 So for simplification I have decided to install Jenkins with the provisioning of the Vagrant Virtualbox via a shell provider in my Vagrantfile.</p>
-            
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -697,32 +738,42 @@ So for simplification I have decided to install Jenkins with the provisioning of
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html">
-              <h2 class="post-title">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>September 06, 2016</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a   href="../tags/Linux.html" class="" >Linux</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span>
-                  <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span>
-                  <a   href="../tags/Docker.html" class="" >Docker</a></span><span>
-                  <a   href="../tags/XE.html" class="" >XE</a></span></span></p>
-            <p>For later creation of containers as needed in the deployment process we have first to build docker images whenever we do not find suitable one in docker hub.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2016/Virtual+Development+Server+Provide+Docker+images+in+docker+registry+for+Oracle+XE+Database+and+others.html">
+                                <h2 class="post-title">Virtual Development Server: Provide Docker images in docker registry for Oracle XE Database and others</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>September 06, 2016</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a>
+                                    </span><span>
+                                        <a href="../tags/Linux.html" class="" >Linux</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/Vagrant.html" class="" >Vagrant</a>
+                                    </span><span>
+                                        <a href="../tags/VirtualBox.html" class="" >VirtualBox</a>
+                                    </span><span>
+                                        <a href="../tags/Docker.html" class="" >Docker</a>
+                                    </span><span>
+                                        <a href="../tags/XE.html" class="" >XE</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>For later creation of containers as needed in the deployment process we have first to build docker images whenever we do not find suitable one in docker hub.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -815,32 +866,41 @@ So for simplification I have decided to install Jenkins with the provisioning of
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html">
-              <h2 class="post-title">Virtual Development Server: Add swapfile to VirtualBox as requirement for installing Oracle or build Oracle docker images</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>August 19, 2016</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a   href="../tags/Linux.html" class="" >Linux</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span>
-                  <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span>
-                  <a   href="../tags/Docker.html" class="" >Docker</a></span></span></p>
-            <p>As I want later build Oracle docker images, some of this need a swapfile.
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2016/Virtual+Development+Server+Add+swapfile+to+VirtualBox+as+requirement+for+installing+Oracle+or+build+Oracle+docker+images.html">
+                                <h2 class="post-title">Virtual Development Server: Add swapfile to VirtualBox as requirement for installing Oracle or build Oracle docker images</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 19, 2016</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a>
+                                    </span><span>
+                                        <a href="../tags/Linux.html" class="" >Linux</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/Vagrant.html" class="" >Vagrant</a>
+                                    </span><span>
+                                        <a href="../tags/VirtualBox.html" class="" >VirtualBox</a>
+                                    </span><span>
+                                        <a href="../tags/Docker.html" class="" >Docker</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>As I want later build Oracle docker images, some of this need a swapfile.
 Per default my used <a href="http://www.vagrantbox.es">Vagrantbox</a> does not have one, so later steps will fail.</p>
-            
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -933,33 +993,43 @@ Per default my used <a href="http://www.vagrantbox.es">Vagrantbox</a> does not h
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html">
-              <h2 class="post-title">Virtual Development Server: Add enough ram and disk space to VirtualBox for further server components</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>August 13, 2016</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a   href="../tags/Linux.html" class="" >Linux</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span>
-                  <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span><span>
-                  <a   href="../tags/VDI.html" class="" >VDI</a></span><span>
-                  <a   href="../tags/VDMK.html" class="" >VDMK</a></span></span></p>
-            <p>As I want later build docker images and run docker containers I have to provide enough ram and disk space for this.
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2016/Virtual+Development+Server+Add+enough+ram+and+disk+space+to+VirtualBox+for+further+server+components.html">
+                                <h2 class="post-title">Virtual Development Server: Add enough ram and disk space to VirtualBox for further server components</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 13, 2016</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a>
+                                    </span><span>
+                                        <a href="../tags/Linux.html" class="" >Linux</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/Vagrant.html" class="" >Vagrant</a>
+                                    </span><span>
+                                        <a href="../tags/VirtualBox.html" class="" >VirtualBox</a>
+                                    </span><span>
+                                        <a href="../tags/VDI.html" class="" >VDI</a>
+                                    </span><span>
+                                        <a href="../tags/VDMK.html" class="" >VDMK</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>As I want later build docker images and run docker containers I have to provide enough ram and disk space for this.
 Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk disks, these have a static size and are to small for my purposes.</p>
-            
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1052,31 +1122,40 @@ Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk di
           </ul>
 
         
-          </div>
-          <hr>
-        
-          <div class="post-preview"  >
-            <a href="../blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html">
-              <h2 class="post-title">Virtual Development Server: Creating Virtualbox machine including docker containers with Vagrant</h2>
-              
-            </a>
-            <p class="post-meta">
-              Posted by <b>Torsten Kleiber</b>
-              on <span>August 12, 2016</span>
-              
-              </br>
-              <span> Tags:
-                <span>
-                  <a   href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a></span><span>
-                  <a   href="../tags/Continous-Integration.html" class="" >Continous-Integration</a></span><span>
-                  <a   href="../tags/Docker.html" class="" >Docker</a></span><span>
-                  <a   href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a></span><span>
-                  <a   href="../tags/Linux.html" class="" >Linux</a></span><span>
-                  <a   href="../tags/Oracle.html" class="" >Oracle</a></span><span>
-                  <a   href="../tags/Vagrant.html" class="" >Vagrant</a></span><span>
-                  <a   href="../tags/VirtualBox.html" class="" >VirtualBox</a></span></span></p>
-            <p>As I want to decouple my development server from my computer as much as possible I want to create first a virtual machine with linux.</p>
-            
+                        </div>
+                        <hr>
+                        
+                        <div class="post-preview">
+                            <a href="../blog/2016/Virtual+Development+Server+Creating+Virtualbox+machine+including+docker+containers+with+Vagrant.html">
+                                <h2 class="post-title">Virtual Development Server: Creating Virtualbox machine including docker containers with Vagrant</h2>
+                                
+                            </a>
+                            <p class="post-meta">
+                                Posted by <b>Torsten Kleiber</b>
+                                on <span>August 12, 2016</span>
+                                
+                                <span> Tags:
+                                    <span>
+                                        <a href="../tags/Virtual-Development-Server.html" class="" >Virtual-Development-Server</a>
+                                    </span><span>
+                                        <a href="../tags/Continous-Integration.html" class="" >Continous-Integration</a>
+                                    </span><span>
+                                        <a href="../tags/Docker.html" class="" >Docker</a>
+                                    </span><span>
+                                        <a href="../tags/Infrastructure-as-Code.html" class="" >Infrastructure-as-Code</a>
+                                    </span><span>
+                                        <a href="../tags/Linux.html" class="" >Linux</a>
+                                    </span><span>
+                                        <a href="../tags/Oracle.html" class="" >Oracle</a>
+                                    </span><span>
+                                        <a href="../tags/Vagrant.html" class="" >Vagrant</a>
+                                    </span><span>
+                                        <a href="../tags/VirtualBox.html" class="" >VirtualBox</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p>As I want to decouple my development server from my computer as much as possible I want to create first a virtual machine with linux.</p>
+                            
           <ul class="list-inline text-center"><!-- Social Share Button HTML -->
             <!-- Twitter -->
             <li class="list-inline-item">
@@ -1169,19 +1248,20 @@ Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk di
           </ul>
 
         
-          </div>
-          <hr>
-        
-        
-      </div>
-    </div>
-  </div>
+                        </div>
+                        <hr>
+                        
+                        
+                   </div>
+               </div>
+           </div>
+        </article>
 
-  <!-- Footer -->
-  <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10 mx-auto">
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
                                 <a href="../feed.xml" title="Subscribe to RSS feed">
@@ -1208,7 +1288,7 @@ Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk di
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://linkedin.com/in/kleiber/">
+                                <a href="https://linkedin.com/in/kleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -1216,7 +1296,7 @@ Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk di
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.xing.com/profile/Torsten_Kleiber/">
+                                <a href="https://www.xing.com/profile/Torsten_Kleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
@@ -1224,7 +1304,7 @@ Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk di
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.slideshare.net/tkleiber/">
+                                <a href="https://www.slideshare.net/tkleiber">
                                     <span class="fa-stack">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-slideshare fa-stack-1x fa-inverse"></i>
@@ -1232,24 +1312,24 @@ Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk di
                                 </a>
                             </li>
                         </ul>
-                            <p class="copyright text-muted">&copy; <span>Torsten Kleiber</span>
-                                <span>2023</span> | <a
-              href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog theme</a> by <a
-              href="https://startbootstrap.com/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.7.0-rc.6</span></a> | <a href="#" onclick="klaro.show();">Change cookie settings</a></p>
-      </div>
-    </div>
-  </div>
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" ></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="../js/clean-blog.min.js"></script>
-
-  
-
-</body>
-
+                            <p class="small text-center text-muted fst-italic">
+                                &copy;
+                                <span>Torsten Kleiber</span>
+                                <span>2023</span>
+                                | <a href="https://startbootstrap.com/theme/clean-blog">Clean Blog theme</a>
+                                by <a href="https://startbootstrap.com/">Start Bootstrap</a>
+                                | Baked with <a href="https://jbake.org">JBake
+                                <span>v2.7.0-rc.6</span></a>
+                                | <a href="#" onclick="klaro.show();">Change cookie settings</a>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../vendor/clean-blog/js/scripts.js"></script>
+        
+    </body>
 </html>
