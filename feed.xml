@@ -6,8 +6,8 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Fri, 6 Dec 2024 21:15:25 +0000</pubDate>
-    <lastBuildDate>Fri, 6 Dec 2024 21:15:25 +0000</lastBuildDate>
+    <pubDate>Fri, 6 Dec 2024 21:29:53 +0000</pubDate>
+    <lastBuildDate>Fri, 6 Dec 2024 21:29:53 +0000</lastBuildDate>
 
     <item>
       <title>Jenkins Configuration as Code (JCasC)</title>
