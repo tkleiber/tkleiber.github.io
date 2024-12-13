@@ -6,8 +6,8 @@
     <atom:link href="https://www.amapac.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>As Much As Possible As Code</description>
     <language>en-gb</language>
-    <pubDate>Fri, 13 Dec 2024 20:36:32 +0000</pubDate>
-    <lastBuildDate>Fri, 13 Dec 2024 20:36:32 +0000</lastBuildDate>
+    <pubDate>Fri, 13 Dec 2024 21:14:44 +0000</pubDate>
+    <lastBuildDate>Fri, 13 Dec 2024 21:14:44 +0000</lastBuildDate>
 
     <item>
       <title>Jenkins Configuration as Code (JCasC)</title>
@@ -165,7 +165,7 @@ For read only access of configuration and logs WebLogic provides out of the box 
       <link>https://www.amapac.io/blog/2017/Javaland+2017+wrap+up.html</link>
       <pubDate>Sat, 1 Apr 2017 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/2017/Javaland+2017+wrap+up.html</guid>
-      <description><p>Yes - I did it again and attend <a href="https://twitter.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
+      <description><p>Yes - I did it again and attend <a href="https://x.com/hashtag/javaland?src=hash">Javaland</a>, conference in <a href="http://www.phantasialand.de">Phantasialand</a> <a href="https://www.bruehl.de">Brühl</a>.
 It was not easy this year to concentrate on the sessions because of the hottest march of the last 100 years. But the quality of the sessions beats the weather. Maybe again my invest in reading the abstracts and filter the sessions before the conference has payed off.</p></description>
     </item><item>
       <title>DEVCAMP17 wrap up</title>
@@ -256,7 +256,7 @@ Per default the <a href="http://www.vagrantbox.es">Vagrantboxes</a> have vmdk di
       <link>https://www.amapac.io/blog/2016/Javaland+2016+conference+day+1.html</link>
       <pubDate>Wed, 9 Mar 2016 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/2016/Javaland+2016+conference+day+1.html</guid>
-      <description><p>This year I have decided to give the <a href="https://twitter.com/hashtag/javaland2016?src=hash">Javaland</a> conference a try.
+      <description><p>This year I have decided to give the <a href="https://x.com/hashtag/javaland2016?src=hash">Javaland</a> conference a try.
 I&#8217;m not a java professional, but in the program was listed a lot of interesting testing presentations, so my company booked for me.</p></description>
     </item><item>
       <title>Slides for my german presentation DOAG2015 &quot;Bob the Builder: Build/Deploy of ADF enterprise applications&quot; available</title>
